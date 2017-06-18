@@ -24,20 +24,183 @@ block body
 							figure
 								img.img-thumbnail(src="/images/learn/new/css4.jpg", alt="")
 						.col-md-7
+							p.lead W3C vẫn đang tiếp tục xây dựng để cập nhật lên phiên bản tiếp theo của CSS3 là CSS4, những gì chúng ta mong đợi ở những tính năng tiếp theo sẽ có, CSS sẽ càng ngày càng giúp cho mã đánh dấu của bạn gọn hơn, có thể tác động được mãnh mẽ hơn và giảm bớt sự phụ thuộc vào các thư viện javaScript với những tính năng đơn giản.
+							p.lead Mặc dù hiện tại chúng ta vẫn nỗ lực đưa CSS3 vào các website của mình nhưng chúng ta cũng đã phải rất hạn chế bởi IE8 vẫn còn tồn tại một thời gian tương đối dài nữa và IE9 chưa thực sự hổ trợ CSS3 tốt, có lẽ IE11 mới thực sự hoàn toàn hổ trợ CSS3 tốt nhất, vấn để chỉ là thời gian.
 							p.lead Hiện CSS level 4 đã được W3C phác thảo từ năm 2011 và hiện tại vẫn đang triển khai để hoàn thiện, bạn có thể theo dõi những cập nhật tại website của W3C.
+							h3 Có gì mới?
 			.row
 				.col
-					h5.text-danger Selector
+					h5.text-danger Kết hợp các các phần tử chọn
 					hr
 					.row
-						.col-md-6
-							h6.text-primary By ID
-							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
-								<div id="demo">Text</div>
-						.col-md-6
-							h6.text-primary  By ID
-							pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
-								#demo {
-									*...
-								}
+						.col-md-5.mb-3
+							h5 Pseudo-class
+							h6
+								code :not
+							p Với CSS3 chúng ta có pseudo-class là :not() nhưng chỉ cho phép với một phần tử đơn, trong CSS4 bạn có thể liệt kê các phần tử chọn bằng cách thêm đối số ví dụ:
+						.col-md-7
+							.row
+								.col-md-6
+									h6.text-primary CSS3
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										a:not([rel="nofollow"]) {
+											*color: red;
+										}
+										a:not([rel="external"]) {
+											*color: red;
+										}
+								.col-md-6
+									h6.text-primary CSS4
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										a:not([rel="external"], [rel="nofollow"]) {
+											*color: red;
+										}
+					hr
+					.row
+						.col-md-5.mb-3
+							h5 Pseudo-class
+							h6
+								code :matches
+							p Tiếp theo là pseudo-class :matches điều này thực sự hữu dụng khi bạn phải liệt kê nhiều thẻ chọn theo thừa kế mà chúng có những thẻ nào đó trùng nhau. Ví dụ thông thường chúng ta sẽ viết như sau:
+						.col-md-7
+							.row
+								.col-md-6
+									h6.text-primary CSS3
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										section h1, article h1, aside h1 {
+											*color: red;
+										}
+								.col-md-6
+									h6.text-primary CSS4
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										:matches(section, article, aside) h1 {
+											*color: red;
+										}
+							.row
+								.col-md-6
+									h6.text-primary CSS3
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										a:link,
+										a:hover,
+										a:visited,
+										a:focus {
+											*color: red;
+										}
+								.col-md-6
+									h6.text-primary CSS4
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										a:matches(:link, :hover, :visited, :focus) {
+											*color: red;
+										}
 
+					hr
+					.row
+						.col-md-5.mb-3
+							h5 Pseudo-class
+							h6
+								code :any-link
+							p Với pseudo-class :any-link bạn sẽ rút ngắn dòng code hơn trong tình huống sau:
+						.col-md-7
+							.row
+								.col-md-6
+									h6.text-primary CSS3
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										a:link,
+										a:visited {
+											*color: red;
+										}
+								.col-md-6
+									h6.text-primary CSS4
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										a:any-link {
+											*color: red;
+										}
+					hr
+					.row
+						.col-md-5.mb-3
+							h5 Pseudo-class
+							h6
+								code :local-link
+							p Tiếp theo là Pseudo-class với liên kết nội bộ :local-link, đây sẽ là cách chọn những thẻ liên kết với nhiều mục đích khác nhau về liên kết bên trong website hay liên kết tới trang khác hoặc các cấp của đường dẫn liên kết, ví dụ bạn có thể chọn những liên kết bên trong website của bạn:
+						.col-md-7
+							.row
+								.col-md-6
+									h6.text-primary CSS3
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										Không có
+								.col-md-6
+									h6.text-primary CSS4
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										:local-link {
+											*text-decoration: none;
+										}
+									p
+										| Ví dụ chọn theo các cấp cùa đường dẫn liên kết:
+										br
+										| Nhứng liên kết dạng không có cấp http://example.com/
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										:local-link(0) {
+											*color: red;
+										}
+									p
+										| Nhứng liên kết có một cấp http://example.com/year/ */
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										:local-link(1) {
+											*color: red;
+										}
+									p
+										| Nhứng liên kết có 2 cấp http://example.com/year/month/ link(s) */
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										:local-link(2) {
+											*color: red;
+										}
+					hr
+					.row
+						.col-md-5.mb-3
+							h5 Trạng thái indeterminate của checkbox và radio
+							p Thông thường các nút này có vài trạng thái là :enable, :disable, : checked và có một trạng thái mới là :indeterminate, nó là trạng thái không ảnh hưởng tới giá trị của input field và mặc định nó chỉ hiện thị lần đầu tiên khi field chưa được tác động. Trạng thái này mặc định không được hiển thị mà bạn phải bật nó bằng javaScript với thuộc tính indeterminate. Hiện bộ chọn mới của CSS có thể cho phép bạn chọn field với trạng thái này thông qua pseudo-class :indeterminate, hầu hết các trình duyệt hiện đại đều đã hỗ trợ cách chọn này.  Ví dụ:
+
+						.col-md-7
+							.row
+								.col-md-6
+									h6.text-primary CSS3
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										Không có
+								.col-md-6
+									h6.text-primary CSS4
+									pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+										<style type="text/css">
+											*:indeterminate {
+												**opacity: 0.3;
+											*}
+										</style>
+
+										<label for="test">Label</label>
+										<input type="checkbox" id="test" />
+
+										<script type="text/javascript">
+										*document.getElementById("test").indeterminate = true;
+										</script>
+					hr
+					.row
+						.col-md-5.mb-3
+							h5 Thêm bộ chọn về các phần tử theo cấu trúc cây
+
+							p Chúng ta đã quen với pseudo-class :nth-child giúp chúng ta chọn phần tử theo thứ tự hay một quy tắc nào đó. Ví dụ nếu muốn chọn các phần tử có thứ tự là chắn chúng ta có nth-child(even) nếu bây giờ chúng ta muốn chọn các phần tử là chẵn nhưng có tên class là .active thì sao. Để tăng khả năng chọn phần tử ở phiên bản tiếp theo của CSS chúng ta sẽ có pseudo-class :nth-math và nth-last-math. ví dụ:
+
+
+						.col-md-7
+							.row
+								.col-md-6
+									h6.text-primary CSS3
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										Không có
+								.col-md-6
+									h6.text-primary CSS4
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										li:nth-match(even of .active) {
+											*color: red;
+										}
+										p:nth-match(2n+1 of .active, .visible, .current) {
+											*color: red;
+										}
