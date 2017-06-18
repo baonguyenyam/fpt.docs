@@ -1,1 +1,1 @@
-var DOMAIN_URL = 'http://domain.com'
+var DOMAIN_URL = 'http://baonguyenyam.github.io'

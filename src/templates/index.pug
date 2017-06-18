@@ -10,6 +10,9 @@ block variables
 block css
 	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
 	+getMin(bodyclass)
+block js
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMinJS(bodyclass)
 
 block og
 	meta(property="og:image", content='/images/logo.png')
