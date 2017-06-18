@@ -45,7 +45,7 @@ config:
     mobile_color: "#000000"
     cfg_name: "FPT"
     cfg_url: "baonguyenyam.github.io/fpt"
-    analytics: 'UA-XXXXXXXXXXX-1'
+    analytics: 'UA-101173524-1'
     seo_lang: 'en'
     seo_geo: 'EN' # Check at http://en.mygeoposition.com/
     seo_geo_latitude: '36.204824'
@@ -57,7 +57,7 @@ config:
     cfg_sitenameurl: "baonguyenyam"
     app_facebook_adminsID: 'XXXXXXX,XXXXXXX'
     app_appleID: 'XXX-XXX-XXX-XXXX'
-    cfg_sitenameurlgoogle: "XXXXXXXXXXXXXX"
+    cfg_sitenameurlgoogle: "+baonguyenyam"
     verf_google: "VhfbPndGW-UftEvWql2Nwt7F1F5KBgd3lMcGgjn4Ovc"
     verf_bing: "F7679394C660249FBA58732D6100A65A"
     verf_yandex: "bc82adfacdd74cbf"
