@@ -22,10 +22,10 @@ block body
 					p.lead.text-shadown.text-danger.text-bold Có nhiều bố cục khác nhau
 					p Tuy nhiên bố cục cơ bản bao gồm các phần tử như hình dưới:
 					.row.text-center
-						.col
+						.col-md-6.mb-3
 							a(href="/images/learn/html/04.png", target="_blank")
 								img.img-thumbnail(src="/images/learn/html/04.png", alt="")
-						.col
+						.col-md-6
 							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
 								[!DOCTYPE html]
 								[html dir="ltr" lang="en"]
@@ -54,12 +54,12 @@ block body
 								img.img-thumbnail(src="/images/learn/html/html-syntax-outline.png", alt="")
 					p.mt-5.text-lg.text-primary.text-bold 1) Elements
 					.row
-						.col-4
+						.col
 							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
 								<tagname>Content</tagname>
 					.row
 						.col
-							table.table.table-bordered.thead-inverse.table-striped
+							table.table.table-responsive.table-bordered.thead-inverse.table-striped
 								thead
 									tr
 										th Mở tag
@@ -192,12 +192,12 @@ block body
 
 					p.mt-5.text-lg.text-primary.text-bold 2) Attribute
 					.row
-						.col-4
+						.col
 							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
 								<tagname attribute="abc">Content</tagname>
 					.row
 						.col
-							table.table.table-bordered.thead-inverse.table-striped
+							table.table.table-responsive.table-bordered.thead-inverse.table-striped
 								thead
 									tr
 										th Mở tag
@@ -273,15 +273,15 @@ block body
 
 										td
 											p.mb-0
-												img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/220px-Google_2015_logo.svg.png", style="width:120px")
+												img.img-thumbnail(src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/220px-Google_2015_logo.svg.png", style="width:120px")
 											figure.mb-0
-												img(src="/images/sample_icon.png")
+												img.img-thumbnail(src="/images/sample_icon.png")
 
 
 					p.mt-5.text-lg.text-primary.text-bold 3) Requirements
 					.row
 						.col
-							table.table.table-bordered.thead-inverse.table-striped
+							table.table.table-responsive.table-bordered.thead-inverse.table-striped
 								thead
 									tr
 										th TAG
@@ -355,7 +355,7 @@ block body
 					p.mt-5.text-lg.text-primary.text-bold 4) Tag Type
 					.row
 						.col
-							table.table.table-bordered.thead-inverse.table-striped
+							table.table.table-responsive.table-bordered.thead-inverse.table-striped
 								thead
 									tr
 										th Type

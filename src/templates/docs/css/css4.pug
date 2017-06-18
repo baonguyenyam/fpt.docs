@@ -1,0 +1,43 @@
+extends ../../_layout/layout
+
+block variables
+	- var title = 'CSS'
+	- var description = 'Description for home page'
+	- var bodyclass = 'css'
+	- var selected = 'CSS';
+	- var href = '';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+
+block body
+	section.demo-css
+		.container-fluid
+
+			.row
+				.col.p-4
+					h1.mt-6#sec1 CSS4
+					hr
+					.row
+						.col-md-5
+							figure
+								img.img-thumbnail(src="/images/learn/new/css4.jpg", alt="")
+						.col-md-7
+							p.lead Hiện CSS level 4 đã được W3C phác thảo từ năm 2011 và hiện tại vẫn đang triển khai để hoàn thiện, bạn có thể theo dõi những cập nhật tại website của W3C.
+			.row
+				.col
+					h5.text-danger Selector
+					hr
+					.row
+						.col-md-6
+							h6.text-primary By ID
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								<div id="demo">Text</div>
+						.col-md-6
+							h6.text-primary  By ID
+							pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+								#demo {
+									*...
+								}
+

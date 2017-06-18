@@ -15,13 +15,13 @@ mixin getMin(bodyClass)
 		else if (process.argv.slice(3).indexOf('--production') > -1) && (process.argv.slice(3).indexOf('--notmin') > -1)
 			link(rel='stylesheet', href='https://'+config.SEO.cfg_url+'/css/pages/'+bodyClass+'.css')
 		else
-			link(rel='stylesheet', href='https://'+config.SEO.cfg_url+'/css/pages/'+bodyClass+'.css')
+			link(rel='stylesheet', href='/css/pages/'+bodyClass+'.css')
 
 mixin getMinJS(bodyClass)
-	if !config.concat.ACTIVE_CONCAT
-		if (process.argv.slice(3).indexOf('--production') > -1) && (process.argv.slice(3).indexOf('--notmin') < 0)
-			script(src='https://'+config.SEO.cfg_url+'/js/pages/'+bodyClass+'.min.js')
-		else if (process.argv.slice(3).indexOf('--production') > -1) && (process.argv.slice(3).indexOf('--notmin') > -1)
-			script(src='https://'+config.SEO.cfg_url+'/js/pages/'+bodyClass+'.js')
-		else
-			script(src='https://'+config.SEO.cfg_url+'/js/pages/'+bodyClass+'.js')
+	//- if !config.concat.ACTIVE_CONCAT
+	//- 	if (process.argv.slice(3).indexOf('--production') > -1) && (process.argv.slice(3).indexOf('--notmin') < 0)
+	//- 		script(src='https://'+config.SEO.cfg_url+'/js/pages/'+bodyClass+'.min.js')
+	//- 	else if (process.argv.slice(3).indexOf('--production') > -1) && (process.argv.slice(3).indexOf('--notmin') > -1)
+	//- 		script(src='https://'+config.SEO.cfg_url+'/js/pages/'+bodyClass+'.js')
+	//- 	else
+	//- 		script(src='/js/pages/'+bodyClass+'.js')
