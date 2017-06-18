@@ -75,122 +75,124 @@ block body
 
 					.row
 						.col
-							table.table.table-responsive.table-bordered.thead-inverse.table-striped
-								thead
-									tr
-										th HTML
-										th CSS
-										th Hiển thị
-								tbody
-									tr
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												[html]
-												*[body]
-												**[h1]Nội dung văn bản[/h1]
-												**[div class="demo"]Nội dung văn bản[/div]
-												**[p class="baonguyen"]Nội dung văn bản[/p]
-												**[p class="demo"]Nội dung văn bản[/p]
-												*[/body]
-												[/html]
-										td
-											pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												body {background: #5bc0def}
-												h1 {color: #000}
-												.demo {color: green}
-												p.baonguyen {color: red}
+							.table-responsive
+								table.table.table-bordered.thead-inverse.table-striped
+									thead
+										tr
+											th HTML
+											th CSS
+											th Hiển thị
+									tbody
+										tr
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													[html]
+													*[body]
+													**[h1]Nội dung văn bản[/h1]
+													**[div class="demo"]Nội dung văn bản[/div]
+													**[p class="baonguyen"]Nội dung văn bản[/p]
+													**[p class="demo"]Nội dung văn bản[/p]
+													*[/body]
+													[/html]
+											td
+												pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													body {background: #5bc0def}
+													h1 {color: #000}
+													.demo {color: green}
+													p.baonguyen {color: red}
 
-										td
-											.box.bg-info
-												h1.den Nội dung văn bản
-												.xanh Nội dung văn bản
-												p.do.mb-0 Nội dung văn bản
-												p.xanh.mb-0 Nội dung văn bản
+											td
+												.box.bg-info
+													h1.den Nội dung văn bản
+													.xanh Nội dung văn bản
+													p.do.mb-0 Nội dung văn bản
+													p.xanh.mb-0 Nội dung văn bản
 
 					p.mt-5.text-lg.text-primary.text-bold Cách viết CSS n lớp
 
 					.row
 						.col
-							table.table.table-responsive.table-bordered.thead-inverse.table-striped
-								thead
-									tr
-										th HTML
-										th CSS
-										th Hiển thị
-								tbody
-									tr
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												[html]
-												*[body]
-												**[h1]Nội dung văn bản[/h1]
-												**[div class="demo"]Nội dung văn bản[/div]
-												**[p class="baonguyen"]Nội dung văn bản[/p]
-												**[p class="demo"]Nội dung văn bản[/p]
-												*[/body]
-												[/html]
-										td
-											pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												body {background: #5bc0def}
-												body h1 {color: #000}
-												body .demo {color: green}
-												body p.baonguyen {color: red}
-												body p.demo {color: red}
+							.table-responsive
+								table.table.table-bordered.thead-inverse.table-striped
+									thead
+										tr
+											th HTML
+											th CSS
+											th Hiển thị
+									tbody
+										tr
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													[html]
+													*[body]
+													**[h1]Nội dung văn bản[/h1]
+													**[div class="demo"]Nội dung văn bản[/div]
+													**[p class="baonguyen"]Nội dung văn bản[/p]
+													**[p class="demo"]Nội dung văn bản[/p]
+													*[/body]
+													[/html]
+											td
+												pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													body {background: #5bc0def}
+													body h1 {color: #000}
+													body .demo {color: green}
+													body p.baonguyen {color: red}
+													body p.demo {color: red}
 
-										td
-											.box.bg-info
-												h1.den Nội dung văn bản
-												.xanh Nội dung văn bản
-												p.do.mb-0 Nội dung văn bản
-												p.do.mb-0 Nội dung văn bản
-									tr
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												[html]
-												*[body]
-												**[h1 id="title"]Nội dung văn bản[/h1]
-												**[div class="demo"]
-												***[p class="baonguyen"]Nội dung văn bản[/p]
-												***[p class="demo"]Nội dung văn bản[/p]
-												**[/div]
-												*[/body]
-												[/html]
-										td
-											pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												body {background: #5bc0def}
-												#title {color: #000}
-												.demo .baonguyen {color: xanh}
-												.demo .demo {color: red}
-
-										td
-											.box.bg-info
-												h1#title.den Nội dung văn bản
-												div
-													p.xanh.mb-0 Nội dung văn bản
+											td
+												.box.bg-info
+													h1.den Nội dung văn bản
+													.xanh Nội dung văn bản
 													p.do.mb-0 Nội dung văn bản
-									tr
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												[html]
-												*[body]
-												**[h1 id="title" class="red"]Nội dung văn bản[/h1]
-												**[p class="red underline"]Nội dung văn bản[/p]
-												*[/body]
-												[/html]
-										td
-											pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												.red {color: red}
-												.underline {text-decoration: underline;}
-												#title:hover {
-													*color: vang;
-													*text-decoration: underline;
-													*text-transform: uppercase
-												}
+													p.do.mb-0 Nội dung văn bản
+										tr
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													[html]
+													*[body]
+													**[h1 id="title"]Nội dung văn bản[/h1]
+													**[div class="demo"]
+													***[p class="baonguyen"]Nội dung văn bản[/p]
+													***[p class="demo"]Nội dung văn bản[/p]
+													**[/div]
+													*[/body]
+													[/html]
+											td
+												pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													body {background: #5bc0def}
+													#title {color: #000}
+													.demo .baonguyen {color: xanh}
+													.demo .demo {color: red}
 
-										td
-											.box
-												h1#title.do.ho Nội dung văn bản
-												p.do.underline Nội dung văn bản
+											td
+												.box.bg-info
+													h1#title.den Nội dung văn bản
+													div
+														p.xanh.mb-0 Nội dung văn bản
+														p.do.mb-0 Nội dung văn bản
+										tr
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													[html]
+													*[body]
+													**[h1 id="title" class="red"]Nội dung văn bản[/h1]
+													**[p class="red underline"]Nội dung văn bản[/p]
+													*[/body]
+													[/html]
+											td
+												pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													.red {color: red}
+													.underline {text-decoration: underline;}
+													#title:hover {
+														*color: vang;
+														*text-decoration: underline;
+														*text-transform: uppercase
+													}
+
+											td
+												.box
+													h1#title.do.ho Nội dung văn bản
+													p.do.underline Nội dung văn bản
 
 
 			.row

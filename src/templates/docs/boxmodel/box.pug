@@ -12,7 +12,7 @@ block css
 
 
 block body
-	section.m-5.demo-box
+	section.mt-5.demo-box
 		.container-fluid
 			.row
 				.col
@@ -22,17 +22,17 @@ block body
 						figure
 							img.img-thumbnail(src="/images/learn/boxmodel/padding.png", alt="alt")
 					.row
-						.col
+						.col-md-4
 							h5 Default
 							.box Box 1
-						.col
+						.col-md-4
 							h5 Padding all
 							.box.p-3.bg-primary.text-white Box 2
 							pre.mt-3.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
 								.box {
 									*padding: 1rem;
 								}
-						.col
+						.col-md-4
 							h5 Padding custom
 							.box.pt-1.pl-2.pr-3.pb-4.bg-primary.text-white Box 3
 							pre.mt-3.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
@@ -47,17 +47,17 @@ block body
 						figure
 							img.img-thumbnail(src="/images/learn/boxmodel/margin.png", alt="alt")
 					.row
-						.col
+						.col-md-4
 							h5 Default
 							.box Box 1
-						.col
+						.col-md-4
 							h5 Margin all
 							.box.m-5.bg-primary.text-white Box 2
 							pre.mt-3.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
 								.box {
 									*margin: 3rem 3rem;
 								}
-						.col
+						.col-md-4
 							h5 Margin custom
 							.box.mt-5.mr-3.mb-4.bg-primary.text-white Box 3
 							pre.mt-3.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
@@ -72,7 +72,7 @@ block body
 						figure
 							img.img-thumbnail(src="/images/learn/boxmodel/border.png", alt="alt")
 					.row
-						.col
+						.col-md-4
 							h5 Border all: 1px solid
 							.box.border Box 1
 							pre.mt-3.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
@@ -81,7 +81,7 @@ block body
 									*border-color: #ff0000;
 									*border-style: solid;
 								}
-						.col
+						.col-md-4
 							h5 Border custom
 							.box.border-2 Box 2
 							pre.mt-3.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
@@ -89,7 +89,7 @@ block body
 									*border-top: 1px solid #ff0000;
 									*border-right: 3px solid #0000ff;
 								}
-						.col
+						.col-md-4
 							h5 Border custom
 							.box.border-3 Box 3
 							pre.mt-3.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
@@ -107,7 +107,7 @@ block body
 						figure
 							img.img-thumbnail(src="/images/learn/boxmodel/border-radius.png", alt="alt")
 					.row
-						.col
+						.col-md-4
 							h5 Border-radius all: 10px
 							.box.border-r Box 1
 							pre.mt-3.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
@@ -115,7 +115,7 @@ block body
 									*border: 1px solid #ff0000;
 									*border-radius: 10px;
 								}
-						.col
+						.col-md-4
 							h5 Border-radius custom
 							.box.border-r-2 Box 2
 							pre.mt-3.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
@@ -126,7 +126,7 @@ block body
 									*border-bottom-right-radius: 30px;
 									*border-bottom-left-radius: 5px;
 								}
-						.col
+						.col-md-4
 							h5 Border-radius custom
 							.box.border-r-3 Box 3
 							pre.mt-3.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
@@ -136,7 +136,7 @@ block body
 									*width: 100px;
 									*height: 100px;
 								}
-						.col
+						.col-md-4
 							h5 Border-radius custom
 							.box.border-r-4 Box 4
 							pre.mt-3.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
@@ -154,21 +154,21 @@ block body
 						figure
 							img.img-thumbnail(src="/images/learn/boxmodel/shadow.png", alt="alt")
 					.row
-						.col
+						.col-md-4
 							h5 Box Shadow:
 							.box.box-shadow Box 1
 							pre.mt-5.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
 								.box {
 									*box-shadow: 3px 7px 0px 0px #ff0000;
 								}
-						.col
+						.col-md-4
 							h5 Box Shadow custom
 							.box.box-shadow-2 Box 2
 							pre.mt-5.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
 								.box {
 									*box-shadow: 0px 0px 30px 0px #ff0000;
 								}
-						.col
+						.col-md-4
 							h5 Box Shadow custom
 							.box.box-shadow-3 Box 3
 							pre.mt-5.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.

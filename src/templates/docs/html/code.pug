@@ -59,369 +59,373 @@ block body
 								<tagname>Content</tagname>
 					.row
 						.col
-							table.table.table-responsive.table-bordered.thead-inverse.table-striped
-								thead
-									tr
-										th Mở tag
-										th Nội dung
-										th Đóng tag
-										th CODE
-										th Hiển thị
-								tbody
-									tr
-										td &#x3C;h1&#x3E;
-										td Tiêu đề trang
-										td &#x3C;/h1&#x3E;
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<h1>Tiêu đề trang</h1>
-												...
-												<h6>Tiêu đề trang</h6>
-										td
-											h1 Tiêu đề trang
-											h6.mb-0 Tiêu đề trang
+							.table-responsive
+								table.table.table-bordered.thead-inverse.table-striped
+									thead
+										tr
+											th Mở tag
+											th Nội dung
+											th Đóng tag
+											th CODE
+											th Hiển thị
+									tbody
+										tr
+											td &#x3C;h1&#x3E;
+											td Tiêu đề trang
+											td &#x3C;/h1&#x3E;
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<h1>Tiêu đề trang</h1>
+													...
+													<h6>Tiêu đề trang</h6>
+											td
+												h1 Tiêu đề trang
+												h6.mb-0 Tiêu đề trang
 
-									tr
-										td &#x3C;p&#x3E;
-										td Nội dung bài viết&#x3C;br&#x3E;Nội dung bài viết
-										td &#x3C;/p&#x3E;
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<p>Nội dung bài viết<br>Nội dung bài viết</p>
-										td
-											p.mb-0 Nội dung bài viết
+										tr
+											td &#x3C;p&#x3E;
+											td Nội dung bài viết&#x3C;br&#x3E;Nội dung bài viết
+											td &#x3C;/p&#x3E;
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<p>Nội dung bài viết<br>Nội dung bài viết</p>
+											td
+												p.mb-0 Nội dung bài viết
+													br
+													| Nội dung bài viết
+										tr
+											td &#x3C;b&#x3E;
+											td Nội dung bài viết
+											td &#x3C;/b&#x3E;
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<p><b>Nội dung bài viết</b></p>
+													<p><strong>Nội dung bài viết</strong></p>
+											td
+												p.mb-0
+													b Nội dung bài viết
+												p.mb-0
+													strong Nội dung bài viết
+										tr
+											td &#x3C;i&#x3E;
+											td Nội dung bài viết
+											td &#x3C;/i&#x3E;
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<p><i>Nội dung bài viết</i></p>
+													<p><em>Nội dung bài viết</em></p>
+											td
+												p.mb-0
+													i Nội dung bài viết
+												p.mb-0
+													em Nội dung bài viết
+										tr
+											td &#x3C;u&#x3E;
+											td Nội dung bài viết
+											td &#x3C;/u&#x3E;
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<p><u>Nội dung bài viết</u></p>
+											td
+												p.mb-0
+													u Nội dung bài viết
+										tr
+											td &#x3C;s&#x3E;
+											td Nội dung bài viết
+											td &#x3C;/s&#x3E;
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<p><s>Nội dung bài viết</s></p>
+													<p><del>Nội dung bài viết</del></p>
+											td
+												p.mb-0
+													s Nội dung bài viết
+												p.mb-0
+													del Nội dung bài viết
+										tr
+											td &#x3C;sub&#x3E;
+											td Nội dung bài viết
+											td &#x3C;/sub&#x3E;
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<p>Nội dung<sub>bài viết</sub></p>
+													<p>Nội dung<sup>bài viết</sup></p>
+											td
+												p.mb-0
+													| Nội dung
+													sub bài viết
+												p.mb-0
+													| Nội dung
+													sup bài viết
+										tr
+											td &#x3C;ul&#x3E;
+											td &#x3C;li&#x3E;Menu 1&#x3C;/ul&#x3E;
 												br
-												| Nội dung bài viết
-									tr
-										td &#x3C;b&#x3E;
-										td Nội dung bài viết
-										td &#x3C;/b&#x3E;
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<p><b>Nội dung bài viết</b></p>
-												<p><strong>Nội dung bài viết</strong></p>
-										td
-											p.mb-0
-												b Nội dung bài viết
-											p.mb-0
-												strong Nội dung bài viết
-									tr
-										td &#x3C;i&#x3E;
-										td Nội dung bài viết
-										td &#x3C;/i&#x3E;
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<p><i>Nội dung bài viết</i></p>
-												<p><em>Nội dung bài viết</em></p>
-										td
-											p.mb-0
-												i Nội dung bài viết
-											p.mb-0
-												em Nội dung bài viết
-									tr
-										td &#x3C;u&#x3E;
-										td Nội dung bài viết
-										td &#x3C;/u&#x3E;
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<p><u>Nội dung bài viết</u></p>
-										td
-											p.mb-0
-												u Nội dung bài viết
-									tr
-										td &#x3C;s&#x3E;
-										td Nội dung bài viết
-										td &#x3C;/s&#x3E;
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<p><s>Nội dung bài viết</s></p>
-												<p><del>Nội dung bài viết</del></p>
-										td
-											p.mb-0
-												s Nội dung bài viết
-											p.mb-0
-												del Nội dung bài viết
-									tr
-										td &#x3C;sub&#x3E;
-										td Nội dung bài viết
-										td &#x3C;/sub&#x3E;
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<p>Nội dung<sub>bài viết</sub></p>
-												<p>Nội dung<sup>bài viết</sup></p>
-										td
-											p.mb-0
-												| Nội dung
-												sub bài viết
-											p.mb-0
-												| Nội dung
-												sup bài viết
-									tr
-										td &#x3C;ul&#x3E;
-										td &#x3C;li&#x3E;Menu 1&#x3C;/ul&#x3E;
-											br
-											| &#x3C;li&#x3E;Menu 2&#x3C;/ul&#x3E;
-										td &#x3C;/ul&#x3E;
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<ul>
-												*<li>Menu 1</li>
-												*<li>Menu 2</li>
-												</ul>
-										td
-											ul
-												li Menu 1
-												li Menu 2
-									tr
-										td &#x3C;ol&#x3E;
-										td &#x3C;li&#x3E;Menu 1&#x3C;/ol&#x3E;
-											br
-											| &#x3C;li&#x3E;Menu 2&#x3C;/ol&#x3E;
-										td &#x3C;/ol&#x3E;
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<ol>
-												*<li>Menu 1</li>
-												*<li>Menu 2</li>
-												</ol>
-										td
-											ol
-												li Menu 1
-												li Menu 2
+												| &#x3C;li&#x3E;Menu 2&#x3C;/ul&#x3E;
+											td &#x3C;/ul&#x3E;
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<ul>
+													*<li>Menu 1</li>
+													*<li>Menu 2</li>
+													</ul>
+											td
+												ul
+													li Menu 1
+													li Menu 2
+										tr
+											td &#x3C;ol&#x3E;
+											td &#x3C;li&#x3E;Menu 1&#x3C;/ol&#x3E;
+												br
+												| &#x3C;li&#x3E;Menu 2&#x3C;/ol&#x3E;
+											td &#x3C;/ol&#x3E;
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<ol>
+													*<li>Menu 1</li>
+													*<li>Menu 2</li>
+													</ol>
+											td
+												ol
+													li Menu 1
+													li Menu 2
 
 
-					p.mt-5.text-lg.text-primary.text-bold 2) Attribute
-					.row
-						.col
-							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
-								<tagname attribute="abc">Content</tagname>
-					.row
-						.col
-							table.table.table-responsive.table-bordered.thead-inverse.table-striped
-								thead
-									tr
-										th Mở tag
-										th Nội dung
-										th Đóng tag
-										th CODE
-										th VALUE
-										th Hiển thị
-								tbody
-									tr
-										td &#x3C;a&#x3E;
-										td Liên kết
-										td &#x3C;/a&#x3E;
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<a href="https://google.com" target="_blank">Liên kết</a>
-										td
-											p.mb-0
-												code href
-												br
-												| Đường dẫn liên kết
-											p.mb-0
-												code target
-												br
-												| _blank: Mở trong một cửa sổ hoặc tab mới
-												br
-												| _parent: Mở trong khung cha
-												br
-												| _top: Mở trong toàn bộ phần của cửa sổ
-										td
-											p.mb-0
-												a(href="#") Liên kết
-									tr
-										td &#x3C;div&#x3E;
-										td Liên kết
-										td &#x3C;/div&#x3E;
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<div id="baonguyen" class="class-demo">Nội dung văn bản</div>
-										td
-											p.mb-0
-												code id
-												br
-												| Là duy nhất
-											p.mb-0
-												code class
-												br
-												| Gọi hàm css định dạng văn bản
+						p.mt-5.text-lg.text-primary.text-bold 2) Attribute
+						.row
+							.col
+								pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+									<tagname attribute="abc">Content</tagname>
+						.row
+							.col
+								.table-responsive
+								table.table.table-bordered.thead-inverse.table-striped
+									thead
+										tr
+											th Mở tag
+											th Nội dung
+											th Đóng tag
+											th CODE
+											th VALUE
+											th Hiển thị
+									tbody
+										tr
+											td &#x3C;a&#x3E;
+											td Liên kết
+											td &#x3C;/a&#x3E;
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<a href="https://google.com" target="_blank">Liên kết</a>
+											td
+												p.mb-0
+													code href
+													br
+													| Đường dẫn liên kết
+												p.mb-0
+													code target
+													br
+													| _blank: Mở trong một cửa sổ hoặc tab mới
+													br
+													| _parent: Mở trong khung cha
+													br
+													| _top: Mở trong toàn bộ phần của cửa sổ
+											td
+												p.mb-0
+													a(href="#") Liên kết
+										tr
+											td &#x3C;div&#x3E;
+											td Liên kết
+											td &#x3C;/div&#x3E;
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<div id="baonguyen" class="class-demo">Nội dung văn bản</div>
+											td
+												p.mb-0
+													code id
+													br
+													| Là duy nhất
+												p.mb-0
+													code class
+													br
+													| Gọi hàm css định dạng văn bản
 
-										td
-											#baonguyen.class-demo Nội dung văn bản
-									tr
-										td &#x3C;img&#x3E;
-										td Hình ảnh
-										td.text-danger Không có
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<p>
-												*<img src="http://google.com/logo.png">
-												</p>
-												<figure>
-												*<img src="/images/logo.png" alt="LOGO">
-												</figure>
-										td
-											p.mb-0
-												code src
-												br
-												| Đường dẫn của ảnh
-											p.mb-0
-												code alt
-												br
-												| Đặt tên cho ảnh
+											td
+												#baonguyen.class-demo Nội dung văn bản
+										tr
+											td &#x3C;img&#x3E;
+											td Hình ảnh
+											td.text-danger Không có
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<p>
+													*<img src="http://google.com/logo.png">
+													</p>
+													<figure>
+													*<img src="/images/logo.png" alt="LOGO">
+													</figure>
+											td
+												p.mb-0
+													code src
+													br
+													| Đường dẫn của ảnh
+												p.mb-0
+													code alt
+													br
+													| Đặt tên cho ảnh
 
-										td
-											p.mb-0
-												img.img-thumbnail(src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/220px-Google_2015_logo.svg.png", style="width:120px")
-											figure.mb-0
-												img.img-thumbnail(src="/images/sample_icon.png")
+											td
+												p.mb-0
+													img.img-thumbnail(src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/220px-Google_2015_logo.svg.png", style="width:120px")
+												figure.mb-0
+													img.img-thumbnail(src="/images/sample_icon.png")
 
 
 					p.mt-5.text-lg.text-primary.text-bold 3) Requirements
 					.row
 						.col
-							table.table.table-responsive.table-bordered.thead-inverse.table-striped
-								thead
-									tr
-										th TAG
-										th Require
-										th Parents
-										th CODE
-								tbody
-									tr
-										td &#x3C;a&#x3E;
-										td
-											code href
-										td
-											| &#x3C;div&#x3E;
-											br
-											| &#x3C;p&#x3E;
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<div>
-													*<a href="https://google.com">Liên kết</a>
-												</div>
-									tr
-										td
-											| &#x3C;b&#x3E;, &#x3C;strong&#x3E;, &#x3C;em&#x3E;, &#x3C;sub&#x3E;, &#x3C;sup&#x3E;,
-											br
-											| &#x3C;pre&#x3E;, &#x3C;code&#x3E;, &#x3C;i&#x3E;, &#x3C;u&#x3E;, &#x3C;br&#x3E;, &#x3C;span&#x3E;, &#x3C;del&#x3E; ...
-										td
-											code Không có
-										td
-											| &#x3C;div&#x3E;
-											br
-											| &#x3C;p&#x3E;
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<p>
-													*<strong>Nội dung văn bản</strong>
-												</p>
-									tr
-										td
-											| &#x3C;img&#x3E;
-										td
-											code src
-											| ,
-											code alt
-										td
-											| &#x3C;div&#x3E;
-											br
-											| &#x3C;p&#x3E;
-											br
-											| &#x3C;figure&#x3E;
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<figure>
-													*<img src="image.png", alt="">
-												</figure>
-									tr
-										td
-											| &#x3C;li&#x3E;
-										td
-											code Không có
-										td
-											| &#x3C;ul&#x3E;
-											br
-											| &#x3C;ol&#x3E;
+							.table-responsive
+								table.table.table-bordered.thead-inverse.table-striped
+									thead
+										tr
+											th TAG
+											th Require
+											th Parents
+											th CODE
+									tbody
+										tr
+											td &#x3C;a&#x3E;
+											td
+												code href
+											td
+												| &#x3C;div&#x3E;
+												br
+												| &#x3C;p&#x3E;
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<div>
+														*<a href="https://google.com">Liên kết</a>
+													</div>
+										tr
+											td
+												| &#x3C;b&#x3E;, &#x3C;strong&#x3E;, &#x3C;em&#x3E;, &#x3C;sub&#x3E;, &#x3C;sup&#x3E;,
+												br
+												| &#x3C;pre&#x3E;, &#x3C;code&#x3E;, &#x3C;i&#x3E;, &#x3C;u&#x3E;, &#x3C;br&#x3E;, &#x3C;span&#x3E;, &#x3C;del&#x3E; ...
+											td
+												code Không có
+											td
+												| &#x3C;div&#x3E;
+												br
+												| &#x3C;p&#x3E;
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<p>
+														*<strong>Nội dung văn bản</strong>
+													</p>
+										tr
+											td
+												| &#x3C;img&#x3E;
+											td
+												code src
+												| ,
+												code alt
+											td
+												| &#x3C;div&#x3E;
+												br
+												| &#x3C;p&#x3E;
+												br
+												| &#x3C;figure&#x3E;
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<figure>
+														*<img src="image.png", alt="">
+													</figure>
+										tr
+											td
+												| &#x3C;li&#x3E;
+											td
+												code Không có
+											td
+												| &#x3C;ul&#x3E;
+												br
+												| &#x3C;ol&#x3E;
 
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<ul>
-													*<li> Menu 1</li>
-													*<li> Menu 2</li>
-												</ul>
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<ul>
+														*<li> Menu 1</li>
+														*<li> Menu 2</li>
+													</ul>
 					p.mt-5.text-lg.text-primary.text-bold 4) Tag Type
 					.row
 						.col
-							table.table.table-responsive.table-bordered.thead-inverse.table-striped
-								thead
-									tr
-										th Type
-										th TAGS
-										th Wrong
-								tbody
-									tr
-										td Tag về định dạng văn bản
-										td
-											p.mb-0
-												| Tag mềm: span, a, small, strong, b, u, i, sub, sup...
-												br
-												| Tag cứng: div, p, h1, h2, h3, h4, h5, h6, hr...
-											p.mb-0 Trong đó
-											ul.mb-0
-												li Tag div: có độ ưu tiên cao nhất
-												li Tag h1 > h6, hr: ko nên có tag con
-												li Tag p: nên có tag con là tag mềm
-										td.bg-warning
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												[p]
-													*<div>Nội dung văn bản</div>
-												[/p]
-									tr
-										td Tag về hình ảnh
-										td
-											p.mb-0
-												| img, figure, figcaption
-										td.bg-warning
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												[img src="image.png"]
-													*<figure>Nội dung văn bản</figure>
-												[/img]
-									tr
-										td Tag về hiển thị dữ liệu
-										td
-											p.mb-0
-												| dl, dt, dd, ol, ul, li...
-										td.bg-warning
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												[div]
-													*<li>Nội dung văn bản</li>
-												[/div]
-									tr
-										td Tag về bảng
-										td
-											p.mb-0
-												| table, caption, tbody, tfoot, thead, tr, th, td...
-										td.bg-warning
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												[table]
-													*[thead]Nội dung văn bản[/thead]
-													*[tbody]
-													**[td]Nội dung văn bản[/td]
-													*[/tbody]
-												[/table]
-									tr
-										td Tag về bố cục (layout)
-										td
-											p.mb-0
-												| article, section, details, footer, header, hgroup, menu, nav, summary, time, mark...
-										td.bg-warning
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												[header]
-													*<footer>Nội dung văn bản</footer>
-												[/header]
+							.table-responsive
+								table.table.table-bordered.thead-inverse.table-striped
+									thead
+										tr
+											th Type
+											th TAGS
+											th Wrong
+									tbody
+										tr
+											td Tag về định dạng văn bản
+											td
+												p.mb-0
+													| Tag mềm: span, a, small, strong, b, u, i, sub, sup...
+													br
+													| Tag cứng: div, p, h1, h2, h3, h4, h5, h6, hr...
+												p.mb-0 Trong đó
+												ul.mb-0
+													li Tag div: có độ ưu tiên cao nhất
+													li Tag h1 > h6, hr: ko nên có tag con
+													li Tag p: nên có tag con là tag mềm
+											td.bg-warning
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													[p]
+														*<div>Nội dung văn bản</div>
+													[/p]
+										tr
+											td Tag về hình ảnh
+											td
+												p.mb-0
+													| img, figure, figcaption
+											td.bg-warning
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													[img src="image.png"]
+														*<figure>Nội dung văn bản</figure>
+													[/img]
+										tr
+											td Tag về hiển thị dữ liệu
+											td
+												p.mb-0
+													| dl, dt, dd, ol, ul, li...
+											td.bg-warning
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													[div]
+														*<li>Nội dung văn bản</li>
+													[/div]
+										tr
+											td Tag về bảng
+											td
+												p.mb-0
+													| table, caption, tbody, tfoot, thead, tr, th, td...
+											td.bg-warning
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													[table]
+														*[thead]Nội dung văn bản[/thead]
+														*[tbody]
+														**[td]Nội dung văn bản[/td]
+														*[/tbody]
+													[/table]
+										tr
+											td Tag về bố cục (layout)
+											td
+												p.mb-0
+													| article, section, details, footer, header, hgroup, menu, nav, summary, time, mark...
+											td.bg-warning
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													[header]
+														*<footer>Nội dung văn bản</footer>
+													[/header]
 					p.mt-5.text-lg.text-primary.text-bold 5) HTML Tag list
 					.row
 						.col

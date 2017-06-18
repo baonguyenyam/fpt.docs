@@ -20,7 +20,7 @@ block body
 					hr
 
 			.row
-				.col
+				.col-md-4
 					pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
 						<div class="demo">
 							*<div class="demo-child">
@@ -30,7 +30,7 @@ block body
 								**<div class="box-d">D</div>
 							*</div>
 						</div>
-				.col
+				.col-md-4
 					pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
 						.demo {
 							*background: cyan;
@@ -53,7 +53,7 @@ block body
 						.demo .demo-child .box-b { background-color:yellow }
 						.demo .demo-child .box-c { background-color:red }
 						.demo .demo-child .box-d { background-color:blue }
-				.col
+				.col-md-4
 					.demo
 						.demo-child
 							.box-a A
@@ -61,14 +61,14 @@ block body
 							.box-c C
 							.box-d D
 			.row.mt-5
-				.col
+				.col-md-4.mb-3
 					.demo
 						.demo-child
 							.box-a A
 							.box-b B
 							.box-c C
 							.box-d D
-				.col
+				.col-md-4
 					pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
 						.demo { }
 						.demo .demo-child {
@@ -99,7 +99,7 @@ block body
 							*top: -20px
 							*right: -10px
 						}
-				.col
+				.col-md-4
 					.demo
 						.demo-child.demo-1
 							.box-a.demo-1 A
@@ -107,7 +107,7 @@ block body
 							.box-c.demo-1 C
 							.box-d.demo-1 D
 			.row.mt-5
-				.col
+				.col-md-4.mb-3
 					.demo
 						.demo-child.demo-1
 							.box-a.demo-1 A
@@ -115,7 +115,7 @@ block body
 							.box-c.demo-1 C
 							.box-d.demo-1 D
 
-				.col
+				.col-md-4
 					pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
 						.demo .demo-child .box-b {
 							*...
@@ -125,7 +125,7 @@ block body
 							*...
 							*z-index:1
 						}
-				.col
+				.col-md-4
 					.demo
 						.demo-child.demo-1
 							.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsum eos a nesciunt aperiam vitae repellat pariatur fugit earum error, dolorem, nisi magni inventore! Tempora ipsum repudiandae fugit eaque est.
@@ -134,7 +134,7 @@ block body
 							.box-c.demo-1.z-1 C
 							.box-d.demo-1 D
 			.row.mt-5
-				.col
+				.col-md-4.mb-3
 					.demo
 						.demo-child.demo-1
 							.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsum eos a nesciunt aperiam vitae repellat pariatur fugit earum error, dolorem, nisi magni inventore! Tempora ipsum repudiandae fugit eaque est.
@@ -143,7 +143,7 @@ block body
 							.box-c.demo-1.z-1 C
 							.box-d.demo-1 D
 
-				.col
+				.col-md-4
 					pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
 						.demo {
 							*position: relative
@@ -152,7 +152,7 @@ block body
 							*...
 							*position: initial
 						}
-				.col
+				.col-md-4
 					.demo.demo-2
 						.demo-child.demo-2
 							.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsum eos a nesciunt aperiam vitae repellat pariatur fugit earum error, dolorem, nisi magni inventore! Tempora ipsum repudiandae fugit eaque est.
@@ -162,45 +162,46 @@ block body
 							.box-d.demo-1 D
 
 			.row.mt-5
-				.col.p-4
+				.col.mt-4
 					h1.mt-6#sec1 Positioning content
 					hr
 
 			.row
 				.col
-					table.table.table-responsive.table-bordered.thead-inverse.table-striped
-						thead
-							tr
-								th Giá trị
-								th CODE
-								th Mô tả
-						tbody
-							tr
-								td static
-								td position: static;
-								td Thành phần sẽ nằm theo thứ tự trong văn bản, đây là dạng mặc định.
-							tr
-								td initial
-								td position: initial;
-								td Đặt lại giá trị trước đó về mặc định
-							tr
-								td relative
-								td position: relative;
-								td Định vị trí tuyệt đối cho thành phần.
-							tr
-								td absolute
-								td position: absolute;
-								td Định vị trí tuyệt đối cho thành phần theo thành phần bao ngoài (thành phần định vị trí tương đối position: relative;) hoặc theo cửa sổ trình duyệt.
+					.table-responsive
+						table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Giá trị
+									th CODE
+									th Mô tả
+							tbody
+								tr
+									td static
+									td position: static;
+									td Thành phần sẽ nằm theo thứ tự trong văn bản, đây là dạng mặc định.
+								tr
+									td initial
+									td position: initial;
+									td Đặt lại giá trị trước đó về mặc định
+								tr
+									td relative
+									td position: relative;
+									td Định vị trí tuyệt đối cho thành phần.
+								tr
+									td absolute
+									td position: absolute;
+									td Định vị trí tuyệt đối cho thành phần theo thành phần bao ngoài (thành phần định vị trí tương đối position: relative;) hoặc theo cửa sổ trình duyệt.
 
-							tr
-								td fixed
-								td position: fixed;
-								td Định vị trí tương đối cho thành phần theo cửa sổ trình duyệt. Xem nút 'back to top'
+								tr
+									td fixed
+									td position: fixed;
+									td Định vị trí tương đối cho thành phần theo cửa sổ trình duyệt. Xem nút 'back to top'
 
-							tr
-								td inherit
-								td position: inherit;
-								td Xác định thừa hưởng thuộc tính từ thành phần cha (thành phần bao ngoài).
+								tr
+									td inherit
+									td position: inherit;
+									td Xác định thừa hưởng thuộc tính từ thành phần cha (thành phần bao ngoài).
 
 
 

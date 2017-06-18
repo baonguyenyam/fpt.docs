@@ -19,22 +19,21 @@ block body
 				.col.p-4
 					h1.mt-6#sec1 Bắt đầu
 					hr
-
-			.row
-				.col-4
 					figure
 						img.img-thumbnail(src="/images/learn/css/css.gif", alt="")
 					p Property: phải thuộc
 					p Value: phải thuộc hoặc người coder phải gán
+
+			.row
 				.col
 					h5.text-danger Selector
 					hr
 					.row
-						.col
+						.col-md-6
 							h6.text-primary By ID
 							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
 								<div id="demo">Text</div>
-						.col
+						.col-md-6
 							h6.text-primary  By ID
 							pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
 								#demo {
@@ -43,13 +42,13 @@ block body
 					p
 						a(href="https://jsfiddle.net/bo3rxfhb/", target="_blank") https://jsfiddle.net/bo3rxfhb/
 					.row
-						.col
+						.col-md-6
 							h6.text-primary By Class
 							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
 								<div class="demo">
 								*<p class="title title-xanh">Text</p>
 								</div>
-						.col
+						.col-md-6
 							h6.text-primary  By Class
 							pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
 								.demo .title.title-xanh {
@@ -60,13 +59,13 @@ block body
 					p
 						a(href="https://jsfiddle.net/bo3rxfhb/3/", target="_blank") https://jsfiddle.net/bo3rxfhb/3/
 					.row
-						.col
+						.col-md-6
 							h6.text-primary By Attributes
 							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
 								<div class="demo-1">Text</div>
 								<div class="demo-2">Text</div>
 								<div class="demo">Text</div>
-						.col
+						.col-md-6
 							h6.text-primary  By Attributes
 							pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
 								div[class^="col-"] {
@@ -75,14 +74,14 @@ block body
 					p
 						a(href="https://jsfiddle.net/bo3rxfhb/1/", target="_blank") https://jsfiddle.net/bo3rxfhb/1/
 					.row
-						.col
+						.col-md-6
 							h6.text-primary By other
 							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
 								<div class="lists">
 									*<div class="item">Item 01</div>
 									*<div class="item">Item 02</div>
 								</div>
-						.col
+						.col-md-6
 							h6.text-primary  By other
 							pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
 								.lists .item:last-child {
