@@ -187,6 +187,7 @@ block body
 							h5 Thêm bộ chọn về các phần tử theo cấu trúc cây
 
 							p Chúng ta đã quen với pseudo-class :nth-child giúp chúng ta chọn phần tử theo thứ tự hay một quy tắc nào đó. Ví dụ nếu muốn chọn các phần tử có thứ tự là chắn chúng ta có nth-child(even) nếu bây giờ chúng ta muốn chọn các phần tử là chẵn nhưng có tên class là .active thì sao. Để tăng khả năng chọn phần tử ở phiên bản tiếp theo của CSS chúng ta sẽ có pseudo-class :nth-math và nth-last-math. ví dụ:
+							p :nth-last-math cũng tương tự như :nth-math nhưng nó sẽ bắt đầu theo thứ tự từ dưới lên. Hiện tại chưa có trình duyệt nào hỗ trợ những pseudo-class này.
 
 
 						.col-md-7
@@ -204,3 +205,81 @@ block body
 										p:nth-match(2n+1 of .active, .visible, .current) {
 											*color: red;
 										}
+					hr
+					.row
+						.col-md-5.mb-3
+							h5 Thêm bộ chọn với cấu trúc dạng table
+
+							p Mặc dù vẫn có các cách chọn các cột trong table với các selector theo cấu trúc cây DOM nhưng để thêm trực quan và ngắn gọn đồng thời nâng cao tính hữu dụng của table thì css4 sẽ có thêm một số pseudo-class mới, ví dụ:
+
+
+						.col-md-7
+							.row
+								.col-md-6
+									h6.text-primary CSS3
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										Không có
+								.col-md-6
+									h6.text-primary CSS4
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										:column(.highlight) {
+											*background-color: yellow;
+										}
+										:nth-column(2n+1) {
+											*background-color: gray;
+										}
+										:nth-last-column(3n+1) {
+											*background-color: green;
+										}
+					hr
+					.row
+						.col-md-5.mb-3
+							h5 Chọn phần tử cha
+
+
+							p Chúng ta vẫn đang thắc mắc làm sao để chọn phần tử tổ tiên của một phần tử với CSS, chúng ta không muốn thực hiện điều này bằng javaScript và một trong những điều mong đợi nhất này trong phiên bản tiếp theo của CSS sẽ có. Ví dụ:
+							p Ví dụ bên phần từ được định kiểu với CSS là body bởi dấu "!". Thật quá hữu dụng với cách chọn này. Hiện tại chưa có trình duyệt nào hỗ trợ cách chọn này nhưng chúng ta tin rằng các trình duyệt sẽ mau chóng được cập nhật khi CSS4 được chính thức công bố.
+
+
+						.col-md-7
+							.row
+								.col-md-6
+									h6.text-primary CSS3
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										Không có
+								.col-md-6
+									h6.text-primary CSS4
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										body! header a.styleSwitcher:hover {
+											*background-color: green;
+										}
+					hr
+					.row
+						.col-md-5.mb-3
+							h5 Chọn phần tử trong form với trường yêu cầu bắt buộc và không bắt buộc
+
+							p Với form HTML5 chúng ta có thuộc tính required="required" để yêu cầu người dùng phải nhập những trường cần thiết và để định kiểu cho những trường yêu cầu bắt buộc hoặc không bắt buộc sẽ có 2 pseudo-class mới là :required và :optional. Ví dụ
+							p Còn rất nhiều thứ nữa ở phiên bản css4 tiếp theo mọi thứ vẫn được tiến hành và đây mới chỉ là những bản thảo, chúng ta còn có các cải tiến css về text, về images, về background... chúng ta sẽ cùng chờ đợi. Có một điều chúng ta thấy rằng CSS ngày càng cải tiến thì nó càng có tác động mạnh mẽ đến giao diện người dùng trên web hơn, ngày càng ít phải dùng tới javaScript ở những chức năng đơn giản hơn, ngày càng ít phải sử dụng hình ảnh làm giao diện hơn và ngày càng ít phải dùng class name hơn kết hợp với những cải tiến ở ngôn ngữ đánh dấu HTML.
+
+
+						.col-md-7
+							.row
+								.col-md-6
+									h6.text-primary CSS3
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										Không có
+								.col-md-6
+									h6.text-primary CSS4
+									pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+										<style>
+											*:required {
+												**border: 1px solid red;
+											*}
+											*:optional {
+												**border: 1px solid gray;
+											*}
+										</style>
+										<form method="get">
+											*<input type="text" required="required" />
+											*<input type="text" />
+										</form>

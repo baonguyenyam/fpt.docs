@@ -1,6 +1,6 @@
 footer.footer
 	.container
-		.row
+		//- .row
 			.col.linkfooter
 				.row
 					.col-sm-4.col-md-3
@@ -42,8 +42,9 @@ footer.footer
 										a(href=val.URL, target='_blank')
 											i.fa(class=val.Icon, ga-action-click='', data-value=val.Name, data-label=val.Name, data-action=val.Name)
 
-	.container-fluid
+	//- .container-fluid
 		.row
 			.col.copyright.text-center
-				p.m-b-0 Copyright 2017 by 
-					a(href='/') baonguyenyam.
+				p.m-b-0
+					| Copyright 2017 by
+					a(href='http://baonguyenyam.github.io/', target="_blank") baonguyenyam.
