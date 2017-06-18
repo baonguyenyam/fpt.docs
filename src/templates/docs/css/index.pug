@@ -1,0 +1,113 @@
+extends ../../_layout/layout
+
+block variables
+	- var title = 'CSS'
+	- var description = 'Description for home page'
+	- var bodyclass = 'css'
+	- var selected = 'CSS';
+	- var href = '';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+
+block body
+	section.demo-css
+		.container-fluid
+
+			.row
+				.col.p-4
+					h1.mt-6#sec1 Khái niệm
+					hr
+					p.lead.text-shadown.text-danger.text-bold CSS: Cascading Style Sheets
+					p CSS là chữ viết tắt của Cascading Style Sheets, nó là một ngôn ngữ được sử dụng để tìm và định dạng lại các phần tử được tạo ra bởi các ngôn ngữ đánh dấu (ví dụ như HTML).
+
+			.row
+				.col
+					h5 Code
+					pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+						<div class="hello">
+							*<h1>Lorem ipsum dolor sit amet</h1>
+							*<p class="quick"><strong>consectetur</strong> adipisicing elit.</p>
+							*<figure><img src="/images/sample_icon.png" alt=""></figure>
+							*<p><a href="#">Maxime beatae</a>, voluptatibus eum dolor neque accusamus exercitationem perferendis aperiam odit eos, dignissimos distinctio repudiandae ab blanditiis! Alias, magnam, dignissimos distinctio repudiandae ab blanditiis! Alias, magnam.</p>
+						</div>
+				.col
+					h5 Un-Styled
+					.hello-none
+						h1 Lorem ipsum dolor sit amet
+						p.quick
+							strong consectetur
+							|  adipisicing elit.
+						figure
+							img(src="/images/sample_icon.png", alt="")
+						p
+							a(href="#") Maxime beatae
+							| , voluptatibus eum dolor neque accusamus exercitationem perferendis aperiam odit eos, dignissimos distinctio repudiandae ab blanditiis! Alias, magnam, dignissimos distinctio repudiandae ab blanditiis! Alias, magnam.
+				.col
+					h5 Styled
+					.hello
+						h1 Lorem ipsum dolor sit amet
+						p.quick
+							strong consectetur
+							|  adipisicing elit.
+						figure
+							img(src="/images/sample_icon.png", alt="")
+						p.mb-0
+							a(href="#") Maxime beatae
+							| , voluptatibus eum dolor neque accusamus exercitationem perferendis aperiam odit eos, dignissimos distinctio repudiandae ab blanditiis! Alias, magnam, dignissimos distinctio repudiandae ab blanditiis! Alias, magnam.
+					pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.mt-3.
+						.hello {
+						*background: #fff;
+						*border-radius: 3px;
+						*border-left: 3px solid #ff0000;
+						*padding: 10px;
+						}
+
+						.hello:hover {
+						*border-left: 3px solid #0000ff;
+						}
+
+						.hello h1 {
+						*font-size: 1.2rem;
+						*color: #ff0000;
+						}
+
+						.hello .quick {
+						*color: #b3b2b2;
+						*text-align: right;
+						*border-bottom: 1px solid #807f7f;
+						*background: #fff000;
+						*padding-top: 0;
+						*padding-right: 0.5rem;
+						*padding-bottom: 0;
+						*padding-left: 0.5rem;
+						*text-transform: capitalize;
+						}
+
+						.hello figure {
+						*float: left;
+						*margin-right: 5px;
+						*margin-bottom: 2px;
+						}
+
+						.hello figure img {
+						*max-width: 34px;
+						}
+
+						.hello a:hover {
+						*color: #ff0000;
+						}
+
+						.hello p {
+						*line-height: 1.3rem;
+						}
+
+						.hello p:last-child {
+						*text-align: justify;
+						}
+
+			.row
+				.col.p-4
+					p
+						a.btn.btn-xs.btn-primary(href="/docs/css/layout.html") Vấn đề

@@ -1,0 +1,29 @@
+@import cfg
+
+// Header
+header
+	.navbar-toggler.navbar-toggler-right
+		top: 5px
+	.container-fluid
+		width: 100%
+	+media-breakpoint-up(md)
+		.container-fluid
+			display: flex
+			.navbar-nav
+				.nav-item
+					span
+						display: none
+	+media-breakpoint-up(lg)
+		.container-fluid
+			.navbar-nav
+				.nav-item
+					span
+						display: block
+	.navbar-brand
+		img
+			max-height: 38px
+	.navbar-text
+		+lh(1.3rem)
+	.navbar-nav
+		img
+			max-height: 26px

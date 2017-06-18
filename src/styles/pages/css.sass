@@ -1,0 +1,54 @@
+@import cfg
+// COLORS
+$colorcss: (vang: #fff000,
+xanhngoc: #00ffff,
+xanhla: #00ff00,
+do: #ff0000,
+xanhduong: #0000ff,
+trang: #fff)
+
+
+.viensoi-css-page
+	.color-sample
+		border-radius: 6px
+		min-height: 36px
+		min-width: 36px
+	.font-sample
+		font-style: italic
+		font-variant: small-caps
+		font-weight: bold
+		font-size: 30px
+		line-height: 1.33em
+		font-family: 'Georgia, Arial, serif'
+	.demo-css
+		.hello
+			background: #fff
+			border-radius: 3px
+			border-left: 3px solid color-get($colorcss,do)
+			+pad(10px)
+			&:hover
+				border-left: 3px solid color-get($colorcss,xanhduong)
+			h1
+				+fz(1.2rem)
+				color: color-get($colorcss,do)
+			.quick
+				color: darken(#fff,30%)
+				text-align: right
+				border-bottom: 1px solid darken(#fff,50%)
+				background: color-get($colorcss,vang)
+				+pad(0 .5rem)
+				text-transform: capitalize
+			figure
+				float: left
+				margin-right: 5px
+				margin-bottom: 2px
+				img
+					max-width: 34px
+			a
+				&:hover
+					color: color-get($colorcss,do)
+			p
+				line-height: 1.3rem
+				&:last-child
+					text-align: justify
+

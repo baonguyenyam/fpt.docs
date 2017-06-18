@@ -1,0 +1,55 @@
+@import cfg
+// COLORS
+$colorhtml: (vang: #fff000,
+xanhngoc: #00ffff,
+xanhla: #00ff00,
+do: #ff0000,
+xanhduong: #0000ff,
+trang: #fff)
+
+
+.viensoi-html-page
+	.demo-html
+		.box
+			min-height: 100px
+			.den
+				color: #000
+			.underline
+				text-decoration: underline
+			.do
+				color: color-get($colorhtml,do)
+				&.ho
+					&:hover
+						color: color-get($colorhtml,vang)
+						text-decoration: underline
+						text-transform: uppercase
+			.xanh
+				color: color-get($colorhtml,xanhla)
+			.vang
+				color: color-get($colorhtml,vang)
+		svg
+			max-width: 130px
+			max-height: 80px
+		.demo
+			background: #fff
+			.main
+				border: 0
+			.header
+				border: 1px solid #000
+				border-bottom: 0
+			.footer
+				border: 1px solid #000
+				border-top: 0
+			.na
+				border: 1px solid #000
+				height: 100%
+			.ctn
+				border: 1px solid #000
+				border-left: 0
+				height: 100%
+
+		.democode
+			border: 1px solid #000
+			+pad(1rem)
+
+

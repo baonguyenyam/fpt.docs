@@ -1,0 +1,402 @@
+extends ../../_layout/layout
+
+block variables
+	- var title = 'CSS'
+	- var description = 'Description for home page'
+	- var bodyclass = 'css'
+	- var selected = 'CSS';
+	- var href = '';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+
+block body
+	section.demo-css
+		.container-fluid
+
+			.row
+				.col.p-4
+					h1.mt-6#sec1 Colors
+					hr
+
+			.row
+
+				.col-3
+					pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+						.demo {
+							*color: red
+						}
+						.demo-1 {
+							*background-color: #ff0000
+						}
+						.demo-2 {
+							*background-color: rgb(255, 0, 0)
+						}
+						.demo-3 {
+							*background-color: hsl(0, 100%, 50%)
+						}
+					p
+						a(href="https://jsfiddle.net/bo3rxfhb/10/", target="_blank") https://jsfiddle.net/bo3rxfhb/10/
+					p
+						a(href="/images/learn/css/photoshop-color-picker.png", target="_blank")
+							img.img-thumbnail(src="/images/learn/css/photoshop-color-picker.png", alt="")
+				.col
+					table.table.table-bordered.thead-inverse.table-striped
+								thead
+									tr
+										th Color
+										th Name
+										th Hex Values
+										th RGB Values
+										th HSL Values
+								tbody
+									tr
+										td
+											.color-sample(style='background: black;')
+										td(data-title='Name')
+											code black
+										td(data-title='Hex Value')
+											code #000000
+										td(data-title='RGB Value')
+											code rgb(0, 0, 0)
+										td(data-title='HSL Value')
+											code hsl(0, 0%, 0%)
+									tr
+										td
+											.color-sample(style='background: silver;')
+										td(data-title='Name')
+											code silver
+										td(data-title='Hex Value')
+											code #c0c0c0
+										td(data-title='RGB Value')
+											code rgb(192, 192, 192)
+										td(data-title='HSL Value')
+											code hsl(0, 0%, 75%)
+									tr
+										td
+											.color-sample(style='background: gray;')
+										td(data-title='Name')
+											code gray
+										td(data-title='Hex Value')
+											code #808080
+										td(data-title='RGB Value')
+											code rgb(128, 128, 128)
+										td(data-title='HSL Value')
+											code hsl(0, 0%, 50%)
+									tr
+										td
+											.color-sample(style='background: white; border: 1px solid #cecfd5;')
+										td(data-title='Name')
+											code white
+										td(data-title='Hex Value')
+											code #ffffff
+										td(data-title='RGB Value')
+											code rgb(255, 255, 255)
+										td(data-title='HSL Value')
+											code hsl(0, 100%, 100%)
+									tr
+										td
+											.color-sample(style='background: maroon;')
+										td(data-title='Name')
+											code maroon
+										td(data-title='Hex Value')
+											code #800000
+										td(data-title='RGB Value')
+											code rgb(128, 0, 0)
+										td(data-title='HSL Value')
+											code hsl(0, 100%, 25%)
+									tr
+										td
+											.color-sample(style='background: red;')
+										td(data-title='Name')
+											code red
+										td(data-title='Hex Value')
+											code #ff0000
+										td(data-title='RGB Value')
+											code rgb(255, 0, 0)
+										td(data-title='HSL Value')
+											code hsl(0, 100%, 50%)
+									tr
+										td
+											.color-sample(style='background: purple;')
+										td(data-title='Name')
+											code purple
+										td(data-title='Hex Value')
+											code #800080
+										td(data-title='RGB Value')
+											code rgb(128, 0, 128)
+										td(data-title='HSL Value')
+											code hsl(300, 100%, 25%)
+									tr
+										td
+											.color-sample(style='background: fuchsia;')
+										td(data-title='Name')
+											code fuchsia
+										td(data-title='Hex Value')
+											code #ff00ff
+										td(data-title='RGB Value')
+											code rgb(255, 0, 255)
+										td(data-title='HSL Value')
+											code hsl(300, 100%, 50%)
+									tr
+										td
+											.color-sample(style='background: green;')
+										td(data-title='Name')
+											code green
+										td(data-title='Hex Value')
+											code #008000
+										td(data-title='RGB Value')
+											code rgb(0, 128, 0)
+										td(data-title='HSL Value')
+											code hsl(120, 100%, 25%)
+									tr
+										td
+											.color-sample(style='background: olive;')
+										td(data-title='Name')
+											code olive
+										td(data-title='Hex Value')
+											code #808000
+										td(data-title='RGB Value')
+											code rgb(0, 255, 0)
+										td(data-title='HSL Value')
+											code hsl(120, 100%, 50%)
+									tr
+										td
+											.color-sample(style='background: lime;')
+										td(data-title='Name')
+											code lime
+										td(data-title='Hex Value')
+											code #00ff00
+										td(data-title='RGB Value')
+											code rgb(128, 128, 0)
+										td(data-title='HSL Value')
+											code hsl(60, 100%, 25%)
+									tr
+										td
+											.color-sample(style='background: yellow;')
+										td(data-title='Name')
+											code yellow
+										td(data-title='Hex Value')
+											code #ffff00
+										td(data-title='RGB Value')
+											code rgb(255, 255, 0)
+										td(data-title='HSL Value')
+											code hsl(60, 100%, 50%)
+									tr
+										td
+											.color-sample(style='background: navy;')
+										td(data-title='Name')
+											code navy
+										td(data-title='Hex Value')
+											code #000080
+										td(data-title='RGB Value')
+											code rgb(0, 0, 128)
+										td(data-title='HSL Value')
+											code hsl(240, 100%, 25%)
+									tr
+										td
+											.color-sample(style='background: blue;')
+										td(data-title='Name')
+											code blue
+										td(data-title='Hex Value')
+											code #0000ff
+										td(data-title='RGB Value')
+											code rgb(0, 0, 255)
+										td(data-title='HSL Value')
+											code hsl(240, 100%, 50%)
+									tr
+										td
+											.color-sample(style='background: teal;')
+										td(data-title='Name')
+											code teal
+										td(data-title='Hex Value')
+											code #008080
+										td(data-title='RGB Value')
+											code rgb(0, 128, 128)
+										td(data-title='HSL Value')
+											code hsl(180, 100%, 25%)
+									tr
+										td
+											.color-sample(style='background: aqua;')
+										td(data-title='Name')
+											code aqua
+										td(data-title='Hex Value')
+											code #00ffff
+										td(data-title='RGB Value')
+											code rgb(0, 255, 255)
+										td(data-title='HSL Value')
+											code hsl(180, 100%, 50%)
+
+			.row
+				.col.p-4
+					h1.mt-6#sec1 Cách viết
+					hr
+
+			.row
+				.col
+					table.table.table-bordered.thead-inverse.table-striped
+						thead
+							tr
+								th Hệ màu
+								th Chú thích
+								th Cách viết
+								th DEMO
+
+						tbody
+							tr
+								td HEX
+								td
+									p.mb-0
+										| HEX là viết tắc của từ "hexadecimal".
+										br
+										| Cách viết: gồm dấu "#" kết hợp với dãy ký tự Latin, chỉ bao gồm số hoặc chữ (hệ thập lục phân), không phân biệt chữ hoa hay chữ thường.
+										br
+										| Các ký tự Latin có thể chấp nhận là: a,b,c,d,e,f,A,B,C,D,E,F.
+										br
+										| Ví dụ: #00ffff
+										br
+										| Ta có thể viết gút gọn màu này theo các cách sau:
+										br
+										| Gút gọn 6 ký tự giống nhau thành 3 ký tự: #ffffff => #fff
+										br
+										| Gút gọn 3 cặp ký tự thành 3 ký tự: #ff0066 => #f06
+								td
+									p.mb-0 #+[value]
+								td
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										.demo {
+											*color: #FF0000
+										}
+							tr
+								td RGB
+								td
+									p.mb-0
+										| RGB là viết tắc của từ "Red-Green-Blue".
+										br
+										| Xác định màu theo RGB là sự kết hợp của 3 màu cơ bản: đỏ (Red), xanh lá cây (Green) và xanh dương (Blue)
+										br
+										| Cách viết: rgb(giá trị 1, giá trị 2, giá trị 3)
+										br
+										| Với giá trị từ 0 tới 255.
+										br
+										| Ví dụ: rgb(155,167,1)
+										br
+										| Ngoài ra còn có giá trị đặc biệt là RGBA với A có giá trị từ 0 đến 1. Giá trị này xác định độ transparent của màu
+										br
+										| Ví dụ: rgba(155,167,1, 0.5)
+
+								td
+									p.mb-0
+										| RGB([value],[value],[value])
+										br
+										| RGBA([value],[value],[value],[transparent])
+								td
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										.demo {
+											*color: rgb(155,167,1)
+										}
+										.demo {
+											*color: rgba(155,167,1, .8)
+										}
+							tr
+								td HSL
+								td
+									p.mb-0
+										| HSL là viết tắc của từ "Hue-Saturation-Lightness".
+										br
+										| Xác định màu theo HSL là sự kết hợp của 3 yếu tố cơ bản: mức độ về màu sắc, độ bão hoà, độ sáng
+										br
+										| Cách viết: hsl(giá trị 1, giá trị 2, giá trị 3)
+										br
+										| Với giá trị Hue từ 0 tới 360.
+										br
+										| Với giá trị Saturation từ 0% tới 100%.
+										br
+										| Với giá trị Lightness từ 0% tới 100%.
+										br
+										| Ví dụ: hsl(180, 50%, 50%)
+
+								td
+									p.mb-0 HSL([value],[value],[value])
+								td
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										.demo {
+											*color: hsl(180, 50%, 50%)
+										}
+							tr
+								td HWB
+								td
+									.alert.alert-danger Chú ý thuộc tính này rất mới chỉ hỗ trợ CSS4
+									p.mb-0
+										| HWB là viết tắc của từ "Hue-Whiteness-Blackness".
+										br
+										| Xác định màu theo HWB là sự kết hợp của 3 yếu tố cơ bản: mức độ về màu sắc, độ trắng, độ đen
+										br
+										| Cách viết: hwb(giá trị 1, giá trị 2, giá trị 3)
+										br
+										| Với giá trị Hue từ 0 tới 360.
+										br
+										| Với giá trị Whiteness từ 0% tới 100%.
+										br
+										| Với giá trị Blackness từ 0% tới 100%.
+										br
+										| Ví dụ: hwb(60, 60%, 0)
+
+								td
+									p.mb-0 HWB([value],[value],[value])
+								td
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										.demo {
+											*color: hwb(60, 60%, 0)
+										}
+							tr
+								td CMYK
+								td
+									.alert.alert-danger Chú ý thuộc tính này rất mới chỉ hỗ trợ CSS4
+									p.mb-0
+										| CMYK là viết tắc của từ "CYAN-MAGENTA-YELLOW-BLACK".
+										br
+										| Xác định màu theo CMYK là sự kết hợp của 4 màu cơ bản: Màu lục lam, màu tím, vàng, đen
+										br
+										| Cách viết: cmyk(giá trị 1, giá trị 2, giá trị 3, giá trị 4)
+										br
+										| Với giá trị Cyan từ 0% tới 100%.
+										br
+										| Với giá trị Magenta từ 0% tới 100%.
+										br
+										| Với giá trị Yellow từ 0% tới 100%.
+										br
+										| Với giá trị Black từ 0% tới 100%.
+										br
+										| Ví dụ: cmyk(100%, 0%, 0%, 0%)
+
+								td
+									p.mb-0 CMYK([value],[value],[value],[value])
+								td
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										.demo {
+											*color: cmyk(100%, 0%, 0%, 0%)
+										}
+							tr
+								td Name
+								td
+									p.mb-0
+										| Cách viết: tên màu được viết theo tiếng anh.
+										br
+										| Ví dụ: blue
+
+								td
+									p.mb-0 [name]
+								td
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										.demo {
+											*color: green
+										}
+			.row
+				.col
+					.m-4.text-center.btn-toolbar.justify-content-center
+						.btn-group
+							a.btn.btn-xs.btn-primary(href="/docs/css/index.html", title="title") Home
+							a.btn.btn-xs.btn-primary(href="/docs/css/mixin.html", title="title") Next
+

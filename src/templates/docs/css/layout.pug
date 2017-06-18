@@ -1,0 +1,55 @@
+extends ../../_layout/layout
+
+block variables
+	- var title = 'CSS'
+	- var description = 'Description for home page'
+	- var bodyclass = 'css'
+	- var selected = 'CSS';
+	- var href = '';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+
+block body
+	section.demo-css
+		.container-fluid
+
+			.row
+				.col.p-4
+					h1.mt-6#sec1 CSS trên mỗi trình duyệt là khác nhau
+					hr
+					.alert.alert-danger
+						strong CSS trên mỗi trình duyệt khác nhau thì hiển thị khác nhau. Nên bố cục trên mỗi trình duyệt cũng khác nhau. Đó là sự không đồng nhất của các nhà phát triển. Nhiệm vụ của người code CSS là làm sao để hiển thị giống nhau trên mọi nền tảng.
+					ul.mt-2
+						li Internet Explorer: Trident
+						li Chrome: Blink, V8
+						li Firefox: Gecko
+						li Safari: WebKit (Apple, Adobe, KDE)
+						li Microsoft Edge: EdgeHTML
+			.row
+				.col
+					h5 index.html
+					pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+						<button>Submit</button>
+					p.mb-0 Mỗi loại trình duyệt đều có những quy tắc riêng nên việc hiển thị mặc định sẽ không giống nhau.
+
+					p Do vậy khi viết CSS cho website, bạn nên đưa tất cả các giá trị của các phần tử trên website về bằng 0 hết nghĩa là xóa mọi định dạng có sẵn để khi cần chúng ta sẽ dùng CSS viết lại theo ý của mình để đảm bảo nó hiển thị tốt trên tất cả các trình duyệt. Việc làm này người ta gọi là Reset CSS.
+					h6 Một số bộ Reset CSS thông dụng
+					p
+						a(href="https://getbootstrap.com/", target="_blank") https://getbootstrap.com/
+					p
+						a(href="http://necolas.github.io/normalize.css/", target="_blank") http://necolas.github.io/normalize.css/
+					p
+						a(href="http://meyerweb.com/eric/tools/css/reset/", target="_blank") http://meyerweb.com/eric/tools/css/reset/
+				.col
+					figure
+						img(src="/images/learn/css/button.png", alt="")
+
+			.row
+				.col
+					.m-4.text-center.btn-toolbar.justify-content-center
+						.btn-group
+							a.btn.btn-xs.btn-primary(href="/docs/css/index.html", title="title") Home
+							a.btn.btn-xs.btn-primary(href="/docs/css/style.html", title="title") Next
+

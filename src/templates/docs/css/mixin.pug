@@ -1,0 +1,177 @@
+extends ../../_layout/layout
+
+block variables
+	- var title = 'CSS'
+	- var description = 'Description for home page'
+	- var bodyclass = 'css'
+	- var selected = 'CSS';
+	- var href = '';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+
+block body
+	section.demo-css
+		.container-fluid
+
+			.row
+				.col.p-4
+					h1.mt-6#sec1 Viết tắt trong CSS
+					hr
+
+			.row
+				.col
+					figure
+						img.img-thumbnail(src="/images/learn/css/hexadecimal-syntax.png", alt="")
+
+			.row
+				.col
+					table.table.table-bordered.thead-inverse.table-striped
+						thead
+							tr
+								th.w-40 Code tường minh
+								th Rút gọn
+								th Giá trị
+
+						tbody
+							tr
+								td
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										#demo {
+											*color: #FF0033
+										}
+								td
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										#demo {
+											*color: #F03
+										}
+								td AA-BB-CC ~ ABC
+							tr
+								td
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										#demo {
+											*font-style: italic;
+											*font-variant: small-caps;
+											*font-weight: bold;
+											*font-size: 30px;
+											*line-height: 1.33em;
+											*font-family: 'Georgia, Arial, serif';
+										}
+								td
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										#demo {
+											*font: italic small-caps bold 30px/1.33em 'Georgia, Arial, serif'
+										}
+								td
+									p
+										| [font-style]
+										br
+										| [font-variant]
+										br
+										| [font-weight]
+										br
+										| [font-size]/[line-height]
+										br
+										| [font-family]
+									h6 VD:
+									.font-sample Lorem ipsum dolor sit amet.
+							tr
+								td
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										#demo {
+											*background-color: #fff;
+											*background-image: url('../image.png'');
+											*background-repeat: repeat-x;
+											*background-attachment: fixed;
+											*background-position: 50% 0;
+										}
+								td
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										#demo {
+											*background: #fff url('../image.png'') repeat-x fixed 50% 0;
+										}
+								td
+									p.mb-0
+										| [background-color]
+										br
+										| [background-image]
+										br
+										| [background-repeat]
+										br
+										| [background-attachment]
+										br
+										| [background-position]
+							tr
+								td
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										#demo {
+											*margin-top: 10px;
+											*margin-right: 20px;
+											*margin-bottom: 10px;
+											*margin-left: 20px;
+										}
+								td
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										#demo {
+											*margin: 10px 20px;
+										}
+								td
+									p.mb-0
+										| [top]
+										br
+										| [right]
+										br
+										| [bottom]
+										br
+										| [left]
+							tr
+								td
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										#demo {
+											*padding-top: 50px;
+											*padding-right: 20px;
+											*padding-bottom: 10px;
+											*padding-left: 0;
+										}
+								td
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										#demo {
+											*padding: 50px 20px 10px;
+										}
+								td
+									p.mb-0
+										| [top]
+										br
+										| [right]
+										br
+										| [bottom]
+										br
+										| [left]
+							tr
+								td
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										#demo {
+											*border-width: 1px;
+											*border-style: solid;
+											*border-color: red;
+										}
+								td
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										#demo {
+											*border: 1px solid red;
+										}
+								td
+									p.mb-0
+										| [border-width]
+										br
+										| [border-style]
+										br
+										| [border-color]
+
+			.row
+				.col
+					.m-4.text-center.btn-toolbar.justify-content-center
+						.btn-group
+							a.btn.btn-xs.btn-primary(href="/docs/css/index.html", title="title") Home
+

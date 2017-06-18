@@ -1,0 +1,212 @@
+extends ../../_layout/layout
+
+block variables
+	- var title = 'Position'
+	- var description = 'Description for home page'
+	- var bodyclass = 'position'
+	- var selected = 'Position';
+	- var href = '';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+
+block body
+	section.demo-position
+		.container-fluid
+			.row
+				.col.p-4
+					h1.mt-6#sec1 Positioning content
+					hr
+
+			.row
+				.col
+					pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+						<div class="demo">
+							*<div class="demo-child">
+								**<div class="box-a">A</div>
+								**<div class="box-b">B</div>
+								**<div class="box-c">C</div>
+								**<div class="box-d">D</div>
+							*</div>
+						</div>
+				.col
+					pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+						.demo {
+							*background: cyan;
+							*min-height: 300px;
+							*padding: 10px;
+						}
+						.demo .demo-child {
+							*background: #fff;
+							*width: 200px;
+							*height: 200px;
+						}
+						.demo .demo-child .box-a,
+						.demo .demo-child .box-b,
+						.demo .demo-child .box-c,
+						.demo .demo-child .box-d {
+							*width: 50px;
+							*height: 50px;
+						}
+						.demo .demo-child .box-a { background-color:green }
+						.demo .demo-child .box-b { background-color:yellow }
+						.demo .demo-child .box-c { background-color:red }
+						.demo .demo-child .box-d { background-color:blue }
+				.col
+					.demo
+						.demo-child
+							.box-a A
+							.box-b B
+							.box-c C
+							.box-d D
+			.row.mt-5
+				.col
+					.demo
+						.demo-child
+							.box-a A
+							.box-b B
+							.box-c C
+							.box-d D
+				.col
+					pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+						.demo { }
+						.demo .demo-child {
+							*...
+							*position: relative;
+						}
+						.demo .demo-child .box-a {
+							*...
+							*position: absolute
+							*top: 20px
+							*left: 100px
+						}
+						.demo .demo-child .box-b {
+							*...
+							*position: absolute
+							*bottom: 20px
+							*right: 10px
+						}
+						.demo .demo-child .box-c {
+							*...
+							*position: absolute
+							*bottom: -15px
+							*right: -10px
+						}
+						.demo .demo-child .box-d {
+							*...
+							*position: absolute
+							*top: -20px
+							*right: -10px
+						}
+				.col
+					.demo
+						.demo-child.demo-1
+							.box-a.demo-1 A
+							.box-b.demo-1 B
+							.box-c.demo-1 C
+							.box-d.demo-1 D
+			.row.mt-5
+				.col
+					.demo
+						.demo-child.demo-1
+							.box-a.demo-1 A
+							.box-b.demo-1 B
+							.box-c.demo-1 C
+							.box-d.demo-1 D
+
+				.col
+					pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+						.demo .demo-child .box-b {
+							*...
+							*z-index:2
+						}
+						.demo .demo-child .box-c {
+							*...
+							*z-index:1
+						}
+				.col
+					.demo
+						.demo-child.demo-1
+							.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsum eos a nesciunt aperiam vitae repellat pariatur fugit earum error, dolorem, nisi magni inventore! Tempora ipsum repudiandae fugit eaque est.
+							.box-a.demo-1 A
+							.box-b.demo-1.z-1 B
+							.box-c.demo-1.z-1 C
+							.box-d.demo-1 D
+			.row.mt-5
+				.col
+					.demo
+						.demo-child.demo-1
+							.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsum eos a nesciunt aperiam vitae repellat pariatur fugit earum error, dolorem, nisi magni inventore! Tempora ipsum repudiandae fugit eaque est.
+							.box-a.demo-1 A
+							.box-b.demo-1.z-1 B
+							.box-c.demo-1.z-1 C
+							.box-d.demo-1 D
+
+				.col
+					pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+						.demo {
+							*position: relative
+						}
+						.demo .demo-child {
+							*...
+							*position: initial
+						}
+				.col
+					.demo.demo-2
+						.demo-child.demo-2
+							.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsum eos a nesciunt aperiam vitae repellat pariatur fugit earum error, dolorem, nisi magni inventore! Tempora ipsum repudiandae fugit eaque est.
+							.box-a.demo-1 A
+							.box-b.demo-1.z-1 B
+							.box-c.demo-1.z-1 C
+							.box-d.demo-1 D
+
+			.row.mt-5
+				.col.p-4
+					h1.mt-6#sec1 Positioning content
+					hr
+
+			.row
+				.col
+					table.table.table-bordered.thead-inverse.table-striped
+						thead
+							tr
+								th Giá trị
+								th CODE
+								th Mô tả
+						tbody
+							tr
+								td static
+								td position: static;
+								td Thành phần sẽ nằm theo thứ tự trong văn bản, đây là dạng mặc định.
+							tr
+								td initial
+								td position: initial;
+								td Đặt lại giá trị trước đó về mặc định
+							tr
+								td relative
+								td position: relative;
+								td Định vị trí tuyệt đối cho thành phần.
+							tr
+								td absolute
+								td position: absolute;
+								td Định vị trí tuyệt đối cho thành phần theo thành phần bao ngoài (thành phần định vị trí tương đối position: relative;) hoặc theo cửa sổ trình duyệt.
+
+							tr
+								td fixed
+								td position: fixed;
+								td Định vị trí tương đối cho thành phần theo cửa sổ trình duyệt. Xem nút 'back to top'
+
+							tr
+								td inherit
+								td position: inherit;
+								td Xác định thừa hưởng thuộc tính từ thành phần cha (thành phần bao ngoài).
+
+
+
+			.row
+				.col
+					.m-4.text-center.btn-toolbar.justify-content-center
+						.btn-group
+							a.btn.btn-xs.btn-primary(href="/docs/position/index.html", title="title") Home
+							//- a.btn.btn-xs.btn-primary(href="/docs/position/style.html", title="title") Next

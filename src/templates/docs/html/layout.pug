@@ -1,0 +1,111 @@
+extends ../../_layout/layout
+
+block variables
+	- var title = 'HTML'
+	- var description = 'Description for home page'
+	- var bodyclass = 'html'
+	- var selected = 'HTML';
+	- var href = '';
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+
+
+block body
+	section.m-5.demo-html
+		.container-fluid
+			.row
+				.col
+					pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+						<div class="hello">
+							*<h1>Lorem ipsum dolor sit amet</h1>
+							*<p><strong>consectetur</strong> adipisicing elit.</p>
+							*<p><a href="#">Maxime beatae</a>, voluptatibus eum dolor neque accusamus exercitationem perferendis aperiam odit eos, dignissimos distinctio repudiandae ab blanditiis! Alias, magnam.</p>
+						</div>
+				.col
+					.democode
+						.hello
+							h1 Lorem ipsum dolor sit amet
+							p
+								strong consectetur
+								|  adipisicing elit.
+							p
+								a(href="#") Maxime beatae
+								| , voluptatibus eum dolor neque accusamus exercitationem perferendis aperiam odit eos, dignissimos distinctio repudiandae ab blanditiis! Alias, magnam.
+
+			.row.mt-5
+				.col
+					.demo
+						.row
+							.col
+								.header
+									pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.no-border.
+										<div class="header-page">
+											*<a href="#"><img src="/images/home_icon.png"></a>
+										</div>
+						.main
+							.row.no-gutters
+								.col.col-4
+									.na
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.no-border.
+											<div class="nav-page">
+												*<ul>
+													**<li>Menu 1</li>
+													**<li>Menu 2</li>
+													**<li>Menu 3</li>
+												*</ul>
+											</div>
+								.col.col-8
+									.ctn
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.no-border.
+											<div class="main-page">
+												*<h1>Lorem ipsum dolor sit amet</h1>
+												*<p><strong>consectetur</strong> adipisicing elit.</p>
+												*<p><a href="#">Maxime beatae</a>, voluptatibus eum dolor neque accusamus exercitationem perferendis aperiam odit eos, dignissimos distinctio repudiandae ab blanditiis! Alias, magnam.</p>
+											</div>
+						.row
+							.col
+								.footer
+									pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.no-border.
+										<div class="footer-page">
+											*Copyright by Bao Nguyen
+										</div>
+				.col
+					.demo
+						.row
+							.col
+								.header
+									.header-page
+										a(href="#")
+											img(src="/images/home_icon.png")
+						.main
+							.row.no-gutters
+								.col.col-3
+									.na
+										.nav-page
+											ul
+												li Menu 1
+												li Menu 2
+												li Menu 3
+								.col.col-9
+									.ctn
+										.main-page
+											h1 Lorem ipsum dolor sit amet
+											p
+												strong consectetur
+												|  adipisicing elit.
+											p
+												a(href="#") Maxime beatae
+												| , voluptatibus eum dolor neque accusamus exercitationem perferendis aperiam odit eos, dignissimos distinctio repudiandae ab blanditiis! Alias, magnam.
+						.row
+							.col
+								.footer
+									.footer-page Copyright by Bao Nguyen
+
+
+			.row
+				.col
+					.m-4.text-center.btn-toolbar.justify-content-center
+						.btn-group
+							a.btn.btn-xs.btn-primary(href="/docs/html/index.html", title="title") Home
+							a.btn.btn-xs.btn-primary(href="/docs/html/use.html", title="title") Next

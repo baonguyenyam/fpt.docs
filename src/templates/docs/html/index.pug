@@ -1,0 +1,51 @@
+extends ../../_layout/layout
+
+block variables
+	- var title = 'HTML'
+	- var description = 'Description for home page'
+	- var bodyclass = 'html'
+	- var selected = 'HTML';
+	- var href = '';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+
+block body
+	section.demo-html
+		.container-fluid
+
+			.row
+				.col.p-4
+					h1.mt-6#sec1 Khái niệm
+					hr
+					p.lead.text-shadown.text-danger.text-bold HTML: HyperText Markup Language
+					p HTML là một ngôn ngữ đánh dấu siêu văn bản nên nó sẽ có vai trò xây dựng cấu trúc văn bản trên một website hay ứng dụng, hoặc khai báo các tập tin kỹ thuật số (media) như hình ảnh, video, nhạc.
+					ul.mt-2
+						li Internet Explorer: Trident
+						li Chrome: Blink, V8
+						li Firefox: Gecko
+						li Safari: WebKit (Apple, Adobe, KDE)
+						li Microsoft Edge: EdgeHTML
+			.row
+				.col
+					h5 index.html
+					pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.linenums.
+						[!DOCTYPE html]
+						[html]
+						*[head]
+						**<title>Hello</title>
+						*[/head]
+						*[body]
+						**<h1>Tiêu đề</h1>
+						**<p>My first paragraph.</p>
+						*[/body]
+						[/html]
+				.col
+					figure
+						img(src="/images/learn/html/html.png", alt="")
+
+			.row
+				.col.p-4
+					p
+						a.btn.btn-xs.btn-primary(href="/docs/html/layout.html") Vấn đề

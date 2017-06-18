@@ -1,0 +1,41 @@
+extends ../../_layout/layout
+
+block variables
+	- var title = 'Box Model'
+	- var description = 'Description for home page'
+	- var bodyclass = 'box-model'
+	- var selected = 'Box Model';
+	- var href = '';
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+
+
+block body
+	section.m-5.demo-layout
+		.container-fluid
+			.row
+				.col-8
+					.demo
+						.row.header
+							.col Header
+						.row.main
+							.col.col-3.na Navigation
+							.col.col-9.ctn Content
+						.row.footer
+							.col Footer
+
+
+				.col-4
+					.demo
+						.row.header
+							.col Header
+						.row.main-2
+							.col.ctn Content
+
+			.row
+				.col
+					.m-4.text-center.btn-toolbar.justify-content-center
+						.btn-group
+							a.btn.btn-xs.btn-primary(href="/docs/boxmodel/index.html", title="title") Home
+							a.btn.btn-xs.btn-primary(href="/docs/boxmodel/box.html", title="title") Next

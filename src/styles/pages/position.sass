@@ -1,0 +1,80 @@
+@import cfg
+// COLORS
+$colorposition: (vang: #fff000,
+xanhngoc: #00ffff,
+xanhla: #00ff00,
+do: #ff0000,
+xanhduong: #0000ff,
+trang: #fff)
+
+
+.viensoi-position-page
+	.demo
+		background: color-get($colorposition,xanhngoc)
+		min-height: 300px
+		padding: 10px
+		&.demo-2
+			position: relative
+		.demo-child
+			background: color-get($colorposition,trang)
+			width: 200px
+			height: 200px
+			.text
+				+lh(1rem)
+			&.demo-1
+				position: relative
+			&.demo-2
+				position: initial
+			.box-a
+				width: 50px
+				height: 50px
+				text-align: center
+				+lh(50px)
+				+fw(bold)
+				color: #000
+				background: color-get($colorposition,xanhla)
+				&.demo-1
+					position: absolute
+					top: 20px
+					left: 100px
+
+			.box-b
+				width: 50px
+				height: 50px
+				text-align: center
+				+lh(50px)
+				+fw(bold)
+				color: #000
+				background: color-get($colorposition,vang)
+				&.demo-1
+					position: absolute
+					bottom: 20px
+					right: 10px
+				&.z-1
+					z-index: 2
+			.box-c
+				width: 50px
+				height: 50px
+				text-align: center
+				+lh(50px)
+				+fw(bold)
+				color: #fff
+				background: color-get($colorposition,do)
+				&.demo-1
+					position: absolute
+					bottom: -15px
+					right: -10px
+				&.z-1
+					z-index: 1
+			.box-d
+				width: 50px
+				height: 50px
+				text-align: center
+				+lh(50px)
+				+fw(bold)
+				color: #fff
+				background: color-get($colorposition,xanhduong)
+				&.demo-1
+					position: absolute
+					top: -20px
+					right: -10px

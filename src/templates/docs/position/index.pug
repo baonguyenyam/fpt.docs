@@ -1,0 +1,35 @@
+extends ../../_layout/layout
+
+block variables
+	- var title = 'Position'
+	- var description = 'Description for home page'
+	- var bodyclass = 'position'
+	- var selected = 'Position';
+	- var href = '';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+
+block body
+	section.demo-position
+		.container-fluid
+
+			.row
+				.col.p-4
+					h1.mt-6#sec1 Khái niệm
+					hr
+					p.lead Thuộc tính position xác định loại của phương pháp định vị trí cho thành phần. Thuộc tính position thường dùng kèm với các thuộc tính định vị trí: left, right, bottom, top và z-index
+
+			.row.text-center
+				.col
+					figure
+						img.img-thumbnail(src="/images/learn/position/01.png", alt="")
+				.col
+					figure
+						img.img-thumbnail(src="/images/learn/position/02.png", alt="")
+
+			.row
+				.col.p-4
+					p
+						a.btn.btn-xs.btn-primary(href="/docs/position/position.html") Next

@@ -1,0 +1,28 @@
+extends ../../_layout/layout
+
+block variables
+	- var title = 'Box Model'
+	- var description = 'Description for home page'
+	- var bodyclass = 'box-model'
+	- var selected = 'Box Model';
+	- var href = '';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+
+block body
+	section.home
+		.container-fluid
+
+			.row
+				.col.p-4
+					h1.mt-6#sec1 Khái niệm
+					hr
+					p Box Model là một kỹ thuật cơ bản nhất trong CSS Layout và được sử dụng để bạn mô tả về khoảng cách mà mỗi phần tử trên website được sở hữu, hay nói cách khác là kỹ thuật tinh chỉnh khoảng cách hiển thị cho mỗi phần tử trên website.
+
+					figure
+						img.w-50(src="/images/learn/boxmodel/01.png", alt="")
+
+					p
+						a.btn.btn-xs.btn-primary(href="/docs/boxmodel/layout.html") Vấn đề
