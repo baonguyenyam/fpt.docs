@@ -13,7 +13,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
     gulp.task('local-run-doc', () => {
 
         return gulp.src([
-                path.join(target, 'docs/**/*.html'),
+                path.join(target, 'docs', '**/*.html'),
                 '!' + path.join(target, '*.html')
             ])
             .pipe(replace('/css/', '../../css/'))
@@ -34,7 +34,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
     gulp.task('local-run', () => {
 
         return gulp.src([
-                path.join(target, 'docs/*.html')
+                path.join(target, 'docs', '*.html')
             ])
             .pipe(replace('/css/', '../css/'))
             .pipe(replace('/js/', '../js/'))

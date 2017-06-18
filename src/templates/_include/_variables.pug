@@ -11,8 +11,8 @@ if process.argv.slice(3) == '--production'
 mixin getMin(bodyClass)
 	if !config.concat.ACTIVE_CONCAT
 		if (process.argv.slice(3).indexOf('--production') > -1) && (process.argv.slice(3).indexOf('--notmin') < 0)
-			link(rel='stylesheet', href='https://'+config.SEO.cfg_url+'/css/pages/'+bodyClass+'.min.css')
+			link(rel='stylesheet', href='/css/pages/'+bodyClass+'.min.css')
 		else if (process.argv.slice(3).indexOf('--production') > -1) && (process.argv.slice(3).indexOf('--notmin') > -1)
-			link(rel='stylesheet', href='https://'+config.SEO.cfg_url+'/css/pages/'+bodyClass+'.css')
+			link(rel='stylesheet', href='/css/pages/'+bodyClass+'.css')
 		else
-			link(rel='stylesheet', href='https://'+config.SEO.cfg_url+'/css/pages/'+bodyClass+'.css')
+			link(rel='stylesheet', href='/css/pages/'+bodyClass+'.css')
