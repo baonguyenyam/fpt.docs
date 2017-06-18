@@ -107,7 +107,7 @@ gulp.task('ser', function(cb) {
 gulp.task('product', function(cb) {
     runSequence(
         'k-task',
-        'favicon',
+        // 'favicon',
         'cssmin',
         'uglify',
         'csscomb',
@@ -132,7 +132,7 @@ gulp.task('product', function(cb) {
 gulp.task('product-no', function(cb) {
     runSequence(
         'k-task',
-        'favicon',
+        // 'favicon',
         'csscomb',
         'tobase64',
         'inject',
@@ -153,7 +153,7 @@ gulp.task('product-no', function(cb) {
 gulp.task('product-local', function(cb) {
     runSequence(
         'k-task',
-        'favicon',
+        // 'favicon',
         'cssmin',
         'uglify',
         'csscomb',
@@ -181,7 +181,7 @@ gulp.task('product-local', function(cb) {
 gulp.task('product-local-no', function(cb) {
     runSequence(
         'k-task',
-        'favicon',
+        // 'favicon',
         'csscomb',
         'tobase64',
         'inject',
