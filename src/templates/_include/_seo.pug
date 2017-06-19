@@ -25,7 +25,7 @@ meta(name='geo.position', content=config.SEO.seo_geo_latitude+';'+config.SEO.seo
 meta(name='ICBM', content=config.SEO.seo_geo_latitude+','+config.SEO.seo_geo_longitude)
 // SEO
 meta(name='author', content=config.SEO.cfg_name)
-link(rel='canonical', href='//'+config.SEO.cfg_url+href+'.html')
+link(rel='canonical', href=href+'.html')
 // Social: Twitter
 meta(name='twitter:card', content=title+' - '+ config.SEO.cfg_name)
 meta(name='twitter:site', content=config.SEO.cfg_url)
@@ -37,7 +37,7 @@ meta(name='twitter:image:src', content='/images/logo.png')
 meta(property='fb:admins', content=config.SEO.app_facebook_adminsID)
 meta(property='fb:app_id', content=config.SEO.app_facebook_ID)
 meta(property="og:type", content="website")
-meta(property='og:url', content='//'+config.SEO.cfg_url+href+'.html')
+meta(property='og:url', content=href+'.html')
 meta(property='og:title', content=title+'- '+ config.SEO.cfg_name)
 meta(property='og:image', content='/images/logo.png')
 meta(property='og:description', content=description)
