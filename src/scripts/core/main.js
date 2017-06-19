@@ -8,11 +8,10 @@ console.log('%cVienSoi', 'font-size:100px;color:#000000;text-shadow:0 1px 0 #404
 console.log('%c VienSoi ' + '%c - Customer success is our mission.', 'border-radius: 2px; padding: 3px; background: #000000; color: #FFF', 'color: #000000')
 console.warn("VienSoi warning: This is a browser feature intended for developers. If someone told you to copy and paste something here to enable a 4xlabs feature or 'hack' someone's account, it is a scam and will give them access to your 4xlabs account.");
 
-document.onkeyup = function(e) {
-    var e = e || window.event;
-    if (e.altKey && e.ctrlKey && e.shiftKey && e.which == 13) {
-        $('body')
-        alert('BAO NGUYEN - 0969689893\nEmail: baonguyenyam@gmail.com\nWeb: baonguyenyam.github.io')
-        return false;
-    }
-};
+// document.onkeyup = function(e) {
+//     var e = e || window.event;
+//     if (e.altKey && e.ctrlKey && e.which == 67) {
+//         alert('BAO NGUYEN - 0969689893\nEmail: baonguyenyam@gmail.com\nWeb: baonguyenyam.github.io')
+//         return false;
+//     }
+// };

@@ -1,0 +1,10 @@
+#nguyenGames
+	#nGames
+	#nGameRestart
+		button(onclick='restartGame()') Chơi lại
+	#nGameCanvasContainer
+	#nGameButton
+		button.up(ontouchstart='moveup()', onmousedown='moveup()', onmouseup='clearmove()') ↑
+		button.le(ontouchstart='moveleft()', onmousedown='moveleft()', onmouseup='clearmove()') ←
+		button.ri(ontouchstart='moveright()', onmousedown='moveright()', onmouseup='clearmove()') →
+		button.do(ontouchstart='movedown()', onmousedown='movedown()', onmouseup='clearmove()') ↓

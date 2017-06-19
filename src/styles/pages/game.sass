@@ -1,0 +1,73 @@
+@import cfg
+body
+	&.active-game
+		overflow: hidden
+		#nguyenGames
+			display: block
+		#back-to-top
+			display: none
+#nguyenGames
+	background-color: #000000
+	position: fixed
+	overflow: hidden
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	z-index: 7777
+	display: none
+	#nGames
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
+	#nGameRestart
+		position: absolute
+		width: 100%
+		height: 100%
+		z-index: 9999
+		display: none
+		button
+			position: absolute
+			top: 50%
+			left: 50%
+			+transform(translateX(-50%) translateY(-50%))
+
+	#nGameCanvasContainer
+		width: auto
+		height: auto
+		position: absolute
+		top: 50%
+		left: 50%
+		+transform(translateX(-50%) translateY(-50%))
+		background: #fff
+		canvas
+			border: 1px solid #dfdfdf
+	#nGameButton
+		text-align: center
+		position: fixed
+		overflow: hidden
+		width: 100%
+		bottom: 1rem
+		left: 0
+		z-index: 8888
+		.up, .le, .ri, .do
+			width: 3rem
+			display: inline-block
+			font-weight: normal
+			line-height: 1.25
+			text-align: center
+			white-space: nowrap
+			vertical-align: middle
+			-webkit-user-select: none
+			-moz-user-select: none
+			-ms-user-select: none
+			user-select: none
+			border: 1px solid transparent
+			padding: 0.5rem 1rem
+			font-size: 1rem
+			border-radius: 0.25rem
+			-webkit-transition: all 0.2s ease-in-out
+			transition: all 0.2s ease-in-out
