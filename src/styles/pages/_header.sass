@@ -30,3 +30,30 @@ header
 	.navbar-nav
 		img
 			max-height: 26px
+	&.offcanvas
+		.container-fluid
+			width: 100%
+		nav.navbar
+			+pad(.25rem 1rem)
+			width: 100%
+
+		+media-breakpoint-down(md)
+			.navbar-toggler
+				top: 1rem
+		+media-breakpoint-up(md)
+			.navbar-nav
+				.nav-item
+					span
+						display: none
+			.navbar-nav
+				.nav-item
+					display: flex
+		+media-breakpoint-up(lg)
+			.navbar-nav
+				.nav-item
+					span
+						display: block
+		.navbar-brand
+			img
+				max-height: 38px
+
