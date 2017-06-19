@@ -198,85 +198,85 @@ block body
 					.row
 						.col
 							.table-responsive
-							table.table.table-bordered.thead-inverse.table-striped
-								thead
-									tr
-										th Mở tag
-										th Nội dung
-										th Đóng tag
-										th CODE
-										th VALUE
-										th Hiển thị
-								tbody
-									tr
-										td &#x3C;a&#x3E;
-										td Liên kết
-										td &#x3C;/a&#x3E;
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<a href="https://google.com" target="_blank">Liên kết</a>
-										td
-											p.mb-0
-												code href
-												br
-												| Đường dẫn liên kết
-											p.mb-0
-												code target
-												br
-												| _blank: Mở trong một cửa sổ hoặc tab mới
-												br
-												| _parent: Mở trong khung cha
-												br
-												| _top: Mở trong toàn bộ phần của cửa sổ
-										td
-											p.mb-0
-												a(href="#") Liên kết
-									tr
-										td &#x3C;div&#x3E;
-										td Liên kết
-										td &#x3C;/div&#x3E;
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<div id="baonguyen" class="class-demo">Nội dung văn bản</div>
-										td
-											p.mb-0
-												code id
-												br
-												| Là duy nhất
-											p.mb-0
-												code class
-												br
-												| Gọi hàm css định dạng văn bản
+								table.table.table-bordered.thead-inverse.table-striped
+									thead
+										tr
+											th Mở tag
+											th Nội dung
+											th Đóng tag
+											th CODE
+											th VALUE
+											th Hiển thị
+									tbody
+										tr
+											td &#x3C;a&#x3E;
+											td Liên kết
+											td &#x3C;/a&#x3E;
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<a href="https://google.com" target="_blank">Liên kết</a>
+											td
+												p.mb-0
+													code href
+													br
+													| Đường dẫn liên kết
+												p.mb-0
+													code target
+													br
+													| _blank: Mở trong một cửa sổ hoặc tab mới
+													br
+													| _parent: Mở trong khung cha
+													br
+													| _top: Mở trong toàn bộ phần của cửa sổ
+											td
+												p.mb-0
+													a(href="#") Liên kết
+										tr
+											td &#x3C;div&#x3E;
+											td Liên kết
+											td &#x3C;/div&#x3E;
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<div id="baonguyen" class="class-demo">Nội dung văn bản</div>
+											td
+												p.mb-0
+													code id
+													br
+													| Là duy nhất
+												p.mb-0
+													code class
+													br
+													| Gọi hàm css định dạng văn bản
 
-										td
-											#baonguyen.class-demo Nội dung văn bản
-									tr
-										td &#x3C;img&#x3E;
-										td Hình ảnh
-										td.text-danger Không có
-										td
-											pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-												<p>
-												*<img src="http://google.com/logo.png">
-												</p>
-												<figure>
-												*<img src="/images/logo.png" alt="LOGO">
-												</figure>
-										td
-											p.mb-0
-												code src
-												br
-												| Đường dẫn của ảnh
-											p.mb-0
-												code alt
-												br
-												| Đặt tên cho ảnh
+											td
+												#baonguyen.class-demo Nội dung văn bản
+										tr
+											td &#x3C;img&#x3E;
+											td Hình ảnh
+											td.text-danger Không có
+											td
+												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
+													<p>
+													*<img src="http://google.com/logo.png">
+													</p>
+													<figure>
+													*<img src="/images/logo.png" alt="LOGO">
+													</figure>
+											td
+												p.mb-0
+													code src
+													br
+													| Đường dẫn của ảnh
+												p.mb-0
+													code alt
+													br
+													| Đặt tên cho ảnh
 
-										td
-											p.mb-0
-												img.img-thumbnail(src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/220px-Google_2015_logo.svg.png", style="width:120px")
-											figure.mb-0
-												img.img-thumbnail(src="/images/sample_icon.png")
+											td
+												p.mb-0
+													img.img-thumbnail(src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/220px-Google_2015_logo.svg.png", style="width:120px")
+												figure.mb-0
+													img.img-thumbnail(src="/images/sample_icon.png")
 
 
 					p.mt-5.text-lg.text-primary.text-bold 3) Requirements
