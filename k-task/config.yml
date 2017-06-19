@@ -43,7 +43,7 @@ config:
   SEO:
     AppName: "Home"
     mobile_color: "#000000"
-    cfg_name: "FPT"
+    cfg_name: "FPT Documents"
     cfg_url: "baonguyenyam.github.io/fpt"
     analytics: 'UA-101173524-1'
     seo_lang: 'en'

@@ -5,7 +5,7 @@ block variables
 	- var description = 'Description for home page'
 	- var bodyclass = 'html'
 	- var selected = 'HTML';
-	- var href = '';
+	- var href = '/docs/html/layout';
 block css
 	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
 	+getMin(bodyclass)
@@ -16,8 +16,8 @@ block body
 		.container-fluid
 			.row
 				.col.p-4
-					h1.mt-6#sec1 Chồng (HTML) có nhiệm vụ dựng nhà 
-					hr 
+					h1.mt-6#sec1 Chồng (HTML) có nhiệm vụ dựng nhà
+					hr
 			.row
 				.col-md-6
 					pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
