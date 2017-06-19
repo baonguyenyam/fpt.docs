@@ -1,0 +1,23 @@
+extends ../../_layout/layout
+
+block variables
+	- var title = 'Box Model'
+	- var description = 'Description for home page'
+	- var bodyclass = 'box-model'
+	- var selected = 'Box Model';
+	- var href = '';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+
+block body
+	section.home
+		.container-fluid
+
+			.row
+				.col.p-4
+					//- https://tinhte.vn/threads/hoc-photoshop-lam-quen-giao-dien-che-do-blend-mau-khai-niem-layer-va-mask.2535835/
+					//- https://www.sitepoint.com/getting-started-photoshop-5/
+					//- http://mashable.com/2010/08/12/12-beginner-tutorials-for-getting-started-with-photoshop/#iYCQNe3hjmqX
+					//- https://www.gcflearnfree.org/photoshopbasics/getting-to-know-the-photoshop-interface/1/
