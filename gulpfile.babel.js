@@ -119,6 +119,7 @@ gulp.task('product', function(cb) {
         'sitemap',
         'htmlmin',
         'header',
+        'water-mark',
         'cleanup',
         'cleanup-js',
         'cleanup-css',
