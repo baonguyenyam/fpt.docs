@@ -171,8 +171,6 @@ gulp.task('product-local', function(cb) {
         'cleanup-css',
         'local-run',
         'local-run-doc',
-        'local-run-design',
-        'local-rundesign',
         'local-run-home',
         'browserSync',
         'done',

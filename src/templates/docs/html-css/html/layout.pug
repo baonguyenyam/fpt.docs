@@ -1,11 +1,11 @@
-extends ../../_layout/layout
+extends ../../../_layout/layout
 
 block variables
 	- var title = 'HTML'
 	- var description = 'HTML là một ngôn ngữ đánh dấu siêu văn bản nên nó sẽ có vai trò xây dựng cấu trúc văn bản trên một website hay ứng dụng, hoặc khai báo các tập tin kỹ thuật số (media) như hình ảnh, video, nhạc.'
 	- var bodyclass = 'html'
 	- var selected = 'HTML';
-	- var href = '/docs/html/layout';
+	- var href = '/docs/html-css/html/layout';
 block css
 	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
 	+getMin(bodyclass)
@@ -113,5 +113,5 @@ block body
 				.col
 					.m-4.text-center.btn-toolbar.justify-content-center
 						.btn-group
-							a.btn.btn-xs.btn-primary(href="/docs/html/index.html", title="title") Home
-							a.btn.btn-xs.btn-primary(href="/docs/html/code.html", title="title") Next
+							a.btn.btn-xs.btn-primary(href="/docs/html-css/html/index.html", title="title") Home
+							a.btn.btn-xs.btn-primary(href="/docs/html-css/html/code.html", title="title") Next

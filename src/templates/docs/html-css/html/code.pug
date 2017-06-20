@@ -1,11 +1,11 @@
-extends ../../_layout/layout
+extends ../../../_layout/layout
 
 block variables
 	- var title = 'HTML'
 	- var description = 'Tag mềm: span, a, small, strong, b, u, i, sub, sup... Tag cứng: div, p, h1, h2, h3, h4, h5, h6, hr... Trong đó Tag div: có độ ưu tiên cao nhất Tag h1 > h6, hr: ko nên có tag con Tag p: nên có tag con là tag mềm'
 	- var bodyclass = 'html'
 	- var selected = 'HTML';
-	- var href = '/docs/html/code';
+	- var href = '/docs/html-css/html/code';
 
 block css
 	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
@@ -437,5 +437,5 @@ block body
 				.col
 					.m-4.text-center.btn-toolbar.justify-content-center
 						.btn-group
-							a.btn.btn-xs.btn-primary(href="/docs/html/index.html", title="title") Home
-							a.btn.btn-xs.btn-primary(href="/docs/html/style.html", title="title") Next
+							a.btn.btn-xs.btn-primary(href="/docs/html-css/html/index.html", title="title") Home
+							a.btn.btn-xs.btn-primary(href="/docs/html-css/html/style.html", title="title") Next

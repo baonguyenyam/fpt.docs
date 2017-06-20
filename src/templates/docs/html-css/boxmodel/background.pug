@@ -1,11 +1,11 @@
-extends ../../_layout/layout
+extends ../../../_layout/layout
 
 block variables
 	- var title = 'Box Model'
 	- var description = 'Box Model là một kỹ thuật cơ bản nhất trong CSS Layout và được sử dụng để bạn mô tả về khoảng cách mà mỗi phần tử trên website được sở hữu, hay nói cách khác là kỹ thuật tinh chỉnh khoảng cách hiển thị cho mỗi phần tử trên website.'
 	- var bodyclass = 'box-model'
 	- var selected = 'Box Model';
-	- var href = '/docs/boxmodel/background';
+	- var href = '/docs/html-css/boxmodel/background';
 block css
 	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
 	+getMin(bodyclass)
@@ -152,5 +152,5 @@ block body
 				.col
 					.m-4.text-center.btn-toolbar.justify-content-center
 						.btn-group
-							a.btn.btn-xs.btn-primary(href="/docs/boxmodel/index.html", title="title") Home
-							a.btn.btn-xs.btn-primary(href="/docs/boxmodel/columns.html", title="title") Next
+							a.btn.btn-xs.btn-primary(href="/docs/html-css/boxmodel/index.html", title="title") Home
+							a.btn.btn-xs.btn-primary(href="/docs/html-css/boxmodel/columns.html", title="title") Next
