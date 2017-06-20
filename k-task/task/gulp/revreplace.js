@@ -39,10 +39,10 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
                 addRootSlash: true
             })))
             .pipe(replace('/' + target + '/', 'https://' + url.SEO.cfg_url + '/'))
-            .pipe(replace('/design/', 'https://' + url.SEO.cfg_url + '/design/'))
-            .pipe(replace('/docs/', 'https://' + url.SEO.cfg_url + '/docs/'))
             .pipe(replace('/favicon/', 'https://' + url.SEO.cfg_url + '/favicon/'))
             .pipe(replace('/images/', 'https://' + url.SEO.cfg_url + '/images/'))
+            .pipe(replace('/design/', 'https://' + url.SEO.cfg_url + '/design/'))
+            .pipe(replace('/docs/', 'https://' + url.SEO.cfg_url + '/docs/'))
             .pipe(gulp.dest(dest));
     });
 
