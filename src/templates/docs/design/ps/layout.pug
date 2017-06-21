@@ -1,0 +1,162 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'Design'
+	- var description = 'Photoshop được thiết kế chủ yếu để sử dụng chuyên nghiệp, giao diện có thể cảm thấy hơi phức tạp và đáng sợ đối với người dùng mới. Ngay cả khi bạn có một số kinh nghiệm với phần mềm chỉnh sửa ảnh khác, bạn nên làm quen với các phần khác nhau của giao diện Photoshop.'
+	- var bodyclass = 'ps'
+	- var selected = 'Design';
+	- var href = '/docs/design/ps';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			.row
+				.col
+					h2 Tổng quan về giao diện Photoshop
+					hr
+					p.lead Photoshop được thiết kế chủ yếu để sử dụng chuyên nghiệp, giao diện có thể cảm thấy hơi phức tạp và đáng sợ đối với người dùng mới. Ngay cả khi bạn có một số kinh nghiệm với phần mềm chỉnh sửa ảnh khác, bạn nên làm quen với các phần khác nhau của giao diện Photoshop.
+			.row
+				.col-md-6
+					a(href="/images/design/ps/BACKGROUND_WE.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/BACKGROUND_WE.jpg", alt="")
+				.col.mb-3
+
+					#accordion(role='tablist', aria-multiselectable='true')
+						.card
+							#heading-1.card-header(role='tab')
+								h5.mb-0
+									a(data-toggle='collapse', data-parent='#accordion', href='#collapse-1', aria-expanded='true', aria-controls='collapse-1') 1. Tools panel
+							#collapse-1.collapse(role='tabpanel', aria-labelledby='heading-1')
+								.card-block
+									p.lead Đây là một trong những tính năng quan trọng nhất trong Photoshop đó là nơi bạn sẽ chọn các công cụ khác nhau để chỉnh sửa hình ảnh của bạn. Khi bạn đã chọn một công cụ, bạn sẽ có thể sử dụng nó để thao tác với ảnh hiện tại.
+									a(href="/images/design/ps/tool_move.png", target="_blank")
+										figure
+											img.img-thumbnail(src="/images/design/ps/tool_move.png", alt="")
+						.card
+							#heading-2.card-header(role='tab')
+								h5.mb-0
+									a(data-toggle='collapse', data-parent='#accordion', href='#collapse-2', aria-expanded='true', aria-controls='collapse-2') 2. Selection tools
+							#collapse-2.collapse(role='tabpanel', aria-labelledby='heading-2')
+								.card-block
+									p.lead Công cụ này cho phép bạn vẽ một vùng lựa chọn xung quanh các khu vực nhất định của ảnh hiện tại. Công cụ lựa chọn mặc định được hiển thị trong ví dụ dưới đây là công cụ Rectangular Marquee.
+									p.lead Các công cụ khác, như Lasso và Magic Wand, cho phép bạn chọn các đối tượng cụ thể mà không chọn nền. Một khi bạn đã chọn một phần của một hình ảnh, có rất nhiều thứ khác nhau bạn có thể làm với vùng chọn.
+									a(href="/images/design/ps/select_web.jpg", target="_blank")
+										figure
+											img.img-thumbnail(src="/images/design/ps/select_web.jpg", alt="")
+						.card
+							#heading-3.card-header(role='tab')
+								h5.mb-0
+									a(data-toggle='collapse', data-parent='#accordion', href='#collapse-3', aria-expanded='true', aria-controls='collapse-3') 3. Layers panel
+							#collapse-3.collapse(role='tabpanel', aria-labelledby='heading-3')
+								.card-block
+									p.lead Ở đây, bạn có thể thấy các lớp khác nhau trong bản thiết kế hiện tại. Bạn có thể bật và tắt từng lớp bằng cách nhấp vào biểu tượng mắt.
+
+									a(href="/images/design/ps/layer_web.png", target="_blank")
+										figure
+											img.img-thumbnail(src="/images/design/ps/layer_web.png", alt="")
+						.card
+							#heading-4.card-header(role='tab')
+								h5.mb-0
+									a(data-toggle='collapse', data-parent='#accordion', href='#collapse-4', aria-expanded='true', aria-controls='collapse-4') 4. Control panel
+
+							#collapse-4.collapse(role='tabpanel', aria-labelledby='heading-4')
+								.card-block
+									p.lead Bạn sẽ có thể tùy chỉnh cài đặt cho công cụ hiện được chọn. Ví dụ: nếu bạn đang sử dụng công cụ Brush, bạn sẽ có thể thay đổi kích thước bàn chải, đầu bàn chải và nhiều thứ khác.
+
+									a(href="/images/design/ps/control_web.png", target="_blank")
+										figure
+											img.img-thumbnail(src="/images/design/ps/control_web.png", alt="")
+						.card
+							#heading-5.card-header(role='tab')
+								h5.mb-0
+									a(data-toggle='collapse', data-parent='#accordion', href='#collapse-5', aria-expanded='true', aria-controls='collapse-5') 5. Drawing tools
+
+							#collapse-5.collapse(role='tabpanel', aria-labelledby='heading-5')
+								.card-block
+									p.lead Bạn có thể hình dung nó giống như công cụ vẽ thực tế. Ví dụ: công cụ Brush cho phép bạn vẽ trên hình ảnh, trong khi công cụ Eraser cho phép bạn loại bỏ các phần khỏi hình ảnh. Ví dụ: khi bạn xóa một phần của một lớp, nó sẽ cho phép bất kỳ lớp nào bên dưới nó hiển thị.
+
+									p.lead Trong ví dụ dưới đây, chúng tôi đã xóa một phần của một lớp màu đen và trắng nằm trên một lớp màu, cho phép màu sắc hiển thị.
+
+									a(href="/images/design/ps/eraser_web.jpg", target="_blank")
+										figure
+											img.img-thumbnail(src="/images/design/ps/eraser_web.jpg", alt="")
+						.card
+							#heading-6.card-header(role='tab')
+								h5.mb-0
+									a(data-toggle='collapse', data-parent='#accordion', href='#collapse-6', aria-expanded='true', aria-controls='collapse-6') 6. Shape tool
+
+							#collapse-6.collapse(role='tabpanel', aria-labelledby='heading-6')
+								.card-block
+									p.lead Công cụ này cho phép bạn chèn khuôn: chẳng hạn như hình vuông, đường kẻ, và hình bầu dục, trong bản thiết kế hiện tại.
+
+									a(href="/images/design/ps/start_tool_alternate.png", target="_blank")
+										figure
+											img.img-thumbnail(src="/images/design/ps/start_tool_alternate.png", alt="")
+						.card
+							#heading-7.card-header(role='tab')
+								h5.mb-0
+									a(data-toggle='collapse', data-parent='#accordion', href='#collapse-7', aria-expanded='true', aria-controls='collapse-7') 7. Color Picker tool
+
+							#collapse-7.collapse(role='tabpanel', aria-labelledby='heading-7')
+								.card-block
+									p.lead Bạn có thể chọn màu cho các công cụ khác nhau, chẳng hạn như công cụ Brush, công cụ Gradient, và nhiều công cụ khác.
+			.row.mt-5
+				.col
+					h2 Sử dụng công cụ
+					hr
+			.row
+				.col
+					.media
+						a(href="/images/design/ps/start_tool_alternate.png", target="_blank")
+							img.imgw.d-flex.mr-3(src='/images/design/ps/start_tool_alternate.png', alt='')
+						.media-body
+							h5.mt-0 Tools panel
+							p.lead Đây là một trong những tính năng quan trọng nhất trong Photoshop đó là nơi bạn sẽ chọn các công cụ khác nhau để chỉnh sửa hình ảnh của bạn. Khi bạn đã chọn một công cụ, bạn sẽ có thể sử dụng nó để thao tác với ảnh hiện tại.
+							p.lead Bạn cũng có thể nhấp và giữ để chọn một công cụ khác. Ví dụ: bạn có thể nhấp và giữ công cụ Rectangle để chọn các công cụ Kéo khác nhau, chẳng hạn như công cụ Ellipse, Line, hoặc Custom.
+
+			hr
+			.row.mt-2
+				.col
+					.media
+						a(href="/images/design/ps/start_panel_on.png", target="_blank")
+							img.imgw.d-flex.mr-3(src='/images/design/ps/start_panel_on.png', alt='')
+						.media-body
+							h5.mt-0 Bật/tắt cửa sổ
+							p.lead Bạn cũng có thể xem và chỉnh sửa rất nhiều thông tin về bản thiết kế hiện tại thông qua các cửa sổ khác trong không gian làm việc. Ví dụ, bạn có thể xem các lớp của bản thiết kế trong cửa sổ điều khiển Layer. Để hiển thị hoặc ẩn bất kỳ cửa sổ nào, hãy nhấp vào trình đơn Window  sau đó chọn cửa sổ muốn tương tác. Trong hình bên đây, chúng tôi đang sử dụng menu Window để bật bảng History
+
+			.row.mt-2
+				.col
+					.media
+						a(href="/images/design/ps/start_panel_expand.png", target="_blank")
+							img.imgw.d-flex.mr-3(src='/images/design/ps/start_panel_expand.png', alt='')
+						.media-body
+							p.lead Bạn có thể sử dụng mũi tên đôi để mở rộng hoặc thu gọn bảng. Điều này có thể hữu ích nếu bạn muốn tạm thời ẩn một bảng điều khiển mà không cần xoá nó khỏi không gian làm việc.
+			.row.mt-2
+				.col
+					.media
+						a(href="/images/design/ps/start_panel_move.png", target="_blank")
+							img.imgw.d-flex.mr-3(src='/images/design/ps/start_panel_move.png', alt='')
+						.media-body
+							h5.mt-0 Di chuyển panels
+							p.lead Nếu bạn muốn thay đổi vị trí của một bảng điều khiển, bạn có thể di chuyển nó bằng cách nhấp và kéo bảng điều khiển tới một phần mới của không gian làm việc.
+			.row.mt-2
+				.col
+					.media
+						a(href="/images/design/ps/start_panel_reset.png", target="_blank")
+							img.imgw.d-flex.mr-3(src='/images/design/ps/start_panel_reset.png', alt='')
+						.media-body
+							p.lead Tuy nhiên tôi khuyên bạn nên giữ hầu hết các bảng trong vị trí mặc định. Để đặt lại các bảng vào vị trí mặc định của chúng, chọn Window → Workspace → Reset Essentials. Lưu ý rằng quá trình này có thể khác nhau tùy thuộc vào phiên bản Photoshop mà bạn đang sử dụng. Ví dụ, trong Photoshop Elements, bạn sẽ vào Window → Reset Panels.
+
+			.row.mt-5
+				.col
+					.m-4.text-center.btn-toolbar.justify-content-center
+						.btn-group
+							a.btn.btn-xs.btn-primary(href="/docs/design/ps/index.html", title="title") Home
+							a.btn.btn-xs.btn-primary(href="/docs/design/ps/settings.html", title="title") Next

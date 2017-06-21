@@ -1,0 +1,80 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'Design'
+	- var description = 'Bạn có thể sử dụng Photoshop để chỉnh sửa hầu như bất kỳ hình ảnh nào, chẳng hạn như sửa một ảnh chụp thiếu sáng ảnh, xoá bỏ một vật thể ra khỏi ảnh và nhiều hơn nữa. Trong bài học này, chúng tôi sẽ giới thiệu cho bạn về giao diện Photoshop, bao gồm cách mở các tệp tin, làm việc với bảng điều khiển, tuỳ chỉnh không gian làm việc và thay đổi kích thước hiển thị.'
+	- var bodyclass = 'ps'
+	- var selected = 'Design';
+	- var href = '/docs/design/ps';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			.row
+				.col
+					h2 Tùy chỉnh môi trường Photoshop
+					hr
+					p.lead Nếu bạn muốn đặt lại giá trị cho Photoshop bạn có thể điều chỉnh lại chúng tuỳ thích. Hầu hết các tùy chọn này là khá kỹ thuật, trong ví dụ dưới tôi sẽ thực hiện 1 ví dụ tuỳ chỉnh cơ bản cho bạn:
+			.row
+				.col-md-5
+					a(href="/images/design/ps/start_pref_unit_grad.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/start_pref_unit_grad.png", alt="")
+				.col.mb-7
+					h1 Bước 1
+					p Theo mặc định, kích thước tài liệu được đo bằng inch. Tuy nhiên nếu bạn là một web designer chúng tôi khuyên bạn nên thay đổi cài đặt này thành pixel.
+					p Chọn Edit → Preferences → Units & Rulers. Nếu bạn đang sử dụng Mac, thì chọn Photoshop → Preferences   Units & Rulers.
+
+			.row.mt-3
+				.col-md-5
+					a(href="/images/design/ps/start_pref_pixels.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/start_pref_pixels.png", alt="")
+				.col.mb-7
+					h1 Bước 2
+					p Một hộp thoại sẽ xuất hiện. Chọn Units, trong cửa sổ hiện ra chọn tiếp menu đổ xuống của mục Rulers. Chọn tiếp Pixels → OK. Bạn có thể phải khởi động lại Photoshop để những thay đổi có hiệu lực.
+			.row.mt-3
+				.col-md-5
+					a(href="/images/design/ps/start_pref_text.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/start_pref_text.png", alt="")
+				.col.mb-7
+					h3 Để điều chỉnh kích thước văn bản:
+					p Chọn Edit → Preferences → Interface (hoặc Photoshop → Preferences → Interface nếu sử dụng Mac).
+					p Bên dưới ô Text, chọn menu trong mục UI Font Size, sau đó chọn kích thước mong muốn. Bạn có thể phải khởi động lại Photoshop để những thay đổi có hiệu lực.
+
+			.row.mr-5
+				.col
+					h2 Thay đổi mức độ thu phóng
+					hr
+					p.lead Khi bạn chỉnh sửa một hình ảnh trong Photoshop, bạn thường sẽ được xem nó ở dưới 100% kích thước đầy đủ của nó. Đó là bởi vì hầu hết các máy ảnh kỹ thuật số hiện đại đều chụp những bức ảnh có độ phân giải lớn. Những hình ảnh này thật lớn, trên thực tế, hầu hết màn hình máy tính không thể hiển thị trọn vẹn 1 tấm ảnh có kích thước lớn.
+
+			.row
+				.col-md-5
+					a(href="/images/design/ps/start_zoom_fit.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/start_zoom_fit.jpg", alt="")
+				.col.mb-7
+					p Nếu bạn muốn phóng to hoặc thu nhỏ, chỉ cần nhấn Ctrl+ hoặc Ctrl- (giữ phím Ctrl và sau đó nhấn phím + hoặc -). Nếu bạn đang sử dụng Mac, bạn sẽ nhấn Command+ hoặc Command-.
+
+					p Trong ví dụ bên đây, bạn có thể xem một tài liệu ở 44,4% kích thước đầy đủ của nó. Lưu ý rằng bạn có thể thấy mức độ phóng hiện tại ở đầu cửa sổ tài liệu, cũng như ở góc dưới cùng bên trái của màn hình.
+			hr
+			.row
+				.col-md-5
+					a(href="/images/design/ps/start_zoom_100_fit.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/start_zoom_100_fit.jpg", alt="")
+				.col.mb-7
+					p Ngược lại, ví dụ dưới đây cho thấy cùng một hình ảnh ở 100% (kích thước đầy đủ). Lưu ý rằng chỉ có một phần của hình ảnh có thể nhìn thấy ở mức độ thu phóng này. Nếu muốn, bạn có thể sử dụng thanh cuộn ngang và dọc để xem các phần khác của hình ảnh.
+			.row.mt-5
+				.col
+					.m-4.text-center.btn-toolbar.justify-content-center
+						.btn-group
+							a.btn.btn-xs.btn-primary(href="/docs/design/ps/index.html", title="title") Home
+							a.btn.btn-xs.btn-primary(href="/docs/design/ps/background.html", title="title") Next

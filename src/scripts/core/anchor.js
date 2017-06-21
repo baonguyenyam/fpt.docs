@@ -37,9 +37,9 @@ function callAnchor(target) {
 }
 
 $(document).ready(function() {
-    setAnchor()
+    // setAnchor()
 });
 
 $(window).resize(function() {
-    setAnchor()
+    // setAnchor()
 })
