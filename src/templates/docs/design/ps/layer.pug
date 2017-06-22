@@ -1,0 +1,39 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'Design'
+	- var description = 'aaaaaaaaaaaaaaaaaaaaaaa'
+	- var bodyclass = 'ps'
+	- var selected = 'Design';
+	- var href = '/docs/design/ps/layer';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			.row
+				.col
+					h2 Layer
+					hr
+					p.lead aaaaaaaaaaaaaaaaaaaaaaa
+			.row
+				.col-md-6
+					a(href="/images/design/ps/01.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/01.png", alt="")
+				.col-md-6
+
+
+
+			.row
+				.col
+					.m-4.text-center.btn-toolbar.justify-content-center
+						.btn-group
+							a.btn.btn-xs.btn-primary(href="/docs/design/ps/index.html", title="title") Home
+							//- a.btn.btn-xs.btn-primary(href="/docs/design/ps/ssssssssssssss.html", title="title") Next
+
