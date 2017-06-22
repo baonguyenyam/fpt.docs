@@ -13,11 +13,34 @@ block og
 	include _seo
 
 block body
-	section.mt-3.demo-columns
+	section.mt-5.demo-columns
 		.container-fluid
 			.row
 				.col
-					h2 Columns
+					h2 Float
+					hr
+					p.lead Trước khi học nội dung về thuộc tính float, bạn hãy xem trước vùng không gian của HTML để hiểu rõ hơn cách sắp xếp không gian trong một trang HTML, nếu chưa hiểu vùng không gian HTML thì bạn sẽ rất khó hình dung được nội dung bài học.
+					p Thuộc tính float: xác định sự trôi nổi của thành phần.
+					p Nếu chỉ định nghĩa thuộc tính float đơn giản như vậy chắc chắn chúng ta sẽ không thể nào hiểu được thuộc tính này, chúng ta hãy xem trước các giá trị của float để xem thuộc tính float tác động lên thành phần như thế nào, rồi sau đó chúng ta sẽ rút ra định nghĩa về float, hãy kiên nhẫn từng bước:
+			.row.mt-2
+				.col
+					h4.text-danger Chưa có float
+					.box-father
+						.bg-primary Thành phần A
+						.bg-success Thành phần B
+					.row
+						.col-sm-6
+							pre.mt-3.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+								.box-1 {
+								}
+						.col-sm-6
+							pre.mt-3.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+								.box-2 {
+								}
+			hr 
+			.row.mt-5
+				.col
+					h4.text-danger Columns
 					.box-father
 						.box-child-1 30%
 						.box-child-2 70%
@@ -36,7 +59,7 @@ block body
 								}
 			.row.mt-3
 				.col
-					h2 Columns + border
+					h4.text-danger Columns + border
 					p
 						code Error
 					.box-father
@@ -59,7 +82,7 @@ block body
 								}
 			.row.mt-3
 				.col
-					h2 Columns + padding
+					h4.text-danger Columns + padding
 					p
 						code Error
 					.box-father
@@ -82,7 +105,7 @@ block body
 								}
 			.row.mt-3
 				.col
-					h2 Fixed
+					h4.text-danger Fixed
 					p
 						code.text-primary width: calc(70% - 8px - 4rem);
 					.box-father
@@ -128,6 +151,49 @@ block body
 									*border: 4px solid green;
 									*padding: 2rem;
 									*box-sizing: border-box;
+								}
+
+			.row.mt-3
+				.col
+					h5.text-primary Định nghĩa về float
+					p Từ những ví dụ về float: left và float: right ta có thể rút ra kết luận về thuộc tính float như sau:
+					ul 
+						li Thành phần nào sử dụng float sẽ được giải phóng vùng không gian, vùng không gian này sẽ trở thành vùng trống, và sẽ bị vùng không gian của những thành phần liền kề nó lập tức chiếm lấy.
+						li Khi sử dụng float, các thành phần không chồng chập lên nhau, mà sẽ sắp xếp vị trí tùy thuộc vào chiều rộng của vùng trống.
+						li Khi sử dụng float: left, vùng không gian của thành phần sẽ được giải phóng và thành phần sẽ trôi sang trái.
+						li Khi sử dụng float: right, vùng không gian của thành phần sẽ được giải phóng và thành phần sẽ trôi sang phải.
+			.row.mt-5
+				.col
+					h2 Clear
+					hr
+					p.lead Thuộc tính clear: ngăn chặn thành phần A chiếm vùng không gian của thành phần B (với thành phần B là thành phần sử dụng float).
+
+					p Thuộc tính clear có các giá trị sau:
+					ul 
+						li clear: left
+						li clear: right
+						li clear: both
+						li clear: none
+			.row.mt-5
+				.col
+					h2 ClearFix
+					hr
+					p.lead Thủ thuật clearfix không phải là dạng thuộc tính, mà nó là sự kết hợp của nhiều thuộc tính khác nhau nhằm tạo vùng không gian tạm thay thế vùng không gian bị giải phóng khi thành phần sử dụng float.
+					p Khi thành phần có sử dụng float, thì thành phần sẽ dễ dàng điều khiển các thuộc tính padding và margin chính xác hơn vì gốc tính padding và margin sẽ không còn bị ảnh hưởng bởi float.
+					.row
+						.col-md-6
+							p
+								figure
+									img.img-thumbnail(src="/images/learn/css/clearfix.png", alt="alt")
+						.col-md-6
+							pre.mt-3.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+								.clearfix:after {
+									*clear: both;
+									*content: ""
+									*display: block;
+									*height: 0;
+									*line-height: 0;
+									*visibility: hidden;
 								}
 
 			.row

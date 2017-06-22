@@ -1,0 +1,208 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'HTML'
+	- var description = 'Trình bày thẻ tạo bảng (table) trong html - bảng là dữ liệu có tính cấu trúc: bảng (table) - được tạo bởi các dòng (row) - các dòng được tạo bởi các ô (cell). Tìm hiểu cách hiệu chỉnh bảng: thay đổi border - cellspacing - cellpadding - table bgcolor ...'
+	- var bodyclass = 'html'
+	- var selected = 'HTML';
+	- var href = '/docs/html-css/html/code';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.demo-html
+		.container-fluid
+
+			.row
+				.col.p-4
+					h1.mt-6#sec1 Table
+					hr
+					p.lead Trình bày thẻ tạo bảng (table) trong html - bảng là dữ liệu có tính cấu trúc: bảng (table) - được tạo bởi các dòng (row) - các dòng được tạo bởi các ô (cell). Tìm hiểu cách hiệu chỉnh bảng: thay đổi border - cellspacing - cellpadding - table bgcolor ...
+					p Trong bảng, chiều rộng hay chiều dài đều được tính bằng đơn vị pixel. Thẻ &#x3C;table&#x3E; được dùng để tạo bảng trong tài liệu HTML. Các thuộc tính của phần tử &#x3C;table&#x3E; được áp dụng cho việc định dạng khung nhìn ( dòng kẻ, khoảng cách giữa các ô [cell spacing] - căn lề đổ dữ liệu [cell padding] nhưng không cho dữ liệu hiển thị trên bảng. Đơn vị cơ bản của bảng là một ô (cell) và được định nghĩa bằng thẻ &#x3C;td&#x3E;. Một hàng của bảng được định nghĩa bằng thẻ &#x3C;tr&#x3E; - một hàng sẽ có 1 hoặc nhiều ô (cell). 
+
+					.row
+						.col
+							p
+								img.img-thumbnail.p-2(src="/images/learn/html/table.png", alt="")
+
+					ul 
+						li Tag &#x3C;table&#x3E; được dùng để tạo một bảng HTML.
+						li Một tag &#x3C;table&#x3E; đơn giản có chứa một hoặc nhiều &#x3C;tr&#x3E;, &#x3C;th&#x3E; và &#x3C;td&#x3E;, trong đó:
+						li &#x3C;tr&#x3E; xác định hàng của table.
+						li &#x3C;th&#x3E; xác định phần tử tiêu đề của table
+						li &#x3C;td&#x3E; xác định phần tử nội dung của table
+						li Một table phức tạp có thể bao gồm nhiều thành phần khác, gồm: &#x3C;caption&#x3E;, &#x3C;col&#x3E;, &#x3C;colgroup&#x3E;, &#x3C;thead&#x3E;, &#x3C;tfoot&#x3E;, &#x3C;tbody&#x3E;...
+					
+					h6.text-danger Cấu trúc 
+
+					.row 
+						.col-md-6
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								[table]
+									*[tr]
+										**[th]Lý Mạc Sầu[/th]
+										**[th]Cô Long[/th]
+										**[th]Dương Quá[/th]
+									*[/tr]
+									*[tr]
+										**[td]Nữ[/td]
+										**[td]Nữ[/td]
+										**[td]Nam[/td]
+									*[/tr]
+									*[tr]
+										**[td]9[/td]
+										**[td]10[/td]
+										**[td]0[/td]
+									*[/tr]
+								[/table]
+						.col-md-6
+							table.table-bordered 
+								tr.bg-white
+									th Lý Mạc Sầu
+									th Cô Long
+									th Dương Quá
+								tr.bg-white
+									td Nữ
+									td Nữ
+									td Nam
+								tr.bg-white
+									td 9
+									td 10
+									td 0
+					.row.mt-3
+						.col-md-6
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								[table]
+									*[tr]
+										**[th]Lý Mạc Sầu[/th]
+										**[th]Cô Long[/th]
+										**[th]Dương Quá[/th]
+									*[/tr]
+									*[tr]
+										**[td colspan="2"]Nữ[/td]
+										**[td]Nam[/td]
+									*[/tr]
+									*[tr]
+										**[td]9[/td]
+										**[td]10[/td]
+										**[td]0[/td]
+									*[/tr]
+								[/table]
+						.col-md-6
+							table.table-bordered 
+								tr.bg-white
+									th Lý Mạc Sầu
+									th Cô Long
+									th Dương Quá
+								tr.bg-white
+									td(colspan="2") Nữ
+									td Nam
+								tr.bg-white
+									td 9
+									td 10
+									td 0
+					
+					h6.text-danger Viết đúng
+					.row.mt-3
+						.col-md-6
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								[table]
+									*[thead]
+										**[tr]
+											***[th]Lý Mạc Sầu[/th]
+											***[th]Cô Long[/th]
+											***[th]Dương Quá[/th]
+										**[/tr]
+									*[/thead]
+									*[tbody]
+										**[tr]
+											***[td colspan="2"]Nữ[/td]
+											***[td]Nam[/td]
+										**[/tr]
+									*[/tbody]
+									*[tfoot]
+										**[tr]
+											***[td]9[/td]
+											***[td]10[/td]
+											***[td]0[/td]
+										**[/tr]
+									*[/tfoot]
+								[/table]
+						.col-md-6
+							table.table-bordered 
+								thead 
+									tr.bg-white
+										th Lý Mạc Sầu
+										th Cô Long
+										th Dương Quá
+								tbody 
+									tr.bg-white
+										td(colspan="2") Nữ
+										td Nam
+								tfoot 
+									tr.bg-white
+										td 9
+										td 10
+										td 0
+
+			.row.mt-5
+				.col 
+					p.text-lg.text-primary.text-bold Các thuộc tính
+					.table-responsive
+						table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Thuộc tính
+									th Mô tả 
+							tbody
+								tr
+									td Border
+									td Xác lập khung cho bảng
+								tr
+									td Width
+									td Chiều rộng của bảng
+
+								tr
+									td Cellpadding
+									td Khoảng cách từ mép ô đến nội dung của ô
+								tr
+									td Cellspacing
+									td Khoảng cách giữa các ô
+								tr
+									td Bordercolor
+									td Xác lập màu cho khung
+
+								tr
+									td Bgcolor
+									td Xác lập màu nền cho bảng
+								tr
+									td Background
+									td Xác lập hình nền cho bảng
+								tr
+									td Colspan
+									td Colspan=n: Trộn n ô trên một hàng thành một ô (mở rộng qua nhiều cột). Số n này phụ thuộc số ô trên hàng
+								tr
+									td Rowspan
+									td Rowspan=n: Trộn n ô trên một cột thành một ô (mở rộng ô qua nhiều hàng). Số n này phụ thuộc số ô trên cột
+								tr
+									td Align
+									td Xác lập lề cho ô. Các giá trị gồm: Left, Right, Center, Justify
+								tr
+									td Valign
+									td Xác lập lề cho ô. Các giá trị gồm: trên (top), dưới (bottom), giữa
+								tr
+									td Nowrap
+									td Bình thường mặc định thì nội dung sẽ được bẻ dòng cho vừa vào khổ rộng của từng ô. Dùng thuộc tính NOWRAP trong &#x3C;td&#x3E; để cấm việc đó.
+
+						
+
+			.row
+				.col
+					.m-4.text-center.btn-toolbar.justify-content-center
+						.btn-group
+							a.btn.btn-xs.btn-primary(href="/docs/html-css/html/index.html", title="title") Home
+							a.btn.btn-xs.btn-primary(href="/docs/html-css/html/form.html", title="title") Next

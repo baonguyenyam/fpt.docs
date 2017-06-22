@@ -2,7 +2,7 @@ extends ../../../_layout/layout
 
 block variables
 	- var title = 'HTML'
-	- var description = 'Tag mềm: span, a, small, strong, b, u, i, sub, sup... Tag cứng: div, p, h1, h2, h3, h4, h5, h6, hr... Trong đó Tag div: có độ ưu tiên cao nhất Tag h1 > h6, hr: ko nên có tag con Tag p: nên có tag con là tag mềm'
+	- var description = 'Tag mềm: span, a, small, strong, b, u, i, sub, sup... Tag cứng: div, p, h1, h2, h3, h4, h5, h6.text-danger, hr... Trong đó Tag div: có độ ưu tiên cao nhất Tag h1 > h6.text-danger, hr: ko nên có tag con Tag p: nên có tag con là tag mềm'
 	- var bodyclass = 'html'
 	- var selected = 'HTML';
 	- var href = '/docs/html-css/html/code';
@@ -23,6 +23,15 @@ block body
 					hr
 					p.lead.text-shadown.text-danger.text-bold Có nhiều bố cục khác nhau
 					p Tuy nhiên bố cục cơ bản bao gồm các phần tử như hình dưới:
+					p Một tài liệu hay tập tin HTML để được gọi là một tài liệu web thì sẽ được bao gồm bốn yếu tố chính đó là:
+					ul 
+						li Có thẻ khai báo loại tập tin/tài liệu.
+						li Có thẻ đóng và mở tài liệu HTML.
+						li Có thẻ đóng và mở phần thông tin website.
+						li Có thẻ đóng và mở phần nội dung website.
+					p Và trong bài này, chúng ta sẽ đi tìm hiểu qua 4 phần đó để tạo ra một tài liệu website bằng HTML đúng chuẩn.
+
+					p Trước khi mình giải thích rõ các thành phần đó thì bạn hãy tạo ra một tập tin HTML với nội dung sau và lưu lại.
 					.row.text-center
 						.col-md-6.mb-3
 							a(href="/images/learn/html/04.png", target="_blank")
@@ -48,394 +57,74 @@ block body
 								**<script src="main.js"></script>
 								*[/body]
 								[/html]
-
-					p.mt-5.text-lg.text-primary.text-bold Tag
-					.row
-						.col
-							p
-								img.img-thumbnail(src="/images/learn/html/html-syntax-outline.png", alt="")
-					p.mt-5.text-lg.text-primary.text-bold 1) Elements
-					.row
-						.col
+					.row 
+						.col 
+							h6.text-danger Thẻ khai báo loại tập tin
+							p Ngay tại đoạn đầu tiên của tài liệu, chúng ta phải có một thẻ khai báo loại tập tin cho nó như thế này, cụ thể là ta sẽ khai báo rằng đây là tập tin HTML.
 							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
-								<tagname>Content</tagname>
-					.row
-						.col
-							.table-responsive
-								table.table.table-bordered.thead-inverse.table-striped
-									thead
-										tr
-											th Mở tag
-											th Nội dung
-											th Đóng tag
-											th CODE
-											th Hiển thị
-									tbody
-										tr
-											td &#x3C;h1&#x3E;
-											td Tiêu đề trang
-											td &#x3C;/h1&#x3E;
-											td
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													<h1>Tiêu đề trang</h1>
-													...
-													<h6>Tiêu đề trang</h6>
-											td
-												h1 Tiêu đề trang
-												h6.mb-0 Tiêu đề trang
-
-										tr
-											td &#x3C;p&#x3E;
-											td Nội dung bài viết&#x3C;br&#x3E;Nội dung bài viết
-											td &#x3C;/p&#x3E;
-											td
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													<p>Nội dung bài viết<br>Nội dung bài viết</p>
-											td
-												p.mb-0 Nội dung bài viết
-													br
-													| Nội dung bài viết
-										tr
-											td &#x3C;b&#x3E;
-											td Nội dung bài viết
-											td &#x3C;/b&#x3E;
-											td
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													<p><b>Nội dung bài viết</b></p>
-													<p><strong>Nội dung bài viết</strong></p>
-											td
-												p.mb-0
-													b Nội dung bài viết
-												p.mb-0
-													strong Nội dung bài viết
-										tr
-											td &#x3C;i&#x3E;
-											td Nội dung bài viết
-											td &#x3C;/i&#x3E;
-											td
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													<p><i>Nội dung bài viết</i></p>
-													<p><em>Nội dung bài viết</em></p>
-											td
-												p.mb-0
-													i Nội dung bài viết
-												p.mb-0
-													em Nội dung bài viết
-										tr
-											td &#x3C;u&#x3E;
-											td Nội dung bài viết
-											td &#x3C;/u&#x3E;
-											td
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													<p><u>Nội dung bài viết</u></p>
-											td
-												p.mb-0
-													u Nội dung bài viết
-										tr
-											td &#x3C;s&#x3E;
-											td Nội dung bài viết
-											td &#x3C;/s&#x3E;
-											td
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													<p><s>Nội dung bài viết</s></p>
-													<p><del>Nội dung bài viết</del></p>
-											td
-												p.mb-0
-													s Nội dung bài viết
-												p.mb-0
-													del Nội dung bài viết
-										tr
-											td &#x3C;sub&#x3E;
-											td Nội dung bài viết
-											td &#x3C;/sub&#x3E;
-											td
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													<p>Nội dung<sub>bài viết</sub></p>
-													<p>Nội dung<sup>bài viết</sup></p>
-											td
-												p.mb-0
-													| Nội dung
-													sub bài viết
-												p.mb-0
-													| Nội dung
-													sup bài viết
-										tr
-											td &#x3C;ul&#x3E;
-											td &#x3C;li&#x3E;Menu 1&#x3C;/ul&#x3E;
-												br
-												| &#x3C;li&#x3E;Menu 2&#x3C;/ul&#x3E;
-											td &#x3C;/ul&#x3E;
-											td
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													<ul>
-													*<li>Menu 1</li>
-													*<li>Menu 2</li>
-													</ul>
-											td
-												ul
-													li Menu 1
-													li Menu 2
-										tr
-											td &#x3C;ol&#x3E;
-											td &#x3C;li&#x3E;Menu 1&#x3C;/ol&#x3E;
-												br
-												| &#x3C;li&#x3E;Menu 2&#x3C;/ol&#x3E;
-											td &#x3C;/ol&#x3E;
-											td
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													<ol>
-													*<li>Menu 1</li>
-													*<li>Menu 2</li>
-													</ol>
-											td
-												ol
-													li Menu 1
-													li Menu 2
-
-					p.mt-5.text-lg.text-primary.text-bold 2) Attribute
-					.row
-						.col
+								[!DOCTYPE html]
+							p Với thẻ &#x3C;!DOCTYPE html&#x3E; ở trên, ta có thêm một tham số đó là html. Tham số html này nghĩa là chúng ta khai báo với trình duyệt rằng đây là tài liệu HTML5 (HTML phiên bản 5), dù rằng chúng ta có thể không sử dụng HTML5 nhưng hiện tại khi khai báo tập tin HTML thì bạn cứ sử dụng tham số này vừa ngắn gọn lại vừa dễ dàng sử dụng thêm HTML5 nếu thích.
+							p Ngoài ra, nó còn có một vài tham số khác mà bạn có thể tham khảo thêm 
+								a(href="https://www.w3schools.com/tags/tag_DOCTYPE.asp", target="_blank") tại đây
+								| .
+							p Có một điều thú vị là thẻ &#x3C;!DOCTYPE html&#x3E; không phải là một thẻ của HTML, mà nó chỉ là một thẻ khai báo thông tin trên tài liệu để trình duyệt hiểu phiên bản HTML mà bạn sử dụng trên website mà thôi.
+							h6.text-danger Thẻ đóng mở tài liệu HTML
+							p Ngay tại đoạn đầu tiên của tài liệu, chúng ta phải có một thẻ khai báo loại tập tin cho nó như thế này, cụ thể là ta sẽ khai báo rằng đây là tập tin HTML.
 							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
-								<tagname attribute="abc">Content</tagname>
-					.row
-						.col
-							.table-responsive
-								table.table.table-bordered.thead-inverse.table-striped
-									thead
-										tr
-											th Mở tag
-											th Nội dung
-											th Đóng tag
-											th CODE
-											th VALUE
-											th Hiển thị
-									tbody
-										tr
-											td &#x3C;a&#x3E;
-											td Liên kết
-											td &#x3C;/a&#x3E;
-											td
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													<a href="https://google.com" target="_blank">Liên kết</a>
-											td
-												p.mb-0
-													code href
-													br
-													| Đường dẫn liên kết
-												p.mb-0
-													code target
-													br
-													| _blank: Mở trong một cửa sổ hoặc tab mới
-													br
-													| _parent: Mở trong khung cha
-													br
-													| _top: Mở trong toàn bộ phần của cửa sổ
-											td
-												p.mb-0
-													a(href="#") Liên kết
-										tr
-											td &#x3C;div&#x3E;
-											td Liên kết
-											td &#x3C;/div&#x3E;
-											td
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													<div id="baonguyen" class="class-demo">Nội dung văn bản</div>
-											td
-												p.mb-0
-													code id
-													br
-													| Là duy nhất
-												p.mb-0
-													code class
-													br
-													| Gọi hàm css định dạng văn bản
+								[!DOCTYPE html]
+							p Kế tiếp, ở tầng tiếp theo sẽ là thẻ &#x3C;html&#x3E; &#x3C;/html&#x3E; có nhiệm vụ khai báo cho trình duyệt biết rằng những nội dung bên trong cặp thẻ này là HTML. Tuy nhiên, bên trong thẻ này mình có thêm một thuộc tính tên là lang với giá trị là vi (&#x3C;html lang="vi"&#x3E;). Thuộc tính này nghĩa là chúng ta khai báo cho trình duyệt biết mã ngôn ngữ mà ta sử dụng trên website, mã vi nghĩa là Vietnamese – tiếng Việt, bạn có thể tham khảo các mã ngôn ngữ khác 
+								a(href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes", target="_blank") tại đây
+								| .
 
-											td
-												#baonguyen.class-demo Nội dung văn bản
-										tr
-											td &#x3C;img&#x3E;
-											td Hình ảnh
-											td.text-danger Không có
-											td
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													<p>
-													*<img src="http://google.com/logo.png">
-													</p>
-													<figure>
-													*<img src="/images/logo.png" alt="LOGO">
-													</figure>
-											td
-												p.mb-0
-													code src
-													br
-													| Đường dẫn của ảnh
-												p.mb-0
-													code alt
-													br
-													| Đặt tên cho ảnh
+							p Bạn nên nhớ một điều là thẻ &#x3C;html&#x3E; &#x3C;/html&#x3E; phải bao bọc toàn bộ nội dung website, không bao gồm thẻ &#x3C;!DOCTYPE&#x3E;.
+							h6.text-danger  Thẻ đóng và mở phần thông tin website
 
-											td
-												p.mb-0
-													img.img-thumbnail(src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/220px-Google_2015_logo.svg.png", style="width:120px")
-												figure.mb-0
-													img.img-thumbnail(src="/images/sample_icon.png")
+							p Phần khai báo thông tin của website sẽ được đặt vào bên trong cặp thẻ gọi là &#x3C;head&#x3E; &#x3C;/head&#x3E;. Nội dung bên trong thẻ này là các thẻ chuyên cho khai báo thông tin website (meta), tên website (title), khai báo CSS (style), khai báo các đoạn Javascript (script) và một số thông tin khác. Thường là các thông tin được khai báo trong đây sẽ không hiển thị trực tiếp thành siêu văn bản trên web nhưng nó sẽ có nhiệm vụ chứa các thông tin quan trọng về website.
+							h6.text-danger Thẻ đóng và mở phần phần nội dung website
+
+							p Đây là cặp thẻ mà bạn sẽ tiến hành viết nội dung vào, đó là cặp thẻ &#x3C;body&#x3E; &#x3C;/body&#x3E;. Cặp thẻ này là để trình duyệt xác định đây là phần thân của website, nó sẽ chứa toàn bộ các nội dung siêu văn bản hoặc media mà bạn muốn nó hiển thị lên trang web của bạn. Phần này chúng ta sẽ làm việc nhiều hơn ở các bài sau.
+
+							p Bây giờ nếu bạn mở tài liệu HTML ở trên lên bằng trình duyệt thì chỉ sẽ thấy nó có mỗi đoạn nội dung nằm bên trong thẻ &#x3C;body&#x3E; &#x3C;/body&#x3E; mà thôi.
+							h6.text-danger Khai báo tên tài liệu với cặp thẻ &#x3C;title&#x3E; &#x3C;/title&#x3E;
+
+							p Thẻ &#x3C;title&#x3E; &#x3C;/title&#x3E; có tác dụng khai báo tên tài liệu web của bạn đang soạn. Ứng dụng thực tiễn của thẻ này là giúp trình duyệt hiển thị tên tài liệu khi mở lên và các cỗ máy tìm kiếm như Google cũng hiển thị nội dung trong cặp thẻ này để lấy tên tài liệu.
+							h6.text-danger Khai báo dữ liệu vĩ mô với thẻ &#x3C;meta&#x3E;
+
+							p Thẻ &#x3C;meta&#x3E; là một thẻ đặc biệt vì nó không có thẻ đóng như các thẻ khác mà sẽ có dấu gạch chéo như / ở đằng trước ký tự &#x3E; cuối cùng. Thẻ này có mục đích khai báo các dữ liệu vĩ mô trong tài liệu web HTML của bạn như mô tả, từ khóa, tên tác giả, bảng mã ký tự sử dụng,…
+
+							p Thẻ meta luôn được khai báo kèm theo ít nhất là một thuộc tính và mỗi thuộc tính phải luôn có giá trị. Ví dụ:
+
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								<meta charset="utf-8" />
+							p Trong đó, charset là tên thuộc tính và utf-8 là giá trị của thuộc tính charset.
+
+							p.text-primary 
+								strong Thuộc tính charset
+							p Thuộc tính charset trong thẻ &#x3C;meta&#x3E; có nhiệm vụ khai báo cho trình duyệt biết bảng mã ký tự siêu văn bản bên trong tài liệu là gì. Và hiện nay hầu hết chúng ta đều sử dụng bảng mã UTF-8 cho tất cả ngôn ngữ bao gồm các ngôn ngữ tiếng latin, chữ Hán – Nôm và các ngôn ngữ đọc từ phải sang trái (Right to Left – RTL) như tiếng Ả-Rập chẳng hạn.
+							p.text-primary 
+								strong Thuộc tính name
+							p Đối với thuộc tính name thì thẻ meta của bạn phải có hai thuộc tính, đó là thuộc tính name và content, trong đó thuộc tính content được xem là thiết lập nội dung cho thuộc tính name. Ví dụ:
+
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								<meta name="author" content="Bao Nguyen" />
+
+							p Trong đó, giá trị của thuộc tính name là một giá trị có sẵn vì hiện tại thuộc tính name hỗ trợ một số giá trị như:
+
+							ul 
+								li author: Khai báo tên tác giả của tài liệu.
+								li description: Khai báo mô tả của tài liệu.
+								li keyword: Khai báo từ khóa của tài liệu, các từ khóa này sẽ đóng vai trò hỗ trợ các trình tìm kiếm văn bản hoặc máy tìm kiếm website dò tìm.
+								li application-name: Tên ứng dụng đại diện của tài liệu web.
+								li generator: Khai báo tên ứng dụng tạo ra tài liệu.
 
 
-					p.mt-5.text-lg.text-primary.text-bold 3) Requirements
-					.row
-						.col
-							.table-responsive
-								table.table.table-bordered.thead-inverse.table-striped
-									thead
-										tr
-											th TAG
-											th Require
-											th Parents
-											th CODE
-									tbody
-										tr
-											td &#x3C;a&#x3E;
-											td
-												code href
-											td
-												| &#x3C;div&#x3E;
-												br
-												| &#x3C;p&#x3E;
-											td
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													<div>
-														*<a href="https://google.com">Liên kết</a>
-													</div>
-										tr
-											td
-												| &#x3C;b&#x3E;, &#x3C;strong&#x3E;, &#x3C;em&#x3E;, &#x3C;sub&#x3E;, &#x3C;sup&#x3E;,
-												br
-												| &#x3C;pre&#x3E;, &#x3C;code&#x3E;, &#x3C;i&#x3E;, &#x3C;u&#x3E;, &#x3C;br&#x3E;, &#x3C;span&#x3E;, &#x3C;del&#x3E; ...
-											td
-												code Không có
-											td
-												| &#x3C;div&#x3E;
-												br
-												| &#x3C;p&#x3E;
-											td
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													<p>
-														*<strong>Nội dung văn bản</strong>
-													</p>
-										tr
-											td
-												| &#x3C;img&#x3E;
-											td
-												code src
-												| ,
-												code alt
-											td
-												| &#x3C;div&#x3E;
-												br
-												| &#x3C;p&#x3E;
-												br
-												| &#x3C;figure&#x3E;
-											td
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													<figure>
-														*<img src="image.png", alt="">
-													</figure>
-										tr
-											td
-												| &#x3C;li&#x3E;
-											td
-												code Không có
-											td
-												| &#x3C;ul&#x3E;
-												br
-												| &#x3C;ol&#x3E;
-
-											td
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													<ul>
-														*<li> Menu 1</li>
-														*<li> Menu 2</li>
-													</ul>
-					p.mt-5.text-lg.text-primary.text-bold 4) Tag Type
-					.row
-						.col
-							.table-responsive
-								table.table.table-bordered.thead-inverse.table-striped
-									thead
-										tr
-											th Type
-											th TAGS
-											th Wrong
-									tbody
-										tr
-											td Tag về định dạng văn bản
-											td
-												p.mb-0
-													| Tag mềm: span, a, small, strong, b, u, i, sub, sup...
-													br
-													| Tag cứng: div, p, h1, h2, h3, h4, h5, h6, hr...
-												p.mb-0 Trong đó
-												ul.mb-0
-													li Tag div: có độ ưu tiên cao nhất
-													li Tag h1 > h6, hr: ko nên có tag con
-													li Tag p: nên có tag con là tag mềm
-											td.bg-warning
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													[p]
-														*<div>Nội dung văn bản</div>
-													[/p]
-										tr
-											td Tag về hình ảnh
-											td
-												p.mb-0
-													| img, figure, figcaption
-											td.bg-warning
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													[img src="image.png"]
-														*<figure>Nội dung văn bản</figure>
-													[/img]
-										tr
-											td Tag về hiển thị dữ liệu
-											td
-												p.mb-0
-													| dl, dt, dd, ol, ul, li...
-											td.bg-warning
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													[div]
-														*<li>Nội dung văn bản</li>
-													[/div]
-										tr
-											td Tag về bảng
-											td
-												p.mb-0
-													| table, caption, tbody, tfoot, thead, tr, th, td...
-											td.bg-warning
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													[table]
-														*[thead]Nội dung văn bản[/thead]
-														*[tbody]
-														**[td]Nội dung văn bản[/td]
-														*[/tbody]
-													[/table]
-										tr
-											td Tag về bố cục (layout)
-											td
-												p.mb-0
-													| article, section, details, footer, header, hgroup, menu, nav, summary, time, mark...
-											td.bg-warning
-												pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.no-border.no-padding.
-													[header]
-														*<footer>Nội dung văn bản</footer>
-													[/header]
 
 
-					p.mt-5.text-lg.text-primary.text-bold 5) HTML Tag list
-					.row
-						.col
-							a(href="https://www.w3schools.com/tags/default.asp", target="_blank") https://www.w3schools.com/tags/default.asp
+
+
 			.row
 				.col
 					.m-4.text-center.btn-toolbar.justify-content-center
 						.btn-group
 							a.btn.btn-xs.btn-primary(href="/docs/html-css/html/index.html", title="title") Home
-							a.btn.btn-xs.btn-primary(href="/docs/html-css/html/style.html", title="title") Next
+							a.btn.btn-xs.btn-primary(href="/docs/html-css/html/tag.html", title="title") Next

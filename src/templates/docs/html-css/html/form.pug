@@ -1,0 +1,76 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'HTML'
+	- var description = 'Khi làm website bằng HTML, đặc biệt là sau này bạn học lên các ngôn ngữ server-side như PHP hay Python thì việc sử dụng form nhập liệu rất phổ biến như tạo form đăng nhập, form đăng dữ liệu lên website,…nên nếu có thể thì nên hiểu cách tạo một form nhập liệu bằng HTML ngay từ bây giờ.'
+	- var bodyclass = 'html'
+	- var selected = 'HTML';
+	- var href = '/docs/html-css/html/code';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.demo-html
+		.container-fluid
+
+			.row
+				.col.p-4
+					h1.mt-6#sec1 Form
+					hr
+					p.lead Khi làm website bằng HTML, đặc biệt là sau này bạn học lên các ngôn ngữ server-side như PHP hay Python thì việc sử dụng form nhập liệu rất phổ biến như tạo form đăng nhập, form đăng dữ liệu lên website,…nên nếu có thể thì nên hiểu cách tạo một form nhập liệu bằng HTML ngay từ bây giờ.
+
+					.row
+						.col
+							p
+								img.img-thumbnail.p-4(src="/images/learn/html/form.png", alt="")
+					p Ở HTML, để tạo form chúng ta sẽ sử dụng cặp thẻ &#x3C;form&#x3E; &#x3C;/form&#x3E;, thẻ này sẽ chứa một vài thuộc tính quan trọng và nội dung bên trong cặp thẻ đó là các thẻ &#x3C;input&#x3E;, &#x3C;button&#x3E;, &#x3C;label&#x3E;, &#x3C;select&#x3E;... để khai báo các trường nhập liệu. Trước hết hãy xem qua mẫu một cái form đăng nhập bằng HTML dưới đây.
+
+
+					h6.text-danger Các thuộc tính trong thẻ &#x3C;form&#x3E;
+
+					ul 
+						li action: Đường dẫn đến một trang xử lý dữ liệu sau khi người dùng ấn nút gửi dữ liệu.
+						li method: Phương thức gửi dữ liệu.
+						li name: Tên của form.
+					p Hiện tại nếu bạn đang học HTML thì không cần quan tâm đến ba thuộc tính trên vì nó thuộc thẩm quyền xử lý của các ngôn ngữ server-side, nhưng bạn chỉ cần nhớ khi tạo form thì nhớ khai báo các thuộc tính đó là được.
+
+					h6.text-danger Các thuộc tính trong thẻ  &#x3C;input&#x3E;
+					p Thẻ này sẽ đại diện cho các trường nhập dữ liệu, mỗi thẻ là một trường nhập dữ liệu khác nhau. Tuy nhiên, kiểu nhập liệu của mỗi thẻ sẽ khác nhau dựa vào thuộc tính type bên trong nó vì hiện tại HTML đang hỗ trợ đến 23 kiểu nhập liệu, tương ứng với 23 giá trị của thuộc tính type. Danh sách các giá trị của thuộc tính type:
+
+					ul 
+						li button
+						li checkbox
+						li color
+						li date
+						li datetime
+						li datetime-local
+						li email
+						li file
+						li hidden
+						li image
+						li month
+						li number
+						li password
+						li radio
+						li range
+						li reset
+						li search
+						li submit
+						li tel
+						li text
+						li time
+						li url
+						li week
+					p Thay vì giải thích thì bạn nên tự tay thử từng loại để biết chức năng của nó là gì nhé, chỉ cần thay giá trị của thuộc tính type tương ứng với danh sách trên thôi. Tuy nhiên, bạn sẽ sử dụng nhiều nhất là kiểu text (trường nhập liệu dạng chữ và số), password (trường nhập mật khẩu, nó sẽ tự mã hóa mật khẩu nhập vào bằng ký tự *), submit (trường tạo nút gửi dữ liệu đi), textarea (khung nhập liệu giống kiểu text nhưng bạn có thể viết xuống dòng).
+
+
+			.row
+				.col
+					.m-4.text-center.btn-toolbar.justify-content-center
+						.btn-group
+							a.btn.btn-xs.btn-primary(href="/docs/html-css/html/index.html", title="title") Home
+							a.btn.btn-xs.btn-primary(href="/docs/html-css/html/style.html", title="title") Next

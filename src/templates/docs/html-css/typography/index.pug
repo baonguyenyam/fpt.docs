@@ -1,0 +1,59 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'Typography'
+	- var description = 'Các thuộc tính định dạng cho text thường được sử dụng định dạng trực tiếp cho các thẻ thuộc nhóm inline, (những thuộc tính này cũng có thể định dạng được cho các thẻ khác).'
+	- var bodyclass = 'typography'
+	- var selected = 'Typography';
+	- var href = '/docs/html-css/typography';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+
+block body
+	section.home
+		.container-fluid
+
+			.row
+				.col.p-4
+					h1.mt-5#sec1 Typography
+					hr
+					p Các thuộc tính định dạng cho text thường được sử dụng định dạng trực tiếp cho các thẻ thuộc nhóm inline, (những thuộc tính này cũng có thể định dạng được cho các thẻ khác).
+
+					.row
+						.col-md-6
+							figure
+								img.img-thumbnail(src="/images/learn/typography/typography.jpg", alt="")
+						.col-md-6
+							ul 
+								li Thuộc tính định dạng màu sắc: color
+								li Thuộc tính định dạng kích thước chữ: font-size
+								li Thuộc tính xác định dạng font chữ: font-family
+								li Thuộc tính định dạng kích thước chữ: font-weight
+								li Thuộc tính định dạng kiểu chữ: font-style
+								li Thuộc tính định dạng khoảng cách các ký tự: letter-spacing
+								li Thuộc tính định dạng khoảng cách các dòng: line-height
+								li Thuộc tính xác định chữ có gạch dưới hay không: text-decoration
+								li Thuộc tính định dạng khoảng cách các từ: word-spacing
+								li Thuộc tính định dạng cắt dòng cho đoạn văn: word-wrap
+								li Thuộc tính định dạng cắt từ cho đoạn văn: word-break
+								li Thuộc tính căn chỉnh văn bản: text-align
+								li Thuộc tính căn đều văn bản: text-justify
+								li Thuộc tính định dạng tự động xuống dòng cho nội dung: white-space
+								li Thuộc tính định dạng khi nội dung vượt quá khoảng cách của đối tượng: text-overflow, overflow
+					h6.text-danger word-wrap
+					.row.mt-3
+						.col-md-6
+							figure
+								img.img-thumbnail.p-3(src="/images/learn/typography/word-wrap.png", alt="")
+						.col-md-6
+							pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+								p {
+									*word-wrap: break-word;
+								}
+					p
+						a.btn.btn-xs.btn-primary(href="/docs/html-css/boxmodel/layout.html") Vấn đề

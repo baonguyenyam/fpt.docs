@@ -23,6 +23,8 @@ block body
 					hr
 					p.lead.text-shadown.text-danger.text-bold HTML: HyperText Markup Language
 					p HTML là một ngôn ngữ đánh dấu siêu văn bản nên nó sẽ có vai trò xây dựng cấu trúc văn bản trên một website hay ứng dụng, hoặc khai báo các tập tin kỹ thuật số (media) như hình ảnh, video, nhạc.
+					p HTML dùng để định dạng bố cục, các thuộc tính liên quan đến cách hiển thị của một đoạn text và được hiển thị trên một chương trình đặc biệc ta gọi là Browser. Hiện nay có khá nhiều Browser như Firefox, Chrome, Safari, ...Tất cả Browser đều có điểm chung là giúp người dùng thao tác với website và nó đều có khả năng biên dịch những đoạn mã HTML, CSS và Javascript. Tuy nhiên mỗi Browser được phát triển trên một nền tảng khác nhau.
+
 					ul.mt-2
 						li Internet Explorer: Trident
 						li Chrome: Blink, V8
@@ -47,13 +49,29 @@ block body
 						ul.list-unstyled.mb-0.text-lg
 							li
 								strong Chồng
+								| 
 								| chính là HTML
 							li
 								strong Vợ
+								| 
 								| chính là CSS
 							li
 								strong Con
+								| 
 								| chính là Value
+					p 
+						| - &#x3C;!DOCTYPE html&#x3E; là phần khai báo kiểu dữ liệu hiển thị là html để trình duyệt (Browser) biết.
+						br 
+						| - &#x3C;html&#x3E; và &#x3C;/html&#x3E; là cặp thẻ nằm ngoài cùng và nó có nhiệm vụ là bao hết nội dung của trang web lại. Thẻ này là bát buộc.
+						br 
+						| - &#x3C;head&#x3E; và &#x3C;/head&#x3E; là phần khai báo thông tin của trang web
+						br 
+						| - &#x3C;title&#x3E; và &#x3C;/title&#x3E; nằm bên trong thẻ &#x3C;head&#x3E; và đây chính là khai báo tiêu đề cho trang web.
+						br 
+						| - &#x3C;body&#x3E; và &#x3C;/body&#x3E; là thành phần quan trọng nhất, nó chứa nhưng đoạn mã HTML dùng để hiển thị trên website
+						br 
+						| - Các thẻ còn lại nằm trong thẻ &#x3C;body&#x3E; chính là các thẻ định dạng dữ liệu.
+
 				.col-md-6
 					h5 Preview
 					figure

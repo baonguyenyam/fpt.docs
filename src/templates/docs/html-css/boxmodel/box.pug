@@ -20,10 +20,24 @@ block body
 				.col
 					h2 Padding
 					hr
-					p
-						figure
-							img.img-thumbnail(src="/images/learn/boxmodel/padding.png", alt="alt")
-					.row
+					p.lead Margin và Padding là hai thuộc tính khác nhau và chúng được ngăn cách nhau bởi một con sông và con sông này chính là border. Để hiểu rõ hơn thì bạn xem sơ đồ CSS Box sau:
+					.row 
+						.col-md-6
+							p
+								figure
+									img.img-thumbnail(src="/images/learn/boxmodel/padding.png", alt="alt")
+						.col-md-6
+							p Thuộc tính padding khi sử dụng sẽ thêm khoảng không gian bên trong thành phần, khoảng không gian này sẽ được cộng dồn thêm vào chiều rộng hoặc chiều cao của thành phần (tùy vào hướng sử dụng padding).
+							p
+								figure
+									img.img-thumbnail(src="/images/learn/boxmodel/img_padding_combine.gif", alt="alt")
+							ul 
+								li padding-top: thêm khoảng không gian bên trong hướng trên thành phần.
+								li padding-right: thêm khoảng không gian bên trong hướng bên phải thành phần.
+								li padding-bottom: thêm khoảng không gian bên trong hướng dưới thành phần.
+								li padding-left: thêm khoảng không gian bên trong hướng bên trái thành phần.
+
+					.row.mt-5
 						.col-md-4
 							h5 Default
 							.box Box 1
@@ -45,10 +59,23 @@ block body
 				.col
 					h2 Margin
 					hr
-					p
-						figure
-							img.img-thumbnail(src="/images/learn/boxmodel/margin.png", alt="alt")
-					.row
+					.row 
+						.col-md-6
+							p
+								figure
+									img.img-thumbnail(src="/images/learn/boxmodel/margin.png", alt="alt")
+						.col-md-6
+							p Thuộc tính margin khi sử dụng sẽ thêm khoảng không gian bên ngoài thành phần, khoảng không gian này không cộng dồn thêm vào chiều rộng hoặc chiều cao của thành phần.
+							p
+								figure
+									img.img-thumbnail(src="/images/learn/boxmodel/img_margin_combine.gif", alt="alt")
+							ul 
+								li margin-top: thêm khoảng không gian bên ngoài phía trên thành phần.
+								li margin-right: thêm khoảng không gian bên ngoài phía bên phải thành phần.
+								li margin-bottom: thêm khoảng không gian bên ngoài phía dưới thành phần.
+								li margin-left: thêm khoảng không gian bên ngoài phía bên trái thành phần.
+					
+					.row.mt-5
 						.col-md-4
 							h5 Default
 							.box Box 1
@@ -70,10 +97,19 @@ block body
 				.col
 					h2 Border
 					hr
-					p
-						figure
-							img.img-thumbnail(src="/images/learn/boxmodel/border.png", alt="alt")
-					.row
+					.row 
+						.col-md-6
+							p
+								figure
+									img.img-thumbnail(src="/images/learn/boxmodel/border.png", alt="alt")
+						.col-md-6
+							p.lead Thuộc tính border được dùng để định dạng đường viền cho thành phần.
+							ul 
+								li margin-top: thêm khoảng không gian bên ngoài phía trên thành phần.
+								li margin-right: thêm khoảng không gian bên ngoài phía bên phải thành phần.
+								li margin-bottom: thêm khoảng không gian bên ngoài phía dưới thành phần.
+								li margin-left: thêm khoảng không gian bên ngoài phía bên trái thành phần.
+					.row.mt-5
 						.col-md-4
 							h5 Border all: 1px solid
 							.box.border Box 1
@@ -105,10 +141,20 @@ block body
 				.col
 					h2 Border-radius
 					hr
-					p
-						figure
-							img.img-thumbnail(src="/images/learn/boxmodel/border-radius.png", alt="alt")
-					.row
+					.row 
+						.col-md-6
+							p
+								figure
+									img.img-thumbnail(src="/images/learn/boxmodel/border-radius.png", alt="alt")
+						.col-md-6
+							p.lead Thuộc tính border-radius được dùng để tạo độ bo góc cho thành phần.
+							ul 
+								li border-radius-top-left: thêm độ bo góc phía trên-trái thành phần.
+								li border-radius-top-right: thêm độ bo góc phía bên trên-phải thành phần.
+								li border-radius-bottom-right: thêm độ bo góc phía dưới-phải thành phần.
+								li border-radius-bottom-left: thêm độ bo góc phía dưới-trái thành phần.
+					
+					.row.mt-5
 						.col-md-4
 							h5 Border-radius all: 10px
 							.box.border-r Box 1
@@ -152,10 +198,22 @@ block body
 				.col
 					h2 Box Shadow
 					hr
-					p
-						figure
-							img.img-thumbnail(src="/images/learn/boxmodel/shadow.png", alt="alt")
-					.row
+					.row 
+						.col-md-6
+							p
+								figure
+									img.img-thumbnail(src="/images/learn/boxmodel/shadow.png", alt="alt")
+						.col-md-6
+							p.lead Thuộc tính box-shadow được dùng để tạo đổ bóng cho thành phần nào đó. có 5 giá trị ABCDE
+							ul 
+								li A: kéo bóng về trái hay phải với giá trị dương bóng sẽ đổ về phía phải và ngược lại.
+								li B: kéo bóng về trên hay dưới với giá trị dương bóng sẽ đổ về phía dưới và ngược lại.
+								li C: độ làm mờ (blur) của bóng đổ
+								li D: độ phóng đại (zoom) của bóng đổ
+								li E: màu của bóng đổ
+								
+
+					.row.mt-5
 						.col-md-4
 							h5 Box Shadow:
 							.box.box-shadow Box 1

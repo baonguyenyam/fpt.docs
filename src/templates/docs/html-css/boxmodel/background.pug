@@ -20,10 +20,22 @@ block body
 				.col
 					h2 Background
 					hr
-					p
-						figure
-							img.img-thumbnail(src="/images/learn/boxmodel/background.png", alt="alt")
-					.row
+					.row 
+						.col-md-6
+							p
+								figure
+									img.img-thumbnail(src="/images/learn/boxmodel/background.png", alt="alt")
+						.col-md-6
+							p.lead Thuộc tính background được dùng để định dạng nền cho thành phần.
+							ul 
+								li background-color: xác định màu cho nền.
+								li background-image: xác định hình cho nền.
+								li background-position: xác định vị trí cho nền, thường được sử dụng kèm với background-image.
+								li background-repeat: xác định hình nền được lặp lại như thế nào.
+								li background-attachment: xác định thành phần nền được cố định hoặc cuộn so với trang, được sử dụng kèm với background-image.
+								li background: dạng tổng quát, kết hợp của các loại background trên.
+					
+					.row.mt-5
 						.col-md-4
 							h5 Background color
 							.box.bg-success Box 1
