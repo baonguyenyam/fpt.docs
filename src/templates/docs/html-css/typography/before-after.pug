@@ -1,0 +1,64 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'Before and After'
+	- var description = 'Trong CSS có hai thuộc tính dùng để bổ sung thành phần vào đằng trước và đằng sau thẻ HTML đó là thuộc tính after và before, hai thuộc tính này được dùng rất nhiều khi xây dựng layout website. Không những vậy mà các Framework CSS hay FontAwesome cũng sử dụng hai thuộc tính này để tạo icon.'
+	- var bodyclass = 'typography'
+	- var selected = 'Typography';
+	- var href = '/docs/html-css/typography';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+
+block body
+	section.demo-typography
+		.container-fluid
+
+			.row
+				.col.p-4
+					h1.mt-5#sec1 Before and After
+					hr
+
+					.row
+						.col
+							figure
+								img.img-thumbnail(src="/images/learn/css/css-before-after.png", alt="")
+					.row
+						.col
+							p.lead Trong CSS có hai thuộc tính dùng để bổ sung thành phần vào đằng trước và đằng sau thẻ HTML đó là thuộc tính after và before, hai thuộc tính này được dùng rất nhiều khi xây dựng layout website. Không những vậy mà các Framework CSS hay FontAwesome cũng sử dụng hai thuộc tính này để tạo icon. Bạn có thể bổ sung bất cứ gì đằng trước và đằng sau thẻ HTML bằng cách sử dụng after và before. Cú pháp của nó như sau:
+
+							p ::before và ::after trong CSS (nhiều lúc thường ghi là :before và :after) là những phần tử giả (pseudo element). div, span,… chẳng hạn, là những phần tử thật tồn tại trên file HTML. CSS chủ yếu được dùng để định dạng các phần tử HTML. Tuy nhiên, trong một số trường hợp cần thiết, CSS cũng hỗ trợ chèn nội dung mà không làm ảnh hưởng đến file mã HTML. ::before và ::after được sử dụng trong tình huống đó, nên chúng được gọi là những phần tử giả.
+
+							p ::before được dùng để chèn nội dung vào trước nội dung đang có của phần tử. ::after được dùng để chèn nội dung vào sau nội dung đang có của phần tử. Về mặt hiển thị, chúng sẽ xuất hiện trên giao diện trang web, nhưng nếu bạn bấm view source, bạn sẽ không thấy chúng xuất hiện trên mã HTML.
+
+
+
+					.row.mt-5
+						.col-md-4
+							h5.text-primary style.css
+							pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+								p::before {
+									*content: "NGUYEN -";
+									*background-color: yellow;
+									*color: red;
+									*font-weight: bold;
+								}
+						.col-md-4
+							h5.text-primary index.html
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								<p>My name is BaoNguyen</p>
+						.col-md-4
+							h5.text-primary Preview
+							p.bf-demo My name is BaoNguyen
+
+			.row
+				.col
+					.m-4.text-center.btn-toolbar.justify-content-center
+						.btn-group
+							a.btn.btn-xs.btn-primary(href="/docs/html-css/typography/index.html", title="title") Home
+							//- a.btn.btn-xs.btn-primary(href="/docs/html-css/typography/before-after.html", title="title") Next
+
