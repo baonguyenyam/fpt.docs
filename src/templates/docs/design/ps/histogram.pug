@@ -1,0 +1,95 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'Design'
+	- var description = 'Nếu bạn đã từng sử dụng Levels hoặc Curves adjustment layer, bạn có thể đã thấy một biểu đồ mãu xuất hiện khu vực nơi bạn đang thực hiện điều chỉnh. Biểu đồ này được gọi là histogram. Biểu đồ về cơ bản cho bạn biết độ shadows, midtones, và highlights có trong hình ảnh.'
+	- var bodyclass = 'ps'
+	- var selected = 'Design';
+	- var href = '/docs/design/ps/histogram.html';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			.row
+				.col
+					h2 Histogram
+					hr
+					
+			.row
+				.col-md-5
+					a(href="/images/design/ps/histo_intro_flat.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/histo_intro_flat.jpg", alt="")
+				.col.mb-7
+					p.lead Nếu bạn đã từng sử dụng Levels hoặc Curves adjustment layer, bạn có thể đã thấy một biểu đồ mãu xuất hiện khu vực nơi bạn đang thực hiện điều chỉnh. Biểu đồ này được gọi là histogram. Biểu đồ về cơ bản cho bạn biết độ shadows, midtones, và highlights có trong hình ảnh.
+					p.lead Trong ví dụ bên đây, chúng tôi đã chọn Levels adjustment layer và bạn có thể thấy histogram trong bảng điều khiển Thuộc tính (Properties) ở bên phải:
+			.row.mt-3
+				.col-md-5
+					a(href="/images/design/ps/histo_low_butter_new.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/histo_low_butter_new.jpg", alt="")
+				.col.mb-7
+					h1 Đọc bảng histogram
+					p Histogram là duy nhất cho mọi hình ảnh, và nó sẽ không phải lúc nào cũng được phân phối đều. Ví dụ: hãy xem hình ảnh dưới đây. Bạn có thể thấy hầu hết các thông tin trong histogram lệch về phía bên trái. Điều này có nghĩa là phần lớn các điểm ảnh cho hình ảnh này là bóng tối - vùng tối ở nền, bóng trên các lá, và các vùng tối trên đôi cánh của con bướm.
+			.row.mt-3
+				.col-md-5
+					a(href="/images/design/ps/histo_high.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/histo_high.jpg", alt="")
+				.col.mb-7
+					p Bên đây, tôi có một bức ảnh của một bông hoa trắng trên một nền ánh sáng. Có nhiều ánh sáng trong ảnh. Bạn có thể thấy hầu hết các thông tin trong histogram lệch về phía bên phải.
+			.row.mt-3
+				.col-md-5
+					a(href="/images/design/ps/histo_contrast.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/histo_contrast.jpg", alt="")
+				.col.mb-7
+					p Hình ảnh bên đây có các đỉnh cực lớn ở bên trái và bên phải của histogram nhưng các khu vực ở giữa bị lõm. Điều này có nghĩa là hình ảnh có rất nhiều bóng tối và nổi bật - trong nước và đá. Bạn cũng có thể nói rằng hình ảnh này có nhiều tương phản.
+			h5.mt-5.text-danger Nhận biết các vấn đề thường gặp
+			.row.mt-3
+				.col-md-5
+					a(href="/images/design/ps/histo_under.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/histo_under.jpg", alt="")
+				.col.mb-7
+					p Biết cách đọc histogram có thể cho bạn biết một số điều khác nhau về một bức ảnh. Ví dụ: bạn có thể sử dụng histogram để tìm các sự cố thường gặp trong hình ảnh của mình. Sau đó bạn có thể sử dụng các công cụ khác nhau như Levels và Curves để sửa và cải tiến chúng. Hãy xem ví dụ bên đây:
+					p Trong ví dụ này, bạn có thể thấy rằng có một khoảng trống lớn ở phía bên phải của histogram, có nghĩa là hình ảnh không sáng, hoặc quá tối. Bạn có thể sửa các loại vấn đề này bằng Levels adjustment.
+			.row.mt-3
+				.col-md-5
+					a(href="/images/design/ps/histo_clipping.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/histo_clipping.jpg", alt="")
+				.col.mb-7
+					p Tuy nhiên, nếu bạn không cẩn thận khi thực hiện các điều chỉnh này, bạn sẽ mất chi tiết trong hình ảnh của mình. Đây được gọi là sự cắt xén. Trong hình dưới đây, bạn có thể thấy rằng những đám mây đã mất rất nhiều chi tiết, và màu sắc của bầu trời cũng đã thay đổi. Cũng lưu ý khi điểm chóp cao ở phía bên phải của histogram chiếm nhiều quá nó có nghĩa là sự cắt xén đã xảy ra:
+
+
+
+			h5.mt-5.text-danger Histogram panel
+			.row.mt-3
+				.col-md-5
+					a(href="/images/design/ps/hist_command.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/hist_command.png", alt="")
+				.col.mb-7
+					p Để mở Histogram panel bạn vào Window → Histogram
+					.media
+						.d-flex.mr-3
+							a(href="/images/design/ps/histo_rbg_flat.png", target="_blank")
+								figure
+									img.img-thumbnail(src="/images/design/ps/histo_rbg_flat.png", alt="")
+						.media-body
+							p Bảng điều khiển này sẽ hiển thị biểu đồ màu xám hoạt động chính xác như biểu đồ mà chúng tôi đã chỉ ra cho bạn ở trên. Nó cũng bao gồm một vài biểu đồ màu cho phép bạn xem các màu riêng biệt trong hình ảnh được phân phối như thế nào.
+			
+
+			.row.mt-5
+				.col
+					.m-4.text-center.btn-toolbar.justify-content-center
+						.btn-group
+							a.btn.btn-xs.btn-primary(href="/docs/design/ps/index.html", title="title") Home
+							a.btn.btn-xs.btn-primary(href="/docs/design/ps/histogram.html", title="title") Next
