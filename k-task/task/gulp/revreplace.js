@@ -41,6 +41,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
             .pipe(replace('/' + target + '/', 'https://' + url.SEO.cfg_url + '/'))
             .pipe(replace('/favicon/', 'https://' + url.SEO.cfg_url + '/favicon/'))
             .pipe(replace('/images/', 'https://' + url.SEO.cfg_url + '/images/'))
+            .pipe(replace('/files/', 'https://' + url.SEO.cfg_url + '/files/'))
             .pipe(replace('/docs/', 'https://' + url.SEO.cfg_url + '/docs/'))
             .pipe(gulp.dest(dest));
     });

@@ -1,0 +1,37 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'HTML'
+	- var description = 'Khi làm website bằng HTML, đặc biệt là sau này bạn học lên các ngôn ngữ server-side như PHP hay Python thì việc sử dụng form nhập liệu rất phổ biến như tạo form đăng nhập, form đăng dữ liệu lên website,…nên nếu có thể thì nên hiểu cách tạo một form nhập liệu bằng HTML ngay từ bây giờ.'
+	- var bodyclass = 'html'
+	- var selected = 'HTML';
+	- var href = '/docs/html-css/html/form';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.demo-html.mt-5
+		.container-fluid
+
+			.row
+				.col
+					h1.mt-6#sec1 Form
+					hr
+					p.lead Khi làm website bằng HTML, đặc biệt là sau này bạn học lên các ngôn ngữ server-side như PHP hay Python thì việc sử dụng form nhập liệu rất phổ biến như tạo form đăng nhập, form đăng dữ liệu lên website,…nên nếu có thể thì nên hiểu cách tạo một form nhập liệu bằng HTML ngay từ bây giờ.
+
+					.row
+						.col
+							p
+								img.img-thumbnail.p-4(src="/images/learn/html/form.png", alt="")
+
+
+			.row
+				.col
+					.m-4.text-center.btn-toolbar.justify-content-center
+						.btn-group
+							a.btn.btn-xs.btn-primary(href="/docs/html-css/html/index.html", title="title") Home
+							a.btn.btn-xs.btn-primary(href="/docs/html-css/html/style.html", title="title") Next
