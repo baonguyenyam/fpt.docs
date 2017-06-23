@@ -1,0 +1,41 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'Design'
+	- var description = 'Photoshop được thiết kế chủ yếu để sử dụng chuyên nghiệp, giao diện có thể cảm thấy hơi phức tạp và đáng sợ đối với người dùng mới. Ngay cả khi bạn có một số kinh nghiệm với phần mềm chỉnh sửa ảnh khác, bạn nên làm quen với các phần khác nhau của giao diện Photoshop.'
+	- var bodyclass = 'begin'
+	- var selected = 'Design';
+	- var href = '/docs/begin/ps/index';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			.row
+				.col
+					h2 Tổng quan về giao diện Photoshop
+					hr
+					p.lead Photoshop được thiết kế chủ yếu để sử dụng chuyên nghiệp, giao diện có thể cảm thấy hơi phức tạp và đáng sợ đối với người dùng mới. Ngay cả khi bạn có một số kinh nghiệm với phần mềm chỉnh sửa ảnh khác, bạn nên làm quen với các phần khác nhau của giao diện Photoshop.
+			.row
+				.col-md-6
+					a(href="/images/design/ps/gau.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/gau.png", alt="")
+					p Bạn thấy con gì trong ảnh?
+				.col-md-6
+					a(href="/images/design/ps/ass.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/ass.png", alt="")
+					P Bạn thấy thông điệp gì trong ảnh?
+			
+			//- .row.mt-5
+			//- 	.col
+			//- 		.m-4.text-center.btn-toolbar.justify-content-center
+			//- 			.btn-group
+			//- 				a.btn.btn-xs.btn-primary(href="/docs/begin/ps/index.html", title="title") Home
+			//- 				a.btn.btn-xs.btn-primary(href="/docs/begin/ps/settings.html", title="title") Next
