@@ -19,19 +19,254 @@ block body
 
 			.row
 				.col
-					h1.mt-6#sec1 Form
+					h1.mt-6#sec1 Các mẫu cấu trúc mới của HTML6
 					hr
-					p.lead Khi làm website bằng HTML, đặc biệt là sau này bạn học lên các ngôn ngữ server-side như PHP hay Python thì việc sử dụng form nhập liệu rất phổ biến như tạo form đăng nhập, form đăng dữ liệu lên website,…nên nếu có thể thì nên hiểu cách tạo một form nhập liệu bằng HTML ngay từ bây giờ.
+
+
+					.row
+						.col-md-6
+							p
+								img.img-thumbnail.p-4(src="/images/learn/html/upcoming-html6-features.jpg", alt="")
+						.col-md-6
+							p.lead HTML6 là phiên bản thứ sáu của HTML với không gian tên có cấu trúc như XML, không gian tên XML sẽ giúp bạn sử dụng cùng một từ khóa mà không mâu thuẫn với bất kỳ thẻ khác. Ví dụ những sử dụng trong các DOCTYPE XHTML:
+
+							p.lead Trước đây HTML5 đã đem lại nhiều tính năng thú vị cho thiết kế website như âm thanh, hỗ trợ video, lưu trữ offline cục bộ, và quan trọng nhất là khả năng xây dựng các trang web tối ưu hóa phù hợp cho điện thoại di động. Tuy nhiên nó vẫn còn trong giai đoạn phát triển và vẫn chưa thực sự trở thành một dấu mốc quan trọng cho HTML. Nó cần phải phát triển thêm và đó cũng chính là lí do mà HTML6 đang chuẩn bị hoàn tất để ra mắt.
+					hr 
+					h5.text-primary.mt-5 Các cấu trúc mới của HTML6
+					.row
+						.col-md-6
+							p.lead HTML6 cung cấp cho bạn cách sử dụng thẻ mà bạn muốn chứ không đơn thuần là chỉ sử dụng các thẻ được định nghĩa.
+							p.lead Nhìn vào các tài liệu HTML6 ở bên, bạn sẽ thấy một số thẻ lẻ &#x3C;html: x&#x3E;. Những thẻ lẻ là các yếu tố không gian tên thuộc về W3C và HTML6 , và sẽ kích hoạt sự kiện trình duyệt. Ví dụ, &#x3C;html: title&#x3E; phần tử sẽ thay đổi thanh tiêu đề của trình duyệt của bạn và &#x3C;html: media&#x3E;  sẽ giúp làm cho hình ảnh được xác định xuất hiện trên màn hình trình duyệt của bạn. Thế mạnh HTML6 là làm sao cho tương thích mọi trình duyệt. 
+						.col-md-6
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								[!DOCTYPE html]
+								[html:html]
+									*[html:head]
+										**[html:title]A Look Into HTML6[/html:title]
+										**[html:meta type="title" value="Page Title"]
+										**[html:meta type="description" value="HTML example with namespaces"]
+										**[html:link src="css/mainfile.css" title="Styles" type="text/css"]
+										**[html:link src="js/mainfile.js" title="Script" type="text/javascript"]
+									*[/html:head]
+									*[html:body]
+										**[header]
+											***[logo]
+												****[html:media type="image" src="images/xyz.png"]
+											***[/logo]
+											***[nav]
+												****[html:a href="/img1"]a1[/a]
+												****[html:a href="/img2"]a2[/a]
+											***[/nav]
+										**[/header]
+										**[content]
+											***[article]
+												****[h1]Heading of main article[/h1]
+												****[h2]Sub-heading of main article[/h2]
+												****[p]...[/p]
+												****[p]...[/p]
+											***[/article]
+											***[article]
+												****[h1]The concept of HTML6[/h1]
+												****[h2]Understanding the basics[/h2]
+												****[p]...[/p]
+											***[/article]
+										**[/content]
+										**[footer]
+											***[copyright]This site is &copy; to BaoNguyen 2014[/copyright]
+										**[/footer]
+									*[/html:body]
+								[/html:html]
+							
+					h5.text-primary.mt-5 Một số cấu trúc mới
+					hr 
+					h6.text-danger Advanced Anchors
+					.row
+						.col-md-6
+
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								[a href="w3.org/page.html$section]div]p"]Go to Anchors[/a]
+
+						.col-md-6
+							p Bạn thấy một chút kỳ quặc trong thẻ bên, nhưng đây là cách liên kết đến 1 vị trí chính xác trong một tài liệu rất thú vị phải không nào?. 
+					h6.text-danger Target link
+					.row
+						.col-md-6
+
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								[a href="http://goo.gl]http://goo.gl"]Go to Google[/a]
+
+						.col-md-6
+							p Trong định nghĩa mới thẻ [a] chỉ có 1 thuộc tính duy nhất là 'href' nhưng trình duyệt vẫn hiểu để mở trang mới.
+					h6.text-danger Decompress
+					.row
+						.col-md-6
+
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								[decompress href="/mobile/demo.zip"]
+
+						.col-md-6
+							p Cho phép đọc nội dung bên trong file nén trên trình duyệt, mục đích là giảm băng thông và dung lượng lưu trữ.
+					h6.text-danger Font
+					.row
+						.col-md-6
+
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								[font fontsrc="http://www.demo.com/fontexample.ttf" size="5"]
+									*Text written here will be displayed according to the font file format specified.
+								[/font]
+						.col-md-6
+							p Cho phép định dạng font ngay trên HTML 
+
+					h5.text-primary.mt-5 HTML6 APIs – Giao diện chương trình ứng dụng
+					hr 
+					h6.text-danger &#x3C;html: html&#x3E;
+					.row
+						.col-md-6
+
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								[!DOCTYPE html]
+								[html:html]
+								[/html:html]
+
+						.col-md-6
+							p Các thẻ HTML6 sẽ có html namespace như &#x3C;html: html&#x3E; hoặc &#x3C;html: head&#x3E;, v.v.. Hãy nhìn vào những thuộc tính của mỗi thẻ, được sử dụng trong các tài liệu ví dụ HTML6 ở trên.
+					h6.text-danger &#x3C;html: head&#x3E;
+					.row
+						.col-md-6
+
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								[!DOCTYPE html]
+								[html:html]
+									*[html:head]
+									*[/html:head]
+								[/html:html]
+
+						.col-md-6
+							p Thẻ này là tương đương với thẻ &#x3C;head&#x3E;. 
+					h6.text-danger &#x3C;html: title&#x3E;
+					.row
+						.col-md-6
+
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								[!DOCTYPE html]
+								[html:html]
+									*[html:head]
+										**[html:title]Hello![/html:title]
+									*[/html:head]
+								[/html:html]
+
+						.col-md-6
+							p Như tên gọi của nó, nó sẽ thay đổi tiêu đề của tài liệu HTML, và tương tự như thẻ &#x3C;title&#x3E; được sử dụng trong các phiên bản HTML trước đó. Thẻ này được sử dụng bởi các trình duyệt để thay đổi thanh tiêu đề yêu thích, v.v..
+					h6.text-danger &#x3C;html: meta&#x3E;
+					.row
+						.col-md-6
+
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								[!DOCTYPE html]
+								[html:html]
+									*[html:head]
+										**[html:title]Hello![/html:title]
+										**[html:meta type="description" value="demo"]
+									*[/html:head]
+								[/html:html]
+
+						.col-md-6
+							p Thẻ này khác nhau một chút với thẻ &#x3C;meta&#x3E; được sử dụng trong các phiên bản HTML mới nhất. Sử dụng thẻ HTML6 này bạn có thể sử dụng bất kỳ loại dữ liệu meta. Không giống như HTML5 bạn không cần phải sử dụng các loại meta tiêu chuẩn trong HTML6. 
+
+					h6.text-danger &#x3C;html: link&#x3E;
+					.row
+						.col-md-6
+
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								[!DOCTYPE html]
+								[html:html]
+									*[html:head]
+										**[html:title]Hello![/html:title]
+										**[html:link src="main.js" type="text/javascript"]
+									*[/html:head]
+								[/html:html]
+
+						.col-md-6
+							p Thẻ này sẽ giúp bạn liên kết tài liệu bên ngoài (như CSS, JS vv) vào trong tài liệu HTML. Nó tương tự như thẻ &#x3C;link&#x3E; được sử dụng trong HTML5. Thẻ này bao gồm các thuộc tính sau:
+							ul 
+								li charset: “UTF-8” khai báo mã hoá.
+								li href: Liên kết đến tập tin nguồn của bạn.
+								li media: Xác định các loại thiết bị mà bạn sẽ chạy
+								li type: kiểu MIME của tài liệu
+					h6.text-danger &#x3C;html: body&#x3E;
+					.row
+						.col-md-6
+
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								[!DOCTYPE html]
+								[html:html]
+									*[html:head]
+										**[html:title]Hello![/html:title]
+									*[/html:head]
+									*[html:body]
+										**...
+									*[/html:body]
+								[/html:html]
+
+						.col-md-6
+							p Cũng giống như thẻ &#x3C;body&#x3E; mà bạn đã sử dụng trong phiên bản HTML hiện hành. Đây là nơi mà tất cả các nội dung trang web của bạn như văn bản, hình ảnh được đặt vào.
+
+					h6.text-danger &#x3C;html: a&#x3E;
+					.row
+						.col-md-6
+
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								[!DOCTYPE html]
+								[html:html]
+									*[html:head]
+										**[html:title]Hello![/html:title]
+									*[/html:head]
+									*[html:body]
+										**[html:a href="//google.com"]Go to google[/html:a]
+									*[/html:body]
+								[/html:html]
+
+						.col-md-6
+							p Thẻ này là tương tự như các thẻ &#x3C;a&#x3E;, và được sử dụng để đi đến một liên kết khác. Tuy nhiên, không giống như các thẻ &#x3C;a&#x3E; thẻ &#x3C;html: a&#x3E; chỉ có 1 thuộc tính ‘href’
+					h6.text-danger &#x3C;html: buton&#x3E;
+					.row
+						.col-md-6
+
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								[!DOCTYPE html]
+								[html:html]
+									*[html:head]
+										**[html:title]Hello![/html:title]
+									*[/html:head]
+									*[html:body]
+										**[html:buton]Click me[/html:buton]
+									*[/html:body]
+								[/html:html]
+
+						.col-md-6
+							p Thẻ này là tương đương với thẻ &#x3C;button&#x3E; hoặc &#x3C;input type="button"&#x3E; được sử dụng trong các phiên bản HTML hiện hành. Thẻ này cho phép bạn tạo ra một nút để giúp người dùng thực hiện một số tương tác trên trang web của bạn. 
+					h6.text-danger &#x3C;html: media&#x3E;
+					.row
+						.col-md-6
+
+							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
+								[!DOCTYPE html]
+								[html:html]
+									*[html:head]
+										**[html:title]Hello![/html:title]
+									*[/html:head]
+									*[html:body]
+										**[html:media src="image.png" type="image"]
+										**[html:media src="video.mov"]
+									*[/html:body]
+								[/html:html]
+
+						.col-md-6
+							p Thẻ này sẽ là tổng kết của các thẻ &#x3C;media&#x3E; như &#x3C;img&#x3E; , &#x3C;video&#x3E; , &#x3C;embed&#x3E; ,v.v.. Bằng cách sử dụng thẻ &#x3C;html: media&#x3E;, bạn không còn phải xác định một từ khóa cho từng loại tập tin. Các thẻ &#x3C;html: media&#x3E; mà bạn đang sử dụng sẽ được thực hiện bởi các trình duyệt dựa trên các loại thuộc tính (nếu được cung cấp), hoặc nó sẽ tự phán đoán trên cơ sở đọc thuộc tính mở rộng của tập tin, hoặc bằng 'MIME'
+
 
 					.row
 						.col
-							p
-								img.img-thumbnail.p-4(src="/images/learn/html/form.png", alt="")
 
+							p HTML6 vẫn chưa thực sự được ra mắt, nhưng nó sẽ sớm được chào đón và cung cấp bởi Oscar Godson. Bài viết này sẽ cung cấp cho bạn một cái nhìn tổng quan về một số khái niệm cơ bản của HTML6. Hi vọng bạn sẽ tìm thấy nhiều điều bổ ích từ bài viết.
 
-			.row
-				.col
-					.m-4.text-center.btn-toolbar.justify-content-center
-						.btn-group
-							a.btn.btn-xs.btn-primary(href="/docs/html-css/html/index.html", title="title") Home
-							a.btn.btn-xs.btn-primary(href="/docs/html-css/html/style.html", title="title") Next
