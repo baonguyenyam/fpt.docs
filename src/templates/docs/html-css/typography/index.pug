@@ -5,7 +5,7 @@ block variables
 	- var description = 'Các thuộc tính định dạng cho text thường được sử dụng định dạng trực tiếp cho các thẻ thuộc nhóm inline, (những thuộc tính này cũng có thể định dạng được cho các thẻ khác).'
 	- var bodyclass = 'typography'
 	- var selected = 'Typography';
-	- var href = '/docs/html-css/typography';
+	- var href = '/docs/html-css/typography/index';
 
 block css
 	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
@@ -15,45 +15,396 @@ block og
 
 
 block body
-	section.home
+	section.demo-typography
 		.container-fluid
 
 			.row
 				.col.p-4
 					h1.mt-5#sec1 Typography
 					hr
-					p Các thuộc tính định dạng cho text thường được sử dụng định dạng trực tiếp cho các thẻ thuộc nhóm inline, (những thuộc tính này cũng có thể định dạng được cho các thẻ khác).
 
 					.row
 						.col-md-6
 							figure
 								img.img-thumbnail(src="/images/learn/typography/typography.jpg", alt="")
 						.col-md-6
-							ul 
-								li Thuộc tính định dạng màu sắc: color
-								li Thuộc tính định dạng kích thước chữ: font-size
-								li Thuộc tính xác định dạng font chữ: font-family
-								li Thuộc tính định dạng kích thước chữ: font-weight
-								li Thuộc tính định dạng kiểu chữ: font-style
-								li Thuộc tính định dạng khoảng cách các ký tự: letter-spacing
-								li Thuộc tính định dạng khoảng cách các dòng: line-height
-								li Thuộc tính xác định chữ có gạch dưới hay không: text-decoration
-								li Thuộc tính định dạng khoảng cách các từ: word-spacing
-								li Thuộc tính định dạng cắt dòng cho đoạn văn: word-wrap
-								li Thuộc tính định dạng cắt từ cho đoạn văn: word-break
-								li Thuộc tính căn chỉnh văn bản: text-align
-								li Thuộc tính căn đều văn bản: text-justify
-								li Thuộc tính định dạng tự động xuống dòng cho nội dung: white-space
-								li Thuộc tính định dạng khi nội dung vượt quá khoảng cách của đối tượng: text-overflow, overflow
-					h6.text-danger word-wrap
-					.row.mt-3
-						.col-md-6
-							figure
-								img.img-thumbnail.p-3(src="/images/learn/typography/word-wrap.png", alt="")
-						.col-md-6
-							pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
-								p {
-									*word-wrap: break-word;
-								}
-					p
-						a.btn.btn-xs.btn-primary(href="/docs/html-css/boxmodel/layout.html") Vấn đề
+							p.lead Các thuộc tính định dạng cho text thường được sử dụng định dạng trực tiếp cho các thẻ thuộc nhóm inline, (những thuộc tính này cũng có thể định dạng được cho các thẻ khác).
+
+							p.lead Dưới đây là một ví dụ về 1 thuộc tính định dạng văn bản:
+							.row
+								.col-md-6
+									figure
+										img.img-thumbnail.p-3(src="/images/learn/typography/word-wrap.png", alt="")
+								.col-md-6
+									pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+										p {
+											*word-wrap: break-word;
+										}
+			.row
+				.col
+					p.mt-5.text-lg.text-primary.text-bold Bảng giá trị
+
+					.table-responsive
+						table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Thuộc tính
+									th Giá trị
+									th(width="25%") CODE
+									th(width="25%") Hiển thị
+							tbody
+								tr
+									td.no-wrap -
+									td -
+									td(width="25%")
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+											p {
+											}
+									td(width="25%")
+										p Này em hỡi con đường em đi đó, con đường em theo đó Chắc qua bao lênh đênh. Bao gập ghềnh có làm heo hắt Có dập tắt mất nét tươi nhuộm nụ cười
+								tr
+									td.no-wrap font-style
+									td
+										ol
+											li normal: hiển thị text theo kiểu in thường
+											li italic: hiển thị text theo kiểu in nghiêng
+											li oblique: hiển thị text theo kiểu in xiên
+									td(width="25%")
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+											p {
+												*font-style: oblique;
+											}
+									td(width="25%")
+										p(style="font-style: oblique;") Này em hỡi con đường em đi đó, con đường em theo đó Chắc qua bao lênh đênh. Bao gập ghềnh có làm heo hắt Có dập tắt mất nét tươi nhuộm nụ cười
+								tr
+									td.no-wrap font-size
+									td
+										p Chỉ định kích thước văn bản
+										ol
+											li xx-small | x-small | small | medium | large | x-large | xx-large
+											li smaller | larger
+											li Length (px, pt, em…): chỉ định font-size bằng giá trị cố định
+											li %: chỉ định font-size theo tỉ lệ % so với font-size của phần tử cha
+									td(width="25%")
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+											p {
+												*font-size: 18px;
+											}
+									td(width="25%")
+										p(style="font-size: 18px;") Này em hỡi con đường em đi đó, con đường em theo đó Chắc qua bao lênh đênh. Bao gập ghềnh có làm heo hắt Có dập tắt mất nét tươi nhuộm nụ cười
+								tr
+									td.no-wrap font-weight
+									td
+										p Mô tả cách thức thể hiện của font chữ là ở dạng bình thường (normal) hay in đậm (bold)
+										ol
+											li normal
+											li bold
+											li bolder
+											li lighter
+											li 100, 200, 300, 400 (normal), 500, 600, 700 (bold), 800, 900
+									td(width="25%")
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+											p {
+												*font-weight:700;
+											}
+									td(width="25%")
+										p(style="font-weight:700;") Này em hỡi con đường em đi đó, con đường em theo đó Chắc qua bao lênh đênh. Bao gập ghềnh có làm heo hắt Có dập tắt mất nét tươi nhuộm nụ cười
+								tr
+									td.no-wrap font-variant
+									td
+										p Được dùng để chọn giữa chế độ bình thường và small-caps của một font chữ.
+									td(width="25%")
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+											p {
+												*font-variant:small-caps;
+											}
+									td(width="25%")
+										p(style="font-variant:small-caps;") Này em hỡi con đường em đi đó, con đường em theo đó Chắc qua bao lênh đênh. Bao gập ghềnh có làm heo hắt Có dập tắt mất nét tươi nhuộm nụ cười
+								tr
+									td.no-wrap font-family
+									td
+										p Thuộc tính font-family được dùng để định dạng kiểu chữ cho thành phần.
+
+									td(width="25%")
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+											@import url('https://fonts.googleapis.com/css?family=Pangolin');
+											p {
+												*font-family: 'Pangolin', cursive;
+											}
+									td(width="25%")
+										p(style="font-size: 18px;font-family: 'Pangolin', cursive;") Này em hỡi con đường em đi đó, con đường em theo đó Chắc qua bao lênh đênh. Bao gập ghềnh có làm heo hắt Có dập tắt mất nét tươi nhuộm nụ cười
+								tr
+									td.no-wrap letter-spacing
+									td
+										p Thuộc tính letter-spacing được dùng để định dạng khoảng cách các ký tự cho thành phần.
+										ol
+											li Length (px, pt, em…): chỉ định font-size bằng giá trị cố định
+									td(width="25%")
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+											p {
+												*letter-spacing: 4px;
+											}
+									td(width="25%")
+										p(style="letter-spacing: 4px;") Này em hỡi con đường em đi đó, con đường em theo đó Chắc qua bao lênh đênh. Bao gập ghềnh có làm heo hắt Có dập tắt mất nét tươi nhuộm nụ cười
+								tr
+									td.no-wrap line-height
+									td
+										p Thuộc tính line-height được dùng để định dạng khoảng cách các ký tự cho thành phần.
+										ol
+											li Number: Tăng hoặc giảm khoảng cách giữa các dòng, có thể là số tự nhiên hoặc số thập phân.
+											li Length (px, pt, em…): Tăng hoặc giảm khoảng cách giữa các dòng, đơn vị có thể là px, em, %, ...
+
+									td(width="25%")
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+											p {
+												*line-height: 30px;
+											}
+									td(width="25%")
+										p(style="line-height: 30px;") Này em hỡi con đường em đi đó, con đường em theo đó Chắc qua bao lênh đênh. Bao gập ghềnh có làm heo hắt Có dập tắt mất nét tươi nhuộm nụ cười
+								tr
+									td.no-wrap text-decoration
+									td
+										p Thuộc tính text-decoration được dùng xác định thành phần có gạch dưới hay không.
+
+										ol
+											li underline: Xác định đường gạch bên dưới văn bản.
+											li overline: Xác định đường gạch bên trên văn bản.
+											li line-through: Xác định đường gạch ngang văn bản.
+											li blink: Xác định văn bản nhấp nháy.
+
+
+									td(width="25%")
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+											p {
+												*text-decoration: underline;
+											}
+									td(width="25%")
+										p(style="text-decoration: underline;") Này em hỡi con đường em đi đó, con đường em theo đó Chắc qua bao lênh đênh. Bao gập ghềnh có làm heo hắt Có dập tắt mất nét tươi nhuộm nụ cười
+								tr
+									td.no-wrap word-spacing
+									td
+										p Thuộc tính word-spacing được dùng để định dạng khoảng cách giữa các từ cho thành phần.
+										ol
+											li Length (px, pt, em…): Tăng hoặc giảm khoảng cách giữa các dòng, đơn vị có thể là px, em, %, ...
+
+									td(width="25%")
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+											p {
+												*word-spacing: 10px;
+											}
+									td(width="25%")
+										p(style="word-spacing: 10px;") Này em hỡi con đường em đi đó, con đường em theo đó Chắc qua bao lênh đênh. Bao gập ghềnh có làm heo hắt Có dập tắt mất nét tươi nhuộm nụ cười
+								tr
+									td.no-wrap white-space
+									td
+										p Thuộc tính white-space chỉ rõ khoảng cách trắng bên trong một phần tử được xử lý như thế nào.
+										ol
+											li nowrap: Văn bản sẽ trên 1 dòng duy nhất và chỉ bị rớt dòng khi sử dụng thẻ &#x3C;br&#x3E;
+											li pre: Văn bản sẽ trên 1 dòng duy nhất và chỉ bị rớt dòng khi sử dụng ngắt dòng
+											li pre-line: Văn bản sẽ được rớt dòng khi cần thiết
+											li pre-wrap: Văn bản sẽ được rớt dòng khi cần thiết và có dấu ngắt dòng
+
+									td(width="25%")
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+											p {
+												*white-space: nowrap;
+											}
+									td(width="25%")
+										p(style="white-space: nowrap;max-width:200px; overflow: hidden") Này em hỡi con đường em đi đó, con đường em theo đó Chắc qua bao lênh đênh. Bao gập ghềnh có làm heo hắt Có dập tắt mất nét tươi nhuộm nụ cười
+								tr
+									td.no-wrap overflow
+									td
+										p Khi văn bản vượt quá giợi hạn khung sẽ được xử lý như thế nào.
+										ol
+											li scroll: xuất hiện thanh cuộn trang
+											li hidden: ẩn nội dung vượt giới hạn
+
+
+									td(width="25%")
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+											p {
+												*overflow : hidden;
+											}
+									td(width="25%")
+										p(style="max-width:100px;max-height:100px; overflow: hidden") Này em hỡi con đường em đi đó, con đường em theo đó Chắc qua bao lênh đênh. Bao gập ghềnh có làm heo hắt Có dập tắt mất nét tươi nhuộm nụ cười
+								tr
+									td.no-wrap text-overflow
+									td
+										p Thuộc tính text-overflow xác định khi nội dung bản vượt quá giới hạn khung sẽ được xử lý như thế nào
+
+										ol
+											li ellipsis: xuất hiện dấu ba chấm cuối hàng ('...')
+
+
+									td(width="25%")
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+											p {
+												*overflow : hidden;
+												*text-overflow : ellipsis;
+											}
+									td(width="25%")
+										p(style="white-space: nowrap;max-width:200px;max-height:100px; overflow: hidden;text-overflow : ellipsis;") Này em hỡi con đường em đi đó, con đường em theo đó Chắc qua bao lênh đênh. Bao gập ghềnh có làm heo hắt Có dập tắt mất nét tươi nhuộm nụ cười
+								tr
+									td.no-wrap text-align
+									td
+										p Thuộc tính text-align xác định dồn nội dung văn bản
+
+										ol
+											li left: căn trái nội dung
+											li right: căn phải nội dung
+											li center: căn giữa nội dung
+											li justify: căn đều 2 bên nội dung
+
+									td(width="25%")
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+											p {
+												*text-align : center;
+											}
+									td(width="25%")
+										p(style="text-align: center;") Này em hỡi con đường em đi đó, con đường em theo đó Chắc qua bao lênh đênh. Bao gập ghềnh có làm heo hắt Có dập tắt mất nét tươi nhuộm nụ cười
+								tr
+									td.no-wrap text-indent
+									td
+										p Thuộc tính text-indent xác định thụt đầu dòng
+
+										ol
+											li Length (px, pt, em…): Tăng hoặc giảm khoảng cách giữa các dòng, đơn vị có thể là px, em, %, ...
+											li Để làm mất nội dung của một đối tượng người ta thường dùng text-indent: -9999px
+
+									td(width="25%")
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+											p {
+												*text-indent : 50px;
+											}
+									td(width="25%")
+										p(style="text-indent: 50px;") Này em hỡi con đường em đi đó, con đường em theo đó Chắc qua bao lênh đênh. Bao gập ghềnh có làm heo hắt Có dập tắt mất nét tươi nhuộm nụ cười
+								tr
+									td.no-wrap text-shadow
+									td
+										p Thuộc tính text-shadow xác định đổ bóng cho text
+
+										ol
+											li A: kéo bóng về trái hay phải với giá trị dương bóng sẽ đổ về phía phải và ngược lại.
+											li B: kéo bóng về trên hay dưới với giá trị dương bóng sẽ đổ về phía dưới và ngược lại.
+											li C: độ làm mờ (blur) của bóng đổ
+											li E: màu của bóng đổ
+
+									td(width="25%")
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+											p {
+												*text-shadow : 1px 2px 3px #FF0000;
+											}
+									td(width="25%")
+										p(style="text-shadow: 1px 2px 3px #FF0000;") Này em hỡi con đường em đi đó, con đường em theo đó Chắc qua bao lênh đênh. Bao gập ghềnh có làm heo hắt Có dập tắt mất nét tươi nhuộm nụ cười
+								tr
+									td.no-wrap text-transform
+									td
+										p Thuộc tính text-transform xác định kiểu viết hoa.
+
+										ol
+											li uppercase: Chữ in hoa
+											li lowercase: viết thường tất cả nội dung
+											li capitalize: Chữ hoa mỗi đầu ký tự
+
+									td(width="25%")
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+											p {
+												*text-transform : uppercase;
+											}
+									td(width="25%")
+										p(style="text-transform: uppercase;") Này em hỡi con đường em đi đó, con đường em theo đó Chắc qua bao lênh đênh. Bao gập ghềnh có làm heo hắt Có dập tắt mất nét tươi nhuộm nụ cười
+								tr
+									td.no-wrap vertical-align
+									td
+										p Thuộc tính vertical-align vị trí text
+
+										ol
+											li text-top: Luôn lên đầu
+											li text-bottom: Luôn bên dưới
+
+									td(width="25%")
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+											p {
+												*vertical-align : text-top;
+											}
+									td(width="25%")
+										p(style="vertical-align: text-top;") Này em hỡi con đường em đi đó,
+											img(src="/images/sample_icon.png", alt="")
+											| con đường em theo đó Chắc qua bao lênh đênh. Bao gập ghềnh có làm heo hắt Có dập tắt mất nét tươi nhuộm nụ cười
+			.row
+				.col.p-4
+					h1.mt-5#sec1 @font-face
+					hr
+
+					.table-responsive
+						table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr.bg-white
+									td Font format
+									td.text-center
+										img(src="/images/learn/css/compatible_chrome.gif", alt="")
+									td.text-center
+										img(src="/images/learn/css/compatible_edge.gif", alt="")
+									td.text-center
+										img(src="/images/learn/css/compatible_firefox.gif", alt="")
+									td.text-center
+										img(src="/images/learn/css/compatible_safari.gif", alt="")
+									td.text-center
+										img(src="/images/learn/css/compatible_opera.gif", alt="")
+							tbody
+								tr
+									td TTF/OTF
+									td 4.0
+									td 9.0*
+									td 3.5
+									td 3.1
+									td 10.0
+								tr
+									td WOFF
+									td 5.0
+									td 9.0*
+									td 3.6
+									td 5.1
+									td 11.0
+								tr
+									td WOFF2
+									td 36.0
+									td.text-danger Not supported
+									td 35.0
+									td.text-danger Not supported
+									td 26.0
+
+								tr
+									td SVG
+									td 4.0
+									td.text-danger Not supported
+									td.text-danger Not supported
+									td 3.2
+									td 9.0
+
+								tr
+									td EOT
+									td.text-danger Not supported
+									td 6.0
+									td.text-danger Not supported
+									td.text-danger Not supported
+									td.text-danger Not supported
+
+					pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.bg-white.
+						@font-face {
+							*font-family: "CenturyGothic";
+							*src: url(CenturyGothic.eot);
+							*src: url(CenturyGothic.eot?#iefix) format("embedded-opentype"),
+							*url(CenturyGothic.woff) format("woff"),
+							*url(CenturyGothic.woff2) format("woff2"),
+							*url(CenturyGothic.ttf) format("truetype"),
+							*url(CenturyGothic.svg#CenturyGothic) format("svg");
+						}
+
+			.row
+				.col
+					.m-4.text-center.btn-toolbar.justify-content-center
+						.btn-group
+							a.btn.btn-xs.btn-primary(href="/docs/html-css/typography/index.html", title="title") Home
+							a.btn.btn-xs.btn-primary(href="/docs/html-css/typography/before-after.html", title="title") Next
+

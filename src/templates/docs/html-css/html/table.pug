@@ -5,7 +5,7 @@ block variables
 	- var description = 'Trình bày thẻ tạo bảng (table) trong html - bảng là dữ liệu có tính cấu trúc: bảng (table) - được tạo bởi các dòng (row) - các dòng được tạo bởi các ô (cell). Tìm hiểu cách hiệu chỉnh bảng: thay đổi border - cellspacing - cellpadding - table bgcolor ...'
 	- var bodyclass = 'html'
 	- var selected = 'HTML';
-	- var href = '/docs/html-css/html/code';
+	- var href = '/docs/html-css/html/table';
 
 block css
 	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
@@ -22,24 +22,24 @@ block body
 					h1.mt-6#sec1 Table
 					hr
 					p.lead Trình bày thẻ tạo bảng (table) trong html - bảng là dữ liệu có tính cấu trúc: bảng (table) - được tạo bởi các dòng (row) - các dòng được tạo bởi các ô (cell). Tìm hiểu cách hiệu chỉnh bảng: thay đổi border - cellspacing - cellpadding - table bgcolor ...
-					p Trong bảng, chiều rộng hay chiều dài đều được tính bằng đơn vị pixel. Thẻ &#x3C;table&#x3E; được dùng để tạo bảng trong tài liệu HTML. Các thuộc tính của phần tử &#x3C;table&#x3E; được áp dụng cho việc định dạng khung nhìn ( dòng kẻ, khoảng cách giữa các ô [cell spacing] - căn lề đổ dữ liệu [cell padding] nhưng không cho dữ liệu hiển thị trên bảng. Đơn vị cơ bản của bảng là một ô (cell) và được định nghĩa bằng thẻ &#x3C;td&#x3E;. Một hàng của bảng được định nghĩa bằng thẻ &#x3C;tr&#x3E; - một hàng sẽ có 1 hoặc nhiều ô (cell). 
+					p Trong bảng, chiều rộng hay chiều dài đều được tính bằng đơn vị pixel. Thẻ &#x3C;table&#x3E; được dùng để tạo bảng trong tài liệu HTML. Các thuộc tính của phần tử &#x3C;table&#x3E; được áp dụng cho việc định dạng khung nhìn ( dòng kẻ, khoảng cách giữa các ô [cell spacing] - căn lề đổ dữ liệu [cell padding] nhưng không cho dữ liệu hiển thị trên bảng. Đơn vị cơ bản của bảng là một ô (cell) và được định nghĩa bằng thẻ &#x3C;td&#x3E;. Một hàng của bảng được định nghĩa bằng thẻ &#x3C;tr&#x3E; - một hàng sẽ có 1 hoặc nhiều ô (cell).
 
 					.row
 						.col
 							p
 								img.img-thumbnail.p-2(src="/images/learn/html/table.png", alt="")
 
-					ul 
+					ul
 						li Tag &#x3C;table&#x3E; được dùng để tạo một bảng HTML.
 						li Một tag &#x3C;table&#x3E; đơn giản có chứa một hoặc nhiều &#x3C;tr&#x3E;, &#x3C;th&#x3E; và &#x3C;td&#x3E;, trong đó:
 						li &#x3C;tr&#x3E; xác định hàng của table.
 						li &#x3C;th&#x3E; xác định phần tử tiêu đề của table
 						li &#x3C;td&#x3E; xác định phần tử nội dung của table
 						li Một table phức tạp có thể bao gồm nhiều thành phần khác, gồm: &#x3C;caption&#x3E;, &#x3C;col&#x3E;, &#x3C;colgroup&#x3E;, &#x3C;thead&#x3E;, &#x3C;tfoot&#x3E;, &#x3C;tbody&#x3E;...
-					
-					h6.text-danger Cấu trúc 
 
-					.row 
+					h6.text-danger Cấu trúc
+
+					.row
 						.col-md-6
 							pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.bg-white.
 								[table]
@@ -60,7 +60,7 @@ block body
 									*[/tr]
 								[/table]
 						.col-md-6
-							table.table-bordered 
+							table.table-bordered
 								tr.bg-white
 									th Lý Mạc Sầu
 									th Cô Long
@@ -93,7 +93,7 @@ block body
 									*[/tr]
 								[/table]
 						.col-md-6
-							table.table-bordered 
+							table.table-bordered
 								tr.bg-white
 									th Lý Mạc Sầu
 									th Cô Long
@@ -105,7 +105,7 @@ block body
 									td 9
 									td 10
 									td 0
-					
+
 					h6.text-danger Viết đúng
 					.row.mt-3
 						.col-md-6
@@ -133,31 +133,31 @@ block body
 									*[/tfoot]
 								[/table]
 						.col-md-6
-							table.table-bordered 
-								thead 
+							table.table-bordered
+								thead
 									tr.bg-white
 										th Lý Mạc Sầu
 										th Cô Long
 										th Dương Quá
-								tbody 
+								tbody
 									tr.bg-white
 										td(colspan="2") Nữ
 										td Nam
-								tfoot 
+								tfoot
 									tr.bg-white
 										td 9
 										td 10
 										td 0
 
 			.row.mt-5
-				.col 
+				.col
 					p.text-lg.text-primary.text-bold Các thuộc tính
 					.table-responsive
 						table.table.table-bordered.thead-inverse.table-striped
 							thead
 								tr
 									th Thuộc tính
-									th Mô tả 
+									th Mô tả
 							tbody
 								tr
 									td Border
@@ -198,7 +198,7 @@ block body
 									td Nowrap
 									td Bình thường mặc định thì nội dung sẽ được bẻ dòng cho vừa vào khổ rộng của từng ô. Dùng thuộc tính NOWRAP trong &#x3C;td&#x3E; để cấm việc đó.
 
-						
+
 
 			.row
 				.col
