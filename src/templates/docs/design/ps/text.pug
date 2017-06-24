@@ -1,0 +1,88 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'Design'
+	- var description = 'Công cụ Type cho phép bạn thêm văn bản vào bản thiết kế. Ví dụ: bạn muốn chỉnh sửa văn bản để tạo poster, thiệp hoặc namecard.'
+	- var bodyclass = 'ps'
+	- var selected = 'Design';
+	- var href = '/docs/design/ps/text';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			.row
+				.col
+					h2 Text
+					hr
+			.row
+				.col-md-4
+					a(href="/images/design/ps/photoshop_type_mask_01.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/photoshop_type_mask_01.jpg", alt="")
+				.col-md-8
+					p.lead Công cụ Type cho phép bạn thêm văn bản vào bản thiết kế. Ví dụ: bạn muốn chỉnh sửa văn bản để tạo poster, thiệp hoặc namecard.
+
+			h4.mt-5.text-danger Thay đổi màu cho Brushes
+			.row.mt-3
+				.col
+					a(href="/images/design/ps/text_tool.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/text_tool.png", alt="")
+					p.lead Tìm và chọn công cụ Type trong bảng công cụ. Bạn cũng có thể nhấn phím T để truy cập nhanh và Type tool.
+
+			.row.mt-3
+				.col
+					a(href="/images/design/ps/text_size.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/text_size.jpg", alt="")
+					p.lead Bạn cũng có thể tùy chỉnh các cài đặt khác nhau cho công cụ Type từ bảng điều khiển gần phía trên màn hình.
+			.row.mt-3
+				.col
+					h5 Text Color:
+					p
+						a(href="/images/design/ps/text_color.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/text_color.png", alt="")
+					p Chọn màu mong muốn.
+			.row
+				.col
+					h5 Text box:
+					p
+						a(href="/images/design/ps/text_box.jpg", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/text_box.jpg", alt="")
+					p Nhấp và giữ chuột vào bất kỳ đâu trên bản thiết kế và kéo để tạo Text box
+			.row
+				.col
+					h5 Enter Text:
+					p
+						a(href="/images/design/ps/text_add.jpg", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/text_add.jpg", alt="")
+					p Một lớp văn bản mới sẽ được thêm vào bản thiết kế. Nhập văn bản vào lớp mới được tạo này.
+					p
+						a(href="/images/design/ps/text_move.jpg", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/text_move.jpg", alt="")
+					p Nếu bạn muốn di chuyển văn bản, bạn chọn công cụ Move, sau đó kéo nó vào vị trí mong muốn, phím tắt là V.
+			h4.mt-5.text-danger Định dạng văn bản
+			.row.mt-3
+				.col
+					a(href="/images/design/ps/text_character.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/text_character.png", alt="")
+					p.lead Vào Window → Character để mở Character panel.
+
+			//- .row
+				.col
+					.m-4.text-center.btn-toolbar.justify-content-center
+						.btn-group
+							a.btn.btn-xs.btn-primary(href="/docs/design/ps/index.html", title="title") Home
+							//- a.btn.btn-xs.btn-primary(href="/docs/design/ps/text.html", title="title") Next
+

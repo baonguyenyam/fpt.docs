@@ -2,7 +2,7 @@ extends ../../../_layout/layout
 
 block variables
 	- var title = 'Design'
-	- var description = 'aaaaaaaaaaaaaaaaaaaaaaa'
+	- var description = 'Công cụ Brush cho phép bạn vẽ trên bất kỳ Layer nào, giống như một cây cọ thật. Có các cài đặt khác nhau để lựa chọn để tùy chỉnh cho các tình huống khác nhau. Ngoài ra có các công cụ khác như Eraser và Spot Healing Brush được xếp cùng một nhóm và được sử dụng tương tự.'
 	- var bodyclass = 'ps'
 	- var selected = 'Design';
 	- var href = '/docs/design/ps/bt';
@@ -18,22 +18,67 @@ block body
 		.container-fluid
 			.row
 				.col
-					h2 Brushes - Text
+					h2 Brushes
 					hr
-					p.lead it's not avaliable now!
 			.row
 				.col-md-6
-					a(href="/images/design/ps/01.png", target="_blank")
+					a(href="/images/design/ps/brush_intro.png", target="_blank")
 						figure
-							img.img-thumbnail(src="/images/design/ps/01.png", alt="")
+							img.img-thumbnail(src="/images/design/ps/brush_intro.png", alt="")
 				.col-md-6
+					p.lead Công cụ Brush cho phép bạn vẽ trên bất kỳ Layer nào, giống như một cây cọ thật. Có các cài đặt khác nhau để lựa chọn để tùy chỉnh cho các tình huống khác nhau. Ngoài ra có các công cụ khác như Eraser và Spot Healing Brush được xếp cùng một nhóm và được sử dụng tương tự.
 
-
-
+			h4.mt-5.text-danger Thay đổi màu cho Brushes
+			.row.mt-3
+				.col-md-6
+					a(href="/images/design/ps/brush_color_crop.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/brush_color_crop.png", alt="")
+				.col-md-6
+					p.lead Để chọn màu hãy nhấp vào Color Picker Tool, sau đó chọn màu mong muốn từ hộp thoại.
+			.row.mt-3
+				.col-md-6
+					a(href="/images/design/ps/brush_control.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/brush_control.png", alt="")
+				.col-md-6
+					p.lead Bạn cũng có thể tùy chỉnh các cài đặt khác nhau cho công cụ Brush từ bảng điều khiển gần phía trên màn hình. Trong đó:
+			.row.mt-3
+				.col
+					h5 Brush Size:
+					p
+						a(href="/images/design/ps/brush_size_call.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/brush_size_call.png", alt="")
+					p Nếu bạn muốn làm cho Brush lớn hơn hoặc nhỏ hơn, hãy nhấp vào mũi tên thả xuống của Brush Picker trong Control panel, sau đó điều chỉnh thanh trượt Size. Bạn cũng có thể nhấn các phím tắt là [ hoặc ] để tăng hoặc giảm kích thước.
 			.row
+				.col
+					h5 Brush Tip:
+					p
+						a(href="/images/design/ps/brush_tip.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/brush_tip.png", alt="")
+					p Nếu bạn muốn tạo một hiệu ứng độc đáo, có những brush tips khác nhau để lựa chọn trong  trình đơn thả xuống. Một số cọ trong này được thiết kế bắt chước công cụ vẽ thực tế như bút hay cọ sơn.
+			.row
+				.col
+					h5 Opacity:
+					p
+						a(href="/images/design/ps/brush_opacity.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/brush_opacity.png", alt="")
+					p Mặc định, độ mờ của Brush được đặt là 100%, có nghĩa là Brush sử dụng cường độ cao nhất. Tuy nhiên, bạn có thể giảm độ mờ của Brush để làm cho nó nhạt đi.
+			h4.mt-5.text-danger Công cụ kèm theo Brushes
+			.row.mt-3
+				.col-md-6
+					a(href="/images/design/ps/brush_eraser.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/brush_eraser.png", alt="")
+				.col-md-6
+					p.lead Như đã nói ở trên ta có nhiều công cụ xài kèm với Brush ví dụ như công cụ Eraser. Bạn cũng có thể chọn tăng giảm khích thước cho nó như đã sử dụng với Brush.
+			//- .row
 				.col
 					.m-4.text-center.btn-toolbar.justify-content-center
 						.btn-group
 							a.btn.btn-xs.btn-primary(href="/docs/design/ps/index.html", title="title") Home
-							//- a.btn.btn-xs.btn-primary(href="/docs/design/ps/ssssssssssssss.html", title="title") Next
+							a.btn.btn-xs.btn-primary(href="/docs/design/ps/text.html", title="title") Next
 

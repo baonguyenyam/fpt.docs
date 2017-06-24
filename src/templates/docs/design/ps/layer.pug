@@ -2,7 +2,7 @@ extends ../../../_layout/layout
 
 block variables
 	- var title = 'Design'
-	- var description = 'aaaaaaaaaaaaaaaaaaaaaaa'
+	- var description = 'Layer là yếu tố cơ bản và hay nhất của Photoshop, nếu biết sử dụng nó coi như bạn đã cơ bản sử dụng được Photoshop rồi đó. Định nghĩa một cách trực quan thì có thể hiểu layer trong Photoshop là các lớp ảnh. Một bức ảnh được tạo thành bởi nhiều lớp ảnh khác nhau,mỗi lớp ảnh đều có những thông số màu sắc, độ trong suốt, sắc thái riêng biệt Những layer này sắp xếp theo một thứ tự nhất định, layer nằm trên sẽ che lấp layer nằm dưới tạo thành một bức ảnh hoàn chỉnh.'
 	- var bodyclass = 'ps'
 	- var selected = 'Design';
 	- var href = '/docs/design/ps/layer';
@@ -20,17 +20,160 @@ block body
 				.col
 					h2 Layer
 					hr
-					p.lead it's not avaliable now!
+
+
+
+
 			.row
 				.col-md-6
-					a(href="/images/design/ps/01.png", target="_blank")
+					a(href="/images/design/ps/glossario-de-design-grafico-18.png", target="_blank")
 						figure
-							img.img-thumbnail(src="/images/design/ps/01.png", alt="")
+							img.img-thumbnail(src="/images/design/ps/glossario-de-design-grafico-18.png", alt="")
 				.col-md-6
+					p.lead Layer là yếu tố cơ bản và hay nhất của Photoshop, nếu biết sử dụng nó coi như bạn đã cơ bản sử dụng được Photoshop rồi đó. Định nghĩa một cách trực quan thì có thể hiểu layer trong Photoshop là các lớp ảnh. Một bức ảnh được tạo thành bởi nhiều lớp ảnh khác nhau,mỗi lớp ảnh đều có những thông số màu sắc, độ trong suốt, sắc thái riêng biệt Những layer này sắp xếp theo một thứ tự nhất định, layer nằm trên sẽ che lấp layer nằm dưới tạo thành một bức ảnh hoàn chỉnh.
+					.row.text-center
+						.col-md-6
+							a(href="/images/design/ps/layer-together.gif", target="_blank")
+								figure
+									img.img-thumbnail(src="/images/design/ps/layer-together.gif", alt="")
+						.col-md-6
+							a(href="/images/design/ps/layer-expanded.gif", target="_blank")
+								figure
+									img.img-thumbnail(src="/images/design/ps/layer-expanded.gif", alt="")
 
+			h4.mt-5.text-danger Các tính năng trong Layer
+			.row.mt-3
+				.col-md-4
+					a(href="/images/design/ps/window.gif", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/window.gif", alt="")
+				.col-md-8
+					.table-responsive
+						table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Công cụ
+									th Mô tả
+							tbody
+								tr
+									td.no-wrap Layer Filter
+									td Cho phép ẩn các Layer dựa trên những thuộc tính khác nhau. Làm cho việc tìm các Layer trở nên dễ dàng hơn.
+								tr
+									td.no-wrap Opacity
+									td Nhấn phím số trên bàn phím để thay đổi hoặc điều chỉnh thanh trượt để gán độ trong suốt trên mỗi Layer.
+								tr
+									td.no-wrap Blend Modes
+									td Cách mà lớp được chọn trộn với các lớp bên dưới nó. Tính năng này thường dùng để kết hợp và các hiệu ứng đặc biệt hoặc ghép ảnh. Shift+ hoặc Shift- để đổi chế độ hòa trộn.
 
+								tr
+									td.no-wrap Fill opacity
+									td Chỉ điều chỉnh độ đục của các điểm ảnh, nhấn phím số trên bàn phím để thay đổi hoặc điều chỉnh thanh trượt để gán độ đục trên mỗi Layer.
+								tr
+									td.no-wrap Visibility
+									td Bật/tắt Layer.
+								tr
+									td.no-wrap Locked
+									td
+										p Khoá thuộc tính nào đó, phần này gồm 4 thành phần
+										p
+											a(href="/images/design/ps/PTS_029.png", target="_blank")
+												figure
+													img(src="/images/design/ps/PTS_029.png", alt="")
+										ol.list-unstyled
+											li Lock transparent: Khoá các pixel trong suốt
+											li Lock Image pixels: Khoá không cho hiệu chỉnh trên ảnh
+											li Lock Position: Khoá không cho di chuyển ảnh
+											li Lock all: Khoá mọi thuộc tính
+								tr
+									td.no-wrap Link
+									td Liên kết đến một Layer khác, tất cả sẽ di chuyển cùng nhau nếu được liên kết lại.
+								tr
+									td.no-wrap Layer Effects (Styles)
+									td Các hiệu ứng được áp dụng cho lớp hình ảnh của bạn. Nhiều hiệu ứng có thể được sử dụng cùng một lúc.
+								tr
+									td.no-wrap Add Layer Mask
+									td Đây là nút nhấn để thêm một lớp mặt nạ vào lớp hiện đang được chọn. Cho phép bạn tô vẽ các phần của lớp của bạn mà không làm hỏng hình ảnh ban đầu của bạn.
+								tr
+									td.no-wrap.no-wrap Add Adjustment Layer
+									td Có thể thay tông màu của một hình ảnh. Tất cả các lớp bên dưới đều bị ảnh hưởng bởi lớp điều chỉnh này trừ trường hợp đặc biệt (ví dụ như gán mặt nạ hoặc gán thuộc tính phụ thuộc). Đây là một lựa chọn tốt nhất để điều chỉnh ảnh mà không phá hủy hình ảnh ban đầu và có thể chỉnh sửa lại được.
+								tr
+									td.no-wrap Layer Groups
+									td Tổ chức nhóm các Layer lại với nhau để dễ quản lý phím tắt là Ctrl + G
+								tr
+									td.no-wrap Create New Layer
+									td Tạo Layer mới.
+								tr
+									td.no-wrap Delete Layer
+									td Xoá Layer
+								tr
+									td.no-wrap Panel Options
+									td Nhấp vào đây sẽ mở ra một trình đơn thả xuống cung cấp một số tùy chọn.
+			h4.mt-5.text-danger Thuộc tính của Layer
+			.row.mt-3
+				.col-md-4
+					a(href="/images/design/ps/features.gif", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/features.gif", alt="")
+				.col-md-8
+					.table-responsive
+						table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Công cụ
+									th Mô tả
+							tbody
+								tr
+									td.no-wrap Layer Group
+									td Nhóm các Layer
+								tr
+									td.no-wrap Type Layer
+									td Giống như một Layer hình ảnh nhưng bên trong này chỉ chứa Text (bạn có thể: Thay đổi ký tự, màu sắc, phông chữ hoặc kích thước)
+								tr
+									td.no-wrap Adjustment Layer
+									td Layer để điều chỉnh đang thay đổi màu sắc hoặc thuộc tính của tất cả các lớp bên dưới nó.
+								tr
+									td.no-wrap Layer Style
+									td Áp dụng các hiệu ứng cho Layer
+								tr
+									td.no-wrap Layer Mask
+									td Mặt nạ dùng để hiển thị hoặc ẩn đi một phần của hình ảnh.
+								tr
+									td.no-wrap Smart Object
+									td Một loại Layer biệt mà trong nó có thể chứa 1 hoặc nhiều Layer nữa
 
-			.row
+			h4.mt-5.text-danger Các phím tắt
+			.row.mt-3
+				.col
+					.table-responsive
+						table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Window
+									th Mac
+									th Mô tả
+							tbody
+								tr
+									td Ctrl+Click
+									td Command+Click
+									td Chọn nhiều layer
+								tr
+									td Ctrl+J
+									td Command+J
+									td Nhân đôi layer
+								tr
+									td Ctrl+G
+									td Command+G
+									td Nhóm các layer đã chọn
+								tr
+									td Ctrl+[
+									td Command+[
+									td Đem layer xuống 1 cấp
+								tr
+									td Ctrl+]
+									td Command+]
+									td Đem layer lên 1 cấp
+
+			//- .row
 				.col
 					.m-4.text-center.btn-toolbar.justify-content-center
 						.btn-group

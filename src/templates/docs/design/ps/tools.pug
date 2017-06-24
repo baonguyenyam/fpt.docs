@@ -1,0 +1,160 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'Design'
+	- var description = 'Khi bạn khởi động Photoshop, mặc định Tools panel sẽ xuất hiện ở vị trí bên trái màn hình, hay nói cách khác nó được gắn ở phía bên trái của không gian làm việc. Có bốn nhóm công cụ chính được phân loại bởi chức năng trên Tools panel:'
+	- var bodyclass = 'ps'
+	- var selected = 'Design';
+	- var href = '/docs/design/ps/tools';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			.row
+				.col
+					h2 Text
+					hr
+			.row
+				.col-md-4
+					a(href="/images/design/ps/pscc-61348.png", target="_blank")
+						figure
+							img.img-thumbnail.p-4(src="/images/design/ps/pscc-61348.png", alt="")
+				.col-md-8
+					p.lead Khi bạn khởi động Photoshop, mặc định Tools panel sẽ xuất hiện ở vị trí bên trái màn hình, hay nói cách khác nó được gắn ở phía bên trái của không gian làm việc. Có bốn nhóm công cụ chính được phân loại bởi chức năng trên Tools panel:
+					ul
+						li A. Selection, cropping, and measuring tools: Phần này dùng để tạo vùng chọn, cắt xén, và lấy thông tin đối tượng.
+						li B. Retouching and painting tools: Phần này dùng cho việc tô vẽ làm mờ các loại.
+						li C. Drawing and type tools: Phần này dùng để tạo khối, viết nội dung...
+						li D. Navigation tools: Thu, phóng và kéo rê bản thiết kế.
+						li E. Foreground/Background and Quick Mask: Khai báo màu, tạo mặt nạ, xem lại bản thiết kế...
+
+			h4.mt-5.text-danger Selection, Cropping, and Measuring Tools
+			.table-responsive
+				table.table.table-bordered.thead-inverse.table-striped
+					thead
+						tr
+							th Công cụ
+							th Tên/Phím tắt
+							th Mô tả
+					tbody
+
+						tr
+							td
+								img(alt='61768.png', src='/images/design/ps/pscc-61768.png')
+							td Move (V)
+							td Di chuyển vùng chọn hoặc Layer.
+						tr
+							td
+								img(alt='61760.png', src='/images/design/ps/pscc-61760.png')
+							td Marquee (M)
+							td Tạo vùng chọn theo khung.
+						tr
+							td
+								img(alt='61752.png', src='/images/design/ps/pscc-61752.png')
+							td Lasso (L)
+							td Tạo vùng chọn thủ công.
+						tr
+							td
+								img(alt='61744.png', src='/images/design/ps/pscc-61744.png')
+							td Quick Selection (W)
+							td Tạo vùng chọn bằng cách tô vẽ.
+						tr
+							td
+								img(alt='61734.png', src='/images/design/ps/pscc-61734.png')
+							td Crop (C)
+							td Cắt xén ảnh.
+						tr
+							td
+								img(alt='61724.png', src='/images/design/ps/pscc-61724.png')
+							td Eyedropper (I)
+							td Lấy thông số màu.
+
+
+						tr
+							td
+								img(alt='61868.png', src='/images/design/ps/pscc-61868.png')
+							td Spot Healing (J)
+							td Xoá điểm không mong muốn.
+						tr
+							td
+								img(alt='61860.png', src='/images/design/ps/pscc-61860.png', style='width: 20px; height: 18px;')
+							td Brush (B)
+							td Công cụ tô vẽ.
+						tr
+							td
+								img(alt='61848.png', src='/images/design/ps/pscc-61848.png')
+							td Clone Stamp (S)
+							td Vẽ lại theo một mẫu có sẵn.
+						tr
+							td
+								img(alt='61836.png', src='/images/design/ps/pscc-61836.png')
+							td History Brush (Y)
+							td Lấy lại các bước từng làm của công cụ Brush.
+						tr
+							td
+								img(alt='61827.png', src='/images/design/ps/pscc-61827.png')
+							td Eraser (E)
+							td Xoá vùng nào đó.
+						tr
+							td
+								img(alt='61817.png', src='/images/design/ps/pscc-61817.png')
+							td Gradient (G)
+							td Đổ nền.
+						tr
+							td
+								img(alt='61807.png', src='/images/design/ps/pscc-61807.png')
+							td Blur (no shortcut)
+							td Làm mờ.
+						tr
+							td
+								img(alt='61799.png', src='/images/design/ps/pscc-61799.png')
+							td Dodge (O)
+							td Làm sáng điểm ảnh lên.
+
+						tr
+							td
+								img(alt='61945.png', src='/images/design/ps/pscc-61945.png')
+							td Pen (P)
+							td Vẽ vector.
+						tr
+							td
+								img(alt='61934.png', src='/images/design/ps/pscc-61934.png')
+							td Horizontal Type (T)
+							td Nhập văn bản.
+						tr
+							td
+								img(alt='61926.png', src='/images/design/ps/pscc-61926.png')
+							td Path Selection (A)
+							td Chỉnh sửa lại vector.
+						tr
+							td
+								img(alt='61918.png', src='/images/design/ps/pscc-61918.png')
+							td Rectangle (U)
+							td Vẽ vector theo khối.
+
+						tr
+							td
+								img(alt='61965.png', src='/images/design/ps/pscc-61965.png')
+							td Hand (H)
+							td Kéo rê bản thiết kế.
+						tr
+							td
+								img(alt='61955.png', src='/images/design/ps/pscc-61955.png')
+							td Zoom (Z)
+							td Thu phóng bản thiết kế.
+
+
+
+			//- .row
+				.col
+					.m-4.text-center.btn-toolbar.justify-content-center
+						.btn-group
+							a.btn.btn-xs.btn-primary(href="/docs/design/ps/index.html", title="title") Home
+							//- a.btn.btn-xs.btn-primary(href="/docs/design/ps/text.html", title="title") Next
+

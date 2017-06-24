@@ -1,0 +1,113 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'Design'
+	- var description = 'Layer Masks là một trong những công cụ quan trọng nhất của Photoshop. Nó có thể làm cho các phần của layer có thể được nhìn thấy và một phần vô hình. Ưu điểm chính của việc sử dụng Layer Masks là chúng có thể được thay đổi bất cứ lúc nào – nó là “không phá hủy“, có nghĩa là nó sẽ không bao giờ phá hủy pixel hình ảnh!'
+	- var bodyclass = 'ps'
+	- var selected = 'Design';
+	- var href = '/docs/design/ps/mark';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			.row
+				.col
+					h2 Mark
+					hr
+
+
+
+			h4.text-danger Clipping Mark
+			.row
+				.col-md-6
+					a(href="/images/design/ps/background-805060_960_720.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/background-805060_960_720.jpg", alt="")
+				.col-md-6
+					p.lead Clipping Mask rất hữu ích cho việc sử dụng các nội dung của một layer như một mặt nạ cho layer khác. Nó đặc biệt hữu ích khi bạn muốn hiển thị một hình ảnh bên trong một văn bản. Tất cả bạn cần làm là tạo ra các layer văn bản và đặt các hình ảnh trên đầu layer này. Khi bạn đến giai đoạn này, bạn chỉ cần nhấn giữ phím Alt/Option và click giữa hai lớp trong bảng Layers. Một khi bạn đã tạo một Clipping Mask bạn vẫn có thể chỉnh sửa văn bản của bạn và di chuyển hình ảnh hoặc văn bản xung quanh một cách tự do mà không phá vỡ sự liên kết giữa hai yếu tố của mặt nạ.
+			.row.mt-3
+				.col
+					p Đầu tiên tôi PS ra sau đó tạo 1 trang trắng và kéo ảnh Demo vào
+					p Sau đó nhập 1 đoạn text
+					p
+						a(href="/images/design/ps/2017-06-24_210248.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/2017-06-24_210248.png", alt="")
+					p Kế đến tôi di chuyển Layer ảnh lên trên Layer Text
+					p
+						a(href="/images/design/ps/2017-06-24_210530.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/2017-06-24_210530.png", alt="")
+					p Nhấp phải vào Layer ảnh chọn Create Clipping Mark
+					p
+						a(href="/images/design/ps/2017-06-24_210608.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/2017-06-24_210608.png", alt="")
+					p Kết quả
+					p
+						a(href="/images/design/ps/2017-06-24_210659.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/2017-06-24_210659.png", alt="")
+			h4.mt-5.text-danger Layer Mark
+			.row
+				.col-md-6
+					a(href="/images/design/ps/clippingvslayermasks1.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/clippingvslayermasks1.jpg", alt="")
+				.col-md-6
+					p.lead Layer Masks là một trong những công cụ quan trọng nhất của Photoshop. Nó có thể làm cho các phần của layer có thể được nhìn thấy và một phần vô hình. Ưu điểm chính của việc sử dụng Layer Masks là chúng có thể được thay đổi bất cứ lúc nào – nó là “không phá hủy“, có nghĩa là nó sẽ không bao giờ phá hủy pixel hình ảnh!
+
+					p Để đơn giản hóa cho việc tìm hiểu Layer Mask, chúng ta chỉ cần hiểu đây là mặt nạ lớp, giả sử trong Photoshop chúng ta có 2 lớp thì nếu như lớp bên trên là mặt nạ sẽ che phủ hoàn toàn lớp bên dưới, nếu lớp bên trên được đục thủng thì ngoài việc chúng ta nhìn thấy lớp bên trên thì tại vị trí đục thủng đó ta sẽ nhìn được phần nội dung của bên dưới.
+
+			.row.mt-3
+				.col-md-6
+					p Ảnh gốc 1
+					p
+						a(href="/images/design/ps/phunu8-15-phu-nu-1uyen-ru-nhat-tg-15.jpeg", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/phunu8-15-phu-nu-1uyen-ru-nhat-tg-15.jpeg", alt="")
+				.col-md-6
+					p Ảnh gốc 2
+					p
+						a(href="/images/design/ps/01-1.jpg", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/01-1.jpg", alt="")
+			.row.mt-3
+				.col
+					p Mở PS kéo 2 ảnh gốc vào, ở đây tôi resize ảnh cô gái nhỏ lại cho vừa với khung cảnh
+					p
+						a(href="/images/design/ps/2017-06-24_214248.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/2017-06-24_214248.png", alt="")
+					p Nhấp chọn Layer cô gái sau đó chọn nút Create new layer mark
+					p
+						a(href="/images/design/ps/2017-06-24_214340.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/2017-06-24_214340.png", alt="")
+					p Bạn sẽ thấy sự xuất hiện của mặt nạ tác động lên hình cô gái, dùng chuộn nhấp chọn lên mặt nạ này
+					p
+						a(href="/images/design/ps/2017-06-24_214633.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/2017-06-24_214633.png", alt="")
+					p Tiếp đến chọn công cụ Brush để xoá nền trắng xung quanh cô gái, tuy nhiên bạn lưu ý ở đây là phần color phải trả về giá trị default là trắng và đen (Nhấp D để trả màu về mặc định nếu màu ở đây không phải là màu default).
+					p Một lưu ý khác là khi màu đen nằm ở trên thì Brush sẽ hiểu là bôi xoá lên Layer Mark, Ngược lại nếu mà trắng nằm phía trên thì Brush sẽ hiểu là lấy lại phần đã xoá trên Layer Mark (Bạn có thể đảo 2 màu này bằng phím X)
+					p
+						a(href="/images/design/ps/2017-06-24_214517.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/2017-06-24_214517.png", alt="")
+					p Tiếp theo là chỉ việc khéo léo xoá đi phần thừa xung quanh cô gái
+					p
+						a(href="/images/design/ps/2017-06-24_214751.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/2017-06-24_214751.png", alt="")
+					p Kết quả
+					p
+						a(href="/images/design/ps/2017-06-24_215108.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/2017-06-24_215108.png", alt="")

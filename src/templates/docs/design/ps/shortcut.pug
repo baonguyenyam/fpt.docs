@@ -1,0 +1,474 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'Design'
+	- var description = 'Trong Photoshop chúng ta phải biết và phải nhớ các phím tắt của nó bởi vì nếu sử dụng chuột để thao tác thì bạn sẽ rất mất thời gian và nhìn nghiệp dư không chịu được. Bằng chứng là ngay bây giờ, bạn có thể ra một cửa hàng chụp ảnh thẻ lấy ngay nào đó để xem, người chụp ảnh sau khi họ chụp xong, họ sẽ copy ảnh vào máy tính để bắt đầu chỉnh sửa và in ảnh. Thao tác của họ đa số là sử dụng bàn phím (các phím tắt, tổ hợp phím) mà thôi, rất ít khi sử dụng đến chuột để lựa chọn các tính năng có trên thanh Menu.'
+	- var bodyclass = 'ps'
+	- var selected = 'Design';
+	- var href = '/docs/design/ps/shortcut';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			.row
+				.col
+					h2 Shortcut Keys
+					hr
+			.row.mt-3
+				.col
+					p.lead Trong Photoshop chúng ta phải biết và phải nhớ các phím tắt của nó bởi vì nếu sử dụng chuột để thao tác thì bạn sẽ rất mất thời gian và nhìn nghiệp dư không chịu được. Bằng chứng là ngay bây giờ, bạn có thể ra một cửa hàng chụp ảnh thẻ lấy ngay nào đó để xem, người chụp ảnh sau khi họ chụp xong, họ sẽ copy ảnh vào máy tính để bắt đầu chỉnh sửa và in ảnh. Thao tác của họ đa số là sử dụng bàn phím (các phím tắt, tổ hợp phím) mà thôi, rất ít khi sử dụng đến chuột để lựa chọn các tính năng có trên thanh Menu.
+
+			h4.text-danger Các phím tắt
+			.row.mt-3
+				.col
+					h5.mt-3 Các phím tắt hỗ trợ thao tác với FILE văn bản
+					.table-responsive
+						table.table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Sử dụng phím tắt nhanh
+									th Sử dụng chuột
+									th Tác dụng
+							tbody
+								tr
+									td CTRL + N
+									td New
+									td Hỗ trợ tạo File mới
+								tr
+									td CTRL + O
+									td Open
+									td Mở File có sẵn trên máy tính
+								tr
+									td CTRL + ALT + O
+									td Open As
+									td Mở file từ Adobe Bridge
+								tr
+									td CTRL + P
+									td Print
+									td In ảnh
+								tr
+									td CTRL + ALT + S
+									td Save a Copy
+									td Lưu thêm 1 bản copy
+								tr
+									td CTRL + W
+									td Close
+									td Đóng File
+								tr
+									td CTRL + S
+									td Save
+									td Lưu File
+								tr
+									td CTRL + SHIFT + S
+									td Save As
+									td Lưu File với các dạng khác.
+					h5.mt-3 Các lệnh SELECT bạn cần nắm được
+
+					.table-responsive
+						table.table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Sử dụng phím tắt
+									th Sử dụng chuột
+									th Tính năng tương ứng
+							tbody
+								tr
+									td CTRL + A
+									td All
+									td Chọn tất cả, bôi đen tất cả
+								tr
+									td CTRL + F
+									td Last Filter
+									td Lặp lại Filter cuối cùng
+								tr
+									td CTRL + D
+									td Deselect
+									td Bỏ vùng chọn
+								tr
+									td CTRL + ALT + D
+									td Feather
+									td Mờ biên vùng chọn
+								tr
+									td CTRL + SHIFT + D
+									td Reselect
+									td Chọn lại vùng chọn
+								tr
+									td CTRL + SHIFT + I
+									td Inverse
+									td Nghịch đảo vùng chọn
+								tr
+									td CTRL + SHIFT + F
+									td Fade
+									td Chỉnh Opacity Brush
+					h5.mt-3 Thao tác với LAYER
+
+					.table-responsive
+						table.table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Sử dụng phím tắt
+									th Sử dụng chuột
+									th Tính năng tương ứng
+							tbody
+								tr
+									td CTRL + SHIFT + N
+									td New > Layer
+									td Tạo một Layer mới
+								tr
+									td CTRL + G
+									td Group with Previous
+									td Tạo nhóm Layer
+								tr
+									td CTRL + SHIFT + G
+									td CTRL + SHIFT + G
+									td Bỏ nhóm Layer
+								tr
+									td CTRL + J
+									td New > Layer Via Copy
+									td Nhân đôi Layer
+								tr
+									td CTRL + SHIFT + J
+									td New > Layer Via Cut
+									td Cắt Layer
+								tr
+									td CTRL + SHIFT + ]
+									td Arrange > Bring to Front
+									td Chuyển Layer lên trên cùng
+								tr
+									td CTRL + SHIFT + [
+									td Arrange > Send to Back
+									td Chuyển Layer xuống dưới cùng
+								tr
+									td CTRL + ]
+									td Arrange > Birng to Forward
+									td Chuyển Layer lên trên
+								tr
+									td CTRL + [
+									td Arrange > Send Backward
+									td Chuyển Layer xuống dưới
+								tr
+									td CTRL + E
+									td Merge Down
+									td Ghép các Layer được chọn
+								tr
+									td CTRL + SHIFT + E
+									td Merge Visible
+									td Ghép tất cả các Layer
+					h5.mt-3 Các phím tắt với nhóm IMAGE
+
+					.table-responsive
+						table.table.table.table-bordered.thead-inverse.table-stripedd
+							thead
+								tr
+									th Sử dụng phím tắt
+									th Sử dụng chuột
+									th Tính năng tương ứng
+							tbody
+								tr
+									td CTRL + M
+									td Ajust > Curves
+									td Bảng Curves
+								tr
+									td CTRL + B
+									td Ajust > Color Blance
+									td Bảng Color Blance
+								tr
+									td CTRL + U
+									td Ajust > Hue/Saturation
+									td Bảng Hue/Saturation
+								tr
+									td CTRL + L
+									td Ajust > Levels
+									td Ajust > Levels
+								tr
+									td CTRL + I
+									td Ajust > Invert
+									td Bảng Invert
+								tr
+									td CTRL + SHIFT + L
+									td Ajust > Auto Levels
+									td Tự động chỉnh Levels
+								tr
+									td CTRL + ALT + SHIFT + L
+									td Ajust > Auto Contrast
+									td Tự động chỉnh Contrast
+								tr
+									td CTRL + SHIFT + U
+									td Ajust > Desaturate
+									td Bảng Desaturate
+					h5.mt-3 Sử dụng các phím tắt với nhóm lệnh EDIT
+
+					.table-responsive
+						table.table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Sử dụng phím tắt
+									th Sử dụng chuột
+									th Tính năng tương ứng
+							tbody
+								tr
+									td [
+									td Zoom + Brush
+									td Phóng to nét bút
+								tr
+									td ]
+									td Zoom - Brush
+									td Thu nhỏ nét bút
+								tr
+									td CTRL + X
+									td Cut
+									td Cắt
+								tr
+									td CTRL + C
+									td Copy
+									td Copy (Sao chép)
+								tr
+									td CTRL + SHIFT + C
+									td Copy Merged
+									td Copy Merged
+								tr
+									td CTRL + Z
+									td Undo
+									td Trở lại bước vừa làm
+								tr
+									td CTRL + ALT + Z
+									td Undo More
+									td Trở lại nhiều bước
+								tr
+									td CTRL + V
+									td Paste
+									td Paste
+								tr
+									td CTRL + SHIFT + CTRL + V
+									td Paste Into
+									td Paste chồng lên
+								tr
+									td CTRL + T
+									td Free Transform
+									td Xoay hình / Chỉnh ti lệ
+								tr
+									td CTRL + SHIFT + T
+									td Transform > Again
+									td Làm lại bước Free Transform
+					h5.mt-3 Sử dụng phím tắt với VIEW
+
+					.table-responsive
+						table.table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Sử dụng phím tắt
+									th Sử dụng chuột
+									th Tính năng tương ứng
+							tbody
+								tr
+									td CTRL + Y
+									td Preview>CMYK
+									td Xem màu CMYK
+								tr
+									td CTRL + SHIFT + Y
+									td Gamut Warning
+									td Xem gam màu ngoài hệ CMYK
+								tr
+									td CTRL + 0
+									td Fit on Screen
+									td Xem hình tràn màn hình
+								tr
+									td CTRL + R
+									td Show Rulers
+									td Hiện thước
+								tr
+									td CTRL + ;
+									td Hide Guides
+									td Ẩn Guides
+								tr
+									td CTRL + “
+									td Show Grid
+									td Hiện lưới
+								tr
+									td CTRL + +
+									td Zoom In
+									td Phóng to
+								tr
+									td CTRL + -
+									td Zoom Out
+									td Thu nhỏ
+								tr
+									td CTRL + SHIFT + H
+									td Hide Path
+									td Ẩn các đường Path
+								tr
+									td CTRL + SHIFT + ;
+									td Snap To Guides
+									td Nhẩy bằng Guides
+								tr
+									td CTRL + ALT + ;
+									td Lock Guides
+									td Khoá Guides
+								tr
+									td CTRL + SHIFT + ‘
+									td Snap To Grid
+									td Nhẩy bằng lưới
+					h5.mt-3 Nhóm phím tắt công cụ chỉnh sửa (Toolbar)
+
+					.table-responsive
+						table.table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Sử dụng phím tắt
+									th Sử dụng chuột
+									th Tính năng tương ứng
+							tbody
+								tr
+									td A
+									td Path Selection
+									td Chọn đường Path . Vector
+								tr
+									td B
+									td Brush
+									td Nét bút
+								tr
+									td C
+									td Crop
+									td Cắt hình
+								tr
+									td D
+									td Defaul Background Color
+									td Quay về màu cơ bản ban đầu
+								tr
+									td E
+									td Eraser
+									td Tẩy
+								tr
+									td G
+									td Paint Bucket
+									td Đổ màu/Đổ màu chuyển
+								tr
+									td .
+									td Smudge Tool
+									td Mô tả hiện tường miết tay
+								tr
+									td H
+									td Hand
+									td Hand Tool
+								tr
+									td I
+									td Eyedroppe
+									td Chấm màu . Thước kẻ
+								tr
+									td J
+									td Healing Brush
+									td Chấm sửa chỗ chưa hoàn chỉnh
+								tr
+									td L
+									td Lasso
+									td Tạo vùng chọn tự do
+								tr
+									td M
+									td Marquee
+									td Tạo vùng chọn
+								tr
+									td O
+									td Burn
+									td Làm tối ảnh
+								tr
+									td P
+									td Pen
+									td Tạo đường path . vector
+								tr
+									td S
+									td Clone Stamp
+									td Lấy mẫu từ 1 ảnh
+								tr
+									td T
+									td Horizontal Type
+									td Viết chữ
+								tr
+									td U
+									td Round Retange
+									td Vẽ các hình cơ bản
+								tr
+									td V
+									td Move
+									td Di chuyển
+								tr
+									td X
+									td Swich Foreground & Background color
+									td Đổi màu trên bảng màu
+								tr
+									td Y
+									td History Brush
+									td Gọi lại thông số cũ của ảnh
+								tr
+									td Z
+									td Zoom
+									td Phóng to / thu nhỏ hình ảnh
+								tr
+									td W
+									td Magic Wand
+									td Tạo vùng chọn theo màu
+								tr
+									td &
+									td
+									td Đổi màu trên bảng mà
+					h5.mt-3 Tác dụng của các phím tắt từ F1 đến F9
+
+					.table-responsive
+						table.table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Phím tắt (F1 > F9)
+									th Tính năng tương ứng
+							tbody
+								tr
+									td F1
+									td Xem hướng dẫn từ nhà phát hành
+								tr
+									td F2
+									td Cut
+								tr
+									td F3
+									td Copy (Sao chép)
+								tr
+									td F4
+									td Paste (Dán)
+								tr
+									td F5
+									td Mở Pallete Brush
+								tr
+									td F6
+									td Mở Pallete màu
+								tr
+									td F7
+									td Mở Pallete Layer
+								tr
+									td F8
+									td Mở Pallete Info
+								tr
+									td F9
+									td Mở Pallete Action
+
+
+
+
+
+			.row.mt-3
+				.col.text-center
+					p
+						a(href="/images/design/ps/phim-tat-trong-photoshop-1.jpg", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/design/ps/phim-tat-trong-photoshop-1.jpg", alt="")
+
+			//- .row
+				.col
+					.m-4.text-center.btn-toolbar.justify-content-center
+						.btn-group
+							a.btn.btn-xs.btn-primary(href="/docs/design/ps/index.html", title="title") Home
+							//- a.btn.btn-xs.btn-primary(href="/docs/design/ps/ssssssssssssss.html", title="title") Next
+
+
