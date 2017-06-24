@@ -14,7 +14,8 @@
             { "Name": "CSS Colors", "URL": "/docs/html-css/css/colors.html", "Icon": "setup_icon.png" },
             { "Name": "CSS Background", "URL": "/docs/html-css/boxmodel/background.html", "Icon": "setup_icon.png" },
             { "Name": "CSS Float", "URL": "/docs/html-css/boxmodel/columns.html", "Icon": "setup_icon.png" },
-            { "Name": "CSS4", "URL": "/docs/html-css/css/css4.html", "Icon": "setup_icon.png" }
+            { "Name": "CSS4", "URL": "/docs/html-css/css/css4.html", "Icon": "setup_icon.png" },
+            { "Name": "Product", "URL": "/docs/html-css/html/product.html", "Icon": "setup_icon.png" }
         ],
         "Icon": "web.png"
     },

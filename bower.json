@@ -33,6 +33,7 @@
     "lightgallery": "1.3.9",
     "jquery-lazy": "1.7.5",
     "code-prettify": "master",
-    "highlight.js": "https://github.com/isagalaev/highlight.js.git#^9.12.0"
+    "highlight.js": "https://github.com/isagalaev/highlight.js.git#^9.12.0",
+    "jstree": "^3.3.4"
   }
 }
