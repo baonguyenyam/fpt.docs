@@ -1,0 +1,35 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'Design'
+	- var description = 'Có những lúc bạn muốn thay đổi màu sắc cho hình ảnh. Ví dụ, bạn có thể muốn thay đổi cường độ màu sắc hoặc thậm chí thay đổi màu sắc để tạo ra một hiệu ứng nghệ thuật.'
+	- var bodyclass = 'ps'
+	- var selected = 'Design';
+	- var href = '/docs/design/ps/color';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			.row
+				.col
+					h2 Color
+					hr
+			.row
+				.col-md-6
+					a(href="/images/design/ps/vintage-photoshop-11.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/vintage-photoshop-11.jpg", alt="")
+				.col-md-6
+					p.lead Có những lúc bạn muốn thay đổi màu sắc cho hình ảnh. Ví dụ, bạn có thể muốn thay đổi cường độ màu sắc hoặc thậm chí thay đổi màu sắc để tạo ra một hiệu ứng nghệ thuật.
+			h4.mt-5.text-danger Ảnh mẫu
+			.row
+				.col
+					a(href="/images/design/ps/pink_small.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/pink_small.jpg", alt="")

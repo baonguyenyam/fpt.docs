@@ -28,7 +28,9 @@
             { "Name": "Text", "URL": "/docs/design/ps/text.html", "Icon": "setup_icon.png" },
             { "Name": "Layer", "URL": "/docs/design/ps/layer.html", "Icon": "setup_icon.png" },
             { "Name": "Layer Mark", "URL": "/docs/design/ps/mark.html", "Icon": "setup_icon.png" },
-            { "Name": "Levels - Curves - Color", "URL": "/docs/design/ps/lcc.html", "Icon": "setup_icon.png" },
+            { "Name": "Levels", "URL": "/docs/design/ps/level.html", "Icon": "setup_icon.png" },
+            { "Name": "Curves", "URL": "/docs/design/ps/curves.html", "Icon": "setup_icon.png" },
+            { "Name": "Color", "URL": "/docs/design/ps/color.html", "Icon": "setup_icon.png" },
             { "Name": "Filters", "URL": "/docs/design/ps/filters.html", "Icon": "setup_icon.png" },
             { "Name": "Shortcut", "URL": "/docs/design/ps/shortcut.html", "Icon": "setup_icon.png" }
         ],

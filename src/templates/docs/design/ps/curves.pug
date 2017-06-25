@@ -1,0 +1,55 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'Design'
+	- var description = 'Công cụ Curves tương tự Levels nhưng nó mạnh mẽ hơn khi cho phép bạn tuỳ chỉnh shadows, highlights, và midtones một cách riêng lẽ, tuy nhiên chính vì điều này bạn phải thực sự cẩn trọng trong khi vận dụng nó.'
+	- var bodyclass = 'ps'
+	- var selected = 'Design';
+	- var href = '/docs/design/ps/curves';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			.row
+				.col
+					h2 Curves
+					hr
+			.row
+				.col-md-6
+					a(href="/images/design/ps/vintage-photoshop-11.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/vintage-photoshop-11.jpg", alt="")
+				.col-md-6
+					p.lead Công cụ Curves tương tự Levels nhưng nó mạnh mẽ hơn khi cho phép bạn tuỳ chỉnh shadows, highlights, và midtones một cách riêng lẽ, tuy nhiên chính vì điều này bạn phải thực sự cẩn trọng trong khi vận dụng nó.
+					p.lead Trong ví dụ bên, bạn có thể thấy một hình ảnh trước khi điều chỉnh đường cân chỉnh màu luôn luôn chéo và hoàn toàn thẳng. Khi bạn thực hiện điều chỉnh bạn phải tạo các đường cong khác nhau với đường thẳng có sẵn này.
+			h4.mt-5.text-danger Ảnh mẫu
+			.row
+				.col
+					a(href="/images/design/ps/seagull_small_3x2.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/seagull_small_3x2.jpg", alt="")
+
+			h4.mt-5.text-danger Increasing contrast
+
+			.row
+				.col
+					p Mở ảnh mẫu lên sau đó tại cửa sổ Layers nhấp chọn nút Create new fill or adjustment layer sau đó chọn Curves để thêm 1 lớp Curves Layer mới
+					a(href="/images/design/ps/level_curves_create.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/level_curves_create.png", alt="")
+					p Nhấp bất cứ đâu trên đường chéo để tạo một điểm neo mới sau đó kéo điểm đó đến vị trí mới để thay đổi màu sắc cho ảnh. Lưu ý: bạn không nên di chuyển hai điểm neo ở góc dưới bên trái và góc trên bên phải. Ta vẫn có thể điều chỉnh những điểm này nhưng tôi khuyên bạn nên giữ chúng cho đến khi bạn có nhiều kinh nghiệm hơn với đường cong này.
+
+
+					a(href="/images/design/ps/2017-06-25_201122.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/2017-06-25_201122.png", alt="")
+					p Với sự khéo léo của minh bạn có thể thay đổi tông màu, ánh sáng theo ý mình
+					a(href="/images/design/ps/seagull_small_3x2-done.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/seagull_small_3x2-done.png", alt="")

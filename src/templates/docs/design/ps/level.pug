@@ -1,0 +1,70 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'Design'
+	- var description = 'Hình ảnh từ một máy ảnh kỹ thuật số không phải lúc nào cũng hoàn hảo. Khi bạn bắt đầu có nhiều kinh nghiệm với Photoshop, bạn sẽ nhận ra rằng một số vấn đề với hình ảnh cần chỉnh sửa. Ví dụ, một số hình ảnh có thể quá sáng, trong khi một số khác lại quá tối. Có nhiều sự chỉnh sửa khác nhau để ảnh trông đẹp hơn.'
+	- var bodyclass = 'ps'
+	- var selected = 'Design';
+	- var href = '/docs/design/ps/level';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			.row
+				.col
+					h2 Levels
+					hr
+			.row
+				.col-md-6
+					a(href="/images/design/ps/levels-adjustment-photoshop-cc-05-700x500.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/levels-adjustment-photoshop-cc-05-700x500.jpg", alt="")
+				.col-md-6
+					p.lead Hình ảnh từ một máy ảnh kỹ thuật số không phải lúc nào cũng hoàn hảo. Khi bạn bắt đầu có nhiều kinh nghiệm với Photoshop, bạn sẽ nhận ra rằng một số vấn đề với hình ảnh cần chỉnh sửa. Ví dụ, một số hình ảnh có thể quá sáng, trong khi một số khác lại quá tối. Có nhiều sự chỉnh sửa khác nhau để ảnh trông đẹp hơn. Một số chỉnh sửa chúng tôi sẽ đề cập trong bài học này bao gồm:
+					p Levels and curves: Với tuỳ chọn này bạn sẽ thay đổi được tông màu cho ảnh hay nói cách khác là bạn có thể tăng giảm một màu nào đó trong ảnh theo ý đồ của mình.
+					p Saturation: Nếu màu sắc ảnh quá nhợt nhạt hay mờ ảo bạn có thể sử dụng tính năng này để cải thiện nó.
+					p Auto-adjustment tools: Nếu bạn không nắm chắc chắn về việc chỉnh sửa nào là hợp lý thì Photoshop đã có sẵn cho bạn một số công cụ điều chỉnh tự động để cải thiện hình.
+			h4.mt-5.text-danger Ảnh mẫu
+			.row
+				.col
+
+					a(href="/images/design/ps/dove_small.jpg", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/dove_small.jpg", alt="")
+			h4.mt-5.text-danger Levels
+			.row
+				.col
+					p Mở ảnh mẫu lên sau đó tại cửa sổ Layers nhấp chọn nút Create new fill or adjustment layer sau đó chọn Levels để thêm 1 lớp Levels Layer mới
+					a(href="/images/design/ps/level_level_create.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/level_level_create.png", alt="")
+					p Lúc này bạn sẽ thấy có 1 Layer mới xuất hiện trong cửa sổ Layer đó chính là Levels Layer
+					a(href="/images/design/ps/2017-06-25_145201.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/2017-06-25_145201.png", alt="")
+
+					p Hãy nhìn vào phần Histogram trong bảng Properties. Nó cho bạn biết thông tin về shadows, highlights, và midtones của hình ảnh. Trong ví dụ này, bạn ta thấy rằng có một khoảng trống lớn ở bên phải điều này có nghĩa là hình ảnh không sáng.
+
+					a(href="/images/design/ps/level_level_histogram.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/level_level_histogram.png", alt="")
+
+					p Phần Input Levels sliders là các điều khiển để bạn sử dụng để điều chỉnh mức độ sáng tối.
+					a(href="/images/design/ps/level_level_panel.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/level_level_panel.png", alt="")
+					p Với các tuỳ chỉnh hợp lý khi đặt lại giá trị của thanh trượt bạn sẽ có được bức ảnh như mong muốn
+					a(href="/images/design/ps/level_level_mid_exact.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/level_level_mid_exact.png", alt="")
+					a(href="/images/design/ps/2017-06-25_193712.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/2017-06-25_193712.png", alt="")
+
+
