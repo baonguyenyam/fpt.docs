@@ -1,0 +1,8 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.formatOnSave": false,
+    "material-icon-theme.showUpdateMessage": false,
+    "git.enableSmartCommit": true,
+    "editor.wordWrap": "on"
+}

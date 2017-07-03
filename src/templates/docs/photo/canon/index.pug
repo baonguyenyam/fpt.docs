@@ -1,0 +1,38 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'Photo'
+	- var description = 'Bạn có thể sử dụng Photoshop để chỉnh sửa hầu như bất kỳ hình ảnh nào, chẳng hạn như sửa một ảnh chụp thiếu sáng ảnh, xoá bỏ một vật thể ra khỏi ảnh và nhiều hơn nữa. Trong bài học này, chúng tôi sẽ giới thiệu cho bạn về giao diện Photoshop, bao gồm cách mở các tệp tin, làm việc với bảng điều khiển, tuỳ chỉnh không gian làm việc và thay đổi kích thước hiển thị.'
+	- var bodyclass = 'photo'
+	- var selected = 'Photo';
+	- var href = '/docs/photo/canon/index';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			.row
+				.col
+					h2 Photoshop
+					hr
+					p.lead Bạn có thể sử dụng Photoshop để chỉnh sửa hầu như bất kỳ hình ảnh nào, chẳng hạn như sửa một ảnh chụp thiếu sáng, xoá bỏ một vật thể ra khỏi ảnh và nhiều hơn nữa. Trong bài học này, chúng tôi sẽ giới thiệu cho bạn về giao diện Photoshop, bao gồm cách mở các tệp tin, làm việc với bảng điều khiển, tuỳ chỉnh không gian làm việc và thay đổi kích thước hiển thị.
+					p.lead Photoshop là một ứng dụng phức tạp, và bạn có thể cảm thấy rối ren khi sử dụng lần đầu. Vì lý do này, chúng tôi khuyên bạn nên làm theo với bài học bằng cách tải xuống tệp ví dụ của chúng tôi (nhấp chuột phải vào liên kết để lưu). Bạn càng có nhiều kinh nghiệm thực tế với Photoshop, thì nó sẽ trở nên dễ sử dụng hơn.
+			.row
+				.col-md-8
+					a(href="/images/design/ps/01.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/design/ps/01.png", alt="")
+				.col
+					h4 Chú ý
+					p.lead Chúng tôi sẽ sử dụng Photoshop CC trong suốt hướng dẫn này để cho bạn thấy các tính năng của Photoshop. Nếu bạn đang sử dụng một phiên bản Photoshop cũ hơn như Photoshop CS5 chẳng hạn thì một số tính năng có thể hoạt động hơi khác một chút nhưng bạn vẫn có thể làm theo. Tuy nhiên, nếu bạn đang sử dụng Photoshop Elements thì hầu như không thể áp dụng theo bài học này.
+					h4 Tập tin mẫu
+					hr
+					p
+						a.btn.btn-success(href="/images/design/ps/squirrel.jpg", target="_blank") Tải về
+					p
+						a.btn.btn-primary(href="/docs/design/ps/layout.html") Next
