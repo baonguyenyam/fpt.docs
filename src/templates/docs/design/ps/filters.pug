@@ -36,17 +36,17 @@ block body
 					a(href="/images/design/ps/amxanh-1.jpg", target="_blank")
 						figure
 							img.img-thumbnail(src="/images/design/ps/amxanh-1.jpg", alt="")
-					p aaaaaaaaaaaaaaaa
+					p Dưới đây là một ví dụ tôi sử dụng bộ lọc Camera Raw của PS để khắc phục 1 ảnh bị sai màu
 
 					a(href="/images/design/ps/amxanh-3.png", target="_blank")
 						figure
 							img.img-thumbnail(src="/images/design/ps/amxanh-3.png", alt="")
-					p aaaaaaaaaa
+					p Chỉnh lại các thông số WB sao cho hợp lý
 
 					a(href="/images/design/ps/amxanh-2.png", target="_blank")
 						figure
 							img.img-thumbnail(src="/images/design/ps/amxanh-2.png", alt="")
-					p aaaaaaaaaaaaaaaa
+					p Kết quả
 			.row
 				.col-md-6
 
@@ -59,4 +59,55 @@ block body
 						figure
 							img.img-thumbnail(src="/images/design/ps/amxanh-4.png", alt="")
 
-//- http://chunguv.blogspot.com/2012/01/tim-hieu-ve-cac-bo-loc-anh-trong.html
+
+			h4.text-danger.mt-5 Các bộ lọc cơ bản
+			.row
+				.col
+					.table-responsive
+						table.table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Filters name
+									th Chú thích
+							tbody
+								tr
+									td Blur
+									td
+										p Bộ lọc làm mờ hình ảnh (Filter>Blur): sử dụng để làm mờ và tạo hiệu ứng cho phần vùng chọn hoặc toàn bộ bức ảnh.
+
+										ul.mb-0
+											li Blur: Làm mờ ảnh
+											li Blur more: Tăng độ mờ hình ảnh.
+											li Gaussian blur: Làm mờ hình bằng phương pháp tăng độ lớn của điểm ảnh (bằng cách thay đổi giá trị Radius).
+											li Motion blur: Làm mờ và nhòe hình theo phương pháp điểm ảnh và chỉ thị hướng nhoè. Trong đó, Angle là hướng nhòe, Distance là độ nhoè.
+											li Radial Blur: Làm mờ hình theo phương pháp xoáy. Trong đó, Amount là độ xoáy, Blur center cho phép chọn tâm xoáy, Blur Method để chọn hình thức xoáy, Quality là chất lượng xoáy.
+											li Smart blur: Tổng hợp khả năng làm tăng nét chi tiết. Trong đó, Radius làm thay đổi bán kính của điểm ảnh, Threshold áp lực của hiệu ứng theo giá trị Radius.
+										p.mb-0 Trong các bộ lọc trền, chỉ có Blur và Blur More tác động trực tiếp đến ảnh mà không có hộp thoại điều khiển, nền không có tuỳ biến lựa chọn, chỉ hữu dụng khi làm mềm tất cả hay một phần của ảnh.
+								tr
+									td Noise
+									td
+										p Bộ lọc làm mịn và tăng hạt (Filter>Noise): sử dụng khi hình ảnh của bạn cần mềm mịn hay thềm hạt nhiễu.
+										ul.mb-0
+											li Add Noise: Tăng cường hạt nhiễu trong ảnh.
+											li Despeckle: Tăng cường độ mịn cho ảnh
+											li Median: Tăng cường độ mịn cho ảnh bằng cách tăng giá trị Radius.
+
+
+								tr
+									td Distort
+									td
+										p Bộ lọc tổng hợp Filter>Distort: là một trong những Filter được dùng khá nhiều trong Photoshop, mang lại nhiều hiệu ứng độc đáo rất thú vị.
+										ul.mb-0
+											li Diffuse Glow: Tạo ra các hạt nhiễu theo màu nền bạn chọn sẵn.
+											li Glass: Hiệu ứng lồng kính
+											li Ocean Ripple: Hiệu ứng không gian nước
+											li Pinch: Hiệu ứng lồi và lõm cho vùng ảnh
+											li Polar Coordinates: Xoắn tâm
+											li Ripple: Hiệu ứng gợn sóng
+											li Shear: Uốn ảnh tự do
+											li Spherize: Hiệu ứng lồi, lõm của ảnh
+											li Twirl: Hiệu ứng xoắn ảnh
+											li Wave: Hiệu ứng sóng từ
+											li ZigZag: Tạo các đường Zigzag
+
+

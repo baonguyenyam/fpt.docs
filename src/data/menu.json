@@ -36,9 +36,27 @@
         ],
         "Icon": "design.png"
     },
-    { "Name": "Photo", "URL": "", "Icon": "photo.png" },
-    { "Name": "Node", "URL": "", "Icon": "node.png" },
-    { "Name": "Mobile", "URL": "", "Icon": "mobile.png" },
+    {
+        "Name": "Photo",
+        "URL": [
+            { "Name": "Comming soon...", "URL": "#", "Icon": "setup_icon.png" }
+        ],
+        "Icon": "photo.png"
+    },
+    {
+        "Name": "Node",
+        "URL": [
+            { "Name": "Comming soon...", "URL": "#", "Icon": "setup_icon.png" }
+        ],
+        "Icon": "node.png"
+    },
+    {
+        "Name": "Mobile",
+        "URL": [
+            { "Name": "Comming soon...", "URL": "#", "Icon": "setup_icon.png" }
+        ],
+        "Icon": "mobile.png"
+    },
     {
         "Name": "High level",
         "URL": [
