@@ -39,7 +39,7 @@
     {
         "Name": "Photo",
         "URL": [
-            { "Name": "Comming soon...", "URL": "#", "Icon": "setup_icon.png" }
+            { "Name": "Sử dụng máy ảnh", "URL": "/docs/photo/canon", "Icon": "setup_icon.png" }
         ],
         "Icon": "photo.png"
     },
