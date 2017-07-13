@@ -4,7 +4,7 @@ block variables
 	- var title = 'Box Model'
 	- var description = 'Box Model là một kỹ thuật cơ bản nhất trong CSS Layout và được sử dụng để bạn mô tả về khoảng cách mà mỗi phần tử trên website được sở hữu, hay nói cách khác là kỹ thuật tinh chỉnh khoảng cách hiển thị cho mỗi phần tử trên website.'
 	- var bodyclass = 'box-model'
-	- var selected = 'Box Model';
+	- var selected = 'Front-End';
 	- var href = '/docs/html-css/boxmodel/box';
 block css
 	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
@@ -21,7 +21,7 @@ block body
 					h2 Padding
 					hr
 					p.lead Margin và Padding là hai thuộc tính khác nhau và chúng được ngăn cách nhau bởi một con sông và con sông này chính là border. Để hiểu rõ hơn thì bạn xem sơ đồ CSS Box sau:
-					.row 
+					.row
 						.col-md-6
 							p
 								figure
@@ -31,7 +31,7 @@ block body
 							p
 								figure
 									img.img-thumbnail(src="/images/learn/boxmodel/img_padding_combine.gif", alt="alt")
-							ul 
+							ul
 								li padding-top: thêm khoảng không gian bên trong hướng trên thành phần.
 								li padding-right: thêm khoảng không gian bên trong hướng bên phải thành phần.
 								li padding-bottom: thêm khoảng không gian bên trong hướng dưới thành phần.
@@ -59,7 +59,7 @@ block body
 				.col
 					h2 Margin
 					hr
-					.row 
+					.row
 						.col-md-6
 							p
 								figure
@@ -69,12 +69,12 @@ block body
 							p
 								figure
 									img.img-thumbnail(src="/images/learn/boxmodel/img_margin_combine.gif", alt="alt")
-							ul 
+							ul
 								li margin-top: thêm khoảng không gian bên ngoài phía trên thành phần.
 								li margin-right: thêm khoảng không gian bên ngoài phía bên phải thành phần.
 								li margin-bottom: thêm khoảng không gian bên ngoài phía dưới thành phần.
 								li margin-left: thêm khoảng không gian bên ngoài phía bên trái thành phần.
-					
+
 					.row.mt-5
 						.col-md-4
 							h5 Default
@@ -97,14 +97,14 @@ block body
 				.col
 					h2 Border
 					hr
-					.row 
+					.row
 						.col-md-6
 							p
 								figure
 									img.img-thumbnail(src="/images/learn/boxmodel/border.png", alt="alt")
 						.col-md-6
 							p.lead Thuộc tính border được dùng để định dạng đường viền cho thành phần.
-							ul 
+							ul
 								li margin-top: thêm khoảng không gian bên ngoài phía trên thành phần.
 								li margin-right: thêm khoảng không gian bên ngoài phía bên phải thành phần.
 								li margin-bottom: thêm khoảng không gian bên ngoài phía dưới thành phần.
@@ -141,19 +141,19 @@ block body
 				.col
 					h2 Border-radius
 					hr
-					.row 
+					.row
 						.col-md-6
 							p
 								figure
 									img.img-thumbnail(src="/images/learn/boxmodel/border-radius.png", alt="alt")
 						.col-md-6
 							p.lead Thuộc tính border-radius được dùng để tạo độ bo góc cho thành phần.
-							ul 
+							ul
 								li border-radius-top-left: thêm độ bo góc phía trên-trái thành phần.
 								li border-radius-top-right: thêm độ bo góc phía bên trên-phải thành phần.
 								li border-radius-bottom-right: thêm độ bo góc phía dưới-phải thành phần.
 								li border-radius-bottom-left: thêm độ bo góc phía dưới-trái thành phần.
-					
+
 					.row.mt-5
 						.col-md-4
 							h5 Border-radius all: 10px
@@ -198,20 +198,20 @@ block body
 				.col
 					h2 Box Shadow
 					hr
-					.row 
+					.row
 						.col-md-6
 							p
 								figure
 									img.img-thumbnail(src="/images/learn/boxmodel/shadow.png", alt="alt")
 						.col-md-6
 							p.lead Thuộc tính box-shadow được dùng để tạo đổ bóng cho thành phần nào đó. có 5 giá trị ABCDE
-							ul 
+							ul
 								li A: kéo bóng về trái hay phải với giá trị dương bóng sẽ đổ về phía phải và ngược lại.
 								li B: kéo bóng về trên hay dưới với giá trị dương bóng sẽ đổ về phía dưới và ngược lại.
 								li C: độ làm mờ (blur) của bóng đổ
 								li D: độ phóng đại (zoom) của bóng đổ
 								li E: màu của bóng đổ
-								
+
 
 					.row.mt-5
 						.col-md-4

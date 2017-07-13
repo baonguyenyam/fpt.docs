@@ -1,10 +1,10 @@
 extends ../../../_layout/layout
 
 block variables
-	- var title = 'Box Model'
+	- var title = 'Float & Clear'
 	- var description = 'Box Model là một kỹ thuật cơ bản nhất trong CSS Layout và được sử dụng để bạn mô tả về khoảng cách mà mỗi phần tử trên website được sở hữu, hay nói cách khác là kỹ thuật tinh chỉnh khoảng cách hiển thị cho mỗi phần tử trên website.'
 	- var bodyclass = 'box-model'
-	- var selected = 'Box Model';
+	- var selected = 'Front-End';
 	- var href = '/docs/html-css/boxmodel/columns';
 block css
 	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
@@ -37,7 +37,7 @@ block body
 							pre.mt-3.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.
 								.box-2 {
 								}
-			hr 
+			hr
 			.row.mt-5
 				.col
 					h4.text-danger Columns
@@ -157,7 +157,7 @@ block body
 				.col
 					h5.text-primary Định nghĩa về float
 					p Từ những ví dụ về float: left và float: right ta có thể rút ra kết luận về thuộc tính float như sau:
-					ul 
+					ul
 						li Thành phần nào sử dụng float sẽ được giải phóng vùng không gian, vùng không gian này sẽ trở thành vùng trống, và sẽ bị vùng không gian của những thành phần liền kề nó lập tức chiếm lấy.
 						li Khi sử dụng float, các thành phần không chồng chập lên nhau, mà sẽ sắp xếp vị trí tùy thuộc vào chiều rộng của vùng trống.
 						li Khi sử dụng float: left, vùng không gian của thành phần sẽ được giải phóng và thành phần sẽ trôi sang trái.
@@ -169,7 +169,7 @@ block body
 					p.lead Thuộc tính clear: ngăn chặn thành phần A chiếm vùng không gian của thành phần B (với thành phần B là thành phần sử dụng float).
 
 					p Thuộc tính clear có các giá trị sau:
-					ul 
+					ul
 						li clear: left
 						li clear: right
 						li clear: both
