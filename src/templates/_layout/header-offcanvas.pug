@@ -23,7 +23,10 @@ header.pos-f-t.offcanvas(class=_dataJS.config.VIENSOI_APP.HEADER_TRANPARENT ? 'h
 									span=val.Name
 								.dropdown-menu(aria-labelledby="navbarDropdownMenu"+val.Name)
 									each second_val, second_key in val.URL
-										a.dropdown-item(href=second_val.URL)=second_val.Name
+										if second_val.URL.substr(0, 4) === 'http'
+											a.dropdown-item(href=second_val.URL, target="_blank")=second_val.Name
+										else
+											a.dropdown-item(href=second_val.URL)=second_val.Name
 						else
 							li.nav-item.dropdown
 								a.nav-link.dropdown-toggle.align-items-center.d-flex(href="#", title=val.Name, id="navbarDropdownMenu"+val.Name, data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
@@ -31,7 +34,10 @@ header.pos-f-t.offcanvas(class=_dataJS.config.VIENSOI_APP.HEADER_TRANPARENT ? 'h
 									span=val.Name
 								.dropdown-menu(aria-labelledby="navbarDropdownMenu"+val.Name)
 									each second_val, second_key in val.URL
-										a.dropdown-item(href=second_val.URL)=second_val.Name
+										if second_val.URL.substr(0, 4) === 'http'
+											a.dropdown-item(href=second_val.URL, target="_blank")=second_val.Name
+										else
+											a.dropdown-item(href=second_val.URL)=second_val.Name
 					else
 						if selected === val.Name
 							li.nav-item.active
