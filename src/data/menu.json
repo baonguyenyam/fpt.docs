@@ -39,16 +39,9 @@
     {
         "Name": "Photo",
         "URL": [
-            { "Name": "Sử dụng máy ảnh", "URL": "/docs/photo/canon", "Icon": "setup_icon.png" }
-        ],
-        "Icon": "photo.png"
-    },
-    {
-        "Name": "Node",
-        "URL": [
             { "Name": "Comming soon...", "URL": "#", "Icon": "setup_icon.png" }
         ],
-        "Icon": "node.png"
+        "Icon": "photo.png"
     },
     {
         "Name": "Mobile",
@@ -56,6 +49,14 @@
             { "Name": "Comming soon...", "URL": "#", "Icon": "setup_icon.png" }
         ],
         "Icon": "mobile.png"
+    },
+    {
+        "Name": "Resources",
+        "URL": [
+            { "Name": "MCSA-MCSE", "URL": "https://drive.google.com/drive/folders/0B1JqovD0ypgHTUIwSzQwVEFpUHc?usp=sharing", "Icon": "setup_icon.png" },
+            { "Name": "Software", "URL": "https://drive.google.com/drive/folders/0B1JqovD0ypgHWGhBaGg0R0NadG8?usp=sharing", "Icon": "setup_icon.png" }
+        ],
+        "Icon": "security.png"
     },
     {
         "Name": "High level",
