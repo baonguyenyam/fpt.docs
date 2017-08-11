@@ -1,0 +1,115 @@
+extends ../_layout/layout
+
+block variables
+	- var title = 'Front-end là gì?'
+	- var description = 'Lướt qua một số diễn đàn thảo luận về CNTT tôi thấy không ít bạn trẻ ít nhiều thắc mắc về cụm từ “Front-end developer” bên cạnh một số bạn diễn đạt khá trơn tru về tính chất đặc thù nhưng vẫn còn thiếu ý thì một số bạn vẫn rất mơ hồ về lĩnh vực này hay nói cách khác các bạn đang hiểu sai và chưa nắm rõ bản chất của ngành.'
+	- var bodyclass = 'home'
+	- var selected = 'Home';
+	- var href = '/docs/frontend';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block js
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMinJS(bodyclass)
+
+block og
+	meta(property="og:image", content='/images/fpt.png')
+
+block body
+
+	section.home
+		.container-fluid
+			.row.mt-4
+				.col
+					p.lead Lướt qua một số diễn đàn thảo luận về CNTT tôi thấy không ít bạn trẻ ít nhiều thắc mắc về cụm từ “Front-end developer” bên cạnh một số bạn diễn đạt khá trơn tru về tính chất đặc thù nhưng vẫn còn thiếu ý thì một số bạn vẫn rất mơ hồ về lĩnh vực này hay nói cách khác các bạn đang hiểu sai và chưa nắm rõ bản chất của ngành. Vì lẽ đó hôm nay tôi viết bài này nhằm diễn giải rõ hơn nhằm giúp các bạn có cái nhìn bao quát và hiểu được bản chất cốt lõi của nó.
+					.jumbotron.text-lg.pt-3.pb-3 Một lập trình viên front-end như là người chịu trách nhiệm thiết kế nội thất (phong thuỷ) của ngôi nhà đã được xây dựng bởi một lập trình viên back-end.
+					p Nếu như cách đây vài năm Front-end (FE) được hiểu như là quá trình xử lý giao diện của một trang web từ các font chữ, màu sắc cho tới các menu xổ xuống và các thanh trượt bằng cách sử dụng sự kết hợp của HTML, CSS, và JavaScript thì định nghĩa đó gần như sai trong thế giới hiện đại. Tại sao vậy? Trước khi đi vào bài chúng ta phải hiểu một cách sơ sài tối thiểu rằng:
+					ul
+						li Front-End: phụ trách phần giao diện hiển thị ra thiết bị clients 
+						li Back-End: phụ trách phần viết code để xử lý thông tin và trả kết quả về cho clients
+					p Cách hiểu này chỉ là tạm thời, chúng ta sẽ hiểu khác hơn ở phần “Front-End hiện đại"
+			.row
+				.col
+					h3 I) VAI TRÒ:
+					hr
+					p Trước khi internet băng thông rộng (khoảng trước 2007) cùng với các thiết bị được phát triển mạnh mẽ như hiện nay FE thực sự đóng vai trò rất hạn chế trong việc hiển thị giao diện cho người dùng, lúc đó nhu cầu thực tế là làm sao cho một ứng dụng hiển thị là đủ bên cạnh đó phải làm sao cho Performance (hiệu suất) đạt hiệu quả cao để người dùng không cảm thấy delay (giật) hay load (tải) chậm là đạt. Gánh nặng bấy giờ đè nặng lên Back-End một cách rõ rệt.
+					p 
+						a(href="/images/learn/frontend/20231967_1835013059859057_2041285845099484389_o.jpg", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/learn/frontend/20231967_1835013059859057_2041285845099484389_o.jpg", alt="")
+								figcaption Giao diện trang Web Yahoo! trong những năm FE chưa được chú trọng
+
+
+					p Hãy nhìn lên hình trên bạn sẽ thấy rõ ràng trong những năm trước FE hoàn toàn không được chú trọng điều này cũng dễ hiểu vì khi đó tốc độ internet là cực thấp khi mà đa số người dùng chỉ tiếp cận được với Internet dial-up, với tốc độ “rùa bò" của nó thì việc tải về text thôi đã vất vả rồi chứ không nói đến hình ảnh hay animation....  Lúc này vai trò Server và Back-End là rất quan trọng. Thử tưởng tượng xem 10.000 người dùng truy cập vào một trang web cùng lúc đồng nghĩa với tối thiểu có 10.000 request gọi lên máy chủ (Server) đó là một lượng thông tin kinh khủng thời đó. Vai trò của Back-End rất quan trọng trong việc xử lý hàng ngàn dòng tin thế này sao cho không bị “nghẽn cổ chai” mà vẫn đạt tốc độ tính toán/response cực nhanh... Lúc này nếu bạn là một Back-End giỏi lương của bạn  không dưới 4 con số (tính theo USD). 
+					p Chưa hết đó cũng là lúc Server phải mạnh mẽ để chịu tải với hàng triệu request mỗi ngày, cũng như là vẫn vững vàng trước những vụ tấn công DDos, Flood bài viết... kéo theo dịch vụ Hosting, Security được phát triển mạnh mẽ, tôi còn nhớ những năm đó ngành quản trị mạng máy tính cũng ăn nên làm ra lắm. 			
+
+					p 
+						a(href="/images/learn/frontend/20158044_1835029556524074_1283419331790468984_o.jpg", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/learn/frontend/20158044_1835029556524074_1283419331790468984_o.jpg", alt="")
+								figcaption Mô tả một vụ tấn công DDos
+					
+					p Một điều bất cập là việc phân chia ranh giới giữa Back-End và Front-End không được rõ ràng. Khi đó cả 2 anh developer BE và FE gần như phải làm việc cùng nhau, thiếu anh này công việc của anh kia bị đình trệ ngay. Điều này dẫn đến hệ quả là một số Back-End kiêm luôn việc của Front-End mà hiệu quả thì chắc chắc là chỉ ở mức tạm chấp nhận mà thôi.
+
+
+					h3 II) NHU CẦU VỀ THẨM MỸ 
+					hr
+					p Những năm tháng vật vã với Internet dial-up đã qua và dần được thay thế bằng các công nghệ hiện đại hơn như ADSL, DSL, VPN... đó cũng là lúc nhu cầu về một Website thẩm mỹ được đặt ra với những hình ảnh tuyệt đẹp cùng với những hiệu ứng bắt mắt bắt đầu được chú trọng. Lúc này vai trò của FE cũng bắt đầu được chú trọng tuy vẫn còn rất hạn chế vì song song đó vai trò của Designer cũng được quan tâm bậc nhất. 
+
+					p 
+						a(href="/images/learn/frontend/20229799_1835060966520933_9173471866793346843_o.jpg", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/learn/frontend/20229799_1835060966520933_9173471866793346843_o.jpg", alt="")
+								figcaption Một Website chú trọng thiết kế
+
+					p Thời điểm này vai trò của Back-End cũng quan trọng không kém, cùng với Server được đầu tư rất chu đáo từ load balancing cho đến mail server, isa server ... việc xử lý thông tin, chịu tải của Back-End được giảm đi một cách đáng kể song song đó việc xử lý giao diện, hiệu ứng được FE xử lý triệt để hơn nhờ vào các trình duyệt mới ra đời vô cũng mạnh mẽ với hàng trăm thư viện hỗ trợ có thể kể đến khi đó là: YUI Library, jQuery...
+					p Điều bất cập ở đây là sự không thông hiểu nhau giữa Designer và Front-End thường xuyên xảy ra từ thảo luận tới gay gắt mà nếu bạn từng ở một trong hai vị trí này sẽ thấu hiểu. Vấn đề là ở chỗ một anh Designer thiết kế ra giao diện và anh ta muốn chỗ nút (button) đó khi hover sẽ đổi màu, hay khi open web lên sẽ có hàng chục hiệu ứng hiện ra mà không thể nào diễn đạt bằng hình ảnh được. Điều anh ta cần làm là diễn giải ý tưởng của mình cho anh FE hiểu nhưng mọi thứ đâu dễ vậy!.
+					p Thảo luận bằng tiếng Việt đã khó, discuss bằng English còn khó hơn dẫn đến luôn có sự tranh luận giữa Designer & Front-End khi sản phẩm làm ra không đúng ý của nhau là thế. 
+					p Sự bất đồng không chỉ dừng lại ở đó khi mà HTML5 và CSS3 ra đời kéo theo sự bùng nổ công nghệ Resposive (tương thích trên mobile/tablet) làm cho việc thiết kế Layout nhiều hơn  và FE đôi khi gặp bế tắc với những giao diện khó khi thực hiện Responsive. UI/UX thời điểm này bắt đầu được đề cao mạnh mẽ. 
+					p Hình dung xem một giao diện đẹp nhưng khi hiển thị trên mobile không thể hiển thị đầy dủ chi tiết hoặc các nút bấm nằm quá sát nhau gây khó khăn cho người dùng có ngón tay to và thiết bị nhỏ thì đó chính là thất bại của UI/UX mất rồi.
+
+					p 
+						a(href="/images/learn/frontend/11229783_1835084053185291_420402623844397093_o.jpg", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/learn/frontend/11229783_1835084053185291_420402623844397093_o.jpg", alt="")
+								figcaption Một giao diện rất khó thực hiện Responsive hoàn hảo
+
+					h3 III) FRONT-END HIỆN ĐẠI: 
+					hr
+					p Đến khoảng 5-3 năm đổ lại đây thiết bị cầm tay được phát triển vô cùng mạnh mẽ không còn những PC Pentium IV/256Mb RAM già cỗi nữa mà thay vào đó là những điện thoại với CPU 3-4 nhân, ram 1-2Gb là dỏm.  Nhận thấy  được xu thế này các nhà phát triển đã thay đổi tư duy về Server-Clients một cách khác biệt. Thay vì Back-End & Server chịu tải nặng nề như trước thì giờ đây hầu hết mọi thứ được trả về cho Clients đảm nhiệm. Tiền đầu tư vào những Server đã giảm đi đáng kể bởi gánh nặng tài chính ấy đã được chia sẻ lại cho Clients gánh bớt.
+					p Nói một cách dễ hiễu là thay vì trước kia mọi xử lý thuật toán hay render thì phía Clients phải gửi request lên Server sau đó Server xử lý rồi trả kết quả để Client hiển thị thì giờ đây với nền tảng Back-End là Web API (có thể sử dụng websocket để request/response) các ứng dụng có thể chạy real-time (thời gian thực) và FE hoàn toàn chủ động để xử lý các data như: tạo vòng lập, lưu trữ cục bộ, validate...
+					p Đó cũng chính là lý do mà hàng trăm cty công nghệ lớn nhỏ cho ra đời rất nhiều Front-End FrameWork như:
+					ul 
+						li Google: AngularJS, @Angular, Material... 
+						li Facebook: React, React native...
+						li Evan You: Vuejs
+						li Twitter: Bootstrap, hogan.js...
+						li Apache: Cordova
+						li Drifty Co: Ionic 
+						li ...
+					p Nói như vậy các bạn cũng khó hình dung nổi những gì mà FE hiện đại phải học và làm, dưới đây tôi sẽ list ra một số đặc điểm cơ bản mà FE hiện đại phải nắm bắt và vận hành: 
+					ul 
+						li Thay vì viết CSS như trước thì giờ đây FE phải viết SASS/LESS/STYLUS để tốc độ phát triển ứng dụng nhanh hơn và có thể viết thuật toán vào trong các file SASS/LESS/STYLUS...
+						li Thay vì phải viết HTML thuần tuý như trước thì giờ đây cùng với HTML6/CSS4 sắp release FE hiện đại phải sử dụng Template engine như: JADE, PUG, Handlebars... để có thể gán biến, gọi hàm và một cách dễ dàng, hoặc tuỳ chọn giao diện cho Clients render.
+						li Thay vì phải phụ thuộc và những thư viện jQuery như trước và bị giới hạn khi mà lắm lúc chúng không chạy được trên một số thiết bị thì FE hiện đại phải viết NativeScript hoặc Babel, TypeScript... để build ra code JS chuẩn nhất nhằm đảm bảo có thể hoạt động tốt trên mọi môi trường.
+						li Thay vì phải kéo cả Back-End vào để xử lý những tình huống như trước kia như tạo vòng lặp hiển thị dữ liệu thì giờ đây BE và FE hoàn toàn làm việc với nhau không giới hạn vị trí địa lý nữa, FE hiện đại làm việc độc lập với BE.
+						li FE hiện đại sẽ phải xử lý các hiệu ứng từ phức tạp đến cả tương tác với người dùng như phải bắt sự kiện nhận diện người dùng vuốt mấy ngón tay, vuốt qua trái hay phải... 
+						li Ngay cả đến những Notifications real-time để push lên thiết bị FE cũng phải đảm nhiệm hết 
+						li FE hiện đại kiêm luôn cả việc thiết kế/viết Mobile App (ứng dụng điện thoại) mà chỉ cần có API Back-End tạo dựng mà thôi.
+					p 
+						a(href="/images/learn/frontend/20106737_1835181053175591_4555293735368023650_n.jpg", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/learn/frontend/20106737_1835181053175591_4555293735368023650_n.jpg", alt="")
+
+					p Nói như vậy không phải vai trò của Back-End đã chấm dứt hay mai một đi mà BE hiện đại cũng dần đi theo một lối khác đó chính là Web API/Web Socket... chỉ có vậy sự phát triển của các ứng dụng hiện đại mới phát triển nhanh chóng và hiệu quả cao được.
+					p Cũng như Designer hiện tại đã dần phải thoát khỏi sự tù túng trong thiết kế khi xưa mà phải xông pha vào một thế giới sâu rộng hơn tìm hiểu về sự tương tác của người dùng hơn chứ không thể chỉ tô vẽ cho ra hình hài là được, để tồn tại và đáp ứng được nhu cầu thực tế ít nhiều Designer hiện tại đã kiêm luôn cả việc cutting HTML của FE trước kia 
+					p Từng là một Back-End trước kia sau này là Designer & Front-End Developer tôi dám chắc với các bạn rằng Designer & Front-End Developer là cả một lĩnh vực nghệ thuật chúng ngày một hoà quyện và xích lại gần nhau hơn. Nếu có khả năng tôi khuyên bạn nên là cả 2.
+					p Để hiểu rõ hơn về nội dung FE hiện đại này bạn có thể tham khảo bài viết sau của tôi:
+					p.text-bold
+						a(href="https://www.facebook.com/notes/ph%E1%BA%A1m-nguy%E1%BB%85n-b%E1%BA%A3o-nguy%C3%AAn/walking-with-bao-nguyen-h%C3%A3y-l%C3%A0-m%E1%BB%99t-front-end-%C4%91am-m%C3%AA-k%E1%BB%B3-1-b%E1%BA%AFt-%C4%91%E1%BA%A7u-v%E1%BB%9Bi-s%E1%BB%B1-t%E1%BB%91i-thi%E1%BB%83/986388664715180/", target="_blank") Walking with Bao Nguyen - Hãy là một Front-End đam mê
+					p.text-center.text-lg.text-danger Không thể hiểu Front-End là Web Developer được mà phải hiểu rộng ra đó là một lĩnh vực hội đủ cả sự tinh tế, thẫm mỹ, am hiểu về logic, sự tiện lợi... chính là người tạo nên bộ mặt cho thương hiệu của sản phẩm khi đối diện người dùng.
+					p Tóm lại đã không còn có sự giới hạn nào ở đây! một Front-End đam mê không phải chỉ chịu trách nhiệm về xử lý giao diện website mà thôi mà thực tế phải kiêm luôn cả viết Mobile App (cross platform), xây dựng giao diện và thuật toán cho mọi thứ từ mobile, Web/WebApp, máy POS cho đến cả Email template... Ngoài ra còn phải đảm nhận về cả sự thẩm mỹ, sự hài hoà và Performance (hiệu suất) của ứng dụng. Gần hơn là trở thành một full-stack developer, tại sao không nhỉ? Để rồi bạn sẽ đủ tự tin submit một đơn ứng tuyển mà không phải là một lá đơn xin việc.
+					.jumbotron.text-lg.pt-3.pb-3 Bởi làm trong nghề này khi bạn THÍCH nó bạn sẽ làm được nhiều SẢN PHẨM. Nhưng nếu bạn ĐAM MÊ nó và làm bằng cả trái tim mình thì chắc chắn thứ bạn làm ra sẽ là một TÁC PHẨM. 
+
