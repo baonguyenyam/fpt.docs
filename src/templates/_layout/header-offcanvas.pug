@@ -49,10 +49,10 @@ header.pos-f-t.offcanvas(class=_dataJS.config.VIENSOI_APP.HEADER_TRANPARENT ? 'h
 								a.nav-link.align-items-center.d-flex(href=val.URL, title=val.Name)
 									img.img-fluid(src='/images/'+val.Icon, alt=val.Name)
 									span=val.Name
+			.navbar-text.mr-md-2
+				.input-group
+					include search 
 			.navbar-text.text-md-right
-				//- | 0.96.96.89.89.3
-				//- br
-				//- | baonguyenyam@gmail.com
 				.btn-group.d-flex.flex-column
 					button.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
 						| About me
