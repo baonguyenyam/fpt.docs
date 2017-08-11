@@ -1,0 +1,66 @@
+extends ../../../_layout/layout
+
+block variables
+	- var title = 'Ionic'
+	- var description = 'Trong phạm vi bài viết này, tôi sẽ hướng dẫn các bạn tạo, viết và chạy ứng dụng trực tiếp trên di động một cách nhanh và đơn giản với IonicFramework – một framework xây dựng dựa trên AngularJS và Cordova. Ưu điểm của IonicFramework'
+	- var bodyclass = 'ionic'
+	- var selected = 'Ionic';
+	- var href = '/docs/mobile/ionic/ionic/index';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			.row
+				.col
+					h2 IonicFramework
+					hr
+					p.lead Trong phạm vi bài viết này, tôi sẽ hướng dẫn các bạn tạo, viết và chạy ứng dụng trực tiếp trên di động một cách nhanh và đơn giản với IonicFramework – một framework xây dựng dựa trên Angular và Cordova. 
+
+					a(href="/images/mobile/ionic-lab.png", target="_blank")
+						figure
+							img.img-thumbnail(src="/images/mobile/ionic-lab.png", alt="")
+					p Ưu điểm của IonicFramework là:
+					ul.pl-4
+						li Cài đặt rất nhanh và nhẹ. Thay vì phải tải IDE như Android Studio, Xcode cùng với bộ SDK nặng nề, ta chỉ cần tải NodeJS và dùng command prompt để cài ionic và cordova, rất nhanh và tiện lợi. Ta có thể dùng Notepad++ hoặc Sublime Text để code.
+						li Chỉ cần biết HTML, CSS, JS và AngularJS. Nếu muốn thêm 1 số chức năng như rung, camera, chỉ cần bỏ 5p để xem API ngCordova là làm được ngay.
+						li Tích hợp sẵn IonicViewer, cho phép ta test app vừa viết ngay trên di động, không cần cắm dây hay kết nối phức tạp (Việc debug thì còn hơi phức tạp đôi chút…). Kết hợp với Phonegap Build, ta có thể xuất file apk ngay và luôn.
+
+			h4.text-danger.mt-5 1. Cài đặt Ionic
+			p Đầu tiên, bạn vào 
+				a(href="https://nodejs.org/", target="_blank") https://nodejs.org/
+				| 
+				| để tải nodeJS về và cài đặt.
+			p 	
+				a(href="/images/mobile/node.png", target="_blank")
+					figure
+						img.img-thumbnail.mw-500(src="/images/mobile/node.png", alt="")
+			p Sau khi cài xong, bạn mở cửa sổ console lên, nhập vào:
+			pre.quine.prettyprint.text-left.lang-sh.scrollbar-dynamic.wrapper.vs.
+				npm install -g cordova ionic
+
+			h4.text-danger.mt-5 2. Tạo ứng dụng đầu tiên
+			p Ở đây, tôi sẽ tạo ứng dụng vào 1 folder có tên ionicApp. Để tạo ứng dụng, bạn cd vào thư mục, dùng câu lệnh phía dưới để tạo 1 ứng dụng có sẵn tabs. Chờ một chút, ứng dụng sẽ được tạo. Các bạn có thể đọc thêm ở đây: 
+				a(href="http://ionicframework.com/getting-started/", target="_blank") http://ionicframework.com/getting-started/
+
+			pre.quine.prettyprint.text-left.lang-sh.scrollbar-dynamic.wrapper.vs.
+				ionic start ionicApp tabs
+
+			h4.text-danger.mt-5 3. Chạy ứng dụng 
+			p Để chạy thử, ta chỉ cần cd vào thư mục ionicApp, gõ câu lệnh “ionic serve” để chạy thử ứng dụng trên nền web.
+			pre.quine.prettyprint.text-left.lang-sh.scrollbar-dynamic.wrapper.vs.
+				ionic serve
+
+			p 	
+				a(href="/images/mobile/app.png", target="_blank")
+					figure
+						img.img-thumbnail.mw-500(src="/images/mobile/app.png", alt="")
+
+			p Ứng dụng sau khi được chạy 
+
+			

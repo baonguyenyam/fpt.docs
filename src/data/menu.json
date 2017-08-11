@@ -46,7 +46,8 @@
     {
         "Name": "Mobile",
         "URL": [
-            { "Name": "Comming soon...", "URL": "#", "Icon": "setup_icon.png" }
+            { "Name": "Overview", "URL": "/docs/mobile/ionic", "Icon": "setup_icon.png" },
+            { "Name": "Ionic", "URL": "/docs/mobile/ionic/ionic.html", "Icon": "setup_icon.png" }
         ],
         "Icon": "mobile.png"
     },
