@@ -1,0 +1,373 @@
+extends ../../_layout/layout
+
+block variables
+	- var title = 'SASS'
+	- var description = 'SASS là một CSS Prepocessor (như LESS) giúp bạn viết CSS nhanh hơn và có cấu trúc rõ ràng hơn. Với SASS, bạn có thể viết CSS theo thứ tự rõ ràng, quản lý các biến đã được định nghĩa sẵn, có thể tự động nén tập tin CSS lại để bạn tiết kiệm dung lượng.'
+	- var bodyclass = 'node'
+	- var selected = 'NodeJS';
+	- var href = '/docs/node/sass';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			.row
+				.col
+					h2 Tìm hiểu về SASS/LESS
+					hr
+					p.lead SASS là một CSS Prepocessor (như LESS) giúp bạn viết CSS nhanh hơn và có cấu trúc rõ ràng hơn. Với SASS, bạn có thể viết CSS theo thứ tự rõ ràng, quản lý các biến đã được định nghĩa sẵn, có thể tự động nén tập tin CSS lại để bạn tiết kiệm dung lượng.
+					p Nếu bạn viết một lượng rất lớn về CSS, một bộ xử lý có thể làm giảm mức độ căng thẳng của bạn và giúp bạn tiết kiệm rất nhiều thời gian quý báu. Sử dụng các công cụ như Sass , less , Stylus hoặc PostCS . Làm stylesheets lớn , phức tạp dễ hiểu hơn và dễ dàng hơn để duy trì. Nhờ tính năng giống như các biến, function và mixins các mã sẽ trở nên có tổ chức hơn, cho phép các nhà phát triển web làm việc nhanh hơn và phạm sai lầm ít hơn.
+
+					p Ban đầu, Sass là một phần của một preprocessor khác gọi là Haml (dành cho HTML), được thiết kế và viết bởi các lập trình viên Ruby. Bởi vậy, Sass stylesheets sử dụng cú pháp giống như Ruby với việc không có các dấu ngoặc nhọn {}, dấu chấm phẩy ; và thụt đầu dòng nghiêm ngặt.
+
+					.row
+						.col-md-7
+							a(href="/images/node/sass-vs-scss.png", target="_blank")
+								figure
+									img.img-thumbnail(src="/images/node/sass-vs-scss.png", alt="")
+						.col-md-5
+							ul.pl-2
+								li CSS Prepocessor mạnh nhất hiện nay.
+								li Giản lược cách viết các thẻ CSS.
+								li Có thể kế thừa và tái sử dụng (không phải copy/paste).
+								li Vì mang tính kế thừa, nên sửa một chỗ, có thể cập nhật ở những chỗ khác mà không sợ thiếu sót.
+								li Tạo được biến, mixin... và viết theo cấu trúc cây thư mục rất trực quan và dễ quản lý.
+							p
+								a.btn.btn-success(href="http://sass-lang.com/", target="_blank") API docs
+
+			h4.text-danger.mt-5 Cài đặt, thiết lập môi trường
+			p Yêu cầu: NodeJS
+			pre.quine.prettyprint.text-left.lang-sh.scrollbar-dynamic.wrapper.vs.
+				npm install -g sass node-sass
+			.row
+				.col-md-4
+					p Tạo một file main.sass như sau:
+					pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.
+						#menu
+						*li
+						**background: red
+						**color: #FFF
+						*a
+						**color: yellow
+						**padding: 20px
+				.col-md-4
+					p Sau đó mở command lên chạy lệnh
+					pre.quine.prettyprint.text-left.lang-sh.scrollbar-dynamic.wrapper.vs.
+						sass main.sass:main.css
+				.col-md-4
+					p Kết quả
+					pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.
+						#menu li {
+						**background: red;
+						**color: #FFF;
+						}
+
+						#menu a {
+						**color: yellow;
+						**padding: 20px;
+						}
+			p SASS khá là nhạy cảm với indent là tab hay space, tab thì tab hết còn space thì là space hết (space có thể 2-space hoặc 4-space).
+			p Bạn có thể compile bằng CMD như cách ở trên tuy nhiên trên thực tế khi làm project thì chúng ta sẽ sử dụng Node để render hoặc dùng Gulp/Webpack/Grunt ... để compile (tuỳ theo nhu cầu thực tế). Phần này sẽ được nói chi tiết hơn trong bài viết khác.
+
+
+
+			.row
+				.col
+					.table-responsive
+						table.table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Cú pháp
+									th Code (*.sass)
+									th Compile (*.css)
+
+
+							tbody
+								tr
+									td.no-wrap @extend
+
+									td
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.
+											.floatLeft
+											*float: left
+											*width: 50%
+
+											.columnLeft
+											*@extend .floatLeft
+											*backgroud: #ffffff
+									td
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.
+											.floatLeft, .columnLeft {
+											*float: left;
+											*width: 50%;
+											}
+
+											.columnLeft {
+											*backgroud: #ffffff;
+											}
+								tr
+									td.no-wrap Placer Hoder
+
+									td
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.
+											%message
+											*border: solid 1px
+											*text-align: center
+											*font-size: 16px
+											*padding: 20px 10px
+
+											.error
+											*@extend %message
+											*background: red
+											.success
+											*@extend %message
+											*background: green
+									td
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.
+											.error, .success {
+											*border: solid 1px;
+											*text-align: center;
+											*font-size: 16px;
+											*padding: 20px 10px;
+											}
+
+											.error {
+											*background: red;
+											}
+
+											.success {
+											*background: green;
+											}
+								tr
+									td.no-wrap Variable
+
+									td
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.
+											$color-yellow : yellow
+											.error
+											*color: $color-yellow;
+									td
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.
+											.error {
+											*color: yellow;
+											}
+								tr
+									td.no-wrap Mixin
+
+									td
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.
+											=menu($id, $backgroud:white)
+											*ul&#35;{$id}
+											**li
+											***height: 30px
+											***line-height: 30px
+											***a
+											****background: $background
+											****text-decoration: none
+
+											+menu(menu1, red)
+											+menu(menu2, blue)
+									td
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.
+											ul#menu1 li {
+											*height: 30px;
+											*line-height: 30px;
+											}
+
+											ul#menu1 li a {
+											*background: red;
+											*text-decoration: none;
+											}
+
+											ul#menu2 li {
+											*height: 30px;
+											*line-height: 30px;
+											}
+
+											ul#menu2 li a {
+											*background: blue;
+											*text-decoration: none;
+											}
+								tr
+									td.no-wrap @For
+
+									td
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											@for $i from 1 through 4
+											*#item-&#35;{$i}
+											**background: red
+									td
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.
+											#item-1 {
+											*background: red;
+											}
+
+											#item-2 {
+											*background: red;
+											}
+
+											#item-3 {
+											*background: red;
+											}
+
+											#item-4 {
+											*background: red;
+											}
+								tr
+									td.no-wrap Function
+
+									td
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											@function width_wrapper($value : 20)
+											*@return ($value + 20px);
+
+											.wrapper
+											*width: width_wrapper(80px)
+									td
+										pre.quine.prettyprint.text-left.lang-css.scrollbar-dynamic.wrapper.
+											.wrapper {
+											width: 100px;
+											}
+			h4.text-danger.mt-5 Lựa chọn function, mixin hay place holder?
+			p Việc lựa chọn Funtion, Mixin hay Place Hoder sẽ phụ thuộc vào mục đích của bạn. Nhưng trước tiên mình cần nắm vững khái niệm của chúng.
+
+			p Function dùng để xử lý một nhiệm vụ và nó sẽ trả về một kết quả duy nhất nên việc trả về một đoạn CSS dài ngoằn là điều không thể, vì vậy thông thường ta dùng function trong những trường hợp xủ lý một nhiệm vụ nào đó và mục đích cuối cùng là lấy một kết quả.
+
+			p Mixin như ta đã học thì nó giống như một procedure dùng để gom nhóm một đoạn code CSS lại.
+
+			p Place Holder có chức năng giống Mixin, tuy nhiên có sự khác biệt là bạn không thể khai báo tham số trong Place Holder.
+
+			p Dựa vào những yếu tố trên bạn sẽ quyết định nên sử dụng phần nào vào project của bạn.
+			h4.text-danger.mt-5 Các hàm xử lý chuỗi trong SASS
+			.row
+				.col
+					.table-responsive
+						table.table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Tên hàm
+									th Mô tả
+							tbody
+								tr
+									td.no-wrap
+										code unquote($string)
+									td
+										| Xóa các cặp quote ra khỏi chuỗi
+										code $string
+										| .
+								tr
+									td.no-wrap
+										code quote($string)
+									td
+										| Thêm cặp quote bao quanh chuỗi
+										code $string
+								tr
+									td.no-wrap
+										code str-length($string)
+									td
+										| Trả về tổng số ký tự của chuỗi
+										code $string
+								tr
+									td.no-wrap
+										code str-insert($string,$insert,$index)
+									td
+										| Thêm chuỗi $insert vào chuỗi $string tại vị trí
+										code $index
+								tr
+									td.no-wrap
+										code str-index($string, $substring)
+									td
+										| Kiểm tra vị trí xuất hiện chuỗi $subtring trong chuỗi
+										code $string
+								tr
+									td.no-wrap
+										code str-slice($string,$start-at,[$end-at])
+									td
+										| Cắt chuỗi bắt đầu từ
+										code $start-at
+										|  và kết thúc tại
+										code $end-at
+										| , trường hợp không truyền
+										code $end-at
+										|  thì nó lấy đến cuối chuỗi.
+								tr
+									td.no-wrap
+										code to-upper-case($string)
+									td Chuyển chuỗi $string sang chữ in hoa
+								tr
+									td.no-wrap
+										code to-lower-case($string)
+									td
+										| Chuyển chuỗi
+										code $string
+										|  sang chữ in thường
+
+			h4.text-danger.mt-5 Các hàm xử lý Number trong SASS
+			.row
+				.col
+					.table-responsive
+						table.table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Tên hàm
+									th Mô tả
+							tbody
+								tr
+									td.no-wrap
+										code percentage($number)
+									td
+										| Biến đổi số
+										code $number
+										|  thành tỉ lệ phần trăm (%)
+								tr
+									td.no-wrap
+										code round($number)
+									td
+										| Làm tròn số
+										code $number
+								tr
+									td.no-wrap
+										code ceil($number)
+									td
+										| Làm tròn số
+										code $number
+										|  ở cận trên
+								tr
+									td.no-wrap
+										code floor($number)
+									td
+										| Làm tròn số
+										code $number
+										|  ở cận dưới
+								tr
+									td.no-wrap
+										code abs($number)
+									td
+										| Tính giá trị tuyệt đối cho
+										code $number
+								tr
+									td.no-wrap
+										code min($numbers…)
+									td
+										| Tìm số
+										code $number
+										|  nhỏ nhất trong dãy truyền vào
+								tr
+									td.no-wrap
+										code max($numbers…)
+									td
+										| Tìm số
+										code $number
+										|  lớn nhất trong dãy truyền vào
+								tr
+									td.no-wrap
+										code random([$limit])
+									td
+										| Random ngẫu nhiên một con số không quá
+										code $limit
+										| .

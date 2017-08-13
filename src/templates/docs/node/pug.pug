@@ -1,0 +1,210 @@
+extends ../../_layout/layout
+
+block variables
+	- var title = 'Pug'
+	- var description = 'JADE/PUG là một template engine cực kỳ mạnh được phát triển với ý tưởng dựa trên Haml. Thực thi cùng với JavaScript và NodeJS.'
+	- var bodyclass = 'node'
+	- var selected = 'NodeJS';
+	- var href = '/docs/node/pug';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			.row
+				.col
+					h2 Tìm hiểu về JADE/PUG
+					hr
+					p.lead JADE/PUG là một template engine cực kỳ mạnh được phát triển với ý tưởng dựa trên Haml. Thực thi cùng với JavaScript và NodeJS. Thay đổi hoàn toàn cách viết HTML với những cú pháp hoàn toàn mới và tức nhiên sẽ giải quyết những vấn đề mà HTML không để làm được. Dù mới nhưng không có nghĩa nó sẽ rất khó để có thể đọc và hiểu, trong khi phương châm của các lập trình viên ngày nay là “Write less, do more” và JADE/PUG đã làm được điều đó. Với JADE/PUG, bạn sẽ code HTML một cách nhanh hơn và sạch hơn.
+					p Dự án ban đầu được mang tên là “JADE” một cái tên rất đẹp “Ngọc Bitch”, tuy nhiên cái tên JADE là bị đụng bản quyền với một công ty phần mềm lớn. Sau khi trao đổi với các dev và maintainer thì cái tên “PUG” (Chó mặt xệ) được ra đời. Và tất cả các bản release sau đều đổi thành PUG với cú pháp mạnh mẽ, linh hoạt và rõ ràng hơn JADE.
+
+
+
+					.row
+						.col-md-7
+							a(href="/images/node/pug-eg.png", target="_blank")
+								figure
+									img.img-thumbnail(src="/images/node/pug-eg.png", alt="")
+						.col-md-5
+							ul.pl-2
+								li Template engine cực kỳ mạnh.
+								li Giản lược cách viết các thẻ HTML, không sợ mở thẻ ở chỗ này mà quên đóng thẻ ở chỗ khác.
+								li Có thể kế thừa và tái sử dụng (không phải copy/paste).
+								li Vì mang tính kế thừa, nên sửa một chỗ, có thể cập nhật ở những chỗ khác mà không sợ thiếu sót.
+								li Điều quan trong cuối cùng là JADE/PUG thông minh hơn HTML.
+							p
+								a.btn.btn-success(href="https://pugjs.org", target="_blank") API docs
+
+			h4.text-danger.mt-5 Cài đặt, thiết lập môi trường
+			p Yêu cầu: NodeJS
+			pre.quine.prettyprint.text-left.lang-sh.scrollbar-dynamic.wrapper.vs.
+				npm install -g pug pug-cli
+			.row
+				.col-md-4
+					p Tạo một file index.pug như sau:
+					pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+						doctype html
+						*html(lang="en")
+						**head
+						***title Index
+						**body
+						***h1 Hello World
+				.col-md-4
+					p Sau đó mở command lên chạy lệnh
+					pre.quine.prettyprint.text-left.lang-sh.scrollbar-dynamic.wrapper.vs.
+						pug index.pug -p
+				.col-md-4
+					p Kết quả
+					pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+						[!DOCTYPE html]
+						*[html lang="en"]
+						**[head]
+						***[title]Index[/title]
+						**[/head]
+						**[body]
+						***[h1]Hello World[/h1]
+						**[/body]
+						*[/html]
+			p JADE/PUG khá là nhạy cảm với indent là tab hay space, tab thì tab hết còn space thì là space hết (space có thể 2-space hoặc 4-space).
+			p Bạn có thể compile bằng CMD như cách ở trên tuy nhiên trên thực tế khi làm project thì chúng ta sẽ sử dụng Node để render hoặc dùng Gulp/Webpack/Grunt ... để compile (tuỳ theo nhu cầu thực tế). Phần này sẽ được nói chi tiết hơn trong bài viết khác.
+
+
+
+			.row
+				.col
+					.table-responsive
+						table.table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Cú pháp
+									th Code (*.pug)
+									th Compile (*.html)
+
+
+							tbody
+								tr
+									td.no-wrap Comment
+
+									td
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											// Bao Nguyen
+											p Hello
+									td
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											<!-- Bao Nguyen -->
+											<p>Hello</p>
+								tr
+									td.no-wrap Unbuffered Comment
+
+									td
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											//- Bao Nguyen
+											p Hello
+									td
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											<p>Hello</p>
+								tr
+									td.no-wrap Block Comment
+
+									td
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											// Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam deserunt cumque modi accusamus expedita quis mollitia iste.
+											p Hello
+									td
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											<!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam deserunt cumque modi accusamus expedita quis mollitia iste. -->
+											<p>Hello</p>
+								tr
+									td.no-wrap Plain Text
+
+									td
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											p This is plain old <em>text</em> content.
+									td
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											<p>This is plain old <em>text</em> content.</p>
+								tr
+									td.no-wrap Attributes
+
+									td
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											a(href='google.com') Google
+											a#main.abc(href='google.com', class="active") Google
+									td
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											<a href="google.com">Google</a>
+											<a href="google.com" id="main" class="abc active">Google</a>
+								tr
+									td.no-wrap Attributes
+
+									td
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											- var authenticated = true
+											body(class=authenticated ? 'authed' : 'anon')
+									td
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											[body class="authed"][/body]
+								tr
+									td.no-wrap Iteration
+
+									td
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											ul
+											*each val, index in {1:'one',2:'two',3:'three'}
+											**li= index + ': ' + val
+									td
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											<ul>
+											*<li>1: one</li>
+											*<li>2: two</li>
+											*<li>3: three</li>
+											</ul>
+								tr
+									td.no-wrap Includes
+
+									td
+										p index.pug
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											doctype html
+											*html
+											**include includes/head.pug
+											**body
+											***h1 My Site
+											***p Welcome to my super lame site.
+											***include includes/foot.pug
+										p includes/head.pug
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											head
+											*title My Site
+											*script(src='/js/jquery.js')
+											*script(src='/js/app.js')
+										p includes/foot.pug
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											footer#footer
+											*p Copyright (c) foobar
+									td
+										p Kết quả
+										pre.quine.prettyprint.text-left.lang-html.scrollbar-dynamic.wrapper.
+											[!DOCTYPE html]
+											*[html]
+
+											**[head]
+											***[title]My Site[/title]
+											***[script src="/js/jquery.js"][/script]
+											***[script src="/js/app.js"][/script]
+											**[/head]
+
+											**[body]
+											***[h1]My Site[/h1]
+											***[p]Welcome to my super lame site.[/p]
+											***[footer id="footer"]
+											****[p]Copyright (c) foobar[/p]
+											***[/footer]
+											**[/body]
+
+											*[/html]

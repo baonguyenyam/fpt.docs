@@ -16,6 +16,7 @@
             { "Name": "CSS Float", "URL": "/docs/html-css/boxmodel/columns.html", "Icon": "setup_icon.png" },
             { "Name": "CSS4", "URL": "/docs/html-css/css/css4.html", "Icon": "setup_icon.png" },
             { "Name": "Product", "URL": "/docs/html-css/html/product.html", "Icon": "setup_icon.png" }
+
         ],
         "Icon": "web.png"
     },
@@ -33,6 +34,7 @@
             { "Name": "Color", "URL": "/docs/design/ps/color.html", "Icon": "setup_icon.png" },
             { "Name": "Filters", "URL": "/docs/design/ps/filters.html", "Icon": "setup_icon.png" },
             { "Name": "Shortcut", "URL": "/docs/design/ps/shortcut.html", "Icon": "setup_icon.png" }
+
         ],
         "Icon": "design.png"
     },
@@ -42,6 +44,16 @@
             { "Name": "Comming soon...", "URL": "#", "Icon": "setup_icon.png" }
         ],
         "Icon": "photo.png"
+    },
+    {
+        "Name": "NodeJS",
+        "URL": [
+            { "Name": "PUG/JADE", "URL": "/docs/node/pug.html", "Icon": "setup_icon.png" },
+            { "Name": "SASS/LESS", "URL": "/docs/node/sass.html", "Icon": "setup_icon.png" },
+            { "Name": "Gulp", "URL": "/docs/node/gulp.html", "Icon": "setup_icon.png" },
+            { "Name": "Webpack", "URL": "/docs/node/webpack.html", "Icon": "setup_icon.png" }
+        ],
+        "Icon": "node.png"
     },
     {
         "Name": "Mobile",

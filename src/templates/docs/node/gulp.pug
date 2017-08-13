@@ -1,0 +1,160 @@
+extends ../../_layout/layout
+
+block variables
+	- var title = 'Gulp'
+	- var description = 'Gulp là một tool viết bằng Javascript, được sử dụng để tự động hoá các tác vụ giúp các bạn có thể tiết kiệm rất nhiều thời gian trong quá trình làm việc. Dù bạn có là một developer hay là một designer (người sẽ phải làm quen với HTML wireframes hiện tại hoặc sau này), tôi cũng khuyến khích hãy thử sử dụng Gulp.'
+	- var bodyclass = 'node'
+	- var selected = 'NodeJS';
+	- var href = '/docs/node/gulp';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			.row
+				.col
+					h2 Tìm hiểu về Gulp
+					hr
+					p.lead Như tôi từng giới thiệu ở loạt bài trước về Webpack/Grunt/Gulp/Brunch... là những tool tự động hoá cho các dự án Nodejs. Ta có thể Minify code, biên dịch, unit test, validate, ... và có thể tự động hoá mọi công việc để giảm effort.
+					p.lead Gulp là một tool viết bằng Javascript, được sử dụng để tự động hoá các tác vụ giúp các bạn có thể tiết kiệm rất nhiều thời gian trong quá trình làm việc. Dù bạn có là một developer hay là một designer (người sẽ phải làm quen với HTML wireframes hiện tại hoặc sau này), tôi cũng khuyến khích hãy thử sử dụng Gulp. Điều tôi thích thú rằng cùng với một positions như nhau nhưng cách nhìn của Grunt và Gulp lại khác nhau điều đó được thể hiện rõ ràng qua Logo của họ.
+					p Trong khi Grunt với ngụ ý rằng chính anh ta là một cỗ máy làm việc mạnh mẽ và cần cù thì Gulp lại với phát biểu rằng "hãy để chúng tôi lo, việc của bạn là cứ nhàn nhã mà uống Coca đi nhé". Quả thật cũng không quá khi chúng ta biết vận dụng Grunt/Gulp một cách triệt để và xuyên suốt. Sẽ không còn chuyện phải ngồi đấy thêm vào hay bớt ra từng dòng code import JS, CSS nữa, cũng không còn chuyện phải ngồi tạo image sprite cực nhọc nữa mọi thứ Grunt/Gulp sẽ giúp ta tất cả, với Grunt/Gulp ta sẽ được gì:
+
+					.row
+						.col-md-7
+							a(href="/images/node/151001_eyecatch.png", target="_blank")
+								figure
+									img.img-thumbnail(src="/images/node/151001_eyecatch.png", alt="")
+						.col-md-5
+							ul.pl-2
+								li Tự động Validate, Debug, Fixed bugs
+								li Tự động nối nhiều file .css, .js lại thành 1 file duy nhất.
+								li Tự động tạo file .min.css, .min.js.
+								li Tự động compile file .less, sass, .styl sang .css
+								li Tự động compile file .jade, .halm sang .html
+								li Tự động nén ảnh, tạo image sprite, tự nén html...
+								li Tự tạo server test, auto refresh, tự copy file/folder...
+
+			h4.text-danger.mt-5 Cài đặt, thiết lập môi trường
+			p Yêu cầu: NodeJS, Bạn cần sử dụng Terminal ở OSX và Linux, hoặc Command Prompt của Windows.
+			pre.quine.prettyprint.text-left.lang-sh.scrollbar-dynamic.wrapper.vs.
+				npm install -g gulp
+			p Option -g để cài Gulp trên toàn hệ thống của bạn.
+
+			h4.text-danger.mt-5 Đưa Gulp vào trong Project
+			p Gulp đã được cài đặt từ bước trước, giờ điều chúng ta phải làm là đưa Gulp vào các project mong muốn. Trước hết, tạo một thư mục project mới, vào trong và gõ
+			pre.quine.prettyprint.text-left.lang-sh.scrollbar-dynamic.wrapper.vs.
+				npm install --save-dev gulp
+			p Lý do chúng ta phải thêm Gulp vào từng project riêng biệt, là bởi vì các project sẽ có các yêu cầu khác nhau. Có project cần SASS, có project cần Less v.vv..
+
+			h4.text-danger.mt-5 Sử dụng Gulpfile
+			p Hãy tạo một file mới gulpfile.js và đưa đoạn code sau vào:
+			pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.vs.
+				var gulp = require('gulp');
+
+				gulp.task('copy', function() {
+				^return gulp.src('original.txt')
+				^^.pipe(gulp.dest('destination'));
+				});
+
+				gulp.task('default', ['copy']);
+			p Dòng đầu tiên định nghĩa tên của task là copy. Dòng tiếp theo sử dụng gulp.src để chỉ định file chúng ta hướng tới (trong ví dụ là original.txt). Sau đó ta sử dụng pipe để thực hiện tác vụ tiếp theo: dùng gulp.dest chỉ định nơi đặt file đã xử lý. Save file và chạy câu lệnh sau ở Terminal:
+
+			pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.vs.
+				gulp copy
+
+			h4.text-danger.mt-5 Theo dõi files và folders
+			p Việc cứ phải gõ câu lệnh mỗi khi chạy một task xem chừng không hiệu quả lắm, đặc biệt với trường hợp như sự thay đổi thường xuyên ở các stylesheet files. Nhận thấy vấn đề đó, Gulp cho phép bạn có thể theo dõi sự thay đổi và chạy câu lệnh một cách tự động. Trước tiên bạn phải cài đặt plugins gulp-sass
+			pre.quine.prettyprint.text-left.lang-sh.scrollbar-dynamic.wrapper.vs.
+				npm install gulp-sass
+
+			pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.vs.
+				var gulp = require('gulp');
+				var sass = require('gulp-sass');
+
+				gulp.task('copy', function() {
+				^return gulp.src('original.txt')
+				^^.pipe(gulp.dest('destination'));
+				});
+
+				gulp.task('sass', function () {
+				^gulp.src('styles.{sass,scss}')
+				^^.pipe(sass())
+				^^.pipe(gulp.dest('./css'));
+				});
+
+				gulp.task('automate', function() {
+				*gulp.watch('*.{sass,scss}', ['sass']);
+				});
+
+				gulp.task('default', ['copy', 'sass', 'automate']);
+			p Khi bạn gõ gulp automate vào Terminal task automate sẽ start và finish, nhưng không trả lại prompt bởi vì nó đang tiếp tục theo dõi sự thay đổi ở các files chỉ định (trong ví dụ là các file có phần mở rộng là sass). Khi có file bị thay đổi, task sass sẽ được gọi để convert sang css.
+
+
+			h4.text-danger.mt-5 Chạy multiple tasks
+
+			p Có nhiều trường hợp chúng ta phải xem xét việc xử lý nhiều tasks chứ không chỉ đơn thuần một task. Có hai cách cho các bạn lựa chọn:
+
+			ul
+				li Nếu những tasks đó có liên quan đến nhau, hãy sử dụng pipe để chain chúng lại.
+				li Nếu những tasks đó không liên quan đến nhau, hãy tham khảo ví dụ sau về việc gọi nhiều tasks trong một lần:
+
+			pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.vs.
+				var gulp = require('gulp');
+				var sass = require('gulp-sass');
+				var pug = require('gulp-pug');
+				var rename = require('gulp-rename');
+				var concat = require('gulp-concat');
+				var uglify = require('gulp-uglify');
+				var cssnano = require('gulp-cssnano');
+
+				gulp.task('copy', function() {
+				^return gulp.src('./src/assets/**/*')
+				^^.pipe(gulp.dest('./destination/assets'));
+				});
+
+				gulp.task('sass', function () {
+				^gulp.src('./src/sass/*.{sass,scss}')
+				^^.pipe(sass())
+				^^.pipe(gulp.dest('./destination/css'));
+				^^.pipe(rename({suffix: '.min'}))
+				^^.pipe(cssnano())
+				^^.pipe(gulp.dest('./destination/css'));
+				});
+
+				gulp.task('concat', function () {
+				^gulp.src('./src/js/**/*.js')
+				^^.pipe(concat('scripts.js'))
+				^^.pipe(gulp.dest('./destination/js'));
+				^^.pipe(uglify())
+				^^.pipe(gulp.dest('./destination/js'));
+				});
+
+				gulp.task('pug', function () {
+				^gulp.src('./src/template/**/*.{pug,jade}')
+				^^.pipe(pug())
+				^^.pipe(gulp.dest('./destination'));
+				});
+
+				gulp.task('automate', function() {
+				*gulp.watch('./src/**/*.{sass,scss}', ['sass']);
+				});
+
+				gulp.task('default', ['copy', 'concat', 'pug', 'sass', 'automate']);
+			p Chỉ cần gõ gulp ở Terminal (tự động gọi đến task default), task copy sẽ được chạy, tiếp theo là task concat, pug...
+			h4.text-danger.mt-5 Kết luận
+
+			p Sử dụng Gulp không khó, chính thế mà nhiều người thích sử dụng Gulp hơn Grunt vì syntax khá đơn giản. Hãy nhớ những bước sau mỗi khi muốn thêm mới một automation:
+			ul
+				li Tìm kiếm plugin
+				li Cài đặt plugin
+				li Sử dụng require với plugin đó trong Gulpfile
+				li Sử dụng đúng syntax
+			p Bạn có thể tìm hiểu thêm về 1 bộ full task của tôi viết tại
+				a(href="https://github.com/baonguyenyam/k-lite-task/", target="_blank") https://github.com/baonguyenyam/k-lite-task/
+
+

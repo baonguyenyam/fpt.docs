@@ -4,7 +4,7 @@ block variables
 	- var title = 'Ionic'
 	- var description = 'Trên thị trường ứng dụng di động hiện nay, 3 hệ điều hành chiếm thị phần cao nhất là : Android, iOS và Window phone, tiếp sau là 1 số hệ điều hành khác như BlackBerry… Trong phạm vi bài viết, tôi chỉ phân tích về 3 OS đứng đầu là Android, iOS và Windows Phone nhé.'
 	- var bodyclass = 'ionic'
-	- var selected = 'Ionic';
+	- var selected = 'Mobile';
 	- var href = '/docs/mobile/ionic/index';
 
 block css
@@ -36,7 +36,7 @@ block body
 			p Hiện nay, có 3 hướng chính để phát triển một ứng dụng di động, đó là: Web App, Native App và Hybrid App. Mỗi hướng sẽ cần những kĩ năng riêng, có những ưu nhược điểm riêng, sẽ được nói rõ hơn bên dưới.
 
 
-			
+
 			.row
 				.col
 					.table-responsive
@@ -51,11 +51,11 @@ block body
 
 
 							tbody
-								tr 
+								tr
 									td.no-wrap Web App
 
 									td(width="25%") Hướng Mobile Web thường được áp dụng khi các bạn đã có sẵn một website đang hoạt động. Ta sẽ tạo thêm 1 trang web riêng cho mobile, sử dụng HTML, CSS, một số framework hỗ trợ mobile và responsive (Bootstrap, jQuery Mobile, Materialize). Người dùng sẽ trang web dành cho mobile để dùng ứng dụng.
-									td 
+									td
 										ul.mb-0.pl-4
 											li Chỉ cần có kiến thức về web là viết được
 											li Viết một lần, chạy được trên mọi hệ điều hành
@@ -67,17 +67,17 @@ block body
 											li Với một số máy đời cũ, Web App sẽ bị bể giao diện, hiển thị sai, hoặc javascript không chạy.
 											li Performance chậm
 											li Không thể tận dụng được các tính năng của di động: Push notification, chụp hình, nghiêng máy, định vị GPS…
-									td 
+									td
 										ul.mb-0.pl-4
 											li Kiến thức HTML, CSS, Javascript cơ bản.
 											li Kiến thức về một số framework responsive/mobile như: jQuery Mobile, Bootstrap, …
 											li Một số framework javascript để viết Single Page Application: Angular, EmberJS, …
-								tr 
+								tr
 									td.no-wrap Native App
 
 									td(width="25%") Viết Native App nghĩa là lập trình viên sẽ sử dụng IDE, SDK mà nhà sản xuất cung cấp để lập trình ra một ứng dụng, build ứng dụng đó thành file cài và gửi lên App Store để kiểm duyệt. Người dùng sẽ phải tìm ứng dụng trên App Store, tải về máy và chạy. Đây là hướng phát triển được áp dụng nhiều nhất, điển hình là game Flappy Bird của Nguyễn Hà Đông. Với những ứng dụng game, xử lý ảnh, cần tính toán nhiều, Native App là lựa chọn duy nhất. Với những hệ thống lớn, cần đồng bộ, ta vẫn phải viết phần back-end trên server. Server sẽ đưa ra một số API. Native app lấy dữ liệu về máy, truyền dữ liệu lên server thông qua các API này.
 
-									td 
+									td
 										ul.mb-0.pl-4
 											li Tận dụng được toàn bộ những tính năng của device: Chụp ảnh, nghiêng máy, rung, GPS, notification.
 											li Có thể chạy được offline.
@@ -89,17 +89,17 @@ block body
 											li Với mỗi hệ điều hành, ta phải viết một ứng dụng riêng. Khó đảm bảo sự đồng bộ giữa các ứng dụng (1 button trên Android sẽ khác 1 button trên iOS, pop cũng khác).
 											li Cần phải submit app lên App Store, mỗi lần update phải thông báo người dùng.
 											li Code mệt và lâu hơn so với Mobile Web.
-									td 
+									td
 										ul.mb-0.pl-4
 											li Ngôn ngữ lập trình: Java cho Android, Objective-C hoặc Swift cho iOS, C# cho Windows Phone.
 											li Kiến thức chuyên sâu về ứng dụng: View, Action, Adapter trong Android …
 											li Cách xây dựng Web Serivce, Restful API, cách gọi API từ device, …
-								tr 
+								tr
 									td.no-wrap Hybrid App
 
 									td(width="25%") Hybrid App kết hợp những ưu điểm của Mobile Web và Native App. Ta xây dựng một ứng dụng bằng HTML, CSS, Javascript, chạy trên WebView của mobile. Tuy nhiên, Hybrid App vẫn có thể tận dụng những tính năng của device: chụp hình, GPS, rung, …. Hybrid App sẽ được viết dựa trên một cross-platform framework: Cordova, Phonegap, Titanium, …. Ta sẽ gọi những chức năng của mobile thông qua API mà framework này cung cấp, dưới dạng Javascript. Bạn chỉ cần viết một lần, những framework này sẽ tự động dịch ứng dụng này ra các file cài đặt cho Android, iOS và Windows Phone.
 
-									td 
+									td
 										ul.mb-0.pl-4
 											li Chỉ cần biết HTML, CSS, JS (Thế nên tôi mới khuyên các bạn nên học Javascript).
 											li Viết một lần, chạy được trên nhiều hệ điều hành
@@ -109,7 +109,7 @@ block body
 											li Không ổn định, khó debug. Framework sẽ dịch code của bạn thành code native, việc sửa lỗi ứng dụng khá khó vì bạn không biết code sẽ được dịch ra như thế nào.
 											li Performance chậm.
 											li Cần cài đặt nhiều thứ (Titanium, Cordova đều bắt phải cài đặt SDK này nọ thì mới build ứng dụng được).
-									td 
+									td
 										ul.mb-0.pl-4
 											li HTML, CSS, Javscript cơ bản.
 											li Cách dùng một số framework CSS, Javascript: jQuery Mobile, Ionic Framework, Angular, Bootstrap, …
