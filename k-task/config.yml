@@ -1,6 +1,6 @@
 # #####################################################################
 config:
-# Concat
+  # Concat
   concat:
     ACTIVE_CONCAT: FALSE
     babelconcat: app
@@ -10,9 +10,9 @@ config:
     namecss_core: core
     js_core:
       - "bower_components/Modernizr/modernizr.custom.js"
-      - "bower_components/jquery/dist/jquery.js"
-      - "bower_components/tether/dist/js/tether.js"
-      - "bower_components/bootstrap/dist/js/bootstrap.js"
+      - "bower_components/jquery/dist/jquery.min.js"
+      - "bower_components/popper.js/dist/umd/popper.min.js"
+      - "bower_components/bootstrap/dist/js/bootstrap.min.js"
       - "bower_components/lodash/dist/lodash.min.js"
       - "bower_components/jstree/dist/jstree.min.js"
     css_core:
@@ -39,7 +39,7 @@ config:
       - "bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css"
       - "bower_components/select2/dist/css/select2.min.css"
       - "bower_components/lightgallery/dist/css/lightgallery.min.css"
-# SEO
+  # SEO
   SEO:
     AppName: "Home"
     mobile_color: "#000000"
@@ -61,8 +61,8 @@ config:
     verf_google: "VhfbPndGW-UftEvWql2Nwt7F1F5KBgd3lMcGgjn4Ovc"
     verf_bing: "F7679394C660249FBA58732D6100A65A"
     verf_yandex: "bc82adfacdd74cbf"
-# #####################################################################
-# Base config
+  # #####################################################################
+  # Base config
   url: "./"
   baseUrl: "./"
   source: "src"
@@ -80,20 +80,20 @@ config:
   dataJS: "scripts"
   blank: "_blank"
   images: "images"
-# Layout
+  # Layout
   layouts:
     assets: "partials"
     root: "templates"
     jade: "templates"
     nunjucks: "templates/nunjucks"
-# Scripts
+  # Scripts
   scripts:
     assets: "js"
     root: "scripts"
     typescript: "scripts/typescript"
     javascript: "scripts"
     coffee: "scripts/coffee"
-# Styles
+  # Styles
   styles:
     assets: "css"
     root: "styles"
@@ -101,9 +101,9 @@ config:
     less: "styles/less"
     sass: "styles"
     stylus: "styles/stylus"
-# CleanUp
+  # CleanUp
   cleanup: "{favicon.json,rev-manifest.json}"
-# Ignore
+  # Ignore
   ignore:
     copy: "{**/*.jade,**/*.nunjucks,**/*.js,**/*.ts,**/*.coffee}"
     scripts: "{**/*.ts,**/*.coffee}"
@@ -118,16 +118,16 @@ config:
     css: "{include,include/**}"
     less: "{include,include/**}"
     test: "{vendor,vendor/**}"
-# Config Host
+  # Config Host
   host: "127.0.0.1"
   port: "9999"
   sameport: "6000"
   proxy: "9018"
   website: "baonguyenyam.github.io"
-# Packer
+  # Packer
   packer: main.js
   packerdist: app.js #to app.min.js
-# License
+  # License
   title: "Gulp App"
   author:
     email: "baonguyenyam@gmail.com"
