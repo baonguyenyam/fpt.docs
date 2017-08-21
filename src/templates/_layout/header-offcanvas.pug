@@ -5,14 +5,14 @@ include _config_menu
 header.pos-f-t.offcanvas(class=_dataJS.config.VIENSOI_APP.HEADER_TRANPARENT ? 'has-tranparent': 'no-tranparent')
 	.container-fluid
 		.mainmenu.clearfix
-			button.navbar-toggler.navbar-toggler-right.offcanvas-toggle(type='button', data-toggle='offcanvas', data-target='#VienSoiGlobalMenu', class=_dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "sm" ? 'hidden-md-up' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "md" ? 'hidden-lg-up' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "lg" ? 'hidden-xl-up': 'hidden-xs-up')
+			button.navbar-toggler.float-right.offcanvas-toggle(type='button', data-toggle='offcanvas', data-target='#VienSoiGlobalMenu', class=_dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "sm" ? 'd-md-none' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "md" ? 'd-lg-none' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "lg" ? 'd-xl-none': 'd-xs-none')
 				i.fa.fa-bars
-			a.navbar-brand(href='/fpt/index.html', class=_dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "sm" ? 'hidden-md-up' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "md" ? 'hidden-lg-up' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "lg" ? 'hidden-xl-up': 'hidden-xs-up')
+			a.navbar-brand(href='/fpt/index.html', class=_dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "sm" ? 'd-md-none' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "md" ? 'd-lg-none' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "lg" ? 'd-xl-none': 'd-xs-none')
 				i(site-logo)
-		nav#VienSoiGlobalMenu.navbar.navbar-light.bg-faded.navbar-offcanvas.navbar-offcanvas-touch(role='navigation', class=_dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "sm" ? 'navbar-toggleable-sm' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "md" ? 'navbar-toggleable-md' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "lg" ? 'navbar-toggleable-lg': 'navbar-toggleable-xs')
+		nav#VienSoiGlobalMenu.navbar.navbar-light.bg-faded.navbar-offcanvas.navbar-offcanvas-touch(role='navigation', class=_dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "sm" ? 'navbar navbar-expand-md' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "md" ? 'navbar navbar-expand-lg' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "lg" ? 'navbar navbar-expand-xl': 'navbar navbar-expand-xs')
 			ul#VienSoiNAV.navbar-nav.mr-auto
 				li.nav-item.align-items-center.align-self-center
-					a.navbar-brand(href='/fpt/index.html', class=_dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "sm" ? 'hidden-sm-down' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "md" ? 'hidden-md-down' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "lg" ? 'hidden-lg-down': 'hidden-xl-down')
+					a.navbar-brand(href='/fpt/index.html', class=_dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "sm" ? 'd-none d-md-flex' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "md" ? 'd-none d-lg-flex' : _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON && _dataJS.config.VIENSOI_APP.NAV_CHANGE_ON === "lg" ? 'd-none d-xl-flex': 'd-none d-sm-flex')
 						i(site-logo)
 				each val, key in menu
 					if (typeof(val.URL) == "object")
@@ -51,7 +51,7 @@ header.pos-f-t.offcanvas(class=_dataJS.config.VIENSOI_APP.HEADER_TRANPARENT ? 'h
 									span=val.Name
 			.navbar-text.mr-md-2
 				.input-group
-					include search 
+					include search
 			.navbar-text.text-md-right
 				.btn-group.d-flex.flex-column
 					button.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')

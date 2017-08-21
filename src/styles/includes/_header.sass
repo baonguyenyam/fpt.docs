@@ -23,6 +23,9 @@ header
 		background: color-get($colors, whites)
 	nav.navbar
 		background: none
+		align-items: initial
+		justify-content: initial
+		display: block
 		.navbar-toggler
 			+border-radius(2px)
 			+link(color-get($colors,white))
@@ -82,6 +85,7 @@ header
 	+media-breakpoint-up($active_menu_on_up)
 		+pos(static, initial null null initial)
 		nav.navbar
+			display: flex
 			#VienSoiGlobalMenu.navbar-collapse
 				max-height: initial
 				overflow: initial
@@ -196,6 +200,7 @@ header
 								width: 100%
 								+bor-rad(0)
 								+pad(.5rem)
+
 			@for $i from 2 through 8
 				&.mega-menu-col-#{$i}
 					nav
