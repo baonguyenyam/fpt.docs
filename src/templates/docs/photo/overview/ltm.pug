@@ -2,7 +2,7 @@ extends ../../../_layout/layout
 
 block variables
 	- var title = 'Lý thuyết màu'
-	- var description = 'Bạn có thể sử dụng Photoshop để chỉnh sửa hầu như bất kỳ hình ảnh nào, chẳng hạn như sửa một ảnh chụp thiếu sáng ảnh, xoá bỏ một vật thể ra khỏi ảnh và nhiều hơn nữa. Trong bài học này, chúng tôi sẽ giới thiệu cho bạn về giao diện Photoshop, bao gồm cách mở các tập tin, làm việc với bảng điều khiển, tuỳ chỉnh không gian làm việc và thay đổi kích thước hiển thị.'
+	- var description = 'Trước tiên chúng ta cần công nhận với nhau một điều, lựa chọn màu sắc trong thiết kế UX không phải là một thứ mang tính cảm tính. Mỗi người – là một người dùng tương lai của sản phẩm – sẽ có cảm giác về màu khác nhau và có ưa thích khác nhau đối với màu sắc. Vì thế nếu như chúng ta dựa vào cảm nhận của 1 số người dùng về màu sắc, chúng ta sẽ nhanh chóng đi vào một trong những sai lầm lớn nhất về thiết kế.'
 	- var bodyclass = 'ps'
 	- var selected = 'Design';
 	- var href = '/docs/photo/overview/ltm';
@@ -20,34 +20,141 @@ block body
 				.col
 					h2 Lý thuyết màu
 					hr
-					p.lead https://viblo.asia/p/bai-1-ly-thuyet-ve-mau-sac-trong-thiet-ke-ly-thuyet-mau-bWrZnL4n5xw
+					p.lead Trước tiên chúng ta cần công nhận với nhau một điều, lựa chọn màu sắc trong thiết kế UX không phải là một thứ mang tính cảm tính. Mỗi người – là một người dùng tương lai của sản phẩm – sẽ có cảm giác về màu khác nhau và có ưa thích khác nhau đối với màu sắc. Vì thế nếu như chúng ta dựa vào cảm nhận của 1 số người dùng về màu sắc, chúng ta sẽ nhanh chóng đi vào một trong những sai lầm lớn nhất về thiết kế. Khoa học về màu sắc đã được đúc rút bởi một lý thuyết ngắn gọi là “Lý thuyết màu”, và đó sẽ chính là thứ chúng ta sẽ nghiên cứu ngay đây:
+					p
+						a(href="/images/photo/colour-wheel-Gil-Dekel.jpg", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/photo/colour-wheel-Gil-Dekel.jpg", alt="")
+
+					h4.mt-3 Bánh xe màu
+					p.lead Vào năm 1666, Isaac Newton – một nhà vật lý vĩ đại đã lần đầu đưa ra 1 khái niệm gọi là “Bánh xe màu”.
+					p Theo Newton thì Bánh xe màu bao gồm 7 màu cơ bản: Đỏ (Red) – cam (Orange) – vàng (Yellow) – lục (Green) – lam (Blue) – chàm (Indigo) – tím (Violet). Đó cũng là 7 màu nằm trên một “chiếc cầu vồng” đặc trưng. Có vẻ như các nhà khoa học phương tây ám ảnh bởi con số 7 và thích sử dụng con số này trong mọi lý thuyết cơ bản. Giống như đối với âm nhạc, họ cho chúng ta 7 nốt nhạc Đồ Rê Mi Fa Sol La Si. Với chiêm tinh học, họ cho rằng có 7 hành tinh quay quanh trái đất, còn phụ nữ thì được sinh ra từ chiếc xương sườn thứ 7..
+					p
+						a(href="/images/photo/7.18.jpg", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/photo/7.18.jpg", alt="")
+
+					p Phương Đông thì khác, họ dùng 5 màu ăn theo lý thuyết về âm dương ngũ hành: Kim tương ứng với Trắng, Mộc tương ứng với Xanh, Thủy tương ứng với Đen, Hỏa tương ứng với Đỏ, Thổ tương ứng với Vàng. Đối với âm nhạc, phương Đông sử dụng ngũ Cung, tức 5 nốt chứ ko phải 7 nốt, bao gồm: Hò, Sự, Sang, Xê, Cống. Tuy nhiên, chúng ta sẽ tạm thời công nhận bảng màu của Tây phương trong bài học này nhé.
+					p
+						a(href="/images/photo/xem-tuoi-vo-chong.jpg", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/photo/xem-tuoi-vo-chong.jpg", alt="")
+					p Tạm dựa vào bảng màu cơ bản đó, tìm hiểu thêm, chúng ta thấy có 1 bảng màu được sử dụng phổ biến nhất, đó chính là bảng màu cơ bản + màu trộn lẫu giữa 2 màu cạnh nhau, chúng ta có 12 màu tất cả:
+					p
+						a(href="/images/photo/d009d203-df14-4bfd-8b3e-2e30e0e2e5d4.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/photo/d009d203-df14-4bfd-8b3e-2e30e0e2e5d4.png", alt="")
+					
+					p Đến đây, giống như tôi, bạn sẽ thắc mắc: ơ hay, có điều gì đó khang khác, rõ ràng là ta có 7 màu mà, tại sao ở đây ta chỉ thấy 6 màu quen thuộc nằm ở giữa của hình tròn, các màu bên ngoài thì nhìn lạ hoắc. Vâng, chính xác là chúng ta ko có màu chàm (Indigo) trong bảng màu cơ bản đâu ạ, nó là sự trộn lẫn giữa màu lam và màu tím. Đây chính là vấn đề của con số 7, Newton đã thêm nó vào cho đủ con số thôi – ông đã phạm sai lầm. Và cuối cùng, nhà vật lý người Anh là Thomas Young đã chốt hạ lý thuyết màu của chúng ta, chỉ có 3 màu cơ bản thôi các ngài, đó là Đỏ (Red), Vàng (Yellow) và Lam (Blue) còn đâu các màu còn lại đều được tạo từ việc trộn lẫn các màu cơ bản đó theo một tỉ lệ nhất định thôi.
+
+					h4.mt-3 Cấu trúc bộ màu cơ bản
+					p Từ đó ta có bộ màu như sau:
+
+					ul.pl-3
+						li Màu chính – màu vàng, đỏ và xanh. Đây là những màu cơ bản không thể được chia nhỏ thành bất kỳ màu nào khác.
+						li Màu cấp hai được tạo ra bằng cách trộn hai màu chính. Các màu thứ cấp là cam, xanh lá cây, và tím. Trộn vàng và đỏ tạo ra màu da cam; Pha trộn màu xanh lam và màu vàng tạo ra màu xanh lá cây, và pha trộn màu xanh lam và đỏ tạo ra tím.
+						li Màu cấp ba được tạo ra bằng cách pha trộn cả hai màu chính và thứ cấp để tạo thành một loại lai, chẳng hạn như màu vàng cam, đỏ cam, đỏ tím, xanh da trời tím, xanh lá cây, và màu vàng-xanh lá cây.
+						li Màu cấp cao hơn: Trên một bánh xe màu lớn hơn màu được hiển thị ở trên, sự pha trộn giữa màu cấp 3, cấp hai và màu cơ bản sẽ tạo ra màu sắc bậc 4, 5…
+
+					h4.mt-3 Sự hài hòa về màu sắc và phương pháp phối màu
+					p.lead Trong thiết kế trải nghiệm người dùng nói riêng và thiết kế sản phẩm nói chung, màu sắc có một vị trí quan trọng không thể thay thế. Nó quyết định những cảm nhận đầu tiên của khách hàng về sản phẩm và đôi khi sẽ quyết định rất nhanh hành vi của họ, đặc biệt là những khách hàng mới. Chúng ta ai cũng biết những ngạn ngữ màu sắc như “màu tím thủy chung”, “màu cam năng động”, “màu xanh an toàn và tin cậy”.. Nhưng chúng ta cũng có thể có cảm nhận khác là “màu tím nữ tính”, “màu cam trẻ con” và “màu xanh thiếu cá tính..”. Chính vì thế, việc sử dụng màu sắc như thế nào trong sản phẩm của chúng ta cần thiết phải được nghiên cứu và đánh giá một cách kỹ lưỡng, đồng thời phụ thuộc đặc biệt chặt chẽ vào đối tượng người dùng (tức personas) của chúng ta.
 					.row
 						.col-md-4
 							p
-								a(href="/images/photo/overview/ddobe-photoshop-cc-2017-v18.0.png", target="_blank")
+								a(href="/images/photo/image-3.png", target="_blank")
 									figure
-										img.img-thumbnail(src="/images/photo/overview/ddobe-photoshop-cc-2017-v18.0.png", alt="")
+										img.img-thumbnail(src="/images/photo/image-3.png", alt="")
+							
 						.col-md-8
-							p.lead Yêu cầu hệ thống
-								ul.lead
-									li Intel® Pentium® 4 or AMD Athlon® 64 processor (2GHz or faster)
-									li Microsoft® Windows® 7 with Service Pack 2 or Windows 8 with Service Pack 1
-									li 1GB of RAM
-									li 3.2GB of available hard-disk space for installation
-									li 1024×768 display (1280×800 recommended) with 16-bit color and 512MB of VRAM (1GB VRAM required for 3D features)
-					hr
-					p.lead Photoshop là một ứng dụng phức tạp, và bạn có thể cảm thấy rối ren khi sử dụng lần đầu. Vì lý do này, chúng tôi khuyên bạn nên làm theo với bài học bằng cách tải xuống tập ví dụ của chúng tôi (nhấp chuột phải vào liên kết để lưu).
-			.row
-				.col-md-8
-					a(href="/images/photo/overview/01.png", target="_blank")
-						figure
-							img.img-thumbnail(src="/images/photo/overview/01.png", alt="")
-				.col
-					h4 Chú ý
-					p.lead Chúng tôi sẽ sử dụng Photoshop CC trong suốt hướng dẫn này để cho bạn thấy các tính năng của Photoshop. Nếu bạn đang sử dụng một phiên bản Photoshop cũ hơn như Photoshop CS5 chẳng hạn thì một số tính năng có thể hoạt động hơi khác một chút nhưng bạn vẫn có thể làm theo. Tuy nhiên, nếu bạn đang sử dụng Photoshop Elements thì hầu như không thể áp dụng theo bài học này.
-					h4 Tập tin mẫu
-					hr
+							p Hãy nhìn bảng đen trên, dựa vào bánh xe màu, chúng ta có một số các thuật ngữ và các phương pháp sử dụng màu sắc:
+
+							p 1. Hàng đầu tiên chúng ta đã hiểu trong bài trước: Màu cơ bản được tạo ra từ 3 màu: vàng, xanh và đỏ. Các màu khác trên bánh xe màu được tạo ra bằng cách trộn lẫn các màu cơ bản lại với nhau theo tỉ lệ nhất định.
+
+							p 2. Hàng thứ hai thật sự là thú vị: Nó nói đến một số phương pháp sử dụng màu, mỗi phương pháp trả lại có một hiệu ứng khác nhau. Phương pháp nay sẽ quyết định cho chúng ta một số phong cách và tạo cảm giác khác nhau đối với người dùng.
+					h4.mt-3 Phối màu kiểu đơn sắc (Monochromatic): 
+					p Đây là kiểu thiết kế đơn giản nhất, bạn chỉ cần chọn 1 mầu chính, sau đó cho thêm đen hoặc trắng và thế là có một bộ màu để dùng. Cách dùng màu này thường được dùng trong các bản vẽ wireframe vì nó khiến người xem ko bị mất tập trung vì màu sắc.
 					p
-						a.btn.btn-success(href="/images/photo/overview/squirrel.jpg", target="_blank") Tải về
+						a(href="/images/photo/image-4.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/photo/image-4.png", alt="")
+					p Đôi khi kiểu phối màu này được sử dụng sáng tạo và thành công, bằng cách dùng kết hợp với đen trắng, tạo ra một phong cách ấn tượng và đặc biệt. Ví dụ dưới đây là thiết kế của 1 website 
 					p
-						a.btn.btn-primary(href="/docs/photo/overview/layout.html") Next
+						a(href="/images/photo/mono-1.jpg", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/photo/mono-1.jpg", alt="")
+					p Điều khác biệt là với cách thiết kế này là ấn tượng về màu sắc chính rất lớn. Người dùng hầu như không bị “làm phiền” với các loại màu sắc khác. Thêm nữa người thiết kế thường sử dụng các bộ lọc màu hoặc dùng các hình ảnh flat dạng vector thay vì ảnh chụp. Điều đó cũng khiến cho các sản phẩm dạng này trở nên vô cùng hiện đại.
+
+					p
+						a(href="/images/photo/AAEAAQAAAAAAAAs-AAAAJDgyMjE0MzI1LTM1NzEtNGZjYy05YWI3LTNkM2VjNWNjNTY2Nw-620x465.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/photo/AAEAAQAAAAAAAAs-AAAAJDgyMjE0MzI1LTM1NzEtNGZjYy05YWI3LTNkM2VjNWNjNTY2Nw-620x465.png", alt="")
+					p Và cách thiết kế của app đặt vé máy bay QATAR, từ header, các item, text chính đến màu áo của nhân viên. Có thể nói nếu tôi ko biết tiếng Anh tôi cũng biết đây là 1 app của QATAR vì màu rượu vang rất đặc trưng của nó.
+
+					h4.mt-3 Phối màu tương đồng (Analogous):
+
+					p Cách phối màu tương đồng sẽ sử dụng ba màu nằm cạnh nhau trên bánh xe màu (ví dụ: đỏ, đỏ cam và đỏ tím). Cách này có thể dễ dàng được tìm thấy trong tự nhiên – chỉ cần nhìn vào màu sắc của cây cối vào mùa thu khi lá thay đổi màu sắc.
+
+					p
+						a(href="/images/photo/autumn-wheel2.jpg", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/photo/autumn-wheel2.jpg", alt="")
+					p Đặc điểm của cách phối màu tương đồng là tạo ra cảm giác yên bình và thoải mái (relax), do đó, nếu như bạn chuẩn bị thiết kế một website bán chăn ga gối đệm, có lẽ đây sẽ là một lựa chọn cho màu sắc. Giống như một thiết kế nội thất dưới đây:
+					p
+						a(href="/images/photo/blue-white-and-green-color-scheme.jpg", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/photo/blue-white-and-green-color-scheme.jpg", alt="")
+
+					h4.mt-3 Cách phối màu tương phản (Complementary Schemes)
+					p Hai màu đối diện của bánh xe màu được gọi là màu tương phản. Đặc trưng của cách phối màu này là tính đối lập lớn, tạo nên 1 sự chấn động, rất phù hợp để làm nổi bật một thứ gì đó. Nó cũng rất dễ tạo cảm giác chói mắt, phản cảm, khó chịu khi sử dụng nhiều.
+
+					p Trên bánh xe màu nó được thể hiện như sau:
+
+					p
+						a(href="/images/photo/image.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/photo/image.png", alt="")
+
+					p Một ví dụ tiêu biểu là logo của firefox sử dụng cách thiết kế này, sử dụng 2 màu chủ đạo là da cam và màu xanh. 
+					p
+						a(href="/images/photo/image-1.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/photo/image-1.png", alt="")
+					p Cách phối màu tương phản đặc biệt không phù hợp khi sử dụng với chữ viết, text.. nó gây khó chịu khi đọc nội dung. Ví dụ dưới đây thể hiện điều đó:
+					p
+						a(href="/images/photo/image-7.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/photo/image-7.png", alt="")
+
+					h4.mt-3 Kiểu phối màu tam giác cân (Split-Complementary hoặc Compound Harmony)
+					p Kiểu phối màu này sử dụng kết hợp giữa kiểu 1: Tương phản (complementary) và kiểu 2. Tương tự (Analogous), bằng cách làm như sau:
+					ul.pl-3
+						li Bước 1: Chọn 1 cặp tương phản
+						li Bước 2: Thay 1 một màu trong cặp màu tương phản đó bằng bằng 2 màu bên cạnh của nó.
+
+					p
+						a(href="/images/photo/image-5-1-620x654.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/photo/image-5-1-620x654.png", alt="")
+					
+					p Tại sao lại có loại phối màu này?
+
+					ul.pl-3
+						li Thứ 1 nó làm giảm bớt độ tương phản đi, giảm áp lực cho mắt người xem
+						li Thứ 2 nó cho nhiều lựa chọn màu hơn, đôi khi 2 màu đối lập là không đủ
+					p Căn phòng dưới đây sử dụng 3 màu chính: màu xanh nhạt đối lập với màu cam nhạt, sau đó màu cam nhạt chia sang màu vàng và màu đỏ. Rõ ràng căn phòng này có cách dùng màu sắc rất cá tính, nhưng không quá dị, bắt đầu thu hút người dùng. Nếu chỉ có màu cam và màu xanh chiếm lĩnh, có lẽ chúng ta ko muốn ngồi lên cái salon kia.
+
+					p
+						a(href="/images/photo/image-6-1.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/photo/image-6-1.png", alt="")
+					p Trong thời trang, đôi khi kiểu pha màu này cũng được sử dụng, tạo một cảm giác cá tính:
+
+					p
+						a(href="/images/photo/image-10.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/photo/image-10.png", alt="")
+					p
+						a(href="/images/photo/image-11.png", target="_blank")
+							figure
+								img.img-thumbnail(src="/images/photo/image-11.png", alt="")
+
