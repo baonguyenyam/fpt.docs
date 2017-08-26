@@ -1,0 +1,406 @@
+extends ../../_layout/layout
+
+block variables
+	- var title = 'JavaScript'
+	- var description = 'JavaScript là một ngôn ngữ lập trình của HTML và WEB. Nó là nhẹ và được sử dụng phổ biến nhất như là một phần của các trang web, mà sự thi hành của chúng cho phép Client-Side script tương tác với người sử dụng và tạo các trang web động. Nó là một ngôn ngữ chương trình thông dịch với các khả năng hướng đối tượng.'
+	- var bodyclass = 'node'
+	- var selected = 'Scripts';
+	- var href = '/docs/node/index';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			h2#01 Tìm hiểu về JavaScript
+			hr
+			.row
+				.col-lg-9.mb-4
+					p.lead JavaScript là một ngôn ngữ lập trình của HTML và WEB. Nó là nhẹ và được sử dụng phổ biến nhất như là một phần của các trang web, mà sự thi hành của chúng cho phép Client-Side script tương tác với người sử dụng và tạo các trang web động. Nó là một ngôn ngữ chương trình thông dịch với các khả năng hướng đối tượng.
+
+					.row
+						.col-lg-12
+							a(href="/images/node/js-cover.jpg", target="_blank")
+								figure
+									img.img-thumbnail(src="/images/node/js-cover.jpg", alt="")
+					.row
+						.col-lg-12
+							h3#02 JavaScript là gì?
+							p JavaScript được biết đến đầu tiên với tên Mocha, và sau đó là LiveScript, nhưng Hãng Netscape thay đổi tên của nó thành JavaScript, bởi vì sự phổ biến như là một hiện tượng của Java lúc bấy giờ. Giống Java, JavaScript có cú pháp tương tự C, nhưng nó gần với Self hơn Java. .js là phần mở rộng thường được dùng cho tập tin mã nguồn JavaScript.
+							p Lúc đầu, các lập trình viên đã không coi JavaScript là quan trọng, bởi vì nó không được xem như là một ngôn ngữ phát triển nghiêm túc như các ngôn ngữ phía máy chủ là Java, Ruby hay Python. JavaScript giống như phần kem phết trên bề mặt chiếc bánh vậy, nó chỉ chịu trách nhiệm về phần trải nghiệm người dùng. Nhưng ngôn ngữ này tiếp tục phát triển và ngày càng trở nên phổ biến, nó thường được đề xuất là ngôn ngữ lập trình nên học đầu tiên dành cho người mới bắt đầu. Nếu bạn sử dụng một framework JavaScript có tên là Node.js, thì giờ đây bạn có thể thực sự sử dụng JavaScript như là một ngôn ngữ phía máy chủ (server-side).
+							h3#03 Tại sao JavaScript được sử dụng rộng rãi?
+							p JavaScript là ngôn ngữ kịch bản phía máy khách (client-side) duy nhất. Do đó, nó được sử dụng trên hầu hết các trang web mà bạn nhìn thấy trên internet. Đây là một trong những lý do tại sao Codecademy cung cấp JavaScript là ngôn ngữ đầu tiên cho các học viên tìm hiểu. Không giống như các ngôn ngữ cổ điển đang được giảng dạy ở môn khoa học máy tính tại các trường đại học, JavaScript chắc chắn sẽ được sử dụng trong công việc nếu bạn là một nhà phát triển web.
+
+							p Ngoài ra, kể từ khi JavaScript chạy trong một trình duyệt, bạn không cần phải tải một phần mềm nào đó về để sử dụng nó. Tất cả bạn cần chỉ là một trình soạn thảo văn bản (như TextWrangler hay TextEdit) và một trình duyệt web. Đây là một lợi ích rõ ràng cho các lập trình viên mới vào nghề.
+
+							p Mặc cho những tiện ích của nó mang lại, các lập trình viên không coi JavaScript là ngôn ngữ tinh tế nhất - cú pháp của nó có vẻ lộn xộn. CoffeeScript là một nỗ lực để thay đổi điều này - nó làm cho JavaScript trông giống như Ruby hay Python bằng cách loại bỏ các dấu ngoặc xoắn, dấu chấm phẩy, bổ sung thêm khoảng trắng và căn lề thụt đầu dòng. Những thay đổi này làm cho code dễ đọc hơn, cho dù bạn đang xem lại phần code cũ của mình và cố gắng nhớ ra nó dùng để làm gì, hay đang làm việc chung trên một dự án với các lập trình viên khác.
+							h3#04 JavaScript có thể làm được những gì
+							p Đầu tiên, như chúng ta đã nói ở trên, JavaScript có thể được sử dụng để xây dựng toàn bộ một trang web nếu sử dụng với Node.js và MongoDB (một cơ sở dữ liệu). Node.js là bất đồng bộ, điều đó làm cho nó có tính dễ mở rộng và rất phù hợp cho tất cả các dữ liệu lớn ở ngoài kia. Ví dụ, một nhà phát triển đã nhận thấy việc gửi 600 email với Node.js chỉ mất 3 giây, trong khi đó phải mất 30 giây với PHP. MongoDB là một cơ sở dữ liệu hướng tài liệu (document-oriented) được xây dựng phục vụ cho khả năng mở rộng nhưng các chức năng nó cung cấp vẫn tốt nhất cho cả hai thế giới.
+
+							p JavaScript hiện nay là một trong những cách ưa thích để phát triển ứng dụng web. Đó là ngôn ngữ được sử dụng nhiều nhất trên Github. Rất nhiều các trang web được xây dựng với Node, bao gồm cả các trang web lớn như Klout, Storify và Yammer. Việc có thể sử dụng cùng một ngôn ngữ trên cả phần front-end và back-end làm cho cuộc sống của các nhà phát triển phần mềm trở nên dễ dàng hơn.
+
+							p Riêng bản thân nó, JavaScript chịu trách nhiệm về các hiệu ứng động như các cửa sổ pop-up và với AJAX, những trang web có thể hiển thị dữ liệu mới mà không cần phải refresh lại trang. Bạn có thể xem một ví dụ của AJAX trong thực tế ở đây - bạn thấy thế nào khi nhấp chuột vào một hình ảnh trên trang đó, thì địa chỉ URL thay đổi và nó hiển thị dữ liệu mới tương ứng mà không cần phải refresh lại toàn bộ trang. AJAX là cụm từ viết tắt của Asynchronous JavaScript And Xml, vì vậy nó không thể được sử dụng ngoài JavaScript.
+							h3#05 JavaScript có phải là ngôn ngữ của tương lai?
+							p HTML5 được cho là sự kết thúc của Flash, nhưng nếu HTML5 là công cụ tổ chức, thì JavaScript soán vị trí của phần tử Flash. Những video hoặc hình ảnh trực quan trước đây thường phải chạy trong một plugin thì bây giờ được phục vụ với JavaScript, chạy trong trình duyệt của bạn, vì vậy bạn không cần phải tải về một plugin của bên thứ ba để xem nó, và các nhà phát triển biết rằng người dùng sẽ có cùng trải nghiệm.
+
+							p Kể từ khi Javascript bắt đầu như là ngôn ngữ trông giống Java nhưng không có khả năng thực hiện cùng một tác vụ, thì nó đã tạo ra một chút ngạc nhiên cho những ai đặt cược vào sự phát triển ngày càng lớn mạnh của nó. JavaScript cũng không phải là ngôn ngữ dễ viết nhất - các nhà phát triển nói rằng Ruby hay Python được viết theo cách mà bạn mong muốn, bởi vậy cú pháp của chúng trông tự nhiên hơn. Nhưng một ngôn ngữ chỉ tốt nhất khi có các công cụ đi kèm với nó, và nhờ sự bổ sung như Node.js, jQuery (thư viện), JSON (JavaScript Object Notation) và MongoDB, JavaScript sẽ có một tương lai tươi sáng.
+							hr 
+					.row
+						.col-lg-12
+							h3#06 Khai báo biến trong javascript
+							p Để khai báo một biến ta sử dụng từ khóa 
+								code var [tenbien]
+								| 
+								| và 
+								code let [tenbien]
+							.row
+								.col-lg-12
+									pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.vs.
+										var username;
+										var _username;
+										var __username;
+										var username90;
+										var 90baonguyen; => Sai
+								.col-lg-12
+									ul.pl-4
+										li Tên biến phải là các chữ không dấu viết  hoa hoặc viết thường, các chữ số từ 0-9 và dấu gạch dưới (_).
+										li Tên biến bắt đầu phải là chữ hoặc dấu gạch dưới (_), nếu bắt đầu bằng số là sai 
+										li Tên biến có thể đặt dài hay ngắn tùy vào lập trình viên.
+							.row
+								.col-lg-12
+									pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.vs.
+										var username, _username, __username, username90;
+								.col-lg-12
+									p Ngoài cách khai báo như trên ta còn có cách khai báo nhiều biến cùng một lúc bằng cách viết chúng liên tiếp với nhau và cách nhau bởi dấu phẩy.
+
+							h3#07 Gán kiểu giá trị cho biến
+							.row
+								.col-lg-12
+									pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.vs.
+										/* Biến website đang kiểu String */
+										var website = 'baonguyen.com';
+										
+										/* Biến danhsach đang kiểu Int và biến bang là Array, biến data là Object */
+										var danhsach = 12,
+										^bang = ['table 1', 'table 2'],
+										^data = {
+											^^id: 1,
+											^^ten: 'Nguyen',
+											^^tuoi: 30
+										^};
+								.col-lg-12
+									p Trong Javascript rất hạn chế về kiểu dữ liệu nhưng bù lại cơ chế xử lý kiểu dữ liệu của nó rất linh hoạt giúp lập trình viên có thể chuyển đổi một cách dễ dàng, bởi mọi kiểu dữ liệu đều có thể quy về đối tượng và mỗi đối tượng ta có thể bổ sung các phương thức xử lý riêng.
+
+									p Giống như php, để xác định biến có kiểu dữ liệu là gì thì ta dựa vào giá trị mà nó đang có, có nghĩa khi bạn gán một con số không có dấu chấm động thì nó sẽ là kiểu INT, nếu gán một chuỗi thì là kiểu String.
+
+							h3#08 Dấu chấm phẩy là tùy ý
+							.row
+								.col-lg-12
+									pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.vs.
+										var website = 'baonguyen.com'
+										var danhsach = 12
+								.col-lg-12
+									p Các lệnh đơn giản trong JavaScript nói chung được theo sau bởi một ký tự dấu chấm phảy, mà khi chúng có trong C, C++, và Java. Tuy nhiên, JavaScript cho phép bạn bỏ quên dấu chấm phảy này nếu mỗi lệnh của bạn được đặt trên một dòng riêng rẽ. Ví dụ, code sau có thể được viết mà không sử dụng dấu chấm phảy:
+
+							.row
+								.col-lg-12
+									pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.vs.
+										var WebSite = 'baonguyen.com'; var website = 12
+								.col-lg-12
+									p Nhưng khi được định dạng trong một dòng đơn, bạn phải sử dụng các dấu chấm phảy:
+									p JavaScript là ngôn ngữ phân biệt kiểu chữ (case-sensitive). Nghĩa là các từ khóa ngôn ngữ, biến, tên hàm, và bất kỳ định danh nào khác phải luôn luôn được soạn đúng.
+							h3#09 Khi nào nên sử dụng let để khai báo biến
+							p Với phạm vi hoạt động hẹp 
+								code let
+								| 
+								| thường dùng để khai báo các biến mang tính chất tạm thời, nghĩa là nó chỉ sống trong một phạm vi hoạt động của khối đó thôi, không sử dụng qua vị trí khác.
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/8cv44mzm/1/embed/js,result/")
+								.col-lg-12
+									p Như vậy biến data sau khi kết thúc lệnh if nó vẫn tồn tại => dư thừa không cần thiết. 
+							p Quay lại bài toán ta sử dụng từ khóa let như sau:
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/8cv44mzm/3/embed/js,result/")
+								.col-lg-12
+									p Đoạn code này chạy bình thường, tuy nhiến nếu bạn cố ý document.write(data) như ví dụ trên thì sẽ xuất hiện lỗi biến data không tồn tại vì biến data chỉ tồn tại bên trong lệnh if.
+							h3#10 Phạm vi biến trong JavaScript
+							p Phạm vi của một biến là vùng chương trình trong đó nó được định nghĩa. Biến JavaScript chỉ có hai phạm vi sau:
+							.row
+								.col-lg-12
+									p Biến Global − Một biến Global có phạm vi chung, nghĩa là nó có thể được định nghĩa bất cứ đâu trong JavaScript code.
+
+									p Biến Local − Một biến Local sẽ chỉ nhìn thấy trong một hàm, nơi nó được định nghĩa. Các tham số hàm luôn luôn là nội bộ cho hàm đó.
+
+									p Trong thân của một hàm, một biến Local có quyền ưu tiên cao hơn biến Global với cùng một tên. Nếu bạn khai báo một biến Local hoặc tham số hàm với cùng tên với biến Global, bạn ẩn biến Global đó một cách hiệu quả. Bạn xem ví dụ sau:
+									script(async, src="//jsfiddle.net/baonguyenyam/8cv44mzm/7/embed/js,result/")
+
+							hr 
+							h3#11 Function trong JavaScript
+							p Trong Javascript để tạo một function thì thông thường chúng ta sử dụng hai cách sau:
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/3jrfb8ap/2/embed/js,result/")
+							h5#12 Arrow function
+							p Với phiển bản ES6 trở lên thì bạn có thêm một cách đó là sử dụng dấu mũi tên => rất phức tạp, chi tiết thế nào thì chúng ta cùng tìm hiểu nhé. Bạn có thẻ coi như đây là một tính năng mới của Javascript.
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/3jrfb8ap/3/embed/js,result/")
+							h5#13 Map
+							p Ví dụ đầu tiên ta sử dụng kết hợp hàm map của array trong Javascript, hàm này giống như vòng lặp vậy, nó có một tham số truyền vào và đó là một callback function, hàm callback function này sẽ có hai tham số truyền vào đại diện cho value và key của mỗi phần tử trong mảng.
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/3jrfb8ap/5/embed/js,result/")
+									p Hãy mở console.log để xem kết quả 
+							h5#14 Khắc phục nhược điểm với this trong closure function
+							p Nếu bạn đã từng đọc qua bài viết hàm bind trong javascript thì từ version ES5 trở về trước sẽ có nhược điểm với đối tượng this đó là phạm vi hoạt động, và trong ES5 có sử dụng hàm bind để khắc phục. Vấn đề này được khắc phục hoàn toàn trong ES6 bằng cách sử dụng hàm arrow function.
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/3jrfb8ap/7/embed/js,result/")
+
+							p Với ES6 trở lên thì viết như sau:
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/3jrfb8ap/6/embed/js,result/")
+
+
+							h3#15 Toán tử toán học trong JavaScript
+							p Thông thường chúng ta sử dụng toán tử toán học như cộng, trừ, nhận, chia, ... để thực xử lý thay đổi giá trị các biến trong javascript. Sau đây là bảng danh sách các toán tử hay dùng.
+
+							.table-responsive
+								table.table.table.table-bordered.thead-inverse.table-striped
+									thead
+										tr
+											th Toán tử	
+											th.mw-200 Mô tả
+											th Code
+									tbody
+										tr
+											td % (Phép chia lấy phần dư)
+											td.mw-200 Kết quả là phần dư của phép chia.
+											td 
+												script(async, src="//jsfiddle.net/baonguyenyam/L39mp1za/1/embed/js,result/")
+											
+										tr
+											td ++ (Tăng lên 1)
+											td.mw-200 Tăng giá trị integer lên 1
+											td 
+												script(async, src="//jsfiddle.net/baonguyenyam/L39mp1za/2/embed/js,result/")
+											
+										tr
+											td += (Phép cộng và gán)
+											td.mw-200 Nó cộng giá trị toán hạng phải với toán hạng trái và gán kết quả cho toán hạng trái
+											td 
+												script(async, src="//jsfiddle.net/baonguyenyam/L39mp1za/4/embed/js,result/")
+										tr
+											td Toán tử điều kiện (? :)
+											td.mw-200 Toán tử điều kiện đầu tiên tính toán một biểu thức để xem nó là true hoặc false và sau đó thực thi một trong hai lệnh đã cung cấp phụ thuộc vào kết quả của sự tính toán. Nếu điều kiện là true ? Thì giá trị X : Nếu không thì giá trị Y
+
+											td 
+												script(async, src="//jsfiddle.net/baonguyenyam/L39mp1za/5/embed/js,result/")
+										tr
+											td Toán tử typeof
+											td.mw-200 
+												p Toán tử typeof là một toán tử một ngôi mà được đặt trước toán hạng đơn của nó, mà có thể là bất cứ kiểu nào. Giá trị của nó là một chuỗi chỉ dẫn kiểu dữ liệu của toán hạng. Dưới đây là danh sách các giá trị trả về cho toán tử typeof.
+
+												table.table.table-bordered.table-sm(style="min-width:initial")
+													thead
+														tr
+															th Kiểu	
+															th Chuỗi trả về
+													tbody
+														tr
+															td Number
+															td 
+																code "number"
+														tr
+															td String
+															td 
+																code "string"
+														tr
+															td Boolean
+															td 
+																code "boolean"
+														tr
+															td Object
+															td 
+																code "object"
+														tr
+															td Hàm
+															td 
+																code "function"
+														tr
+															td Undefined
+															td 
+																code "undefined"
+														tr
+															td Null
+															td 
+																code "object"
+														
+
+											td 
+												script(async, src="//jsfiddle.net/baonguyenyam/ge6vk0bg/embed/js,result/")
+											
+										tr
+											td Toán tử quan hệ
+											td.mw-200 Toán tử quan hệ dùng để thể hiện mối quan hệ giữa hai toán tử trong toán học, còn trong lập trình thì ta dùng toán tử quan hệ để nói đến mối quan hệ giữa hai biến hoặc hai giá trị nào đó. Kết quả của toán tử quan hệ sẽ trả về một trong hai giá trị TRUE hoặc FALSE.
+
+											td 
+												script(async, src="//jsfiddle.net/baonguyenyam/ge6vk0bg/1/embed/js,result/")
+										tr
+											td Toán tử luận lý
+											td.mw-200 Toán tử luân lý dùng để kết hợp hay phủ định biểu thức có chứa các toán tử quan hệ, kết quả của sự kết hợp sẽ có giá trị là TRUE hoặc FALSE.
+
+											td 
+												script(async, src="//jsfiddle.net/baonguyenyam/t30x46g3/embed/js,result/")
+										tr
+											td Lưu ý với toán tử so sánh bằng
+											td.mw-200 
+												p Chúng ta có hai toán tử so sánh bằng đó là toán tử 
+													code == 
+													| 
+													| và 
+													code ===
+													| 
+													| , vậy sự khác nhau giữa hai toán tử này như thế nào? Khi nào thì sử dụng các toán tử đó? Chúng ta cùng tìm hiểu nhé.
+												p Khác với các ngôn ngữ cao cấp khác như C# thì khi khai báo biến bạn không cần phải khai báo kiểu dữ liệu cho biến mà nó sẽ dựa vào giá trị mà bạn truyền cho biến, vì vậy bạn có thể chuyển đổi giá trị cho biến với nhiều kiểu dữ liệu khác nhau. 
+
+
+											td 
+												script(async, src="//jsfiddle.net/baonguyenyam/jscbmvny/embed/js,result/")
+							h3#16 Vòng lặp
+							p Trong khi viết một chương trình, bạn có thể gặp một tình huống mà bạn cần thực hiện một hành động lặp đi lặp lại. Trong những tính huống này, bạn sẽ cần viết các lệnh vòng lặp để giảm số dòng code.
+
+							h5#17 Vòng lặp while
+							p Vòng lặp cơ bản nhất trong JavaScript là vòng lặp while sẽ được bàn luận trong chương này. Mục đích của vòng lặp while là để thực thi một lệnh hoặc khối code lặp đi lặp lại miễn là expression – biểu thức là true. Một khi biểu thức trở thành false, vòng lặp kết thúc.
+
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/xn732dsw/embed/js,result/")
+							h5#18 Vòng lặp do...while
+
+							p Vòng lặp do...while là tương tự như vòng lặp while ngoại trừ việc kiểm tra điều kiện xảy ra ở phần cuối vòng lặp. Điều này có nghĩa là vòng lặp sẽ luôn luôn được thực thi ít nhất một lần, ngay cả khi điều kiện là false.
+
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/4o6tqLwv/embed/js,result/")
+							h5#19 Vòng lặp for
+
+							p Vòng lặp 'for' là mẫu vòng lặp gọn nhất. Nó bao gồm 3 phần quan trọng:
+
+							ul.pl-3 
+								li Phần khởi tạo vòng lặp – initialization, nơi chúng ta khởi tạo phép tính tới một giá trị bắt đầu. Lệnh khởi tạo được thực thi trước khi vòng lặp bắt đầu.
+
+								li Phần kiểm tra lệnh – test statement mà sẽ kiểm tra nếu một điều kiện đã cho là true hoặc không. Nếu điều kiện là true, thì khi đó code đã cho bên trong vòng lặp sẽ được thực thi, nếu không thì điều khiển sẽ thoát ra khỏi vòng lặp.
+
+								li Phần lệnh lặp lại – iteration statement, nơi bạn có thể tăng hoặc giảm phép tính của bạn.
+
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/kn8fbrdg/embed/js,result/")
+							h5#20 Vòng lặp for...in
+
+							p Vòng lặp for...in được sử dụng để lặp qua các thuộc tính của một đối tượng. Khi chúng ta vẫn chưa bàn luận về đối tượng, bạn có thể không cảm thấy thoải mái với vòng lặp này. Nhưng một khi bạn hiểu cách các đối tượng vận hành trong JavaScript, bạn sẽ thấy vòng lặp này rất hữu ích. Trong mỗi lần lặp, một thuộc tính từ object – đối tượng được gán tới variablename - tên biến và vòng lặp này tiếp tục tới khi hết tất cả thuộc tính của đối tượng.
+
+
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/vLjjm77x/embed/js,result/")
+							h3#21 Điều khiển vòng lặp trong JavaScript
+
+
+							p JavaScript cung cấp sự điều khiển cao để xử lý các lệnh vòng lặp và lệnh switch. Có thể có một tình huống khi bạn cần thoát khỏi vòng lặp mà không phải đi tới điểm cuối của nó. Cũng có thể có tình huống khi bạn muốn nhảy qua một phần của khối code và bắt đầu vòng lặp tiếp theo.
+							p Để xử lý các tình huống trên, JavaScript cung cấp lệnh break và continue. Những lệnh này được sử dụng để thoát khỏi ngay lập tức bất kỳ vòng lặp nào hoặc để bắt đầu vòng lặp tiếp theo của bất kỳ vòng lặp tương ứng.
+
+							h5#22 Lệnh break
+							p Lệnh break, đã được giới thiệu ngắn gọn với lệnh switch, được sử dụng để thoát sớm ra khỏi một vòng lặp, thoát khỏi khu vực dấu ngoặc ôm.
+
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/9twe4ct2/embed/js,result/")
+							h5#23 Lệnh continue
+
+							p Lệnh continue nói cho bộ thông dịch ngay lập tức bắt đầu lần lặp tiếp theo của vòng lặp và nhảy qua khối code còn lại. Khi một lệnh continue được bắt gặp, luồng chương trình di chuyển ngay lập tức tới biểu thức kiểm tra và nếu điều kiện còn true, sau đó nó bắt đầu lần lặp tiếp theo, nếu không thì điều khiển thoát khỏi vòng lặp.
+
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/9twe4ct2/embed/js,result/")
+
+
+
+
+				.col-lg-3.d-none.d-xl-block
+					.jumbotron.pt-2.pb-2.pl-3.pr-3.bd-toc
+						h3 Overview 
+						ol.pl-4
+							li
+								a(href="#01") Tìm hiểu về JavaScript
+							li
+								a(href="#02") JavaScript là gì?
+							li
+								a(href="#03") Tại sao JavaScript được sử dụng rộng rãi?
+							li
+								a(href="#04") JavaScript có thể làm được những gì
+							li
+								a(href="#05") JavaScript có phải là ngôn ngữ của tương lai?
+						h3 JavaScript
+						ol.pl-4
+							li
+								a(href="#06") Khai báo biến trong javascript
+							li
+								a(href="#07") Gán kiểu giá trị cho biến
+							li
+								a(href="#08") Dấu chấm phẩy là tùy ý
+							li
+								a(href="#09") Khi nào nên sử dụng let để khai báo biến
+							li
+								a(href="#10") Phạm vi biến trong JavaScript
+							li
+								a(href="#11") Function trong JavaScript
+								ol.pl-4
+									li
+										a(href="#12") Arrow function
+									li
+										a(href="#13") Map
+									li
+										a(href="#14") Khắc phục nhược điểm với this trong closure function
+							li
+								a(href="#15") Toán tử toán học trong JavaScript
+							li
+								a(href="#16") Vòng lặp
+								ol.pl-4
+									li
+										a(href="#17") Vòng lặp while
+									li
+										a(href="#18") Vòng lặp do...while
+									li
+										a(href="#19") Vòng lặp for
+									li
+										a(href="#20") Vòng lặp for...in
+							li
+								a(href="#21") Điều khiển vòng lặp trong JavaScript
+								ol.pl-4
+									li
+										a(href="#22") Lệnh break
+									li
+										a(href="#23") Lệnh continue
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
