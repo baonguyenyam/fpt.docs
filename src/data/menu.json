@@ -23,7 +23,7 @@
     {
         "Name": "Design",
         "URL": [
-			{ "Name": "Overview", "URL": "/docs/design/ps", "Icon": "setup_icon.png" },
+            { "Name": "Overview", "URL": "/docs/design/ps", "Icon": "setup_icon.png" },
             { "Name": "Tools", "URL": "/docs/design/ps/tools.html", "Icon": "setup_icon.png" },
             { "Name": "Brushes", "URL": "/docs/design/ps/bt.html", "Icon": "setup_icon.png" },
             { "Name": "Text", "URL": "/docs/design/ps/text.html", "Icon": "setup_icon.png" },
@@ -39,17 +39,16 @@
         "Icon": "design.png"
     },
     {
-		"Name": "Photo",
+        "Name": "Photo",
         "URL": [
-			{ "Name": "Lý thuyết màu", "URL": "/docs/photo/overview/ltm.html", "Icon": "setup_icon.png" },
-			{ "Name": "Typography", "URL": "/docs/photo/overview/typography.html", "Icon": "setup_icon.png" },
-			{ "Name": "Layout", "URL": "/docs/photo/overview/layout.html", "Icon": "setup_icon.png" }
+            { "Name": "Lý thuyết màu", "URL": "/docs/photo/overview/ltm.html", "Icon": "setup_icon.png" }
         ],
         "Icon": "photo.png"
     },
     {
-        "Name": "NodeJS",
+        "Name": "Scripts",
         "URL": [
+            { "Name": "JavaScript", "URL": "/docs/node", "Icon": "setup_icon.png" },
             { "Name": "PUG/JADE", "URL": "/docs/node/pug.html", "Icon": "setup_icon.png" },
             { "Name": "SASS/LESS", "URL": "/docs/node/sass.html", "Icon": "setup_icon.png" },
             { "Name": "Gulp", "URL": "/docs/node/gulp.html", "Icon": "setup_icon.png" },

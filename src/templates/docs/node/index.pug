@@ -1,0 +1,1168 @@
+extends ../../_layout/layout
+
+block variables
+	- var title = 'JavaScript'
+	- var description = 'JavaScript là một ngôn ngữ lập trình của HTML và WEB. Nó là nhẹ và được sử dụng phổ biến nhất như là một phần của các trang web, mà sự thi hành của chúng cho phép Client-Side script tương tác với người sử dụng và tạo các trang web động. Nó là một ngôn ngữ chương trình thông dịch với các khả năng hướng đối tượng.'
+	- var bodyclass = 'node'
+	- var selected = 'Scripts';
+	- var href = '/docs/node/index';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			h2#01 Tìm hiểu về JavaScript
+			hr
+			.row
+				.col-lg-9.mb-4
+					p.lead JavaScript là một ngôn ngữ lập trình của HTML và WEB. Nó là nhẹ và được sử dụng phổ biến nhất như là một phần của các trang web, mà sự thi hành của chúng cho phép Client-Side script tương tác với người sử dụng và tạo các trang web động. Nó là một ngôn ngữ chương trình thông dịch với các khả năng hướng đối tượng.
+
+					.row
+						.col-lg-12
+							a(href="/images/node/js-cover.jpg", target="_blank")
+								figure
+									img.img-thumbnail(src="/images/node/js-cover.jpg", alt="")
+					.row
+						.col-lg-12
+							h3#02 JavaScript là gì?
+							p JavaScript được biết đến đầu tiên với tên Mocha, và sau đó là LiveScript, nhưng Hãng Netscape thay đổi tên của nó thành JavaScript, bởi vì sự phổ biến như là một hiện tượng của Java lúc bấy giờ. Giống Java, JavaScript có cú pháp tương tự C, nhưng nó gần với Self hơn Java. .js là phần mở rộng thường được dùng cho tập tin mã nguồn JavaScript.
+							p Lúc đầu, các lập trình viên đã không coi JavaScript là quan trọng, bởi vì nó không được xem như là một ngôn ngữ phát triển nghiêm túc như các ngôn ngữ phía máy chủ là Java, Ruby hay Python. JavaScript giống như phần kem phết trên bề mặt chiếc bánh vậy, nó chỉ chịu trách nhiệm về phần trải nghiệm người dùng. Nhưng ngôn ngữ này tiếp tục phát triển và ngày càng trở nên phổ biến, nó thường được đề xuất là ngôn ngữ lập trình nên học đầu tiên dành cho người mới bắt đầu. Nếu bạn sử dụng một framework JavaScript có tên là Node.js, thì giờ đây bạn có thể thực sự sử dụng JavaScript như là một ngôn ngữ phía máy chủ (server-side).
+							h3#03 Tại sao JavaScript được sử dụng rộng rãi?
+							p JavaScript là ngôn ngữ kịch bản phía máy khách (client-side) duy nhất. Do đó, nó được sử dụng trên hầu hết các trang web mà bạn nhìn thấy trên internet. Đây là một trong những lý do tại sao Codecademy cung cấp JavaScript là ngôn ngữ đầu tiên cho các học viên tìm hiểu. Không giống như các ngôn ngữ cổ điển đang được giảng dạy ở môn khoa học máy tính tại các trường đại học, JavaScript chắc chắn sẽ được sử dụng trong công việc nếu bạn là một nhà phát triển web.
+
+							p Ngoài ra, kể từ khi JavaScript chạy trong một trình duyệt, bạn không cần phải tải một phần mềm nào đó về để sử dụng nó. Tất cả bạn cần chỉ là một trình soạn thảo văn bản (như TextWrangler hay TextEdit) và một trình duyệt web. Đây là một lợi ích rõ ràng cho các lập trình viên mới vào nghề.
+
+							p Mặc cho những tiện ích của nó mang lại, các lập trình viên không coi JavaScript là ngôn ngữ tinh tế nhất - cú pháp của nó có vẻ lộn xộn. CoffeeScript là một nỗ lực để thay đổi điều này - nó làm cho JavaScript trông giống như Ruby hay Python bằng cách loại bỏ các dấu ngoặc xoắn, dấu chấm phẩy, bổ sung thêm khoảng trắng và căn lề thụt đầu dòng. Những thay đổi này làm cho code dễ đọc hơn, cho dù bạn đang xem lại phần code cũ của mình và cố gắng nhớ ra nó dùng để làm gì, hay đang làm việc chung trên một dự án với các lập trình viên khác.
+							h3#04 JavaScript có thể làm được những gì
+							p Đầu tiên, như chúng ta đã nói ở trên, JavaScript có thể được sử dụng để xây dựng toàn bộ một trang web nếu sử dụng với Node.js và MongoDB (một cơ sở dữ liệu). Node.js là bất đồng bộ, điều đó làm cho nó có tính dễ mở rộng và rất phù hợp cho tất cả các dữ liệu lớn ở ngoài kia. Ví dụ, một nhà phát triển đã nhận thấy việc gửi 600 email với Node.js chỉ mất 3 giây, trong khi đó phải mất 30 giây với PHP. MongoDB là một cơ sở dữ liệu hướng tài liệu (document-oriented) được xây dựng phục vụ cho khả năng mở rộng nhưng các chức năng nó cung cấp vẫn tốt nhất cho cả hai thế giới.
+
+							p JavaScript hiện nay là một trong những cách ưa thích để phát triển ứng dụng web. Đó là ngôn ngữ được sử dụng nhiều nhất trên Github. Rất nhiều các trang web được xây dựng với Node, bao gồm cả các trang web lớn như Klout, Storify và Yammer. Việc có thể sử dụng cùng một ngôn ngữ trên cả phần front-end và back-end làm cho cuộc sống của các nhà phát triển phần mềm trở nên dễ dàng hơn.
+
+							p Riêng bản thân nó, JavaScript chịu trách nhiệm về các hiệu ứng động như các cửa sổ pop-up và với AJAX, những trang web có thể hiển thị dữ liệu mới mà không cần phải refresh lại trang. Bạn có thể xem một ví dụ của AJAX trong thực tế ở đây - bạn thấy thế nào khi nhấp chuột vào một hình ảnh trên trang đó, thì địa chỉ URL thay đổi và nó hiển thị dữ liệu mới tương ứng mà không cần phải refresh lại toàn bộ trang. AJAX là cụm từ viết tắt của Asynchronous JavaScript And Xml, vì vậy nó không thể được sử dụng ngoài JavaScript.
+							h3#05 JavaScript có phải là ngôn ngữ của tương lai?
+							p HTML5 được cho là sự kết thúc của Flash, nhưng nếu HTML5 là công cụ tổ chức, thì JavaScript soán vị trí của phần tử Flash. Những video hoặc hình ảnh trực quan trước đây thường phải chạy trong một plugin thì bây giờ được phục vụ với JavaScript, chạy trong trình duyệt của bạn, vì vậy bạn không cần phải tải về một plugin của bên thứ ba để xem nó, và các nhà phát triển biết rằng người dùng sẽ có cùng trải nghiệm.
+
+							p Kể từ khi Javascript bắt đầu như là ngôn ngữ trông giống Java nhưng không có khả năng thực hiện cùng một tác vụ, thì nó đã tạo ra một chút ngạc nhiên cho những ai đặt cược vào sự phát triển ngày càng lớn mạnh của nó. JavaScript cũng không phải là ngôn ngữ dễ viết nhất - các nhà phát triển nói rằng Ruby hay Python được viết theo cách mà bạn mong muốn, bởi vậy cú pháp của chúng trông tự nhiên hơn. Nhưng một ngôn ngữ chỉ tốt nhất khi có các công cụ đi kèm với nó, và nhờ sự bổ sung như Node.js, jQuery (thư viện), JSON (JavaScript Object Notation) và MongoDB, JavaScript sẽ có một tương lai tươi sáng.
+							hr 
+					.row
+						.col-lg-12
+							h3#06 Khai báo biến trong javascript
+							p Để khai báo một biến ta sử dụng từ khóa 
+								code var [tenbien]
+								| 
+								| và 
+								code let [tenbien]
+							.row
+								.col-lg-12
+									pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.vs.
+										var username;
+										var _username;
+										var __username;
+										var username90;
+										var 90baonguyen; => Sai
+								.col-lg-12
+									ul.pl-4
+										li Tên biến phải là các chữ không dấu viết  hoa hoặc viết thường, các chữ số từ 0-9 và dấu gạch dưới (_).
+										li Tên biến bắt đầu phải là chữ hoặc dấu gạch dưới (_), nếu bắt đầu bằng số là sai 
+										li Tên biến có thể đặt dài hay ngắn tùy vào lập trình viên.
+							.row
+								.col-lg-12
+									pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.vs.
+										var username, _username, __username, username90;
+								.col-lg-12
+									p Ngoài cách khai báo như trên ta còn có cách khai báo nhiều biến cùng một lúc bằng cách viết chúng liên tiếp với nhau và cách nhau bởi dấu phẩy.
+
+							h3#07 Gán kiểu giá trị cho biến
+							.row
+								.col-lg-12
+									pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.vs.
+										/* Biến website đang kiểu String */
+										var website = 'baonguyen.com';
+										
+										/* Biến danhsach đang kiểu Int và biến bang là Array, biến data là Object */
+										var danhsach = 12,
+										^bang = ['table 1', 'table 2'],
+										^data = {
+											^^id: 1,
+											^^ten: 'Nguyen',
+											^^tuoi: 30
+										^};
+								.col-lg-12
+									p Trong Javascript rất hạn chế về kiểu dữ liệu nhưng bù lại cơ chế xử lý kiểu dữ liệu của nó rất linh hoạt giúp lập trình viên có thể chuyển đổi một cách dễ dàng, bởi mọi kiểu dữ liệu đều có thể quy về đối tượng và mỗi đối tượng ta có thể bổ sung các phương thức xử lý riêng.
+
+									p Giống như php, để xác định biến có kiểu dữ liệu là gì thì ta dựa vào giá trị mà nó đang có, có nghĩa khi bạn gán một con số không có dấu chấm động thì nó sẽ là kiểu INT, nếu gán một chuỗi thì là kiểu String.
+
+							h3#08 Dấu chấm phẩy là tùy ý
+							.row
+								.col-lg-12
+									pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.vs.
+										var website = 'baonguyen.com'
+										var danhsach = 12
+								.col-lg-12
+									p Các lệnh đơn giản trong JavaScript nói chung được theo sau bởi một ký tự dấu chấm phảy, mà khi chúng có trong C, C++, và Java. Tuy nhiên, JavaScript cho phép bạn bỏ quên dấu chấm phảy này nếu mỗi lệnh của bạn được đặt trên một dòng riêng rẽ. Ví dụ, code sau có thể được viết mà không sử dụng dấu chấm phảy:
+
+							.row
+								.col-lg-12
+									pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.vs.
+										var WebSite = 'baonguyen.com'; var website = 12
+								.col-lg-12
+									p Nhưng khi được định dạng trong một dòng đơn, bạn phải sử dụng các dấu chấm phảy:
+									p JavaScript là ngôn ngữ phân biệt kiểu chữ (case-sensitive). Nghĩa là các từ khóa ngôn ngữ, biến, tên hàm, và bất kỳ định danh nào khác phải luôn luôn được soạn đúng.
+							h3#09 Khi nào nên sử dụng let để khai báo biến
+							p Với phạm vi hoạt động hẹp 
+								code let
+								| 
+								| thường dùng để khai báo các biến mang tính chất tạm thời, nghĩa là nó chỉ sống trong một phạm vi hoạt động của khối đó thôi, không sử dụng qua vị trí khác.
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/8cv44mzm/1/embed/js,result/")
+								.col-lg-12
+									p Như vậy biến data sau khi kết thúc lệnh if nó vẫn tồn tại => dư thừa không cần thiết. 
+							p Quay lại bài toán ta sử dụng từ khóa let như sau:
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/8cv44mzm/3/embed/js,result/")
+								.col-lg-12
+									p Đoạn code này chạy bình thường, tuy nhiến nếu bạn cố ý document.write(data) như ví dụ trên thì sẽ xuất hiện lỗi biến data không tồn tại vì biến data chỉ tồn tại bên trong lệnh if.
+							h3#10 Phạm vi biến trong JavaScript
+							p Phạm vi của một biến là vùng chương trình trong đó nó được định nghĩa. Biến JavaScript chỉ có hai phạm vi sau:
+							.row
+								.col-lg-12
+									p Biến Global − Một biến Global có phạm vi chung, nghĩa là nó có thể được định nghĩa bất cứ đâu trong JavaScript code.
+
+									p Biến Local − Một biến Local sẽ chỉ nhìn thấy trong một hàm, nơi nó được định nghĩa. Các tham số hàm luôn luôn là nội bộ cho hàm đó.
+
+									p Trong thân của một hàm, một biến Local có quyền ưu tiên cao hơn biến Global với cùng một tên. Nếu bạn khai báo một biến Local hoặc tham số hàm với cùng tên với biến Global, bạn ẩn biến Global đó một cách hiệu quả. Bạn xem ví dụ sau:
+									script(async, src="//jsfiddle.net/baonguyenyam/8cv44mzm/7/embed/js,result/")
+
+							hr 
+							h3#11 Function trong JavaScript
+							p Trong Javascript để tạo một function thì thông thường chúng ta sử dụng hai cách sau:
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/3jrfb8ap/2/embed/js,result/")
+							h5#12 Arrow function
+							p Với phiển bản ES6 trở lên thì bạn có thêm một cách đó là sử dụng dấu mũi tên => rất phức tạp, chi tiết thế nào thì chúng ta cùng tìm hiểu nhé. Bạn có thẻ coi như đây là một tính năng mới của Javascript.
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/3jrfb8ap/3/embed/js,result/")
+							h5#13 Map
+							p Ví dụ đầu tiên ta sử dụng kết hợp hàm map của array trong Javascript, hàm này giống như vòng lặp vậy, nó có một tham số truyền vào và đó là một callback function, hàm callback function này sẽ có hai tham số truyền vào đại diện cho value và key của mỗi phần tử trong mảng.
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/3jrfb8ap/5/embed/js,result/")
+									p Hãy mở console.log để xem kết quả 
+							h5#14 Khắc phục nhược điểm với this trong closure function
+							p Nếu bạn đã từng đọc qua bài viết hàm bind trong javascript thì từ version ES5 trở về trước sẽ có nhược điểm với đối tượng this đó là phạm vi hoạt động, và trong ES5 có sử dụng hàm bind để khắc phục. Vấn đề này được khắc phục hoàn toàn trong ES6 bằng cách sử dụng hàm arrow function.
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/3jrfb8ap/7/embed/js,result/")
+
+							p Với ES6 trở lên thì viết như sau:
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/3jrfb8ap/6/embed/js,result/")
+
+
+							h3#15 Toán tử toán học trong JavaScript
+							p Thông thường chúng ta sử dụng toán tử toán học như cộng, trừ, nhận, chia, ... để thực xử lý thay đổi giá trị các biến trong javascript. Sau đây là bảng danh sách các toán tử hay dùng.
+
+							.table-responsive
+								table.table.table.table-bordered.thead-inverse.table-striped
+									thead
+										tr
+											th Toán tử	
+											th.mw-200 Mô tả
+											th Code
+									tbody
+										tr
+											td % (Phép chia lấy phần dư)
+											td.mw-200 Kết quả là phần dư của phép chia.
+											td 
+												script(async, src="//jsfiddle.net/baonguyenyam/L39mp1za/1/embed/js,result/")
+											
+										tr
+											td ++ (Tăng lên 1)
+											td.mw-200 Tăng giá trị integer lên 1
+											td 
+												script(async, src="//jsfiddle.net/baonguyenyam/L39mp1za/2/embed/js,result/")
+											
+										tr
+											td += (Phép cộng và gán)
+											td.mw-200 Nó cộng giá trị toán hạng phải với toán hạng trái và gán kết quả cho toán hạng trái
+											td 
+												script(async, src="//jsfiddle.net/baonguyenyam/L39mp1za/4/embed/js,result/")
+										tr
+											td Toán tử điều kiện (? :)
+											td.mw-200 Toán tử điều kiện đầu tiên tính toán một biểu thức để xem nó là true hoặc false và sau đó thực thi một trong hai lệnh đã cung cấp phụ thuộc vào kết quả của sự tính toán. Nếu điều kiện là true ? Thì giá trị X : Nếu không thì giá trị Y
+
+											td 
+												script(async, src="//jsfiddle.net/baonguyenyam/L39mp1za/5/embed/js,result/")
+										tr
+											td Toán tử typeof
+											td.mw-200 
+												p Toán tử typeof là một toán tử một ngôi mà được đặt trước toán hạng đơn của nó, mà có thể là bất cứ kiểu nào. Giá trị của nó là một chuỗi chỉ dẫn kiểu dữ liệu của toán hạng. Dưới đây là danh sách các giá trị trả về cho toán tử typeof.
+
+												table.table.table-bordered.table-sm(style="min-width:initial")
+													thead
+														tr
+															th Kiểu	
+															th Chuỗi trả về
+													tbody
+														tr
+															td Number
+															td 
+																code "number"
+														tr
+															td String
+															td 
+																code "string"
+														tr
+															td Boolean
+															td 
+																code "boolean"
+														tr
+															td Object
+															td 
+																code "object"
+														tr
+															td Hàm
+															td 
+																code "function"
+														tr
+															td Undefined
+															td 
+																code "undefined"
+														tr
+															td Null
+															td 
+																code "object"
+														
+
+											td 
+												script(async, src="//jsfiddle.net/baonguyenyam/ge6vk0bg/embed/js,result/")
+											
+										tr
+											td Toán tử quan hệ
+											td.mw-200 Toán tử quan hệ dùng để thể hiện mối quan hệ giữa hai toán tử trong toán học, còn trong lập trình thì ta dùng toán tử quan hệ để nói đến mối quan hệ giữa hai biến hoặc hai giá trị nào đó. Kết quả của toán tử quan hệ sẽ trả về một trong hai giá trị TRUE hoặc FALSE.
+
+											td 
+												script(async, src="//jsfiddle.net/baonguyenyam/ge6vk0bg/1/embed/js,result/")
+										tr
+											td Toán tử luận lý
+											td.mw-200 Toán tử luân lý dùng để kết hợp hay phủ định biểu thức có chứa các toán tử quan hệ, kết quả của sự kết hợp sẽ có giá trị là TRUE hoặc FALSE.
+
+											td 
+												script(async, src="//jsfiddle.net/baonguyenyam/t30x46g3/embed/js,result/")
+										tr
+											td Lưu ý với toán tử so sánh bằng
+											td.mw-200 
+												p Chúng ta có hai toán tử so sánh bằng đó là toán tử 
+													code == 
+													| 
+													| và 
+													code ===
+													| 
+													| , vậy sự khác nhau giữa hai toán tử này như thế nào? Khi nào thì sử dụng các toán tử đó? Chúng ta cùng tìm hiểu nhé.
+												p Khác với các ngôn ngữ cao cấp khác như C# thì khi khai báo biến bạn không cần phải khai báo kiểu dữ liệu cho biến mà nó sẽ dựa vào giá trị mà bạn truyền cho biến, vì vậy bạn có thể chuyển đổi giá trị cho biến với nhiều kiểu dữ liệu khác nhau. 
+
+
+											td 
+												script(async, src="//jsfiddle.net/baonguyenyam/jscbmvny/embed/js,result/")
+							h3#16 Vòng lặp
+							p Trong khi viết một chương trình, bạn có thể gặp một tình huống mà bạn cần thực hiện một hành động lặp đi lặp lại. Trong những tính huống này, bạn sẽ cần viết các lệnh vòng lặp để giảm số dòng code.
+
+							h5#17 Vòng lặp while
+							p Vòng lặp cơ bản nhất trong JavaScript là vòng lặp while sẽ được bàn luận trong chương này. Mục đích của vòng lặp while là để thực thi một lệnh hoặc khối code lặp đi lặp lại miễn là expression – biểu thức là true. Một khi biểu thức trở thành false, vòng lặp kết thúc.
+
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/xn732dsw/embed/js,result/")
+							h5#18 Vòng lặp do...while
+
+							p Vòng lặp do...while là tương tự như vòng lặp while ngoại trừ việc kiểm tra điều kiện xảy ra ở phần cuối vòng lặp. Điều này có nghĩa là vòng lặp sẽ luôn luôn được thực thi ít nhất một lần, ngay cả khi điều kiện là false.
+
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/4o6tqLwv/embed/js,result/")
+							h5#19 Vòng lặp for
+
+							p Vòng lặp 'for' là mẫu vòng lặp gọn nhất. Nó bao gồm 3 phần quan trọng:
+
+							ul.pl-3 
+								li Phần khởi tạo vòng lặp – initialization, nơi chúng ta khởi tạo phép tính tới một giá trị bắt đầu. Lệnh khởi tạo được thực thi trước khi vòng lặp bắt đầu.
+
+								li Phần kiểm tra lệnh – test statement mà sẽ kiểm tra nếu một điều kiện đã cho là true hoặc không. Nếu điều kiện là true, thì khi đó code đã cho bên trong vòng lặp sẽ được thực thi, nếu không thì điều khiển sẽ thoát ra khỏi vòng lặp.
+
+								li Phần lệnh lặp lại – iteration statement, nơi bạn có thể tăng hoặc giảm phép tính của bạn.
+
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/kn8fbrdg/embed/js,result/")
+							h5#20 Vòng lặp for...in
+
+							p Vòng lặp for...in được sử dụng để lặp qua các thuộc tính của một đối tượng. Khi chúng ta vẫn chưa bàn luận về đối tượng, bạn có thể không cảm thấy thoải mái với vòng lặp này. Nhưng một khi bạn hiểu cách các đối tượng vận hành trong JavaScript, bạn sẽ thấy vòng lặp này rất hữu ích. Trong mỗi lần lặp, một thuộc tính từ object – đối tượng được gán tới variablename - tên biến và vòng lặp này tiếp tục tới khi hết tất cả thuộc tính của đối tượng.
+
+
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/vLjjm77x/embed/js,result/")
+							h3#21 Điều khiển vòng lặp trong JavaScript
+
+
+							p JavaScript cung cấp sự điều khiển cao để xử lý các lệnh vòng lặp và lệnh switch. Có thể có một tình huống khi bạn cần thoát khỏi vòng lặp mà không phải đi tới điểm cuối của nó. Cũng có thể có tình huống khi bạn muốn nhảy qua một phần của khối code và bắt đầu vòng lặp tiếp theo.
+							p Để xử lý các tình huống trên, JavaScript cung cấp lệnh break và continue. Những lệnh này được sử dụng để thoát khỏi ngay lập tức bất kỳ vòng lặp nào hoặc để bắt đầu vòng lặp tiếp theo của bất kỳ vòng lặp tương ứng.
+
+							h5#22 Lệnh break
+							p Lệnh break, đã được giới thiệu ngắn gọn với lệnh switch, được sử dụng để thoát sớm ra khỏi một vòng lặp, thoát khỏi khu vực dấu ngoặc ôm.
+
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/9twe4ct2/embed/js,result/")
+							h5#23 Lệnh continue
+
+							p Lệnh continue nói cho bộ thông dịch ngay lập tức bắt đầu lần lặp tiếp theo của vòng lặp và nhảy qua khối code còn lại. Khi một lệnh continue được bắt gặp, luồng chương trình di chuyển ngay lập tức tới biểu thức kiểm tra và nếu điều kiện còn true, sau đó nó bắt đầu lần lặp tiếp theo, nếu không thì điều khiển thoát khỏi vòng lặp.
+
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/uekkccq1/embed/js,result/")
+
+							h3#24 Lệnh Switch Case trong JavaScript
+
+							p Bạn có thể sử dụng nhiều lệnh if...else…if như trong chương trước để thực hiện một nhánh nhiều lựa chọn. Tuy nhiên, nó luôn luôn không phải là giải pháp tốt nhât, đặc biệt khi tất các các nhánh phụ thuộc vào giá trị của một biến đơn.
+							p Mục tiêu của một lệnh switch là cung cấp một biểu thức để ước lượng và một số lệnh khác nhau để thực thi trên cơ sở giá trị của biểu thức. Bộ thông dịch kiểm tra mỗi case – trường hợp với giá trị của biểu thức tới khi tìm thấy một sự so khớp. Nếu không có so khớp nào, một điều kiện default – mặc định sẽ được sử dụng. Lệnh break chỉ dẫn phần cuối của mỗi trường hợp cụ thể. Nếu chúng bị bỏ quên, bộ thông dịch sẽ tiếp tục thực thi mỗi lệnh trong mỗi trường hợp sau.
+
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/nuzr059v/1/embed/js,result/")
+
+							h3#25 Hàm trong JavaScript
+
+							p Một hàm là một nhóm code có thể tái sử dụng mà có thể được gọi bất cứ đâu trong chương trình của bạn. Điều này giúp bạn không cần thiết phải viết cùng một code lại nhiều lần. Nó giúp các nhà lập trình viết các modular code. Các hàm cho phép một nhà lập trình phân chia một chương trình lớn thành các hàm nhỏ và dễ quản lý.
+
+							p Giống như bất kỳ ngôn ngữ chương trình cấp cao khác, JavaScript cũng hỗ trợ tất cả tính năng cần thiết để viết các code có tính modun bởi sử dụng các hàm. Bạn đã xem các hàm như alert() và write() trong các chương trước. Chúng tôi đã sử dụng các hàm này nhiều lần, nhưng chúng mới chỉ được viết trong core JavaScript. JavaScript cũng cho phép chúng ta viết các hàm cho riêng mình. Phần này giải thích cách viết các hàm riêng của bạn trong JavaScript.
+							h5#26 Định nghĩa hàm 
+							p Trước khi chúng ta sử dụng một hàm, chúng ta cần định nghĩa nó. Phương thức phổ biến nhất để định nghĩa một hàm trong JavaScript là bởi sử dụng từ khóa Hàm, được theo bởi một tên hàm duy nhất, một danh sách các tham số (mà có thể là trống), và một khối lệnh được bao quanh bởi các dấu ngoặc ôm.
+
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/au52u2ax/embed/js,result/")
+							h5#27 Tham số của hàm
+							p Tới chương này, chúng ta đã thấy các hàm mà không có tham số. Nhưng có một sự tiện lợi khi truyền các tham số khác nhau trong khi gọi một hàm. Những tham số được truyền này có thể được nắm bắt bên trong hàm đó và bất kỳ thao tác nào có thể được thực hiện trên các tham số đó. Một hàm có thể nhận nhiều tham số được phân biệt riêng rẽ bởi dấu phảy.
+
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/9kkxfc1s/embed/js,result/")
+
+
+							h3#28 Sự kiện (Event) trong JavaScript
+
+							p Sự tương tác của JavaScript với HMTL được xử lý thông qua các sự kiện xảy ra khi người sử dụng hoặc trình duyệt thao tác một trang.
+
+							p Khi một trang tải, nó được gọi là một sự kiện (Event). Khi người sử dụng click vào một nút, thì click đó cũng là một sự kiện. Các ví dụ về sự kiện khác như nhấn một phím, đóng một cửa sổ, tăng giảm cửa sổ, …
+
+							p Nhà lập trình có thể sử dụng những sự kiện này để thực thi các phản hồi được mã hóa bởi JavaScript, như các nút để đóng cửa sổ, các thông báo được hiển thị tới người dùng, …
+
+							p Các sự kiện là một phần của Document Object Model (DOM) Level 3 và mỗi phần tử HTML chứa một tập hợp các sự kiện mà có thể kích hoạt JavaScript Code.
+
+							p Dưới đây là một ví dụ về kiểu sự kiện onmouseover và onmouseout. Sự kiện onmouseover được kích hoạt khi bạn di chuyển chuột qua bất kỳ vùng nào của phần tử và onmouseout kích hoạt khi bạn di chuyển chuột ra khỏi phần tử đó. Bạn thử ví dụ sau:
+
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/8wx2qx3z/2/embed/js,html,result/")
+							h5#29 Sự kiện HTML5 chuẩn
+							p Các sự kiện HTML5 chuẩn được liệt kê dưới đây. Tại đây, script chỉ dẫn một hàm JavaScript để được thực thi đối với sự kiện đó.
+							.table-responsive
+								table.table.table.table-bordered.thead-inverse.table-striped
+									thead
+										tr
+											th Thuộc tính
+											th Giá trị
+											th Miêu tả
+									tbody
+										tr
+											td Offline
+											td script
+											td Kích hoạt khi tài liệu ở ngoại tuyến
+										tr
+											td Onabort
+											td script
+											td Kích hoạt trên một sự kiện bỏ dở
+										tr
+											td onafterprint
+											td script
+											td Kích hoạt sau khi tài liệu được in
+										tr
+											td onbeforeonload
+											td script
+											td Kích hoạt trước khi tài liệu tải
+										tr
+											td onbeforeprint
+											td script
+											td Kích hoạt trước khi tài liệu được in
+										tr
+											td onblur
+											td script
+											td Kích hoạt khi cửa sổ mất trọng tâm
+										tr
+											td oncanplay
+											td script
+											td Kích hoạt khi media có thể bắt đầu chơi, nhưng phải dừng để đệm
+										tr
+											td oncanplaythrough
+											td script
+											td Kích hoạt khi media có thể chơi tới cuối, mà không dừng để đệm
+										tr
+											td onchange
+											td script
+											td Kích hoạt khi một phần tử thay đổi
+										tr
+											td onclick
+											td script
+											td Kích hoạt trên một cú click chuột
+										tr
+											td oncontextmenu
+											td script
+											td Kích hoạt khi menu ngữ cảnh bị kích hoạt
+										tr
+											td ondblclick
+											td script
+											td Kích hoạt khi nhấp đúp chuột
+										tr
+											td ondrag
+											td script
+											td Kích hoạt khi một phần tử bị kéo
+										tr
+											td ondragend
+											td script
+											td Kích hoạt tại phần cuối của hoạt động kéo
+										tr
+											td ondragenter
+											td script
+											td Kích hoạt khi một phần tử đã được kéo tới một mục tiêu thả hợp lệ
+										tr
+											td ondragleave
+											td script
+											td Kích hoạt khi một phần tử đang được kéo qua một mục tiêu thả hợp lệ
+										tr
+											td ondragover
+											td script
+											td Kích hoạt tại phần đầu của hoạt động kéo
+										tr
+											td ondragstart
+											td script
+											td Kích hoạt tại phần đầu của hoạt động kéo
+										tr
+											td ondrop
+											td script
+											td Kích hoạt khi phần tử được kéo đang được thả
+										tr
+											td ondurationchange
+											td script
+											td Kích hoạt khi độ dài của media được thay đổi
+										tr
+											td onemptied
+											td script
+											td Kích hoạt khi phần tử nguồn media đột nhiên trở nên trống
+										tr
+											td onended
+											td script
+											td Kích hoạt khi media tiến tới cuối cùng
+										tr
+											td onerror
+											td script
+											td Kích hoạt khi một lỗi xảy ra
+										tr
+											td onfocus
+											td script
+											td Kích hoạt khi cửa sổ nhận trọng tâm
+										tr
+											td onformchange
+											td script
+											td Kích hoạt khi một form thay đổi
+										tr
+											td onforminput
+											td script
+											td Kích hoạt khi một form nhận input từ người dùng
+										tr
+											td onhaschange
+											td script
+											td Kích hoạt khi tài liệu có thay đổi
+										tr
+											td oninput
+											td script
+											td Kích hoạt khi một phần tử nhận đầu vào từ người dùng
+										tr
+											td oninvalid
+											td script
+											td Kích hoạt khi một phần tử không hợp lệ
+										tr
+											td onkeydown
+											td script
+											td Kích hoạt khi một phím bị nhấn
+										tr
+											td onkeypress
+											td script
+											td Kích hoạt khi một phím bị nhấn và được thả ra
+										tr
+											td onkeyup
+											td script
+											td Kích hoạt khi một phím được thả ra
+										tr
+											td onload
+											td script
+											td Kích hoạt khi tài liệu tải
+										tr
+											td onloadeddata
+											td script
+											td Kích hoạt khi dữ liệu media được tải
+										tr
+											td onloadedmetadata
+											td script
+											td Kích hoạt khi thời gian và dữ liệu khác của một phần tử media được tải
+										tr
+											td onloadstart
+											td script
+											td Kích hoạt khi trình duyệt bắt đầu tải dữ liệu media
+										tr
+											td onmessage
+											td script
+											td Kích hoạt khi thông báo được kích hoạt
+										tr
+											td onmousedown
+											td script
+											td Kích hoạt khi một nút chuột được nhả ra
+										tr
+											td onmousemove
+											td script
+											td Kích hoạt khi con trỏ chuột di chuyển
+										tr
+											td onmouseout
+											td script
+											td Kích hoạt khi con trỏ chuột di chuyển ra khỏi một phần tử
+										tr
+											td onmouseover
+											td script
+											td Kích hoạt khi con trỏ chuột di chuyển qua một phần tử
+										tr
+											td onmouseup
+											td script
+											td Kích hoạt khi một nút chuột được nhả ra
+										tr
+											td onmousewheel
+											td script
+											td Kích hoạt khi bánh xe chuột được quay
+										tr
+											td onoffline
+											td script
+											td Kích hoạt khi tài liệu ở ngoại tuyến
+										tr
+											td onoine
+											td script
+											td Kích hoạt khi tài liệu ở trực tuyến
+										tr
+											td ononline
+											td script
+											td Kích hoạt khi tài liệu ở trực tuyến
+										tr
+											td onpagehide
+											td script
+											td Kích hoạt khi cửa sổ bị ẩn
+										tr
+											td onpageshow
+											td script
+											td Kích hoạt khi cửa sổ trở nên nhìn thấy
+										tr
+											td onpause
+											td script
+											td Kích hoạt khi dữ liệu media bị dừng
+										tr
+											td onplay
+											td script
+											td Kích hoạt khi dữ liệu media chuẩn bị bắt đầu chơi
+										tr
+											td onplaying
+											td script
+											td Kích hoạt khi dữ liệu media đang bắt đầu chơi
+										tr
+											td onpopstate
+											td script
+											td Kích hoạt khi lịch sử cửa sổ thay đổi
+										tr
+											td onprogress
+											td script
+											td Kích hoạt khi trình duyệt đang nhận dữ liệu media
+										tr
+											td onratechange
+											td script
+											td Kích hoạt khi tốc độ chơi của media đã thay đổi
+										tr
+											td onreadystatechange
+											td script
+											td Kích hoạt khi trạng thái sẵn sàng thay đổi
+										tr
+											td onredo
+											td script
+											td Kích hoạt khi tài liệu thực hiện một redo
+										tr
+											td onresize
+											td script
+											td Kích hoạt khi cửa sổ bị thay đổi kích cỡ
+										tr
+											td onscroll
+											td script
+											td Kích hoạt khi thanh cuốn của phần tử đang được cuốn
+										tr
+											td onseeked
+											td script
+											td
+												| Kích hoạt khi thuộc tính seeking của một phần tử media không còn true, và seeking đã kết thúc
+										tr
+											td onseeking
+											td script
+											td
+												| Kích hoạt khi thuộc tính seeking của một phần tử media là true, và seeking đã bắt đầu
+										tr
+											td onselect
+											td script
+											td Kích hoạt khi một phần tử được chọn
+										tr
+											td onstalled
+											td script
+											td Kích hoạt khi có một lỗi trong quá trình thu nhận dữ liệu media
+										tr
+											td onstorage
+											td script
+											td Kích hoạt khi một tài liệu tải
+										tr
+											td onsubmit
+											td script
+											td Kích hoạt khi một form được đệ trình
+										tr
+											td onsuspend
+											td script
+											td
+												| Kích hoạt khi trình duyệt đã đang thu nhận dữ liệu media, nhưng đã dừng lại trước khi toàn bộ media file được thu nhận
+										tr
+											td ontimeupdate
+											td script
+											td Kích hoạt khi media thay đổi vị trí chơi của nó
+										tr
+											td onundo
+											td script
+											td Kích hoạt khi một tài liệu thực hiện một undo
+										tr
+											td onunload
+											td script
+											td Kích hoạt khi người sử dụng rời khỏi tài liệu
+										tr
+											td onvolumechange
+											td script
+											td Kích hoạt khi media thay đổi âm lượng, kể cả khi media được thiết lập là mute
+										tr
+											td onwaiting
+											td script
+											td Kích hoạt khi media đã dừng chơi nhưng được mong chờ phục hồi.
+
+
+							h3#30 Regular Expression và RegExp trong JavaScript
+							p Một Regular Expression là một đối tượng miêu tả một pattern của các ký tự. Lớp JavaScript RegExp biểu diễn Regular Expression, và cả String và RegExp định nghĩa các phương thức mà sử dụng Regular Expression để thực hiện các hàm so khớp pattern và tìm kiếm-thay thế mạnh trên văn bản. Một Regular Expression có thể được định nghĩa với RegExp () constructor như sau:
+							.row
+								.col-lg-12
+									pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.vs.
+										var pattern = new RegExp(pattern, attributes);
+									p Trong đó 
+									ul.pl-4
+										li pattern − Một chuỗi mà xác định pattern của Regular Expression hoặc Regular Expression khác.
+										li attributes − Một chuỗi tùy chọn chứa bất kỳ thuộc tính "g", "i", và "m" mà xác định tương ứng Global, Không phân biệt kiểu chữ (case-insensitive), và nhiều so khớp (multiline matches)
+							h5 Các dấu ngoặc vuông
+							p Các dấu ngoặc vuông ([]) có một ý nghĩa đặc biệt khi được sử dụng trong Regular Expression. Chúng được sử dụng để tìm một dãy ký tự.
+							.table-responsive
+								table.table.table.table-bordered.thead-inverse.table-striped
+									thead
+										tr
+											th Expression
+											th Miêu tả
+									tbody
+										tr
+											td [...]
+											td Bất kỳ một ký tự nào trong dấu ngoặc vuông
+										tr
+											td [^...]
+											td Bất kỳ một ký tự nào không trong dấu ngoặc vuông
+										tr
+											td [0-9]
+											td Nó so khớp bất kỳ số thập phân nào từ 0 đến 9
+										tr
+											td [a-z]
+											td Nó so khớp bất kỳ ký tự chữ thường nào từ a đến z.
+										tr
+											td [A-Z]
+											td Nó so khớp bất kỳ ký tự chữ hoa nào từ A đến Z.
+										tr
+											td [a-Z]
+											td Nó so khớp bất kỳ ký tự nào từ chữ thường a đến chữ hoa Z.
+
+							p Các dãy được chỉ ở trên là chung; bạn cũng có thể sử dụng dãy [0-3] để so khớp bất kỳ số thập phân nào từ 0 đến 3, hoặc dãy [b-v] để so khớp bất kỳ ký tự chữ thường nào từ b đến v.
+							h5 Phép lượng hóa (Quantifier)
+							p Tần số và vị trí của các dãy ký tự và các ký tự đơn được bao trong các dấu ngoặc có thể được biểu thị bởi một ký tự đặc biệt. Mỗi ký tự đặc biệt có một phần mở rộng riêng biệt. Các +, * … theo sau một dãy ký tự.
+
+							.table-responsive
+								table.table.table.table-bordered.thead-inverse.table-striped
+									thead
+										tr
+											th Expression
+											th Miêu tả
+									tbody
+										tr
+											td p+
+											td Nó so khớp bất kỳ chuỗi nào chứa ít nhất một p.
+										tr
+											td p*
+											td Nó so khớp bất kỳ chuỗi nào chứa 0 hoặc nhiều p.
+										tr
+											td p?
+											td Nó so khớp bất kỳ chuỗi nào chứa 1 hoặc nhiều p
+										tr
+											td
+												| p{
+												b N
+												| }
+											td
+												| Nó so khớp bất kỳ chuỗi nào chứa một dãy có {
+												b N
+												| } p
+										tr
+											td p{2,3}
+											td Nó so khớp bất kỳ chuỗi nào chứa một dãy có 2 hoặc 3 p
+										tr
+											td p{2, }
+											td Nó so khớp bất kỳ chuỗi nào chứa một dãy có ít nhất 2 p
+										tr
+											td p$
+											td Nó so khớp bất kỳ chuỗi nào kết thúc với p
+										tr
+											td
+												b ^
+												| p
+											td Nó so khớp bất kỳ chuỗi nào bắt đầu bằng p
+
+
+
+							h5 Ví dụ
+							p Ví dụ sau giải thích chi tiết hơn về so khớp các ký tự.
+
+							.table-responsive
+								table.table.table.table-bordered.thead-inverse.table-striped
+									thead
+										tr
+											th Expression
+											th Miêu tả
+									tbody
+										tr
+											td [^a-zA-Z]
+											td
+												| Nó so khớp bất kỳ chuỗi nào không chứa bất kỳ ký tự từ 
+												b a
+												|  đến 
+												b z
+												|  và từ 
+												b A
+												|  đến 
+												b Z
+												| .
+										tr
+											td p.p
+											td
+												| Nó so khớp bất kỳ chuỗi nào chứa 
+												b p
+												| , được theo sau bởi bất kỳ ký tự nào, theo sau bởi một ký tự 
+												b p
+												|  khác.
+										tr
+											td ^.{2}$
+											td Nó so khớp bất kỳ chuỗi nào chứa chính xác 2 ký tự
+										tr
+											td <b>(.*)</b>
+											td Nó so khớp bất kỳ chuỗi nào trong thẻ <b> và </b>.
+										tr
+											td p(hp)*
+											td
+												| Nó so khớp bất kỳ chuỗi nào chứa 
+												b p
+												|  được theo sau bởi 0 hoặc nhiều dãy 
+												b hp
+												| .
+
+
+
+							h5 Các ký tự Literal
+
+							.table-responsive
+								table.table.table.table-bordered.thead-inverse.table-striped
+									thead
+										tr
+											th Ký tự
+											th Miêu tả
+									tbody
+										tr
+											td Alphanumeric
+											td Chính nó
+										tr
+											td \0
+											td Ký tự NUL (\u0000)
+										tr
+											td \t 
+											td Tab (\u0009)
+										tr
+											td \n
+											td Dòng mới (\u000A)
+										tr
+											td \v
+											td Tab dọc (\u000B)
+										tr
+											td \f
+											td Form feed (\u000C)
+										tr
+											td \r 
+											td Carriage return (\u000D)
+										tr
+											td \xnn
+											td Ký tự Latin được xác định bởi số thập lục phân nn; ví dụ: \x0A là như \n
+										tr
+											td \uxxxx
+											td Ký tự Unicode được xác định bởi số thập lục phân xxxx; ví dụ: \u0009 là \t
+										tr
+											td \cX
+											td Ký tự điều khiển ^X; Ví dụ: \cJ tương đương với ký tự dòng mới \n
+
+
+							h5 Siêu ký tự (Metacharacter)
+							p Một metacharacter đơn giản là một ký tự chữ cái được đặt trước bởi một dấu gạch chéo ngược mà thực hiện so khớp một ý nghĩa đặc biệt.
+
+							p Ví dụ, bạn có thể tìm kiếm một lượng tiền lớn bởi sử dụng siêu ký tự '\d' là: /([\d]+)000/. Ở đây, \d sẽ tìm bất kỳ chuỗi ký tự số nào.
+
+							p Bảng sau liệt kê một tập hợp các siêu ký tự mà có thể được sử dụng trong PERL Style Regular Expression.
+							.table-responsive
+								table.table.table.table-bordered.thead-inverse.table-striped
+									thead
+										tr
+											th Ký tự
+											th Miêu tả
+									tbody
+										tr
+											td .
+											td Một ký tự đơn
+										tr
+											td \s 
+											td Một ký tự khoảng trống trắng (space, tab, dòng mới)
+										tr
+											td \S
+											td Không phải ký tự khoảng trống trắng
+										tr
+											td \d
+											td Một chữ số (0-9)
+										tr
+											td \D
+											td Không là chữ số
+										tr
+											td \w
+											td Một ký tự từ (a-z, A-Z, 0-9, _)
+										tr
+											td \W 
+											td Không là một ký tự từ
+										tr
+											td [\b]
+											td Một literal backspace (trường hợp đặc biệt)
+										tr
+											td [aeiou]
+											td So khớp một ký tự đơn trong tập hợp đã cho
+										tr
+											td [^aeiou]
+											td So khớp một ký tự đơn bên ngoài tập hợp đã cho
+										tr
+											td (foo|bar|baz)
+											td So khớp bất kỳ các dãy thay đổi nhau đã cho
+
+
+							h5 Lượng hóa (Modifier)
+							p Một số lượng hóa là có sẵn mà có thể xác định cách bạn làm việc với regexp, như phân biệt kiểu chữ, tìm kiếm nhiều dòng, …
+
+							.table-responsive
+								table.table.table.table-bordered.thead-inverse.table-striped
+									thead
+										tr
+											th Modifier
+											th Miêu tả
+									tbody
+										tr
+											td i
+											td Thực hiện so khớp không phân biệt kiểu chữ (case-insensitive).
+										tr
+											td m
+											td
+												| Xác định nếu chuỗi có các ký tự newline (dòng mới) hoặc carriage return , toán tử ^ và $ sẽ so khớp với một giới hạn newline (dòng mới), thay vì một giới hạn chuỗi.
+										tr
+											td g
+											td
+												| Thực hiện so khớp Global, mà tìm tất cả các so khớp thay vì dừng lại sau so khớp đầu tiên.
+							h5 Các thuộc tính của RegExp
+
+							p Bảng dưới liệt kê các thuộc tính của đối tượng RegExp và miêu tả:
+
+							.table-responsive
+								table.table.table.table-bordered.thead-inverse.table-striped
+									thead
+										tr
+											th Thuộc tính	
+											th Miêu tả
+									tbody
+										tr
+											td constructor
+											td Xác định hàm tạo prototype của đối tượng.
+										tr
+											td global
+											td Xác định nếu lượng hóa "g" được thiết lập
+										tr
+											td ignoreCase
+											td Xác định nếu lượng hóa "i" được thiết lập
+										tr
+											td lastIndex
+											td Chỉ mục tại đó bắt đầu so khớp mới
+										tr
+											td multiline
+											td Xác định nếu lượng hóa "m" được thiết lập
+										tr
+											td source
+											td Văn bản của pattern
+
+
+
+
+							h5 Các phương thức của RegExp
+
+							p Bảng dưới liệt kê các phương thức của đối tượng RegExp và miêu tả:
+
+							.table-responsive
+								table.table.table.table-bordered.thead-inverse.table-striped
+									thead
+										tr
+											th Phương thức	
+											th Miêu tả
+									tbody
+
+										tr
+											td exec()
+											td Thực thi một tìm kiếm cho một so khớp trong tham số chuỗi của nó.
+										tr
+											td test()
+											td Kiểm tra một so khớp trong tham số chuỗi của nó.
+										tr
+											td toSource()
+											td
+												| Trả về một literal đối tượng biểu diễn đối tượng đã cho; bạn có thể sử dụng giá trị này để tạo đối tượng mới.
+										tr
+											td toString()
+											td Trả về một chuỗi biểu diễn đối tượng đã cho.
+
+
+							h3#31 DOM là gì? Các loại DOM trong Javascript
+							p Javascript là một ngôn ngữ được sử dụng trong các trình duyệt Browser nên nó đóng một vai trò khá quan trọng trong các ứng dụng website. Và nhiệm vụ của Javascript là thao tác với các tài liệu HTML kết hợp với các cú pháp riêng của nó để tạo nên sự ảo diệu của trang web.
+							p Để thao tác được với các thẻ HTML thì nó phải thông qua một cơ chế ta gọi là DOM và ta hay gọi là Document Object Model. Vậy thì DOM là gì thì chúng ta cùng tì hiểu nó nhé.
+							p DOM là viết tắt của chữ Document Object Model, dịch tạm ra là mô hình các đối tượng trong tài liệu HTML. Như các bạn biết trong mỗi thẻ HTML sẽ có những thuộc tính (Properties) và có phân cấp cha - con với các thẻ HTML khác. Sự phân cấp và các thuộc tính của thẻ HTML này ta gọi là selector và trong DOM sẽ có nhiệm vụ xử lý các vấn đề như đổi thuộc tính của thẻ, đổi cấu trúc HTML của thẻ, ...
+
+
+							.row
+								.col-lg-12
+									script(async, src="//jsfiddle.net/baonguyenyam/xr8oLppm/embed/js,html,result/")
+							p Và đoạn code này có ý nghĩa rằng tìm thẻ có id="result" và gán nội dung HTML bên trong của thẻ này là dòng chữ "Tạm biệt".
+							h5#32 Các thể loại DOM trong Javascript
+							p Việc xử lý và làm việc với đối tượng HTML rất phức tạp và đa dạng, chính vì vậy javascript có cung cấp cho chúng ta nhiều phương thức, đối tượng và mỗi thành phần như vậy sẽ có những nhiệm vụ riêng biệt. Sau đây mình sẽ liệt kê danh sách chia nhóm và trong những bài học tiếp theo chúng ta sẽ cùng tìm hiểu nó nhé.
+							p Danh sách chia nhóm DOM:
+							ul.pl-4
+								li DOM document: có nhiệm vụ lưu trữ toàn bộ các thành phần trong tài liệu của website
+								li DOM element: có nhiệm vụ truy xuất tới thẻ HTML nào đó thông qua các thuộc tính như tên class, id, name của thẻ HTML
+								li DOM HTML: có nhiệm vụ thay đổi giá trị nội dung và giá trị thuộc tính của các thẻ HTML
+								li DOM CSS: có nhiệm vụ thay đổi các định dạng CSS của thẻ HTML
+								li DOM Event: có nhiệm vụ gán các sự kiện như onclick(), onload() vào các thẻ HTML
+								li DOM Listener: có nhiệm vụ lắng nghe các sự kiện tác động lên thẻ HTML đó
+								li DOM Navigation dùng để quản lý, thao tác với các thẻ HTML, thể hiện mối quan hệ cha - con của các thẻ HTML
+								li DOM Node, Nodelist: có nhiệm vụ thao tác với HTML thông qua đối tượng (Object)
+							p Như vậy ta có tổng cộng 8 loại thường được sử dụng như trên, và trong bài này mình không đề cập chi tiết hết được.
+							p Để truy xuất tới một thẻ HTML theo ID ta sử dụng cú pháp sau:
+							script(async, src="//jsfiddle.net/baonguyenyam/h8zpejoe/1/embed/js,html,result/")
+
+							h3#33 BOM là gì?
+							p BOM là chữ viết tắt của Browser Object Model, hay còn gọi là các đối tượng liên quan đến trình duyệt browser. Mỗi browser sẽ có những đối tượng khác nhau nên nó không có một chuẩn chung nào cả, tuy nhiên để có tính thống nhất giữa các trình duyệt thì người ta quy ước ra các loại BOM sau:
+							ul.pl-4
+								li window
+								li screen
+								li location
+								li history
+								li navigator
+								li popup
+								li timing
+								li cookies
+							p Trong các đối tượng DOM trên có phân cấp lẫn nhau và trong đó window là cấp cao nhất vì nó đại diện cho browser. Ví dụ khi bạn muốn truy cập tới document thì bạn sẽ viêt là window.document, tuy nhiên vẫn có cách ghi tắt là document, muốn truy cập tới cookie thì ta viết window.document.cookie (viết tắt document.cookie), ...
+
+							p Đối tượng Window có rất nhiều thuộc tính và phương thức riêng. Ví dụ đối tượng document là một thuộc tính của window (window.document), vì vậy nên ta có thể ví Window là một đối tượng toàn cục và ở đâu trong website cũng có thể sử dụng được. Bây giờ chúng ta sẽ tìm hiểu các thuộc tính và phương thức của đối tượng BOM Window nhé.
+							p VD: Để lấy kích thước chiều cao và chiều rộng của trình duyệt thì chúng ta sử dụng đối tượng window, tuy nhiên với mỗi trình duyệt thì có những cách lấy khác nhau.
+
+							p 
+								strong Đối với Internet Explorer, Chrome, Firefox, Opera, và Safari thì cú pháp như sau:
+							script(async, src="//jsfiddle.net/baonguyenyam/2ve13cox/embed/js,result/")
+							p 
+								strong Đối với Internet Explorer các version 5,6,7,8 thì cú pháp như sau:
+							script(async, src="//jsfiddle.net/baonguyenyam/crj5Lo1u/embed/js/")
+							p Việc tương thích với các trình duyệt quá rắc rối phải không nào? Vậy có cách nào giải quyết vấn đề này không? Câu trả lời là có bằng cách sử dụng một mẹo nhỏ như sau:
+
+							script(async, src="//jsfiddle.net/baonguyenyam/goehap30/embed/js,result/")
+							h5 BOM - Window Navigator trong Javascript
+							p Đối tượng Window Navigator trong Javascript được dùng để kiểm tra các thông tin về người dùng như trình duyệt đang sư dụng là gì? hệ điều hành đang sử dụng là gì? Trình duyệt có bật Cookie hay không? hay thậm chí có thể kiểm tra được tên và version của Browser.
+							script(async, src="//jsfiddle.net/baonguyenyam/sbfg0tn1/embed/js,result/")
+
+							h3#34 Use Strict là gì? Strict Mode trong javascript
+							p Khi bạn download những file JS trên mạng về hoặc download những Plugin jQuery thì bạn sẽ thấy phía trên cùng của file người ta có đặt dòng chữ 
+								code "use strict";
+								| . Vậy câu hỏi được đặt ra là từ khóa use strict là gì và mục đích người ta đặt nó ở đầu file để làm gì?. Để trả lời câu hỏi trên thì ta phải tìm sự thoải mái trong việc phát triển của Javascript và sự ra đời của Strict Mode.
+
+							h5#35 Chế độ Strict Mode là gì ?
+							p Khi bạn làm việc với Javascript thì bạn có thể sử dụng biến mà chưa cần định nghĩa (hoisting), bạn có thể quên đặt dấu chấm phẩy ở cuối mỗi đoạn code và bạn có thể sử dụng tên những từ khóa để tạo tên biến. Điều này làm cho các lập trình viên có thói quen làm việc quá dễ dãi và dẫn đến chương trình thiếu tính an toàn. Chính vì vậy Javascript kể từ phiên bản 1.8.5 trở đi đã bổ sung một khái niệm gọi Strict Mode nhằm giải quyết tính thiếu an toàn này.
+
+
+							h5#36 Use Strict là gì ?
+							p Use strict là từ khóa khai báo sử dụng chế độ Strict Mode, nghĩa là nếu bạn muốn sử dụng chế độ Strict Mode ở đâu thì chỉ việc đặt từ khóa "use strict" ở đó. Chế độ Strict Mode có hai phạm vi sử dụng đó là toàn cục và cục bộ. Tính toàn cục tức là khi bạn đặt từ "use strict" ở ngoài hàm và nằm phía trên cùng của file thì lúc này tất cả các đoạn code bên dưới đều bị ảnh hưởng. Tính cục bộ tức là bạn đặt "use strict" nằm trong một hàm nào đó thì phạm vi ảnh hưởng chỉ nằm trong hàm đó mà thôi.
+
+							h6 Phạm vi Strict Mode toàn cục
+
+							p Trong ví dụ này chương trình chạy bình thường 
+
+							script(async, src="//jsfiddle.net/baonguyenyam/kocrda5d/4/embed/js,result/")
+
+							p Rõ ràng chúng ta viết sai vì chưa khai báo domain nhưng nó vẫn chạy, xét thêm 1 ví dụ nữa ta sẽ thấy dù khai báo Object sai (trùng key) nhưng nó vẫn chạy 
+
+							script(async, src="//jsfiddle.net/baonguyenyam/kocrda5d/5/embed/js,result/")
+
+							p Bây giờ ta thêm "use strict"; vào tất nhiên nó sẽ không chạy vì code đã bị sai, chỉ có cách fixed mọi thứ cho đúng và đủ thì mới có thể chạy tốt được.
+							script(async, src="//jsfiddle.net/baonguyenyam/kocrda5d/6/embed/js,result/")
+
+							p.lead Qua bài này bạn sẽ không còn thắc mắc use strict là gì nữa phải không nào. Và thông qua từ khóa use strict bạn đã biết thế nào là chế độ chạy Strict Mode và công dụng của nó trong việc lập trình. Vì vậy kể từ bây giờ bạn hãy tập làm quen với chế độ Strict Mode này nhé vì nó chặt chẽ và an toàn, đảm bảo chương trình của bạn có thể chạy trên mọi trình duyệt hiện nay.
+
+
+
+
+
+
+
+							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				.col-lg-3.d-none.d-xl-block
+					.jumbotron.pt-2.pb-2.pl-3.pr-3.bd-toc
+						h3 Overview 
+						ol.pl-4
+							li
+								a(href="#01") Tìm hiểu về JavaScript
+							li
+								a(href="#02") JavaScript là gì?
+							li
+								a(href="#03") Tại sao JavaScript được sử dụng rộng rãi?
+							li
+								a(href="#04") JavaScript có thể làm được những gì
+							li
+								a(href="#05") JavaScript có phải là ngôn ngữ của tương lai?
+						h3 JavaScript
+						ol.pl-4
+							li
+								a(href="#06") Khai báo biến trong javascript
+							li
+								a(href="#07") Gán kiểu giá trị cho biến
+							li
+								a(href="#08") Dấu chấm phẩy là tùy ý
+							li
+								a(href="#09") Khi nào nên sử dụng let để khai báo biến
+							li
+								a(href="#10") Phạm vi biến trong JavaScript
+							li
+								a(href="#11") Function trong JavaScript
+								ul.pl-4
+									li
+										a(href="#12") Arrow function
+									li
+										a(href="#13") Map
+									li
+										a(href="#14") Khắc phục nhược điểm với this trong closure function
+							li
+								a(href="#15") Toán tử toán học trong JavaScript
+							li
+								a(href="#16") Vòng lặp
+								ul.pl-4
+									li
+										a(href="#17") Vòng lặp while
+									li
+										a(href="#18") Vòng lặp do...while
+									li
+										a(href="#19") Vòng lặp for
+									li
+										a(href="#20") Vòng lặp for...in
+							li
+								a(href="#21") Điều khiển vòng lặp trong JavaScript
+								ul.pl-4
+									li
+										a(href="#22") Lệnh break
+									li
+										a(href="#23") Lệnh continue
+							li
+								a(href="#24") Lệnh Switch Case trong JavaScript
+							li
+								a(href="#25") Hàm trong JavaScript
+								ul.pl-4
+									li
+										a(href="#26") Định nghĩa hàm 
+									li
+										a(href="#27") Tham số của hàm
+							li
+								a(href="#28") Sự kiện (Event) trong JavaScript
+								ul.pl-4
+									li
+										a(href="#29") Sự kiện HTML5 chuẩn
+							li
+								a(href="#30") Regular Expression và RegExp trong JavaScript
+							li
+								a(href="#31") DOM là gì? Các loại DOM trong Javascript
+								ul.pl-4
+									li
+										a(href="#32") Các thể loại DOM trong Javascript
+							li
+								a(href="#33") BOM là gì?
+							li
+								a(href="#34") Use Strict là gì? Strict Mode trong javascript
+								ul.pl-4
+									li
+										a(href="#35") Chế độ Strict Mode là gì ?
+									li
+										a(href="#36") Use Strict là gì ?
