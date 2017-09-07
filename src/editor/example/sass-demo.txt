@@ -1,0 +1,6 @@
+$primaryColor: #eeccff
+
+body
+  background: $primaryColor
+  p
+    color: darken($primaryColor, 30%)
