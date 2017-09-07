@@ -204,7 +204,6 @@
         var delay;
         var map = CodeMirror.keyMap.sublime;
         var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
-            data: null,
             mode: 'text/html',
             tabMode: 'indent',
             keyMap: "sublime",
@@ -232,7 +231,7 @@
                 if (rawFile.readyState === 4) {
                     if (rawFile.status === 200 || rawFile.status == 0) {
                         var allText = rawFile.responseText;
-                        // document.getElementById('code').value = allText
+                        document.getElementById('code').value = allText
                         updateEditor(allText)
                         setTimeout(updatePreview, 300)
                     }
@@ -242,12 +241,12 @@
         }
 
         function updateEditor(e) {
-            document.getElementById('code').value = e
-                // editor.setOption("data", e);
-                // editor.setValue(e);
-            console.log(document.getElementById('code').value)
-            console.log(editor.getValue())
-            editor.getValue()
+            // document.getElementById('code').value = e
+            // editor.setOption("data", e);
+            // editor.setValue(e);
+            // console.log(document.getElementById('code').value)
+            // console.log(editor.getValue())
+            editor.setValue(e)
                 // var delay;
                 // var map = CodeMirror.keyMap.sublime;
                 // var editor = CodeMirror.fromTextArea(document.getElementById('code'), options);
@@ -269,7 +268,7 @@
             preview.write(editor.getValue());
             preview.close();
         }
-        // updateEditor(null)
-        // updatePreview()
+        updateEditor('')
+        updatePreview()
     </script>
 </body>
