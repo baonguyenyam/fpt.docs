@@ -43,6 +43,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/fold/brace-fold.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/keymap/sublime.js"></script>
     <script src="save.js"></script>
+    <script src="sass/sass.js"></script>
+    <script src="pug/pug.js"></script>
     <style>
         textarea {
             opacity: 0;
@@ -92,6 +94,7 @@
             left: 10px;
             overflow: hidden;
             text-overflow: ellipsis;
+            font-weight: bold;
         }
         
         #preview {
@@ -154,16 +157,22 @@
                                     <select onchange="changeEventHandler(this)" class="form-control form-control-sm mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelectPref">
                                         <option selected disabled>Choose...</option>
                                         <option value="html-demo;text/html">HTML Demo</option>
-                                        <option value="sass-demo;sass">SASS Demo</option>
                                         <option value="pug-demo;pug">PUG Demo</option>
+                                        <option value="css-demo;css">CSS Demo</option>
+                                        <option value="sass-demo;sass">SASS Demo</option>
+                                        <option value="js-demo;javascript">JavaScript Demo</option>
                                     </select>
+                                    <input id="getval" type="hidden" value="">
                                 </li>
                             </ul>
                         </div>
                         <div class="col text-right">
                             <ul class="list-inline mb-0">
                                 <li class="list-inline-item">
-                                    <button type="button" onclick="updatePreview()" class="btn btn-primary btn-sm">Update Code <span class="fa fa-long-arrow-right"></span></button>
+                                    <button type="button" onclick="save(document.getElementById('code').value);" class="btn btn-sm btn-outline-secondary"><span class="fa fa-save"></span></button>
+                                </li>
+                                <li class="list-inline-item">
+                                    <button type="button" onclick="updatePreview(document.getElementById('getval').value)" class="btn btn-primary btn-sm">Update Code <span class="fa fa-long-arrow-right"></span></button>
                                 </li>
                             </ul>
                         </div>
@@ -179,7 +188,7 @@
                         <div id="top">
 
                             <span id="buttons">
-                            <span class="fa fa-save" onclick="save(document.getElementById('code').value, 'index.html');"></span>
+                            <span class="fa fa-save" onclick="saveC(document.getElementById('code').value);"></span>
                             </span>
 
                             <span id="bar"></span>
@@ -195,10 +204,45 @@
     </div>
 
     <script>
-        function save(a, b) {
+        function save(a) {
             var blob = new Blob([a], {
                 type: "text/plain;charset=utf-8"
             });
+            var v = document.getElementById('getval').value
+            if (v === 'text/html') {
+                var b = 'index.html'
+            } else if (v === 'sass') {
+                var b = 'main.sass'
+            } else if (v === 'css') {
+                var b = 'main.css'
+            } else if (v === 'javascript') {
+                var b = 'main.js'
+            } else if (v === 'pug') {
+                var b = 'index.pug'
+            } else {
+                var b = 'text.txt'
+            }
+            saveAs(blob, b);
+        }
+
+        function saveC(a) {
+            var blob = new Blob([a], {
+                type: "text/plain;charset=utf-8"
+            });
+            var v = document.getElementById('getval').value
+            if (v === 'text/html') {
+                var b = 'index.html'
+            } else if (v === 'sass') {
+                var b = 'main.css'
+            } else if (v === 'css') {
+                var b = 'main.css'
+            } else if (v === 'javascript') {
+                var b = 'main.js'
+            } else if (v === 'pug') {
+                var b = 'index.html'
+            } else {
+                var b = 'text.txt'
+            }
             saveAs(blob, b);
         }
 
@@ -216,7 +260,7 @@
             showCursorWhenSelecting: true,
             onChange: function() {
                 clearTimeout(delay);
-                delay = setTimeout(updatePreview, 300);
+                delay = setTimeout(updatePreview(null), 300);
             },
             onCursorActivity: function() {
                 editor.matchHighlight("CodeMirror-matchhighlight");
@@ -226,6 +270,7 @@
 
         function changeEventHandler(event) {
             var keys = event.value.split(';')
+            document.getElementById('getval').value = keys[1]
             var rawFile = new XMLHttpRequest();
             rawFile.open("GET", './example/' + keys[0] + '.txt', false);
             rawFile.onreadystatechange = function() {
@@ -233,7 +278,7 @@
                     if (rawFile.status === 200 || rawFile.status == 0) {
                         var allText = rawFile.responseText;
                         updateEditor(allText, keys[1])
-                        setTimeout(updatePreview, 300)
+                        setTimeout(updatePreview(keys[1]), 300)
                     }
                 }
             }
@@ -247,21 +292,62 @@
 
         }
 
-        function updatePreview() {
-            if (editor.getValue().indexOf("<title>") > 0) {
-                var result = editor.getValue().match(/<title>(.*?)<\/title>/g).map(function(val) {
-                    return val.replace(/<\/?title>/g, '');
-                });
-            } else {
-                var result = 'File'
-            }
-            document.getElementById('bar').innerHTML = result
+        function updatePreview(e) {
+            var compile = editor.getValue();
             var previewFrame = document.getElementById('preview');
             var preview = previewFrame.contentDocument || previewFrame.contentWindow.document;
             preview.open();
-            preview.write(editor.getValue());
+
+            if (e === 'text/html') {
+                preview.write(compile);
+            } else if (e === 'sass') {
+                var sass = new Sass();
+                sass.compile(compile, function(resultS) {
+                    preview.write(resultS.text);
+                    // CodeMirror($('#preview').contents().find("body")[0], {
+                    //     tabMode: 'indent',
+                    //     lineNumbers: true,
+                    //     tabSize: 2,
+                    //     matchBrackets: true,
+                    //     autoCloseBrackets: true,
+                    //     lineWrapping: true,
+                    //     showCursorWhenSelecting: true,
+                    //     wordWrap: true
+                    // })
+                });
+            } else if (e === 'css') {
+                preview.write(compile);
+            } else if (e === 'javascript') {
+                preview.write(compile);
+            } else if (e === 'pug') {
+                var pug = require("pug")
+                var fn = pug.compile(compile);
+                var html = fn({
+                    name: this.name
+                })
+                compile = html
+                preview.write(html);
+            } else {
+                preview.write(compile);
+            }
+
+            if (compile.indexOf("<title>") > 0) {
+                var result = compile.match(/<title>(.*?)<\/title>/g).map(function(val) {
+                    return val.replace(/<\/?title>/g, '');
+                });
+            } else {
+                if (e) {
+                    var result = 'Compile'
+                        // var result = e.charAt(0).toUpperCase() + e.slice(1);
+                } else {
+                    var result = 'Text'
+                }
+            }
+            document.getElementById('bar').innerHTML = result
+
+
             preview.close();
         }
-        setTimeout(updatePreview, 300)
+        setTimeout(updatePreview(null), 300)
     </script>
 </body>
