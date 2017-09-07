@@ -41,6 +41,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/keymap/sublime.js"></script>
     <script src="save.js"></script>
     <style>
+        textarea {
+            display: none
+        }
+        
         #wrap {
             width: 100%;
             height: 100%;
@@ -197,7 +201,10 @@
             saveAs(blob, b);
         }
 
-        var options = {
+        var delay;
+        var map = CodeMirror.keyMap.sublime;
+        var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+            data: null,
             mode: 'text/html',
             tabMode: 'indent',
             keyMap: "sublime",
@@ -216,7 +223,7 @@
                 editor.matchHighlight("CodeMirror-matchhighlight");
             },
             wordWrap: true
-        }
+        });
 
         function changeEventHandler(event) {
             var rawFile = new XMLHttpRequest();
@@ -225,8 +232,8 @@
                 if (rawFile.readyState === 4) {
                     if (rawFile.status === 200 || rawFile.status == 0) {
                         var allText = rawFile.responseText;
-                        document.getElementById('code').value = allText
-                        updateEditor()
+                        // document.getElementById('code').value = allText
+                        updateEditor(allText)
                         setTimeout(updatePreview, 300)
                     }
                 }
@@ -234,14 +241,22 @@
             rawFile.send(null);
         }
 
-        function updateEditor() {
-            var delay;
-            var map = CodeMirror.keyMap.sublime;
-            var editor = CodeMirror.fromTextArea(document.getElementById('code'), options);
+        function updateEditor(e) {
+            document.getElementById('code').value = e
+                // editor.setOption("data", e);
+                // editor.setValue(e);
+            console.log(document.getElementById('code').value)
+            console.log(editor.getValue())
+            editor.getValue()
+                // var delay;
+                // var map = CodeMirror.keyMap.sublime;
+                // var editor = CodeMirror.fromTextArea(document.getElementById('code'), options);
         }
 
         function updatePreview() {
-            var editor = CodeMirror.fromTextArea(document.getElementById('code'), options)
+            // var editor = CodeMirror.fromTextArea(document.getElementById('code'), options)
+            // var allText = document.getElementById('code').value
+            // updateEditor(allText)
             if (editor.getValue()) {
                 var result = editor.getValue().match(/<title>(.*?)<\/title>/g).map(function(val) {
                     return val.replace(/<\/?title>/g, '');
@@ -254,7 +269,7 @@
             preview.write(editor.getValue());
             preview.close();
         }
-        updateEditor()
-        updatePreview()
+        // updateEditor(null)
+        // updatePreview()
     </script>
 </body>
