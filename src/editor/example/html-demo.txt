@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <title>HTML Demo</title>
+    <style>
+        p {
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello!</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+</body>
+
+</html>

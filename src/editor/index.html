@@ -1,0 +1,260 @@
+<!doctype html>
+
+<head>
+    <title>HTML Live - by Bao Nguyen</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/codemirror.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/hint/show-hint.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/fold/foldgutter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/dialog/dialog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/theme/monokai.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/codemirror.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/edit/closetag.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/edit/matchbrackets.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/edit/closebrackets.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/hint/javascript-hint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/hint/css-hint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/hint/html-hint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/hint/show-hint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/hint/xml-hint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/hint/html-hint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/mode/xml/xml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/mode/javascript/javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/mode/css/css.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/search/searchcursor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/search/match-highlighter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/dialog/dialog.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/comment/comment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/wrap/hardwrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/fold/foldcode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/fold/brace-fold.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/keymap/sublime.js"></script>
+    <script src="save.js"></script>
+    <style>
+        #wrap {
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+            background: #dfdfdf
+        }
+        
+        #wrap #browser {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #ccc;
+            position: relative;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            background: #fff
+        }
+        
+        #wrap #browser #top {
+            border-bottom: 1px solid #ccc;
+            height: 40px
+        }
+        
+        #wrap #browser #top #buttons {
+            position: absolute;
+            top: 6px;
+            right: 10px;
+            cursor: pointer;
+        }
+        
+        #wrap #browser #top #buttons span {
+            margin-left: 5px
+        }
+        
+        #wrap #browser #top .button:last-child {
+            margin-right: 6px;
+        }
+        
+        #wrap #browser #top #bar {
+            width: calc(100% - 80px);
+            position: absolute;
+            top: 6px;
+            left: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        #preview {
+            border: 0;
+            width: 100%;
+            height: calc(100% - 40px)
+        }
+        
+        .col-lg-6 {
+            height: calc(100vh - 50%)
+        }
+        
+        .CodeMirror {
+            height: calc(100% - 3rem)
+        }
+        
+        .container-full,
+        .no-gutters {
+            width: 100%;
+            height: 100vh
+        }
+        
+        .control {
+            height: 3rem;
+            padding: .5rem;
+        }
+        
+        .control li {
+            cursor: pointer;
+        }
+        
+        @media (min-width: 991px) {
+            .container-full,
+            .no-gutters,
+            .col-lg-6 {
+                height: 100vh;
+                width: 100%;
+            }
+            .CodeMirror {
+                height: calc(100vh - 3rem)
+            }
+            #preview {
+                width: 100%;
+                height: calc(100% - 40px)
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-full">
+        <div class="row no-gutters">
+            <div class="col-lg-6">
+                <div class="control">
+                    <div class="row">
+                        <div class="col">
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item">
+                                    <select onchange="changeEventHandler(this)" class="form-control form-control-sm mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelectPref">
+                                        <option selected>Choose...</option>
+                                        <option value="html-demo">HTML Demo</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col text-right">
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item">
+                                    <button type="button" onclick="updatePreview()" class="btn btn-primary btn-sm">Update Code <span class="fa fa-long-arrow-right"></span></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <textarea id=code name=code></textarea>
+            </div>
+            <div class="col-lg-6">
+
+                <div id="wrap">
+
+                    <div id="browser">
+                        <div id="top">
+
+                            <span id="buttons">
+                            <!-- <span class="button"></span>
+                            <span class="button"></span> -->
+                            <span class="fa fa-save" onclick="save(document.getElementById('code').value, 'index.html');"></span>
+                            </span>
+
+                            <span id="bar"></span>
+
+                        </div>
+                        <iframe id=preview></iframe>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function save(a, b) {
+            var blob = new Blob([a], {
+                type: "text/plain;charset=utf-8"
+            });
+            saveAs(blob, b);
+        }
+
+        var options = {
+            mode: 'text/html',
+            tabMode: 'indent',
+            keyMap: "sublime",
+            lineNumbers: true,
+            theme: "monokai",
+            tabSize: 2,
+            matchBrackets: true,
+            autoCloseBrackets: true,
+            lineWrapping: true,
+            showCursorWhenSelecting: true,
+            onChange: function() {
+                clearTimeout(delay);
+                delay = setTimeout(updatePreview, 300);
+            },
+            onCursorActivity: function() {
+                editor.matchHighlight("CodeMirror-matchhighlight");
+            },
+            wordWrap: true
+        }
+
+        function changeEventHandler(event) {
+            var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", './example/' + event.value + '.txt', false);
+            rawFile.onreadystatechange = function() {
+                if (rawFile.readyState === 4) {
+                    if (rawFile.status === 200 || rawFile.status == 0) {
+                        var allText = rawFile.responseText;
+                        document.getElementById('code').value = allText
+                        updateEditor()
+                        setTimeout(updatePreview, 300)
+                    }
+                }
+            }
+            rawFile.send(null);
+        }
+
+        function updateEditor() {
+            var delay;
+            var map = CodeMirror.keyMap.sublime;
+            var editor = CodeMirror.fromTextArea(document.getElementById('code'), options);
+        }
+
+        function updatePreview() {
+            var editor = CodeMirror.fromTextArea(document.getElementById('code'), options)
+            if (editor.getValue()) {
+                var result = editor.getValue().match(/<title>(.*?)<\/title>/g).map(function(val) {
+                    return val.replace(/<\/?title>/g, '');
+                });
+            }
+            document.getElementById('bar').innerHTML = result
+            var previewFrame = document.getElementById('preview');
+            var preview = previewFrame.contentDocument || previewFrame.contentWindow.document;
+            preview.open();
+            preview.write(editor.getValue());
+            preview.close();
+        }
+        updateEditor()
+        updatePreview()
+    </script>
+</body>

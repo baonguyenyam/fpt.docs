@@ -18,6 +18,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
                 path.join(url.source, '**/*'),
                 path.join(url.source, '.htaccess'),
                 '!' + path.join(url.source, '{**/\_*,**/\_*/**}'),
+                '!' + path.join(url.source, 'editor', '**/*'),
                 '!' + path.join(url.source, url.scripts.root),
                 '!' + path.join(url.source, url.styles.root),
                 '!' + path.join(url.source, url.layouts.root),
@@ -28,5 +29,12 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
             ])
             .pipe(plugins.changed(dest))
             .pipe(gulp.dest(dest));
+    });
+    gulp.task('copyeditor', function() {
+        gulp.src([
+                path.join(url.source, 'editor', '**/*')
+            ])
+            .pipe(plugins.changed(path.join(target, 'editor')))
+            .pipe(gulp.dest(path.join(target, 'editor')));
     });
 }
