@@ -1,0 +1,261 @@
+extends ../../_layout/layout
+
+block variables
+	- var title = 'TypeScript'
+	- var description = 'TypeScript, một ngôn ngữ được biên dịch thành JavaScript, được thiết kế để xây dựng các ứng dụng lớn và phức tạp. Nó kế thừa nhiều khái niệm từ các ngôn ngữ như C# và Java, những ngôn ngữ nghiêm ngặt và có trật tự trái ngược với sự thoải mái và free-typed của JavaScript.Bài viết này, hướng đến những người đã khá thành thạo JavaScript nhưng vẫn còn là beginner khi đến với TypeScript. Chúng tôi sẽ đề cập hầu hết các tính năng chính và cơ bản bao gồm nhiều ví dụ với chú thích để giúp bạn thấy cách ngôn ngữ này hoạt động. Hãy bắt đầu!'
+	- var bodyclass = 'node'
+	- var selected = 'Scripts';
+	- var href = '/docs/node/typescript';
+
+block css
+	//- Nếu ACTIVE_CONCAT = false thì phải cấu hình bên dưới
+	+getMin(bodyclass)
+block og
+	include _seo
+
+block body
+	section.mt-5.demo-ps
+		.container-fluid
+			h2#01 Tìm hiểu về TypeScript
+			hr
+			.row
+				.col-lg-9.mb-4
+					p.lead TypeScript là một dự án mã nguồn mở được phát triển bởi Microsoft, nó có thể được coi là một phiên bản nâng cao của Javascript bởi việc bổ sung tùy chọn kiểu tĩnh và lớp hướng đối tượng mà điều này không có ở Javascript. TypeScript có thể sử dụng để phát triển các ứng dụng chạy ở client-side (Angular2) và server-side (NodeJS).
+
+					p TypeScript sử dụng tất cả các tính năng của của ECMAScript 2015 (ES6) như classes, modules. Không dừng lại ở đó nếu như ECMAScript 2017 ra đời thì mình tin chắc rằng TypeScript cũng sẽ nâng cấp phiên bản của mình lên để sử dụng mọi kỹ thuật mới nhất từ ECMAScript. Thực ra TypeScript không phải ra đời đầu tiên mà trước đây cũng có một số thư viện như CoffeScript và Dart được phát triển bởi Google, tuy nhiên điểm yếu là hai thư viện này sư dụng cú pháp mới hoàn toàn, điều này khác hoàn toàn với TypeScript, vì vậy tuy ra đời sau nhưng TypeScript vẫn đang nhận được sự đón nhận từ các lập trình viên.
+					.row
+						.col-lg-12
+							a(href="/images/node/typescript.png", target="_blank")
+								figure
+									img.img-thumbnail(src="/images/node/typescript.png", alt="")
+
+					h3#02 Tại sao nên sử dụng TypeScript?
+					ul.pl-4 
+						li Dễ phát triển dự án lớn: Với việc sử dụng các kỹ thuật mới nhất và lập trình hướng đối tượng nên TypeScript giúp chúng ta phát triển các dự án lớn một cách dễ dàng.
+						li Nhiều Framework lựa chọn: Hiện nay các Javascript Framework đã dần khuyến khích nên sử dụng TypeScript để phát triển, ví dụ như AngularJS 2.0 và Ionic 2.0.
+						li Hô trợ các tính năng của Javascript phiên bản mới nhất: TypeScript luôn đảm bảo việc sử dụng đầy đủ các kỹ thuật mới nhất của Javascript, ví dụ như version hiện tại là ECMAScript 2015 (ES6).
+						li Là mã nguồn mở: TypeScript là một mã nguồn mở nên bạn hoàn toàn có thể sử dụng mà không mất phí, bên cạnh đó còn được cộng đồng hỗ trợ.
+						li TypeScript là Javscript: Bản chất của TypeScript là biên dịch tạo ra các đoạn mã javascript nên ban có thê chạy bất kì ở đâu miễn ở đó có hỗ trợ biên dịch Javascript. Ngoài ra bạn có thể sử dụng trộn lẫn cú pháp của Javascript vào bên trong TypeScript, điều này giúp các lập trình viên tiếp cận TypeScript dễ dàng hơn.
+
+				
+					h3#03 Khai báo biến trong TypeScript
+					p Cũng như Javascript chúng ta có thể sử dụng từ khóa var hoặc let để khai báo biến, riêng từ khóa let thường được sư dụng trong ES6 nên nó chỉ chạy ở các trình duyệt phiên bản mới thôi nhé các bạn. Tuy nhiên các bạn đừng lo bởi vì bây giờ hầu hết trình duyệt đã hỗ trợ ES6.
+					p Một tính năng rất đặc biệt của TypeScript là hỗ trợ static typing. Điều này có nghĩa là bạn có thể khai báo kiểu cho biến, và trình biên dịch sẽ đảm bảo rằng chúng không bị gán sai kiểu của các giá trị. Nếu khai báo kiểu bị bỏ qua, chúng sẽ được tự động phát hiện từ code của bạn.
+					.table-responsive
+						table.table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th Kiểu
+									th TypeScript (.ts)
+									th JavaScript (.js)
+									th.mw-500 Mô tả
+							tbody
+								tr
+									td String
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											var domain : string = 'baonguyen.com';
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											var domain = 'baonguyen.com';
+									td.mw-500 Giống như string của JavaScript có thể được bao quanh bởi ‘dấu nháy đơn’ hoặc “dấu nháy kép”.
+								tr
+									td Boolean  
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											let isDone: boolean = false;
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											var isDone = false;
+									td.mw-500 True hoặc False, sử dụng 0 và 1 sẽ gây ra lỗi biên dịch.
+								tr
+									td Number
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											var decimal: number = 12;
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											var decimal = 12;
+									td.mw-500 Tất cả giá trị số được biểu diễn bởi kiểu number, không có định nghĩa riêng cho số nguyên (interger), số thực (float) hoặc các kiểu khác.
+								tr
+									td Arrays 
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											let students: string[] = ['Nguyen', 'Kinh', 'Chinh'];
+										p Hoặc 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper="let students: Array<string> = ['Nguyen', 'Kinh', 'Chinh'];"
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											var student = ['Nguyen', 'Kinh', 'Chinh'];
+									td.mw-500='Có 2 kiểu cú pháp: my_arr: number[]; hoặc my_arr: Array<number>.'
+								//- tr
+									td Object 
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											let students: Object = {id: 1, data: {name:'Nguyen',age:30}}
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											var students = { id: 1, data: { name: 'Nguyen', age: 30 } };
+									td.mw-500='Có 2 kiểu cú pháp: my_arr: number[]; hoặc my_arr: Array<number>.'
+								tr
+									td Any
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											let notSure: any = 4; 
+											notSure = "Hello";
+											notSure = false;
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											var notSure = 4; 
+											notSure = "Hello";
+											notSure = false;
+									td.mw-500 Đây là kiểu dữ liệu thoải mái nhất bởi nó cho phép bạn gán giá trị với kiểu dữ liệu bất kì, điều này giúp giải quyết rắc rối ở một số trường hợp, ví dụ ta cần lấy dữ liệu từ người dùng hoặc một thư viện khác thì ta không biết giá trị trả về sẽ ở kiểu dữ liệu nào nên ta sẽ sử dụng kiểu Any để tránh lỗi. Sau đây là một ví dụ từ trang chủ của nó.
+								tr
+									td Void
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											function showMessage(): void {
+												^alert("Success!");
+											}
+											let unusable: void = undefined;
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											function showMessage() {
+												alert("Success!");
+											}
+											var unusable = undefined;
+									td.mw-500 Trong C# thì khi muốn khai báo một hàm không có giá trị trả về thì ta sẽ sử dụng hàm void, tuy ta hay gọi là hàm void nhưng thực ra nó là một kiểu dữ liệu với giá trị là null, trong TypeScript thì có thêm giá trị undefined.
+								tr
+									td Tuple
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											var stringArray:[string,number,boolean] = ['Nguyen',18,true];
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											var stringArray = ['Nguyen', 18, true];
+									td.mw-500 Kiểu tuple cũng là một kiểu dữ liệu đặc biết,nó là một mảng các giá trị nhưng mỗi giá trị lại có thể có một kiểu dữ liệu khác nhau.
+								tr
+									td Enum
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											enum Hello {Xinchao=10, Hi, Nguyen};  
+											let getname: Hello = Hello.Xinchao; 
+											alert(getname);
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											var Hello;
+											(function (Hello) {
+												^Hello[Hello["Xinchao"] = 10] = "Xinchao";
+												^Hello[Hello["Hi"] = 11] = "Hi";
+												^Hello[Hello["Nguyen"] = 12] = "Nguyen";
+											})(Hello || (Hello = {}));
+											;
+											var getname = Hello.Xinchao;
+											alert(getname);
+									td.mw-500 Tương tự như trong C#, Enum là kiểu dữ liệu đặc biệt dùng để tạo một nhóm tên tương ứng với các giá trị là những con số mà ta thiết lập cho nó, cách này sẽ giúp ta dễ dàng nhớ tên hơn.
+
+
+					h3#04 Interfaces
+					p Interfaces được sử dụng để kiểm tra, xem một đối tượng có phù hợp với một cấu trúc nhất định hay không. Bằng cách định nghĩa một interface, chúng ta có thể đặt tên một sự kết hợp đặc biệt của các biến, đảm bảo rằng chúng luôn luôn đi cùng nhau. Khi chuyển thành JavaScript, interface biến mất – mục đích duy nhất của chúng là trợ giúp trong giai đoạn giai đoạn phát triển.
+					p.text-danger Thứ tự các thuộc tính không quan trọng. Chúng ta chỉ cần đủ số lượng các thuộc tính và đúng kiểu. Nếu một thuộc tính nào đó bị thiếu, hoặc sai kiểu, hoặc sai tên, trình biên dịch sẽ cảnh báo chúng ta.
+					.table-responsive
+						table.table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th TypeScript (.ts)
+									th JavaScript (.js)
+							tbody
+								tr
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											interface Face {
+												^name: string;
+												^calories: number;
+											}
+											function Speak(food: Face) {
+												^console.log(food.name);
+												^console.log(food.calories);
+											}
+											var mon_an = {
+												^name: 'Bia 333', 
+												^calories: 200
+											}
+											Speak(mon_an);
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											function Speak(food) {
+												^console.log(food.name);
+												^console.log(food.calories);
+											}
+											var mon_an = {
+												^name: 'Bia 333',
+												^calories: 200
+											};
+											Speak(mon_an);
+					p Code này đúng nhưng nó sẽ báo lỗi nếu bạn đặt name: 123 vì nó khác kiểu string trong interface
+
+					h3#05 Classes
+					p Khi xây dựng các ứng dụng lớn, phong cách lập trình hướng đối tượng được ưa thích bởi rất nhiều lập trình viên, đặc biệt là trong các ngôn ngữ như Java hoặc C#. TypeScript cung một hệ thống class rất giống các ngôn ngữ này, bao gồm kế thừa, abstract classes, interface implementations, setter/getters, …
+
+
+					p Cũng phải đề cập là từ phiên bản ECMAScript 2015, classes là một tính năng có sẵn trong JS và có thể không cần sử dụng TypeScript. Hai phiên bản khá giống nhau, nhưng chúng vẫn có điểm khác biệt, đó là TypeScript nghiêm ngặt hơn.
+
+
+					//- .table-responsive
+						table.table.table.table-bordered.thead-inverse.table-striped
+							thead
+								tr
+									th TypeScript (.ts)
+									th JavaScript (.js)
+							tbody
+								tr
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											interface Face {
+												^name: string;
+												^calories: number;
+											}
+											function Speak(food: Face) {
+												^console.log(food.name);
+												^console.log(food.calories);
+											}
+											var mon_an = {
+												^name: 'Bia 333', 
+												^calories: 200
+											}
+											Speak(mon_an);
+									td 
+										pre.quine.prettyprint.text-left.lang-js.scrollbar-dynamic.wrapper.
+											function Speak(food) {
+												^console.log(food.name);
+												^console.log(food.calories);
+											}
+											var mon_an = {
+												^name: 'Bia 333',
+												^calories: 200
+											};
+											Speak(mon_an);
+					//- p Code này đúng nhưng nó sẽ báo lỗi nếu bạn đặt name: 123 vì nó khác kiểu string trong interface
+
+
+
+
+
+
+
+				.col-lg-3.d-none.d-xl-block
+					.jumbotron.pt-2.pb-2.pl-3.pr-3.bd-toc
+						h3 Overview 
+						ol.pl-4
+							li
+								a(href="#01") Tìm hiểu về TypeScript
+							li
+								a(href="#02") Tại sao nên sử dụng TypeScript?
+						h3 TypeScript 
+						ol.pl-4
+							li
+								a(href="#03") Khai báo biến trong TypeScript
+							li
+								a(href="#04") Interfaces
+							li
+								a(href="#05") Classes
