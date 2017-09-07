@@ -72,7 +72,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
             // Copy
             gulp.watch([
                 path.join(url.source, '**/*.{svg,jpg,jpeg,png,gif,txt,bmp,md,json,yml,yaml,css,html,js,eot,svg,ttf,woff,woff2}')
-            ], ['copy']);
+            ], ['copy', 'copyeditor']);
 
             // All other files
             gulp.watch([path.join(url.tmp, '**/*'),

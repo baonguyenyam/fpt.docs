@@ -87,6 +87,7 @@ gulp.task('k-task', function(cb) {
         'babel-concat',
         'pug', // hamber, ejs, pug
         'copy',
+        'copyeditor',
         'fonts',
         cb
     );
