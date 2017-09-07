@@ -41,10 +41,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/keymap/sublime.js"></script>
     <script src="save.js"></script>
     <style>
-        textarea {
-            display: none
-        }
-        
         #wrap {
             width: 100%;
             height: 100%;
@@ -222,7 +218,7 @@
                 editor.matchHighlight("CodeMirror-matchhighlight");
             },
             wordWrap: true
-        });
+        })
 
         function changeEventHandler(event) {
             var rawFile = new XMLHttpRequest();
@@ -231,7 +227,7 @@
                 if (rawFile.readyState === 4) {
                     if (rawFile.status === 200 || rawFile.status == 0) {
                         var allText = rawFile.responseText;
-                        document.getElementById('code').value = allText
+                        // document.getElementById('code').value = allText
                         updateEditor(allText)
                         setTimeout(updatePreview, 300)
                     }
@@ -241,11 +237,7 @@
         }
 
         function updateEditor(e) {
-            // document.getElementById('code').value = e
-            // editor.setOption("data", e);
-            // editor.setValue(e);
-            // console.log(document.getElementById('code').value)
-            // console.log(editor.getValue())
+            document.getElementById('code').value = e
             editor.setValue(e)
                 // var delay;
                 // var map = CodeMirror.keyMap.sublime;
@@ -254,8 +246,6 @@
 
         function updatePreview() {
             // var editor = CodeMirror.fromTextArea(document.getElementById('code'), options)
-            // var allText = document.getElementById('code').value
-            // updateEditor(allText)
             if (editor.getValue()) {
                 var result = editor.getValue().match(/<title>(.*?)<\/title>/g).map(function(val) {
                     return val.replace(/<\/?title>/g, '');
@@ -268,7 +258,7 @@
             preview.write(editor.getValue());
             preview.close();
         }
-        updateEditor('')
-        updatePreview()
+        // updateEditor()
+        setTimeout(updatePreview, 300)
     </script>
 </body>
